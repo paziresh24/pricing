@@ -574,6 +574,20 @@
           "scheme": "blackbox",
           "componentType": "component",
           "plumeType": "triggered-overlay"
+        },
+        {
+          "id": "dk4vJhcf_j2D",
+          "name": "Checkbox",
+          "type": "managed",
+          "projectId": "seYsnBL1P3AiXaFGNEMUUM",
+          "renderModuleFilePath": "plasmic/pricing/PlasmicCheckbox.tsx",
+          "importSpec": {
+            "modulePath": "Checkbox.tsx"
+          },
+          "cssFilePath": "plasmic/pricing/PlasmicCheckbox.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "checkbox"
         }
       ],
       "icons": [
@@ -651,6 +665,21 @@
           "id": "YXzAIe4mJWDL",
           "name": "Icon11Icon",
           "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__Icon11.tsx"
+        },
+        {
+          "id": "MFDv12-mmwTj",
+          "name": "SquaresvgIcon",
+          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__Squaresvg.tsx"
+        },
+        {
+          "id": "JhqU_pVwANVN",
+          "name": "SquareCheckFilledsvgIcon",
+          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__SquareCheckFilledsvg.tsx"
+        },
+        {
+          "id": "gqt0H-uJ-Xg8",
+          "name": "SquareMinussvgIcon",
+          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__SquareMinussvg.tsx"
         }
       ],
       "images": [],
