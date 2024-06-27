@@ -112,6 +112,13 @@ export type PlasmicHomepage__OverridesType = {
   txtReservationInternetResult?: Flex__<"div">;
   txtReservationPhoneResult?: Flex__<"div">;
   txtReservationKioskResult?: Flex__<"div">;
+  txtReservationKioskResult2?: Flex__<"div">;
+  txtReservationKioskResult3?: Flex__<"div">;
+  txtReservationKioskResult4?: Flex__<"div">;
+  txtReservationKioskResult5?: Flex__<"div">;
+  txtReservationKioskResult6?: Flex__<"div">;
+  txtReservationKioskResult7?: Flex__<"div">;
+  txtReservationKioskResult8?: Flex__<"div">;
   columns?: Flex__<"div">;
   clReservation?: Flex__<"div">;
   txtInternetReservation?: Flex__<typeof TextInput>;
@@ -532,39 +539,6 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-name={"btnDashboard"}
                   data-plasmic-override={overrides.btnDashboard}
                   className={classNames(projectcss.all, sty.btnDashboard)}
-                  onClick={async event => {
-                    const $steps = {};
-
-                    $steps["runCode"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            customFunction: async () => {
-                              return (() => {
-                                $state.clReservationState = false;
-                                $state.clMainState = false;
-                                $state.clAnnouncementState = false;
-                                $state.clCalculationState = false;
-                                $state.clOnlinepaymentState = false;
-                                $state.clApiState = false;
-                                $state.clEhrState = false;
-                                $state.clSpecialsiteState = false;
-                                return ($state.clDashboardState = true);
-                              })();
-                            }
-                          };
-                          return (({ customFunction }) => {
-                            return customFunction();
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["runCode"] != null &&
-                      typeof $steps["runCode"] === "object" &&
-                      typeof $steps["runCode"].then === "function"
-                    ) {
-                      $steps["runCode"] = await $steps["runCode"];
-                    }
-                  }}
                 >
                   <Icon10Icon
                     className={classNames(projectcss.all, sty.svg__cbLBw)}
@@ -587,39 +561,6 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-name={"btnSpecialsite"}
                   data-plasmic-override={overrides.btnSpecialsite}
                   className={classNames(projectcss.all, sty.btnSpecialsite)}
-                  onClick={async event => {
-                    const $steps = {};
-
-                    $steps["runCode"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            customFunction: async () => {
-                              return (() => {
-                                $state.clReservationState = false;
-                                $state.clMainState = false;
-                                $state.clAnnouncementState = false;
-                                $state.clCalculationState = false;
-                                $state.clOnlinepaymentState = false;
-                                $state.clApiState = false;
-                                $state.clEhrState = false;
-                                $state.clSpecialsiteState = true;
-                                return ($state.clDashboardState = false);
-                              })();
-                            }
-                          };
-                          return (({ customFunction }) => {
-                            return customFunction();
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["runCode"] != null &&
-                      typeof $steps["runCode"] === "object" &&
-                      typeof $steps["runCode"].then === "function"
-                    ) {
-                      $steps["runCode"] = await $steps["runCode"];
-                    }
-                  }}
                 >
                   <Icon9Icon
                     className={classNames(projectcss.all, sty.svg___6EjZr)}
@@ -642,39 +583,6 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-name={"btnEhr"}
                   data-plasmic-override={overrides.btnEhr}
                   className={classNames(projectcss.all, sty.btnEhr)}
-                  onClick={async event => {
-                    const $steps = {};
-
-                    $steps["runCode"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            customFunction: async () => {
-                              return (() => {
-                                $state.clReservationState = false;
-                                $state.clMainState = false;
-                                $state.clAnnouncementState = false;
-                                $state.clCalculationState = false;
-                                $state.clOnlinepaymentState = false;
-                                $state.clApiState = false;
-                                $state.clEhrState = true;
-                                $state.clSpecialsiteState = false;
-                                return ($state.clDashboardState = false);
-                              })();
-                            }
-                          };
-                          return (({ customFunction }) => {
-                            return customFunction();
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["runCode"] != null &&
-                      typeof $steps["runCode"] === "object" &&
-                      typeof $steps["runCode"].then === "function"
-                    ) {
-                      $steps["runCode"] = await $steps["runCode"];
-                    }
-                  }}
                 >
                   <Icon9Icon
                     className={classNames(projectcss.all, sty.svg__rXLkj)}
@@ -697,39 +605,6 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-name={"btnApi"}
                   data-plasmic-override={overrides.btnApi}
                   className={classNames(projectcss.all, sty.btnApi)}
-                  onClick={async event => {
-                    const $steps = {};
-
-                    $steps["runCode"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            customFunction: async () => {
-                              return (() => {
-                                $state.clReservationState = false;
-                                $state.clMainState = false;
-                                $state.clAnnouncementState = false;
-                                $state.clCalculationState = false;
-                                $state.clOnlinepaymentState = false;
-                                $state.clApiState = true;
-                                $state.clEhrState = false;
-                                $state.clSpecialsiteState = false;
-                                return ($state.clDashboardState = false);
-                              })();
-                            }
-                          };
-                          return (({ customFunction }) => {
-                            return customFunction();
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["runCode"] != null &&
-                      typeof $steps["runCode"] === "object" &&
-                      typeof $steps["runCode"].then === "function"
-                    ) {
-                      $steps["runCode"] = await $steps["runCode"];
-                    }
-                  }}
                 >
                   <Icon8Icon
                     className={classNames(projectcss.all, sty.svg__sd3Vz)}
@@ -752,39 +627,6 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-name={"btnOnlinepayment"}
                   data-plasmic-override={overrides.btnOnlinepayment}
                   className={classNames(projectcss.all, sty.btnOnlinepayment)}
-                  onClick={async event => {
-                    const $steps = {};
-
-                    $steps["runCode"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            customFunction: async () => {
-                              return (() => {
-                                $state.clReservationState = false;
-                                $state.clMainState = false;
-                                $state.clAnnouncementState = false;
-                                $state.clCalculationState = false;
-                                $state.clOnlinepaymentState = true;
-                                $state.clApiState = false;
-                                $state.clEhrState = false;
-                                $state.clSpecialsiteState = false;
-                                return ($state.clDashboardState = false);
-                              })();
-                            }
-                          };
-                          return (({ customFunction }) => {
-                            return customFunction();
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["runCode"] != null &&
-                      typeof $steps["runCode"] === "object" &&
-                      typeof $steps["runCode"].then === "function"
-                    ) {
-                      $steps["runCode"] = await $steps["runCode"];
-                    }
-                  }}
                 >
                   <Icon7Icon
                     className={classNames(projectcss.all, sty.svg___8W1Xb)}
@@ -807,39 +649,6 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-name={"btnCalculation"}
                   data-plasmic-override={overrides.btnCalculation}
                   className={classNames(projectcss.all, sty.btnCalculation)}
-                  onClick={async event => {
-                    const $steps = {};
-
-                    $steps["runCode"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            customFunction: async () => {
-                              return (() => {
-                                $state.clReservationState = false;
-                                $state.clMainState = false;
-                                $state.clAnnouncementState = false;
-                                $state.clCalculationState = true;
-                                $state.clOnlinepaymentState = false;
-                                $state.clApiState = false;
-                                $state.clEhrState = false;
-                                $state.clSpecialsiteState = false;
-                                return ($state.clDashboardState = false);
-                              })();
-                            }
-                          };
-                          return (({ customFunction }) => {
-                            return customFunction();
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["runCode"] != null &&
-                      typeof $steps["runCode"] === "object" &&
-                      typeof $steps["runCode"].then === "function"
-                    ) {
-                      $steps["runCode"] = await $steps["runCode"];
-                    }
-                  }}
                 >
                   <Icon6Icon
                     className={classNames(projectcss.all, sty.svg__yUwH)}
@@ -860,39 +669,6 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-name={"btnAnnouncement"}
                   data-plasmic-override={overrides.btnAnnouncement}
                   className={classNames(projectcss.all, sty.btnAnnouncement)}
-                  onClick={async event => {
-                    const $steps = {};
-
-                    $steps["runCode"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            customFunction: async () => {
-                              return (() => {
-                                $state.clReservationState = false;
-                                $state.clMainState = false;
-                                $state.clAnnouncementState = true;
-                                $state.clCalculationState = false;
-                                $state.clOnlinepaymentState = false;
-                                $state.clApiState = false;
-                                $state.clEhrState = false;
-                                $state.clSpecialsiteState = false;
-                                return ($state.clDashboardState = false);
-                              })();
-                            }
-                          };
-                          return (({ customFunction }) => {
-                            return customFunction();
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["runCode"] != null &&
-                      typeof $steps["runCode"] === "object" &&
-                      typeof $steps["runCode"].then === "function"
-                    ) {
-                      $steps["runCode"] = await $steps["runCode"];
-                    }
-                  }}
                 >
                   <Icon5Icon
                     className={classNames(projectcss.all, sty.svg__ph7A)}
@@ -913,39 +689,6 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-name={"btnReservation"}
                   data-plasmic-override={overrides.btnReservation}
                   className={classNames(projectcss.all, sty.btnReservation)}
-                  onClick={async event => {
-                    const $steps = {};
-
-                    $steps["runCode"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            customFunction: async () => {
-                              return (() => {
-                                $state.clReservationState = true;
-                                $state.clMainState = false;
-                                $state.clAnnouncementState = false;
-                                $state.clCalculationState = false;
-                                $state.clOnlinepaymentState = false;
-                                $state.clApiState = false;
-                                $state.clEhrState = false;
-                                $state.clSpecialsiteState = false;
-                                return ($state.clDashboardState = false);
-                              })();
-                            }
-                          };
-                          return (({ customFunction }) => {
-                            return customFunction();
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["runCode"] != null &&
-                      typeof $steps["runCode"] === "object" &&
-                      typeof $steps["runCode"].then === "function"
-                    ) {
-                      $steps["runCode"] = await $steps["runCode"];
-                    }
-                  }}
                 >
                   <Icon3Icon
                     className={classNames(projectcss.all, sty.svg___4NJPi)}
@@ -979,7 +722,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   )}
                 >
                   {
-                    "\u062c\u0632\u0626\u06cc\u0627\u062a \u0635\u0648\u0631\u062a \u062d\u0633\u0627\u0628:"
+                    "\u062c\u0632\u0626\u06cc\u0627\u062a \u0635\u0648\u0631\u062a \u062d\u0633\u0627\u0628"
                   }
                 </div>
                 <div
@@ -1108,6 +851,342 @@ function PlasmicHomepage__RenderFunc(props: {
                         projectcss.all,
                         projectcss.__wab_text,
                         sty.txtReservationKioskResult
+                      )}
+                    >
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $state.reservationKioskResult;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </div>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__j2KvD)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___7CiTp)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__iX6Rz
+                      )}
+                    >
+                      {
+                        "\u0645\u0627\u0698\u0648\u0644 \u0627\u0639\u0644\u0627\u0646\u0627\u062a:"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__muC25)}
+                  >
+                    <div
+                      data-plasmic-name={"txtReservationKioskResult2"}
+                      data-plasmic-override={
+                        overrides.txtReservationKioskResult2
+                      }
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.txtReservationKioskResult2
+                      )}
+                    >
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $state.reservationKioskResult;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </div>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__ilTh)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___2641T)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__ui1E6
+                      )}
+                    >
+                      {
+                        "\u0645\u0627\u0698\u0648\u0644 \u0645\u062d\u0627\u0633\u0628\u0627\u062a:"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___0S54R)}
+                  >
+                    <div
+                      data-plasmic-name={"txtReservationKioskResult3"}
+                      data-plasmic-override={
+                        overrides.txtReservationKioskResult3
+                      }
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.txtReservationKioskResult3
+                      )}
+                    >
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $state.reservationKioskResult;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </div>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__zgsGl)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__hGbk9)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__x3IrN
+                      )}
+                    >
+                      {
+                        "\u0645\u0627\u0698\u0648\u0644 \u067e\u0631\u062f\u0627\u062e\u062a \u0622\u0646\u0644\u0627\u06cc\u0646:"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__iLuZ8)}
+                  >
+                    <div
+                      data-plasmic-name={"txtReservationKioskResult4"}
+                      data-plasmic-override={
+                        overrides.txtReservationKioskResult4
+                      }
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.txtReservationKioskResult4
+                      )}
+                    >
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $state.reservationKioskResult;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </div>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__nHz5J)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___5Ih0L)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__gKxZj
+                      )}
+                    >
+                      {
+                        "\u0645\u0627\u0698\u0648\u0644 \u0627\u0631\u062a\u0628\u0627\u0637 \u0628\u0627 \u0633\u0627\u06cc\u0631 \u0646\u0631\u0645 \u0627\u0641\u0632\u0627\u0631 \u0647\u0627:"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__jydXs)}
+                  >
+                    <div
+                      data-plasmic-name={"txtReservationKioskResult5"}
+                      data-plasmic-override={
+                        overrides.txtReservationKioskResult5
+                      }
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.txtReservationKioskResult5
+                      )}
+                    >
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $state.reservationKioskResult;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </div>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__lRfUf)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__qTl3U)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__h0At3
+                      )}
+                    >
+                      {
+                        "\u0645\u0627\u0632\u0648\u0644 \u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631:"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__lqTaG)}
+                  >
+                    <div
+                      data-plasmic-name={"txtReservationKioskResult6"}
+                      data-plasmic-override={
+                        overrides.txtReservationKioskResult6
+                      }
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.txtReservationKioskResult6
+                      )}
+                    >
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $state.reservationKioskResult;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </div>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__tesQq)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__rl8Lw)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__rwSrg
+                      )}
+                    >
+                      {
+                        "\u0633\u0627\u06cc\u062a \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u0645\u0631\u06a9\u0632:"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__y4W2G)}
+                  >
+                    <div
+                      data-plasmic-name={"txtReservationKioskResult7"}
+                      data-plasmic-override={
+                        overrides.txtReservationKioskResult7
+                      }
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.txtReservationKioskResult7
+                      )}
+                    >
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $state.reservationKioskResult;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </div>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__aEzOj)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___9FO5I)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__ohUay
+                      )}
+                    >
+                      {
+                        "\u062f\u0627\u0634\u0628\u0648\u0631\u062f \u06af\u0632\u0627\u0631\u0634\u0627\u062a \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc:"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__ieJ6Z)}
+                  >
+                    <div
+                      data-plasmic-name={"txtReservationKioskResult8"}
+                      data-plasmic-override={
+                        overrides.txtReservationKioskResult8
+                      }
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.txtReservationKioskResult8
                       )}
                     >
                       <React.Fragment>
@@ -2037,7 +2116,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "\u0645\u0627\u0632\u0648\u0644 \u067e\u0631\u0648\u0646\u062f\u0647 \u0633\u0627\u06cc\u062a \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u0645\u0631\u06a9\u0632"
+                        "\u0633\u0627\u06cc\u062a \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u0645\u0631\u06a9\u0632"
                       }
                     </div>
                   </div>
@@ -2133,6 +2212,13 @@ const PlasmicDescendants = {
     "txtReservationInternetResult",
     "txtReservationPhoneResult",
     "txtReservationKioskResult",
+    "txtReservationKioskResult2",
+    "txtReservationKioskResult3",
+    "txtReservationKioskResult4",
+    "txtReservationKioskResult5",
+    "txtReservationKioskResult6",
+    "txtReservationKioskResult7",
+    "txtReservationKioskResult8",
     "columns",
     "clReservation",
     "txtInternetReservation",
@@ -2172,6 +2258,13 @@ const PlasmicDescendants = {
   txtReservationInternetResult: ["txtReservationInternetResult"],
   txtReservationPhoneResult: ["txtReservationPhoneResult"],
   txtReservationKioskResult: ["txtReservationKioskResult"],
+  txtReservationKioskResult2: ["txtReservationKioskResult2"],
+  txtReservationKioskResult3: ["txtReservationKioskResult3"],
+  txtReservationKioskResult4: ["txtReservationKioskResult4"],
+  txtReservationKioskResult5: ["txtReservationKioskResult5"],
+  txtReservationKioskResult6: ["txtReservationKioskResult6"],
+  txtReservationKioskResult7: ["txtReservationKioskResult7"],
+  txtReservationKioskResult8: ["txtReservationKioskResult8"],
   columns: [
     "columns",
     "clReservation",
@@ -2237,6 +2330,13 @@ type NodeDefaultElementType = {
   txtReservationInternetResult: "div";
   txtReservationPhoneResult: "div";
   txtReservationKioskResult: "div";
+  txtReservationKioskResult2: "div";
+  txtReservationKioskResult3: "div";
+  txtReservationKioskResult4: "div";
+  txtReservationKioskResult5: "div";
+  txtReservationKioskResult6: "div";
+  txtReservationKioskResult7: "div";
+  txtReservationKioskResult8: "div";
   columns: "div";
   clReservation: "div";
   txtInternetReservation: typeof TextInput;
@@ -2339,6 +2439,13 @@ export const PlasmicHomepage = Object.assign(
     ),
     txtReservationPhoneResult: makeNodeComponent("txtReservationPhoneResult"),
     txtReservationKioskResult: makeNodeComponent("txtReservationKioskResult"),
+    txtReservationKioskResult2: makeNodeComponent("txtReservationKioskResult2"),
+    txtReservationKioskResult3: makeNodeComponent("txtReservationKioskResult3"),
+    txtReservationKioskResult4: makeNodeComponent("txtReservationKioskResult4"),
+    txtReservationKioskResult5: makeNodeComponent("txtReservationKioskResult5"),
+    txtReservationKioskResult6: makeNodeComponent("txtReservationKioskResult6"),
+    txtReservationKioskResult7: makeNodeComponent("txtReservationKioskResult7"),
+    txtReservationKioskResult8: makeNodeComponent("txtReservationKioskResult8"),
     columns: makeNodeComponent("columns"),
     clReservation: makeNodeComponent("clReservation"),
     txtInternetReservation: makeNodeComponent("txtInternetReservation"),
