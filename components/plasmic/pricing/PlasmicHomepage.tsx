@@ -60,6 +60,8 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import { SideEffect } from "@plasmicpkgs/plasmic-basic-components";
+import TextInput from "../../TextInput"; // plasmic-import: ZdzGQGZE4mJ7/component
+import Button from "../../Button"; // plasmic-import: oVzoHzMf1TLl/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -70,6 +72,7 @@ import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plas
 import projectcss from "./plasmic.module.css"; // plasmic-import: seYsnBL1P3AiXaFGNEMUUM/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: g64VYoCfAKTS/css
 
+import Icon11Icon from "./icons/PlasmicIcon__Icon11"; // plasmic-import: YXzAIe4mJWDL/icon
 import Icon10Icon from "./icons/PlasmicIcon__Icon10"; // plasmic-import: 5Kdxmn_uOBnI/icon
 import Icon9Icon from "./icons/PlasmicIcon__Icon9"; // plasmic-import: JK4sPT7lqUH1/icon
 import Icon8Icon from "./icons/PlasmicIcon__Icon8"; // plasmic-import: fEKKJ-2F5BD1/icon
@@ -77,6 +80,10 @@ import Icon7Icon from "./icons/PlasmicIcon__Icon7"; // plasmic-import: 1eqoHYLc_
 import Icon6Icon from "./icons/PlasmicIcon__Icon6"; // plasmic-import: WvR12xDIGLgz/icon
 import Icon5Icon from "./icons/PlasmicIcon__Icon5"; // plasmic-import: HAnMzYJg5d76/icon
 import Icon3Icon from "./icons/PlasmicIcon__Icon3"; // plasmic-import: jRHPVqrBy9SV/icon
+import SearchsvgIcon from "./icons/PlasmicIcon__Searchsvg"; // plasmic-import: 2VY19-xmXXIp/icon
+import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: 22TzxIplc3cE/icon
+import ChevronRightIcon from "../fragment_icons/icons/PlasmicIcon__ChevronRight"; // plasmic-import: GHdF3hS-oP_3/icon
+import ChevronLeftIcon from "../fragment_icons/icons/PlasmicIcon__ChevronLeft"; // plasmic-import: r9Upp9NbiZkf/icon
 
 createPlasmicElementProxy;
 
@@ -101,8 +108,15 @@ export type PlasmicHomepage__OverridesType = {
   btnCalculation?: Flex__<"div">;
   btnAnnouncement?: Flex__<"div">;
   btnReservation?: Flex__<"div">;
+  txtReservationInternetResult?: Flex__<"div">;
+  txtReservationPhoneResult?: Flex__<"div">;
+  txtReservationKioskResult?: Flex__<"div">;
   columns?: Flex__<"div">;
   clReservation?: Flex__<"div">;
+  txtInternetReservation?: Flex__<typeof TextInput>;
+  txtPhoneReservation?: Flex__<typeof TextInput>;
+  txtKioskReservation?: Flex__<typeof TextInput>;
+  button?: Flex__<typeof Button>;
   clAnnouncement?: Flex__<"div">;
   clCalculations?: Flex__<"div">;
   clOnlinepayment?: Flex__<"div">;
@@ -207,6 +221,60 @@ function PlasmicHomepage__RenderFunc(props: {
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => true
+      },
+      {
+        path: "txtInternetReservation.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "0"
+      },
+      {
+        path: "txtPhoneReservation.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "0"
+      },
+      {
+        path: "txtKioskReservation.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "0"
+      },
+      {
+        path: "reservationInternetPrice",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 100
+      },
+      {
+        path: "reservationPhonePrice",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 250
+      },
+      {
+        path: "reservationKioskPrice",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 300
+      },
+      {
+        path: "reservationInternetResult",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
+      },
+      {
+        path: "reservsationPhoneResult",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
+      },
+      {
+        path: "reservationKioskResult",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
       }
     ],
     [$props, $ctx, $refs]
@@ -356,20 +424,30 @@ function PlasmicHomepage__RenderFunc(props: {
           />
 
           <section className={classNames(projectcss.all, sty.section__dkFyp)}>
-            <h1
-              data-plasmic-name={"h1"}
-              data-plasmic-override={overrides.h1}
-              className={classNames(
-                projectcss.all,
-                projectcss.h1,
-                projectcss.__wab_text,
-                sty.h1
-              )}
-            >
-              {
-                "\n\u062a\u0639\u0631\u0641\u0647 \u062e\u062f\u0645\u0627\u062a \u067e\u0630\u06cc\u0631\u063424\n"
-              }
-            </h1>
+            <div className={classNames(projectcss.all, sty.freeBox___0ZMo0)}>
+              <div className={classNames(projectcss.all, sty.freeBox__vst7D)}>
+                <h1
+                  data-plasmic-name={"h1"}
+                  data-plasmic-override={overrides.h1}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.h1,
+                    projectcss.__wab_text,
+                    sty.h1
+                  )}
+                >
+                  {
+                    "\u062a\u0639\u0631\u0641\u0647 \u062e\u062f\u0645\u0627\u062a \u067e\u0630\u06cc\u0631\u063424"
+                  }
+                </h1>
+              </div>
+              <div className={classNames(projectcss.all, sty.freeBox___8CihT)}>
+                <Icon11Icon
+                  className={classNames(projectcss.all, sty.svg___0HXtL)}
+                  role={"img"}
+                />
+              </div>
+            </div>
             <section className={classNames(projectcss.all, sty.section__wtTOr)}>
               <div className={classNames(projectcss.all, sty.freeBox___7DSvw)}>
                 <div
@@ -847,8 +925,168 @@ function PlasmicHomepage__RenderFunc(props: {
           </section>
           <section className={classNames(projectcss.all, sty.section__sTanX)}>
             <div className={classNames(projectcss.all, sty.freeBox___6V1K)}>
-              <div className={classNames(projectcss.all, sty.freeBox__pbNpV)} />
-
+              <div
+                className={classNames(projectcss.all, sty.freeBox__pbNpV)}
+                dir={"rtl"}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__jN61S
+                  )}
+                >
+                  {
+                    "\u062c\u0632\u0626\u06cc\u0627\u062a \u0635\u0648\u0631\u062a \u062d\u0633\u0627\u0628:"
+                  }
+                </div>
+                <div
+                  className={classNames(projectcss.all, sty.freeBox___6UN4D)}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__txSdd)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__bWvcv
+                      )}
+                    >
+                      {
+                        "\u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u067e\u0627\u06cc\u0647:"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__qr6DK)}
+                  >
+                    <div
+                      data-plasmic-name={"txtReservationInternetResult"}
+                      data-plasmic-override={
+                        overrides.txtReservationInternetResult
+                      }
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.txtReservationInternetResult
+                      )}
+                    >
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $state.reservationInternetResult;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "0";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </div>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__icJ7C)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___3F5BM)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__oCjWa
+                      )}
+                    >
+                      {
+                        "\u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u062a\u0644\u0641\u0646\u06cc:"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___50XVp)}
+                  >
+                    <div
+                      data-plasmic-name={"txtReservationPhoneResult"}
+                      data-plasmic-override={
+                        overrides.txtReservationPhoneResult
+                      }
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.txtReservationPhoneResult
+                      )}
+                    >
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $state.reservsationPhoneResult;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </div>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__o5T2K)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__c3Ih0)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__tAq0C
+                      )}
+                    >
+                      {
+                        "\u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u06a9\u06cc\u0648\u0633\u06a9:"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__mictd)}
+                  >
+                    <div
+                      data-plasmic-name={"txtReservationKioskResult"}
+                      data-plasmic-override={
+                        overrides.txtReservationKioskResult
+                      }
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.txtReservationKioskResult
+                      )}
+                    >
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $state.reservationKioskResult;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div className={classNames(projectcss.all, sty.freeBox___6LVp)}>
                 <div
                   data-plasmic-name={"columns"}
@@ -881,6 +1119,236 @@ function PlasmicHomepage__RenderFunc(props: {
                         )}
                       >
                         {"\u0646\u0648\u0628\u062a \u062f\u0647\u06cc"}
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__rpnki
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__kzwO
+                          )}
+                          dir={"rtl"}
+                        >
+                          <TextInput
+                            data-plasmic-name={"txtInternetReservation"}
+                            data-plasmic-override={
+                              overrides.txtInternetReservation
+                            }
+                            className={classNames(
+                              "__wab_instance",
+                              sty.txtInternetReservation
+                            )}
+                            onChange={(...eventArgs) => {
+                              generateStateOnChangeProp($state, [
+                                "txtInternetReservation",
+                                "value"
+                              ])((e => e.target?.value).apply(null, eventArgs));
+                            }}
+                            placeholder={
+                              "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u0647\u0627\u06cc \u0627\u06cc\u0646\u062a\u0631\u0646\u062a\u06cc \u0631\u0627 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f"
+                            }
+                            value={
+                              generateStateValueProp($state, [
+                                "txtInternetReservation",
+                                "value"
+                              ]) ?? ""
+                            }
+                          />
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__sEn0F
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__cgsHj
+                            )}
+                          >
+                            {
+                              "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u0627\u06cc\u0646\u062a\u0631\u0646\u062a\u06cc:"
+                            }
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__g8Pc
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__vSifj
+                          )}
+                          dir={"rtl"}
+                        >
+                          <TextInput
+                            data-plasmic-name={"txtPhoneReservation"}
+                            data-plasmic-override={
+                              overrides.txtPhoneReservation
+                            }
+                            className={classNames(
+                              "__wab_instance",
+                              sty.txtPhoneReservation
+                            )}
+                            onChange={(...eventArgs) => {
+                              generateStateOnChangeProp($state, [
+                                "txtPhoneReservation",
+                                "value"
+                              ])((e => e.target?.value).apply(null, eventArgs));
+                            }}
+                            placeholder={
+                              "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u0647\u0627\u06cc \u062a\u0644\u0641\u0646\u06cc \u0631\u0627 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f"
+                            }
+                            value={
+                              generateStateValueProp($state, [
+                                "txtPhoneReservation",
+                                "value"
+                              ]) ?? ""
+                            }
+                          />
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__b0K0E
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__n3Kp0
+                            )}
+                            dir={"rtl"}
+                          >
+                            {
+                              "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u062a\u0644\u0641\u0646\u06cc:"
+                            }
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox___1ZgP
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__oLvKu
+                          )}
+                          dir={"rtl"}
+                        >
+                          <TextInput
+                            data-plasmic-name={"txtKioskReservation"}
+                            data-plasmic-override={
+                              overrides.txtKioskReservation
+                            }
+                            className={classNames(
+                              "__wab_instance",
+                              sty.txtKioskReservation
+                            )}
+                            onChange={(...eventArgs) => {
+                              generateStateOnChangeProp($state, [
+                                "txtKioskReservation",
+                                "value"
+                              ])((e => e.target?.value).apply(null, eventArgs));
+                            }}
+                            placeholder={
+                              "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u0647\u0627\u06cc \u06a9\u06cc\u0648\u0633\u06a9 \u0631\u0627 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f"
+                            }
+                            value={
+                              generateStateValueProp($state, [
+                                "txtKioskReservation",
+                                "value"
+                              ]) ?? ""
+                            }
+                          />
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__tdneg
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__tHMbr
+                            )}
+                          >
+                            {
+                              "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u06a9\u06cc\u0648\u0633\u06a9:"
+                            }
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__aZe2N
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___6YCaW
+                          )}
+                        >
+                          <Button
+                            data-plasmic-name={"button"}
+                            data-plasmic-override={overrides.button}
+                            children2={"\u062b\u0628\u062a"}
+                            className={classNames("__wab_instance", sty.button)}
+                            onClick={async event => {
+                              const $steps = {};
+
+                              $steps["runCode"] = true
+                                ? (() => {
+                                    const actionArgs = {
+                                      customFunction: async () => {
+                                        return (() => {
+                                          $state.reservationInternetResult =
+                                            $state.reservationInternetPrice *
+                                            $state.txtInternetReservation.value;
+                                          $state.reservsationPhoneResult =
+                                            $state.reservationPhonePrice *
+                                            $state.txtPhoneReservation.value;
+                                          return ($state.reservationKioskResult =
+                                            $state.reservationKioskPrice *
+                                            $state.txtKioskReservation.value);
+                                        })();
+                                      }
+                                    };
+                                    return (({ customFunction }) => {
+                                      return customFunction();
+                                    })?.apply(null, [actionArgs]);
+                                  })()
+                                : undefined;
+                              if (
+                                $steps["runCode"] != null &&
+                                typeof $steps["runCode"] === "object" &&
+                                typeof $steps["runCode"].then === "function"
+                              ) {
+                                $steps["runCode"] = await $steps["runCode"];
+                              }
+                            }}
+                          />
+                        </div>
                       </div>
                     </div>
                   ) : null}
@@ -1154,8 +1622,15 @@ const PlasmicDescendants = {
     "btnCalculation",
     "btnAnnouncement",
     "btnReservation",
+    "txtReservationInternetResult",
+    "txtReservationPhoneResult",
+    "txtReservationKioskResult",
     "columns",
     "clReservation",
+    "txtInternetReservation",
+    "txtPhoneReservation",
+    "txtKioskReservation",
+    "button",
     "clAnnouncement",
     "clCalculations",
     "clOnlinepayment",
@@ -1175,9 +1650,16 @@ const PlasmicDescendants = {
   btnCalculation: ["btnCalculation"],
   btnAnnouncement: ["btnAnnouncement"],
   btnReservation: ["btnReservation"],
+  txtReservationInternetResult: ["txtReservationInternetResult"],
+  txtReservationPhoneResult: ["txtReservationPhoneResult"],
+  txtReservationKioskResult: ["txtReservationKioskResult"],
   columns: [
     "columns",
     "clReservation",
+    "txtInternetReservation",
+    "txtPhoneReservation",
+    "txtKioskReservation",
+    "button",
     "clAnnouncement",
     "clCalculations",
     "clOnlinepayment",
@@ -1187,7 +1669,17 @@ const PlasmicDescendants = {
     "clDashboard",
     "clMain"
   ],
-  clReservation: ["clReservation"],
+  clReservation: [
+    "clReservation",
+    "txtInternetReservation",
+    "txtPhoneReservation",
+    "txtKioskReservation",
+    "button"
+  ],
+  txtInternetReservation: ["txtInternetReservation"],
+  txtPhoneReservation: ["txtPhoneReservation"],
+  txtKioskReservation: ["txtKioskReservation"],
+  button: ["button"],
   clAnnouncement: ["clAnnouncement"],
   clCalculations: ["clCalculations"],
   clOnlinepayment: ["clOnlinepayment"],
@@ -1212,8 +1704,15 @@ type NodeDefaultElementType = {
   btnCalculation: "div";
   btnAnnouncement: "div";
   btnReservation: "div";
+  txtReservationInternetResult: "div";
+  txtReservationPhoneResult: "div";
+  txtReservationKioskResult: "div";
   columns: "div";
   clReservation: "div";
+  txtInternetReservation: typeof TextInput;
+  txtPhoneReservation: typeof TextInput;
+  txtKioskReservation: typeof TextInput;
+  button: typeof Button;
   clAnnouncement: "div";
   clCalculations: "div";
   clOnlinepayment: "div";
@@ -1294,8 +1793,17 @@ export const PlasmicHomepage = Object.assign(
     btnCalculation: makeNodeComponent("btnCalculation"),
     btnAnnouncement: makeNodeComponent("btnAnnouncement"),
     btnReservation: makeNodeComponent("btnReservation"),
+    txtReservationInternetResult: makeNodeComponent(
+      "txtReservationInternetResult"
+    ),
+    txtReservationPhoneResult: makeNodeComponent("txtReservationPhoneResult"),
+    txtReservationKioskResult: makeNodeComponent("txtReservationKioskResult"),
     columns: makeNodeComponent("columns"),
     clReservation: makeNodeComponent("clReservation"),
+    txtInternetReservation: makeNodeComponent("txtInternetReservation"),
+    txtPhoneReservation: makeNodeComponent("txtPhoneReservation"),
+    txtKioskReservation: makeNodeComponent("txtKioskReservation"),
+    button: makeNodeComponent("button"),
     clAnnouncement: makeNodeComponent("clAnnouncement"),
     clCalculations: makeNodeComponent("clCalculations"),
     clOnlinepayment: makeNodeComponent("clOnlinepayment"),
