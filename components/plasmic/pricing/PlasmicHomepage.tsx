@@ -852,7 +852,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       <React.Fragment>
                         {(() => {
                           try {
-                            return $state.reservationInternetResult;
+                            return $state.reservationInternetResult
+                              .toString()
+                              .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -900,7 +902,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       <React.Fragment>
                         {(() => {
                           try {
-                            return $state.reservsationPhoneResult;
+                            return $state.reservsationPhoneResult
+                              .toString()
+                              .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -927,7 +931,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "\u0645\u062f\u06cc\u0631\u06cc\u062a \u0635\u0641 \u0648 \u0641\u0631\u0627\u062e\u0648\u0627\u0646"
+                        "\u0645\u062f\u06cc\u0631\u06cc\u062a \u0635\u0641 \u0648 \u0641\u0631\u0627\u062e\u0648\u0627\u0646:"
                       }
                     </div>
                   </div>
@@ -948,7 +952,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       <React.Fragment>
                         {(() => {
                           try {
-                            return $state.reservationKioskResult;
+                            return $state.reservationKioskResult
+                              .toString()
+                              .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -994,7 +1000,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       <React.Fragment>
                         {(() => {
                           try {
-                            return $state.announcementResult;
+                            return $state.announcementResult
+                              .toString()
+                              .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -1040,7 +1048,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       <React.Fragment>
                         {(() => {
                           try {
-                            return $state.calculationResult;
+                            return $state.calculationResult
+                              .toString()
+                              .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -1086,7 +1096,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       <React.Fragment>
                         {(() => {
                           try {
-                            return $state.onlinePayemntResult;
+                            return $state.onlinePayemntResult
+                              .toString()
+                              .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -1132,7 +1144,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       <React.Fragment>
                         {(() => {
                           try {
-                            return $state.apiResult;
+                            return $state.apiResult
+                              .toString()
+                              .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -1182,7 +1196,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       <React.Fragment>
                         {(() => {
                           try {
-                            return $state.ehrResult;
+                            return $state.ehrResult
+                              .toString()
+                              .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -1228,7 +1244,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       <React.Fragment>
                         {(() => {
                           try {
-                            return $state.specialSiteResult;
+                            return $state.specialSiteResult
+                              .toString()
+                              .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -1274,7 +1292,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       <React.Fragment>
                         {(() => {
                           try {
-                            return $state.dashboardResult;
+                            return $state.dashboardResult
+                              .toString()
+                              .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -1318,7 +1338,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       <React.Fragment>
                         {(() => {
                           try {
-                            return $state.suminvoiceResult;
+                            return $state.suminvoiceResult
+                              .toString()
+                              .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -2023,27 +2045,37 @@ function PlasmicHomepage__RenderFunc(props: {
                         (async isChecked => {
                           const $steps = {};
 
-                          $steps["runCode"] = true
+                          $steps["updateUser"] = true
                             ? (() => {
                                 const actionArgs = {
-                                  customFunction: async () => {
-                                    return (() => {
-                                      return ($state.txtResevationCount.value =
-                                        $state.txtResevationCount.value);
-                                    })();
-                                  }
+                                  variable: {
+                                    objRoot: $state,
+                                    variablePath: ["user"]
+                                  },
+                                  operation: 0
                                 };
-                                return (({ customFunction }) => {
-                                  return customFunction();
+                                return (({
+                                  variable,
+                                  value,
+                                  startIndex,
+                                  deleteCount
+                                }) => {
+                                  if (!variable) {
+                                    return;
+                                  }
+                                  const { objRoot, variablePath } = variable;
+
+                                  $stateSet(objRoot, variablePath, value);
+                                  return value;
                                 })?.apply(null, [actionArgs]);
                               })()
                             : undefined;
                           if (
-                            $steps["runCode"] != null &&
-                            typeof $steps["runCode"] === "object" &&
-                            typeof $steps["runCode"].then === "function"
+                            $steps["updateUser"] != null &&
+                            typeof $steps["updateUser"] === "object" &&
+                            typeof $steps["updateUser"].then === "function"
                           ) {
-                            $steps["runCode"] = await $steps["runCode"];
+                            $steps["updateUser"] = await $steps["updateUser"];
                           }
                         }).apply(null, eventArgs);
                       }}

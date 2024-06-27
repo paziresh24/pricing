@@ -93,8 +93,8 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .h1 {
-    margin-top: 73px;
-    font-size: 35px;
+    margin-top: 0px;
+    font-size: 20px;
   }
 }
 .freeBox___8CihT {
@@ -115,6 +115,12 @@
   max-width: 100%;
   height: 45px;
   flex-shrink: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .svg___0HXtL {
+    height: 35px;
+    flex-shrink: 0;
+  }
 }
 .section__wtTOr {
   display: grid;
@@ -158,6 +164,12 @@
   grid-column-gap: 10px;
   min-width: 0;
   padding: 8px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox___7DSvw {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-row-gap: 10px;
+  }
 }
 .btnDashboard {
   display: flex;
@@ -449,6 +461,11 @@
   border-radius: 10px;
   padding: 8px;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox___6V1K {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
 .freeBox__pbNpV {
   display: flex;
   position: relative;
@@ -481,7 +498,6 @@
   max-width: 100%;
   margin-top: 100px;
   min-width: 0;
-  padding: 8px;
 }
 .freeBox__txSdd {
   display: flex;
@@ -531,7 +547,6 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
 }
 .freeBox___3F5BM {
   display: flex;
@@ -581,7 +596,6 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
 }
 .freeBox__c3Ih0 {
   display: flex;
@@ -631,7 +645,6 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
 }
 .freeBox___7CiTp {
   display: flex;
@@ -681,7 +694,6 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
 }
 .freeBox___2641T {
   display: flex;
@@ -731,7 +743,6 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
 }
 .freeBox__hGbk9 {
   display: flex;
@@ -781,7 +792,6 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
 }
 .freeBox___5Ih0L {
   display: flex;
@@ -831,7 +841,6 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
 }
 .freeBox__qTl3U {
   display: flex;
@@ -881,7 +890,6 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
 }
 .freeBox__rl8Lw {
   display: flex;
@@ -931,7 +939,6 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
 }
 .freeBox___9FO5I {
   display: flex;
@@ -981,7 +988,6 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
 }
 .freeBox___6KqmY {
   display: flex;
@@ -1518,7 +1524,6 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
 }
 .freeBox__an2Xd {
   display: flex;
@@ -1564,7 +1569,6 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
 }
 .freeBox___81XZh {
   display: flex;
@@ -1610,7 +1614,6 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
 }
 .freeBox___83JL {
   display: flex;
@@ -1656,7 +1659,6 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
 }
 .freeBox__qMtKh {
   display: flex;
@@ -1702,7 +1704,6 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
 }
 .freeBox__zJYbx {
   display: flex;
@@ -1748,7 +1749,6 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
 }
 .freeBox__cHbRg {
   display: flex;
@@ -1794,7 +1794,6 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
 }
 .freeBox__ubeCl {
   display: flex;
@@ -1840,7 +1839,6 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
 }
 .freeBox__oanOw {
   display: flex;
@@ -1886,7 +1884,6 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
 }
 .freeBox__dnhQr {
   display: flex;
@@ -1932,7 +1929,6 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
 }
 .freeBox__ple {
   display: flex;
