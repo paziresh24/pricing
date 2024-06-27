@@ -149,12 +149,6 @@ function PlasmicHomepage__RenderFunc(props: {
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
-        path: "count",
-        type: "private",
-        variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 0
-      },
-      {
         path: "user",
         type: "private",
         variableType: "object",
@@ -171,6 +165,48 @@ function PlasmicHomepage__RenderFunc(props: {
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "clCalculationState",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "clOnlinepaymentState",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "clApiState",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "clEhrState",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "clSpecialsiteState",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "clDashboardState",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "clMainState",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => true
       }
     ],
     [$props, $ctx, $refs]
@@ -340,6 +376,39 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-name={"btnDashboard"}
                   data-plasmic-override={overrides.btnDashboard}
                   className={classNames(projectcss.all, sty.btnDashboard)}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                $state.clReservationState = false;
+                                $state.clMainState = false;
+                                $state.clAnnouncementState = false;
+                                $state.clCalculationState = false;
+                                $state.clOnlinepaymentState = false;
+                                $state.clApiState = false;
+                                $state.clEhrState = false;
+                                $state.clSpecialsiteState = false;
+                                return ($state.clDashboardState = true);
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
+                    ) {
+                      $steps["runCode"] = await $steps["runCode"];
+                    }
+                  }}
                 >
                   <Icon10Icon
                     className={classNames(projectcss.all, sty.svg__cbLBw)}
@@ -362,6 +431,39 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-name={"btnSpecialsite"}
                   data-plasmic-override={overrides.btnSpecialsite}
                   className={classNames(projectcss.all, sty.btnSpecialsite)}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                $state.clReservationState = false;
+                                $state.clMainState = false;
+                                $state.clAnnouncementState = false;
+                                $state.clCalculationState = false;
+                                $state.clOnlinepaymentState = false;
+                                $state.clApiState = false;
+                                $state.clEhrState = false;
+                                $state.clSpecialsiteState = true;
+                                return ($state.clDashboardState = false);
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
+                    ) {
+                      $steps["runCode"] = await $steps["runCode"];
+                    }
+                  }}
                 >
                   <Icon9Icon
                     className={classNames(projectcss.all, sty.svg___6EjZr)}
@@ -384,6 +486,39 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-name={"btnEhr"}
                   data-plasmic-override={overrides.btnEhr}
                   className={classNames(projectcss.all, sty.btnEhr)}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                $state.clReservationState = false;
+                                $state.clMainState = false;
+                                $state.clAnnouncementState = false;
+                                $state.clCalculationState = false;
+                                $state.clOnlinepaymentState = false;
+                                $state.clApiState = false;
+                                $state.clEhrState = true;
+                                $state.clSpecialsiteState = false;
+                                return ($state.clDashboardState = false);
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
+                    ) {
+                      $steps["runCode"] = await $steps["runCode"];
+                    }
+                  }}
                 >
                   <Icon9Icon
                     className={classNames(projectcss.all, sty.svg__rXLkj)}
@@ -406,6 +541,39 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-name={"btnApi"}
                   data-plasmic-override={overrides.btnApi}
                   className={classNames(projectcss.all, sty.btnApi)}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                $state.clReservationState = false;
+                                $state.clMainState = false;
+                                $state.clAnnouncementState = false;
+                                $state.clCalculationState = false;
+                                $state.clOnlinepaymentState = false;
+                                $state.clApiState = true;
+                                $state.clEhrState = false;
+                                $state.clSpecialsiteState = false;
+                                return ($state.clDashboardState = false);
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
+                    ) {
+                      $steps["runCode"] = await $steps["runCode"];
+                    }
+                  }}
                 >
                   <Icon8Icon
                     className={classNames(projectcss.all, sty.svg__sd3Vz)}
@@ -428,6 +596,39 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-name={"btnOnlinepayment"}
                   data-plasmic-override={overrides.btnOnlinepayment}
                   className={classNames(projectcss.all, sty.btnOnlinepayment)}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                $state.clReservationState = false;
+                                $state.clMainState = false;
+                                $state.clAnnouncementState = false;
+                                $state.clCalculationState = false;
+                                $state.clOnlinepaymentState = true;
+                                $state.clApiState = false;
+                                $state.clEhrState = false;
+                                $state.clSpecialsiteState = false;
+                                return ($state.clDashboardState = false);
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
+                    ) {
+                      $steps["runCode"] = await $steps["runCode"];
+                    }
+                  }}
                 >
                   <Icon7Icon
                     className={classNames(projectcss.all, sty.svg___8W1Xb)}
@@ -450,6 +651,39 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-name={"btnCalculation"}
                   data-plasmic-override={overrides.btnCalculation}
                   className={classNames(projectcss.all, sty.btnCalculation)}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                $state.clReservationState = false;
+                                $state.clMainState = false;
+                                $state.clAnnouncementState = false;
+                                $state.clCalculationState = true;
+                                $state.clOnlinepaymentState = false;
+                                $state.clApiState = false;
+                                $state.clEhrState = false;
+                                $state.clSpecialsiteState = false;
+                                return ($state.clDashboardState = false);
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
+                    ) {
+                      $steps["runCode"] = await $steps["runCode"];
+                    }
+                  }}
                 >
                   <Icon6Icon
                     className={classNames(projectcss.all, sty.svg__yUwH)}
@@ -470,6 +704,39 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-name={"btnAnnouncement"}
                   data-plasmic-override={overrides.btnAnnouncement}
                   className={classNames(projectcss.all, sty.btnAnnouncement)}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                $state.clReservationState = false;
+                                $state.clMainState = false;
+                                $state.clAnnouncementState = true;
+                                $state.clCalculationState = false;
+                                $state.clOnlinepaymentState = false;
+                                $state.clApiState = false;
+                                $state.clEhrState = false;
+                                $state.clSpecialsiteState = false;
+                                return ($state.clDashboardState = false);
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
+                    ) {
+                      $steps["runCode"] = await $steps["runCode"];
+                    }
+                  }}
                 >
                   <Icon5Icon
                     className={classNames(projectcss.all, sty.svg__ph7A)}
@@ -490,6 +757,75 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-name={"btnReservation"}
                   data-plasmic-override={overrides.btnReservation}
                   className={classNames(projectcss.all, sty.btnReservation)}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                $state.clReservationState = true;
+                                $state.clMainState = false;
+                                $state.clAnnouncementState = false;
+                                $state.clCalculationState = false;
+                                $state.clOnlinepaymentState = false;
+                                $state.clApiState = false;
+                                $state.clEhrState = false;
+                                $state.clSpecialsiteState = false;
+                                return ($state.clDashboardState = false);
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
+                    ) {
+                      $steps["runCode"] = await $steps["runCode"];
+                    }
+                  }}
+                  onMouseOver={async event => {
+                    const $steps = {};
+
+                    $steps["updateUser"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["user"]
+                            },
+                            operation: 0
+                          };
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
+                            }
+                            const { objRoot, variablePath } = variable;
+
+                            $stateSet(objRoot, variablePath, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateUser"] != null &&
+                      typeof $steps["updateUser"] === "object" &&
+                      typeof $steps["updateUser"].then === "function"
+                    ) {
+                      $steps["updateUser"] = await $steps["updateUser"];
+                    }
+                  }}
                 >
                   <Icon3Icon
                     className={classNames(projectcss.all, sty.svg___4NJPi)}
@@ -548,138 +884,253 @@ function PlasmicHomepage__RenderFunc(props: {
                       </div>
                     </div>
                   ) : null}
-                  <div
-                    data-plasmic-name={"clAnnouncement"}
-                    data-plasmic-override={overrides.clAnnouncement}
-                    className={classNames(projectcss.all, sty.clAnnouncement)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__x2Jmq
-                      )}
-                    >
-                      {"\u0627\u0639\u0644\u0627\u0646\u0627\u062a"}
-                    </div>
-                  </div>
-                  <div
-                    data-plasmic-name={"clCalculations"}
-                    data-plasmic-override={overrides.clCalculations}
-                    className={classNames(projectcss.all, sty.clCalculations)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__yHvEa
-                      )}
-                    >
-                      {"\u0645\u062d\u0627\u0633\u0628\u0627\u062a"}
-                    </div>
-                  </div>
-                  <div
-                    data-plasmic-name={"clOnlinepayment"}
-                    data-plasmic-override={overrides.clOnlinepayment}
-                    className={classNames(projectcss.all, sty.clOnlinepayment)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___2Jdcw
-                      )}
-                    >
-                      {
-                        "\u067e\u0631\u062f\u0627\u062e\u062a \u0622\u0646\u0644\u0627\u06cc\u0646"
+                  {(() => {
+                    try {
+                      return $state.clAnnouncementState;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
                       }
-                    </div>
-                  </div>
-                  <div
-                    data-plasmic-name={"clApi"}
-                    data-plasmic-override={overrides.clApi}
-                    className={classNames(projectcss.all, sty.clApi)}
-                  >
+                      throw e;
+                    }
+                  })() ? (
                     <div
+                      data-plasmic-name={"clAnnouncement"}
+                      data-plasmic-override={overrides.clAnnouncement}
+                      className={classNames(projectcss.all, sty.clAnnouncement)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__x2Jmq
+                        )}
+                      >
+                        {"\u0627\u0639\u0644\u0627\u0646\u0627\u062a"}
+                      </div>
+                    </div>
+                  ) : null}
+                  {(() => {
+                    try {
+                      return $state.clCalculationState;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })() ? (
+                    <div
+                      data-plasmic-name={"clCalculations"}
+                      data-plasmic-override={overrides.clCalculations}
+                      className={classNames(projectcss.all, sty.clCalculations)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__yHvEa
+                        )}
+                      >
+                        {"\u0645\u062d\u0627\u0633\u0628\u0627\u062a"}
+                      </div>
+                    </div>
+                  ) : null}
+                  {(() => {
+                    try {
+                      return $state.clOnlinepaymentState;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })() ? (
+                    <div
+                      data-plasmic-name={"clOnlinepayment"}
+                      data-plasmic-override={overrides.clOnlinepayment}
                       className={classNames(
                         projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__ddw3B
+                        sty.clOnlinepayment
                       )}
                     >
-                      {
-                        "\u0627\u0631\u062a\u0628\u0627\u0637 \u0628\u0627 \u0633\u0627\u06cc\u0631 \u0646\u0631\u0645 \u0627\u0641\u0632\u0627\u0631 \u0647\u0627"
-                      }
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___2Jdcw
+                        )}
+                      >
+                        {
+                          "\u067e\u0631\u062f\u0627\u062e\u062a \u0622\u0646\u0644\u0627\u06cc\u0646"
+                        }
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    data-plasmic-name={"clEhr"}
-                    data-plasmic-override={overrides.clEhr}
-                    className={classNames(projectcss.all, sty.clEhr)}
-                  >
+                  ) : null}
+                  {(() => {
+                    try {
+                      return $state.clApiState;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })() ? (
                     <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__ws91A
-                      )}
+                      data-plasmic-name={"clApi"}
+                      data-plasmic-override={overrides.clApi}
+                      className={classNames(projectcss.all, sty.clApi)}
                     >
-                      {
-                        "\u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631"
-                      }
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__ddw3B
+                        )}
+                      >
+                        {
+                          "\u0627\u0631\u062a\u0628\u0627\u0637 \u0628\u0627 \u0633\u0627\u06cc\u0631 \u0646\u0631\u0645 \u0627\u0641\u0632\u0627\u0631 \u0647\u0627"
+                        }
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    data-plasmic-name={"clSpecialsite"}
-                    data-plasmic-override={overrides.clSpecialsite}
-                    className={classNames(projectcss.all, sty.clSpecialsite)}
-                  >
+                  ) : null}
+                  {(() => {
+                    try {
+                      return $state.clEhrState;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })() ? (
                     <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__xjtg5
-                      )}
+                      data-plasmic-name={"clEhr"}
+                      data-plasmic-override={overrides.clEhr}
+                      className={classNames(projectcss.all, sty.clEhr)}
                     >
-                      {
-                        "\u0633\u0627\u06cc\u062a \u0627\u062e\u062a\u0635\u0627\u0635\u06cc"
-                      }
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__ws91A
+                        )}
+                      >
+                        {
+                          "\u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631"
+                        }
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    data-plasmic-name={"clDashboard"}
-                    data-plasmic-override={overrides.clDashboard}
-                    className={classNames(projectcss.all, sty.clDashboard)}
-                  >
+                  ) : null}
+                  {(() => {
+                    try {
+                      return $state.clSpecialsiteState;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })() ? (
                     <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__vcuHr
-                      )}
+                      data-plasmic-name={"clSpecialsite"}
+                      data-plasmic-override={overrides.clSpecialsite}
+                      className={classNames(projectcss.all, sty.clSpecialsite)}
                     >
-                      {
-                        "\u062f\u0627\u0634\u0628\u0648\u0631\u062f \u06af\u0632\u0627\u0631\u0634\u0627\u062a \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc"
-                      }
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__xjtg5
+                        )}
+                      >
+                        {
+                          "\u0633\u0627\u06cc\u062a \u0627\u062e\u062a\u0635\u0627\u0635\u06cc"
+                        }
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    data-plasmic-name={"clMain"}
-                    data-plasmic-override={overrides.clMain}
-                    className={classNames(projectcss.all, sty.clMain)}
-                  >
+                  ) : null}
+                  {(() => {
+                    try {
+                      return $state.clDashboardState;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })() ? (
                     <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__qqROb
-                      )}
+                      data-plasmic-name={"clDashboard"}
+                      data-plasmic-override={overrides.clDashboard}
+                      className={classNames(projectcss.all, sty.clDashboard)}
                     >
-                      {
-                        "\u062c\u0647\u062a \u0628\u0631\u0622\u0648\u0631\u062f \u0642\u06cc\u0645\u062a \u0627\u0628\u062a\u062f\u0627 \u06cc\u06a9 \u0645\u0627\u0698\u0648\u0644 \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u0646\u0645\u0627\u06cc\u06cc\u062f"
-                      }
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__vcuHr
+                        )}
+                      >
+                        {
+                          "\u062f\u0627\u0634\u0628\u0648\u0631\u062f \u06af\u0632\u0627\u0631\u0634\u0627\u062a \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc"
+                        }
+                      </div>
                     </div>
-                  </div>
+                  ) : null}
+                  {(() => {
+                    try {
+                      return $state.clMainState;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })() ? (
+                    <div
+                      data-plasmic-name={"clMain"}
+                      data-plasmic-override={overrides.clMain}
+                      className={classNames(projectcss.all, sty.clMain)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__qqROb
+                        )}
+                      >
+                        {
+                          "\u062c\u0647\u062a \u0628\u0631\u0622\u0648\u0631\u062f \u0642\u06cc\u0645\u062a \u0627\u0628\u062a\u062f\u0627 \u06cc\u06a9 \u0645\u0627\u0698\u0648\u0644 \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u0646\u0645\u0627\u06cc\u06cc\u062f"
+                        }
+                      </div>
+                    </div>
+                  ) : null}
                 </div>
               </div>
             </div>
