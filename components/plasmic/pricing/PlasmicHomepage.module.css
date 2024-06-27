@@ -665,7 +665,7 @@
   min-width: 0;
   padding: 8px;
 }
-.txtReservationKioskResult2 {
+.txtAnnouncementResult {
   position: relative;
   width: 100%;
   height: auto;
@@ -715,7 +715,7 @@
   min-width: 0;
   padding: 8px;
 }
-.txtReservationKioskResult3 {
+.txtCalculationResult {
   position: relative;
   width: 100%;
   height: auto;
@@ -765,7 +765,7 @@
   min-width: 0;
   padding: 8px;
 }
-.txtReservationKioskResult4 {
+.txtOnlinePaymentResult {
   position: relative;
   width: 100%;
   height: auto;
@@ -815,7 +815,7 @@
   min-width: 0;
   padding: 8px;
 }
-.txtReservationKioskResult5 {
+.txtapiResult {
   position: relative;
   width: 100%;
   height: auto;
@@ -853,7 +853,7 @@
   text-align: left;
   min-width: 0;
 }
-.freeBox__lqTaG {
+.txtEhrResult {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -915,7 +915,7 @@
   min-width: 0;
   padding: 8px;
 }
-.txtReservationKioskResult7 {
+.txtSpecialSiteResult {
   position: relative;
   width: 100%;
   height: auto;
@@ -965,7 +965,58 @@
   min-width: 0;
   padding: 8px;
 }
-.txtReservationKioskResult8 {
+.txtDashboardResult {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  text-align: right;
+  min-width: 0;
+}
+.freeBox__x4CAq {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
+.freeBox___6KqmY {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 8px;
+}
+.text___2LuHe {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  text-align: left;
+  padding-left: 0px;
+  min-width: 0;
+}
+.freeBox__hKHfX {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+.txtSumInvoice {
   position: relative;
   width: 100%;
   height: auto;
@@ -1501,7 +1552,7 @@
   min-width: 0;
   padding: 8px;
 }
-.checkbox:global(.__wab_instance) {
+.reservationCheck:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
 }
@@ -1547,7 +1598,7 @@
   min-width: 0;
   padding: 8px;
 }
-.checkbox2:global(.__wab_instance) {
+.reservationPhoneCheck:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
 }
@@ -1593,7 +1644,7 @@
   min-width: 0;
   padding: 8px;
 }
-.checkbox3:global(.__wab_instance) {
+.kioskResevationCheck:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
 }
@@ -1639,7 +1690,7 @@
   min-width: 0;
   padding: 8px;
 }
-.checkbox4:global(.__wab_instance) {
+.announcementCheck:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
 }
@@ -1685,7 +1736,7 @@
   min-width: 0;
   padding: 8px;
 }
-.checkbox5:global(.__wab_instance) {
+.calculationCheck:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
 }
@@ -1731,7 +1782,7 @@
   min-width: 0;
   padding: 8px;
 }
-.checkbox6:global(.__wab_instance) {
+.onlinepaymentCheck:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
 }
@@ -1777,7 +1828,7 @@
   min-width: 0;
   padding: 8px;
 }
-.checkbox7:global(.__wab_instance) {
+.apiCheck:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
 }
@@ -1823,7 +1874,7 @@
   min-width: 0;
   padding: 8px;
 }
-.checkbox8:global(.__wab_instance) {
+.ehrCheck:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
 }
@@ -1869,7 +1920,7 @@
   min-width: 0;
   padding: 8px;
 }
-.checkbox9:global(.__wab_instance) {
+.specialSiteCheck:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
 }
@@ -1916,7 +1967,7 @@
   min-width: 0;
   padding: 8px;
 }
-.checkbox10:global(.__wab_instance) {
+.dashboardCheck:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
 }

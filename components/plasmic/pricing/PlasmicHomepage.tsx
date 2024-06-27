@@ -112,13 +112,15 @@ export type PlasmicHomepage__OverridesType = {
   txtReservationInternetResult?: Flex__<"div">;
   txtReservationPhoneResult?: Flex__<"div">;
   txtReservationKioskResult?: Flex__<"div">;
-  txtReservationKioskResult2?: Flex__<"div">;
-  txtReservationKioskResult3?: Flex__<"div">;
-  txtReservationKioskResult4?: Flex__<"div">;
-  txtReservationKioskResult5?: Flex__<"div">;
+  txtAnnouncementResult?: Flex__<"div">;
+  txtCalculationResult?: Flex__<"div">;
+  txtOnlinePaymentResult?: Flex__<"div">;
+  txtapiResult?: Flex__<"div">;
+  txtEhrResult?: Flex__<"div">;
   txtReservationKioskResult6?: Flex__<"div">;
-  txtReservationKioskResult7?: Flex__<"div">;
-  txtReservationKioskResult8?: Flex__<"div">;
+  txtSpecialSiteResult?: Flex__<"div">;
+  txtDashboardResult?: Flex__<"div">;
+  txtSumInvoice?: Flex__<"div">;
   columns?: Flex__<"div">;
   clReservation?: Flex__<"div">;
   txtInternetReservation?: Flex__<typeof TextInput>;
@@ -134,16 +136,16 @@ export type PlasmicHomepage__OverridesType = {
   clDashboard?: Flex__<"div">;
   clMain?: Flex__<"div">;
   txtResevationCount?: Flex__<typeof TextInput>;
-  checkbox?: Flex__<typeof Checkbox>;
-  checkbox2?: Flex__<typeof Checkbox>;
-  checkbox3?: Flex__<typeof Checkbox>;
-  checkbox4?: Flex__<typeof Checkbox>;
-  checkbox5?: Flex__<typeof Checkbox>;
-  checkbox6?: Flex__<typeof Checkbox>;
-  checkbox7?: Flex__<typeof Checkbox>;
-  checkbox8?: Flex__<typeof Checkbox>;
-  checkbox9?: Flex__<typeof Checkbox>;
-  checkbox10?: Flex__<typeof Checkbox>;
+  reservationCheck?: Flex__<typeof Checkbox>;
+  reservationPhoneCheck?: Flex__<typeof Checkbox>;
+  kioskResevationCheck?: Flex__<typeof Checkbox>;
+  announcementCheck?: Flex__<typeof Checkbox>;
+  calculationCheck?: Flex__<typeof Checkbox>;
+  onlinepaymentCheck?: Flex__<typeof Checkbox>;
+  apiCheck?: Flex__<typeof Checkbox>;
+  ehrCheck?: Flex__<typeof Checkbox>;
+  specialSiteCheck?: Flex__<typeof Checkbox>;
+  dashboardCheck?: Flex__<typeof Checkbox>;
 };
 
 export interface DefaultHomepageProps {}
@@ -302,64 +304,154 @@ function PlasmicHomepage__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $ctx }) => "0"
       },
       {
-        path: "checkbox.isChecked",
+        path: "reservationCheck.isChecked",
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "checkbox2.isChecked",
+        path: "reservationPhoneCheck.isChecked",
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "checkbox3.isChecked",
+        path: "kioskResevationCheck.isChecked",
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "checkbox4.isChecked",
+        path: "announcementCheck.isChecked",
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "checkbox5.isChecked",
+        path: "calculationCheck.isChecked",
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "checkbox6.isChecked",
+        path: "onlinepaymentCheck.isChecked",
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "checkbox7.isChecked",
+        path: "apiCheck.isChecked",
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "checkbox8.isChecked",
+        path: "ehrCheck.isChecked",
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "checkbox9.isChecked",
+        path: "specialSiteCheck.isChecked",
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "checkbox10.isChecked",
+        path: "dashboardCheck.isChecked",
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "announcementResult",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
+      },
+      {
+        path: "calculationResult",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
+      },
+      {
+        path: "onlinePayemntResult",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
+      },
+      {
+        path: "apiResult",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
+      },
+      {
+        path: "ehrResult",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
+      },
+      {
+        path: "specialSiteResult",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
+      },
+      {
+        path: "dashboardResult",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
+      },
+      {
+        path: "suminvoiceResult",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
+      },
+      {
+        path: "calculationPrice",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 200
+      },
+      {
+        path: "onlinePayemntPrice",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 100
+      },
+      {
+        path: "apiPrice",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 100
+      },
+      {
+        path: "dashboardPrice",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 1000000
+      },
+      {
+        path: "announcementPrice",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 100
+      },
+      {
+        path: "ehrPrice",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 300
+      },
+      {
+        path: "specialSitePrice",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 1500000
       }
     ],
     [$props, $ctx, $refs]
@@ -891,20 +983,18 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(projectcss.all, sty.freeBox__muC25)}
                   >
                     <div
-                      data-plasmic-name={"txtReservationKioskResult2"}
-                      data-plasmic-override={
-                        overrides.txtReservationKioskResult2
-                      }
+                      data-plasmic-name={"txtAnnouncementResult"}
+                      data-plasmic-override={overrides.txtAnnouncementResult}
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.txtReservationKioskResult2
+                        sty.txtAnnouncementResult
                       )}
                     >
                       <React.Fragment>
                         {(() => {
                           try {
-                            return $state.reservationKioskResult;
+                            return $state.announcementResult;
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -939,20 +1029,18 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(projectcss.all, sty.freeBox___0S54R)}
                   >
                     <div
-                      data-plasmic-name={"txtReservationKioskResult3"}
-                      data-plasmic-override={
-                        overrides.txtReservationKioskResult3
-                      }
+                      data-plasmic-name={"txtCalculationResult"}
+                      data-plasmic-override={overrides.txtCalculationResult}
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.txtReservationKioskResult3
+                        sty.txtCalculationResult
                       )}
                     >
                       <React.Fragment>
                         {(() => {
                           try {
-                            return $state.reservationKioskResult;
+                            return $state.calculationResult;
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -987,20 +1075,18 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(projectcss.all, sty.freeBox__iLuZ8)}
                   >
                     <div
-                      data-plasmic-name={"txtReservationKioskResult4"}
-                      data-plasmic-override={
-                        overrides.txtReservationKioskResult4
-                      }
+                      data-plasmic-name={"txtOnlinePaymentResult"}
+                      data-plasmic-override={overrides.txtOnlinePaymentResult}
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.txtReservationKioskResult4
+                        sty.txtOnlinePaymentResult
                       )}
                     >
                       <React.Fragment>
                         {(() => {
                           try {
-                            return $state.reservationKioskResult;
+                            return $state.onlinePayemntResult;
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -1035,20 +1121,18 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(projectcss.all, sty.freeBox__jydXs)}
                   >
                     <div
-                      data-plasmic-name={"txtReservationKioskResult5"}
-                      data-plasmic-override={
-                        overrides.txtReservationKioskResult5
-                      }
+                      data-plasmic-name={"txtapiResult"}
+                      data-plasmic-override={overrides.txtapiResult}
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.txtReservationKioskResult5
+                        sty.txtapiResult
                       )}
                     >
                       <React.Fragment>
                         {(() => {
                           try {
-                            return $state.reservationKioskResult;
+                            return $state.apiResult;
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -1075,12 +1159,14 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "\u0645\u0627\u0632\u0648\u0644 \u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631:"
+                        "\u0645\u0627\u0698\u0648\u0644 \u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631:"
                       }
                     </div>
                   </div>
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__lqTaG)}
+                    data-plasmic-name={"txtEhrResult"}
+                    data-plasmic-override={overrides.txtEhrResult}
+                    className={classNames(projectcss.all, sty.txtEhrResult)}
                   >
                     <div
                       data-plasmic-name={"txtReservationKioskResult6"}
@@ -1096,7 +1182,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       <React.Fragment>
                         {(() => {
                           try {
-                            return $state.reservationKioskResult;
+                            return $state.ehrResult;
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -1131,20 +1217,18 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(projectcss.all, sty.freeBox__y4W2G)}
                   >
                     <div
-                      data-plasmic-name={"txtReservationKioskResult7"}
-                      data-plasmic-override={
-                        overrides.txtReservationKioskResult7
-                      }
+                      data-plasmic-name={"txtSpecialSiteResult"}
+                      data-plasmic-override={overrides.txtSpecialSiteResult}
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.txtReservationKioskResult7
+                        sty.txtSpecialSiteResult
                       )}
                     >
                       <React.Fragment>
                         {(() => {
                           try {
-                            return $state.reservationKioskResult;
+                            return $state.specialSiteResult;
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -1179,20 +1263,62 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(projectcss.all, sty.freeBox__ieJ6Z)}
                   >
                     <div
-                      data-plasmic-name={"txtReservationKioskResult8"}
-                      data-plasmic-override={
-                        overrides.txtReservationKioskResult8
-                      }
+                      data-plasmic-name={"txtDashboardResult"}
+                      data-plasmic-override={overrides.txtDashboardResult}
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.txtReservationKioskResult8
+                        sty.txtDashboardResult
                       )}
                     >
                       <React.Fragment>
                         {(() => {
                           try {
-                            return $state.reservationKioskResult;
+                            return $state.dashboardResult;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </div>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__x4CAq)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___6KqmY)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___2LuHe
+                      )}
+                    >
+                      {"\u062c\u0645\u0639 \u06a9\u0644:"}
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__hKHfX)}
+                  >
+                    <div
+                      data-plasmic-name={"txtSumInvoice"}
+                      data-plasmic-override={overrides.txtSumInvoice}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.txtSumInvoice
+                      )}
+                    >
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $state.suminvoiceResult;
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -1706,6 +1832,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       data-plasmic-name={"clMain"}
                       data-plasmic-override={overrides.clMain}
                       className={classNames(projectcss.all, sty.clMain)}
+                      dir={"rtl"}
                     >
                       <div
                         className={classNames(
@@ -1733,11 +1860,96 @@ function PlasmicHomepage__RenderFunc(props: {
                         "__wab_instance",
                         sty.txtResevationCount
                       )}
-                      onChange={(...eventArgs) => {
-                        generateStateOnChangeProp($state, [
-                          "txtResevationCount",
-                          "value"
-                        ])((e => e.target?.value).apply(null, eventArgs));
+                      onChange={async (...eventArgs: any) => {
+                        ((...eventArgs) => {
+                          generateStateOnChangeProp($state, [
+                            "txtResevationCount",
+                            "value"
+                          ])((e => e.target?.value).apply(null, eventArgs));
+                        }).apply(null, eventArgs);
+                        (async event => {
+                          const $steps = {};
+
+                          $steps["runCode"] = true
+                            ? (() => {
+                                const actionArgs = {
+                                  customFunction: async () => {
+                                    return (() => {
+                                      $state.reservationCheck.isChecked
+                                        ? ($state.reservationInternetResult =
+                                            $state.reservationInternetPrice *
+                                            $state.txtResevationCount.value)
+                                        : ($state.reservationInternetResult = 0);
+                                      $state.reservationPhoneCheck.isChecked
+                                        ? ($state.reservsationPhoneResult =
+                                            $state.reservationPhonePrice *
+                                            $state.txtResevationCount.value)
+                                        : ($state.reservsationPhoneResult = 0);
+                                      $state.kioskResevationCheck.isChecked
+                                        ? ($state.reservationKioskResult =
+                                            $state.reservationKioskPrice *
+                                            $state.txtResevationCount.value)
+                                        : ($state.reservationKioskResult = 0);
+                                      $state.announcementCheck.isChecked
+                                        ? ($state.announcementResult =
+                                            $state.announcementPrice *
+                                            $state.txtResevationCount.value)
+                                        : ($state.announcementResult = 0);
+                                      $state.calculationCheck.isChecked
+                                        ? ($state.calculationResult =
+                                            $state.calculationPrice *
+                                            $state.txtResevationCount.value)
+                                        : ($state.calculationResult = 0);
+                                      $state.onlinepaymentCheck.isChecked
+                                        ? ($state.onlinePayemntResult =
+                                            $state.onlinePayemntPrice *
+                                            $state.txtResevationCount.value)
+                                        : ($state.onlinePayemntResult = 0);
+                                      $state.apiCheck.isChecked
+                                        ? ($state.apiResult =
+                                            $state.apiPrice *
+                                            $state.txtResevationCount.value)
+                                        : ($state.apiResult = 0);
+                                      $state.ehrCheck.isChecked
+                                        ? ($state.ehrResult =
+                                            $state.ehrPrice *
+                                            $state.txtResevationCount.value)
+                                        : ($state.ehrResult = 0);
+                                      $state.specialSiteCheck.isChecked
+                                        ? ($state.specialSiteResult =
+                                            $state.specialSitePrice)
+                                        : ($state.specialSiteResult = 0);
+                                      $state.dashboardCheck.isChecked
+                                        ? ($state.dashboardResult =
+                                            $state.dashboardPrice)
+                                        : ($state.dashboardResult = 0);
+                                      return ($state.suminvoiceResult =
+                                        $state.dashboardResult +
+                                        $state.specialSiteResult +
+                                        $state.ehrResult +
+                                        $state.apiResult +
+                                        $state.onlinePayemntResult +
+                                        $state.calculationResult +
+                                        $state.announcementResult +
+                                        $state.reservationKioskResult +
+                                        $state.reservsationPhoneResult +
+                                        $state.reservationInternetResult);
+                                    })();
+                                  }
+                                };
+                                return (({ customFunction }) => {
+                                  return customFunction();
+                                })?.apply(null, [actionArgs]);
+                              })()
+                            : undefined;
+                          if (
+                            $steps["runCode"] != null &&
+                            typeof $steps["runCode"] === "object" &&
+                            typeof $steps["runCode"].then === "function"
+                          ) {
+                            $steps["runCode"] = await $steps["runCode"];
+                          }
+                        }).apply(null, eventArgs);
                       }}
                       placeholder={
                         "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a"
@@ -1780,7 +1992,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "\u0645\u0627\u0632\u0648\u0644 \u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u067e\u0627\u06cc\u0647"
+                        "\u0645\u0627\u0698\u0648\u0644 \u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u067e\u0627\u06cc\u0647"
                       }
                     </div>
                   </div>
@@ -1789,20 +2001,51 @@ function PlasmicHomepage__RenderFunc(props: {
                     dir={"rtl"}
                   >
                     <Checkbox
-                      data-plasmic-name={"checkbox"}
-                      data-plasmic-override={overrides.checkbox}
-                      className={classNames("__wab_instance", sty.checkbox)}
+                      data-plasmic-name={"reservationCheck"}
+                      data-plasmic-override={overrides.reservationCheck}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.reservationCheck
+                      )}
                       isChecked={
                         generateStateValueProp($state, [
-                          "checkbox",
+                          "reservationCheck",
                           "isChecked"
                         ]) ?? false
                       }
-                      onChange={(...eventArgs) => {
-                        generateStateOnChangeProp($state, [
-                          "checkbox",
-                          "isChecked"
-                        ])(eventArgs[0]);
+                      onChange={async (...eventArgs: any) => {
+                        ((...eventArgs) => {
+                          generateStateOnChangeProp($state, [
+                            "reservationCheck",
+                            "isChecked"
+                          ])(eventArgs[0]);
+                        }).apply(null, eventArgs);
+                        (async isChecked => {
+                          const $steps = {};
+
+                          $steps["runCode"] = true
+                            ? (() => {
+                                const actionArgs = {
+                                  customFunction: async () => {
+                                    return (() => {
+                                      return ($state.txtResevationCount.value =
+                                        $state.txtResevationCount.value);
+                                    })();
+                                  }
+                                };
+                                return (({ customFunction }) => {
+                                  return customFunction();
+                                })?.apply(null, [actionArgs]);
+                              })()
+                            : undefined;
+                          if (
+                            $steps["runCode"] != null &&
+                            typeof $steps["runCode"] === "object" &&
+                            typeof $steps["runCode"].then === "function"
+                          ) {
+                            $steps["runCode"] = await $steps["runCode"];
+                          }
+                        }).apply(null, eventArgs);
                       }}
                     >
                       {""}
@@ -1822,7 +2065,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "\u0645\u0627\u0632\u0648\u0644 \u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u062a\u0644\u0641\u0646\u06cc"
+                        "\u0645\u0627\u0698\u0648\u0644 \u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u062a\u0644\u0641\u0646\u06cc"
                       }
                     </div>
                   </div>
@@ -1831,18 +2074,21 @@ function PlasmicHomepage__RenderFunc(props: {
                     dir={"rtl"}
                   >
                     <Checkbox
-                      data-plasmic-name={"checkbox2"}
-                      data-plasmic-override={overrides.checkbox2}
-                      className={classNames("__wab_instance", sty.checkbox2)}
+                      data-plasmic-name={"reservationPhoneCheck"}
+                      data-plasmic-override={overrides.reservationPhoneCheck}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.reservationPhoneCheck
+                      )}
                       isChecked={
                         generateStateValueProp($state, [
-                          "checkbox2",
+                          "reservationPhoneCheck",
                           "isChecked"
                         ]) ?? false
                       }
                       onChange={(...eventArgs) => {
                         generateStateOnChangeProp($state, [
-                          "checkbox2",
+                          "reservationPhoneCheck",
                           "isChecked"
                         ])(eventArgs[0]);
                       }}
@@ -1873,18 +2119,21 @@ function PlasmicHomepage__RenderFunc(props: {
                     dir={"rtl"}
                   >
                     <Checkbox
-                      data-plasmic-name={"checkbox3"}
-                      data-plasmic-override={overrides.checkbox3}
-                      className={classNames("__wab_instance", sty.checkbox3)}
+                      data-plasmic-name={"kioskResevationCheck"}
+                      data-plasmic-override={overrides.kioskResevationCheck}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.kioskResevationCheck
+                      )}
                       isChecked={
                         generateStateValueProp($state, [
-                          "checkbox3",
+                          "kioskResevationCheck",
                           "isChecked"
                         ]) ?? false
                       }
                       onChange={(...eventArgs) => {
                         generateStateOnChangeProp($state, [
-                          "checkbox3",
+                          "kioskResevationCheck",
                           "isChecked"
                         ])(eventArgs[0]);
                       }}
@@ -1906,7 +2155,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "\u0645\u0627\u0632\u0648\u0644 \u0627\u0639\u0644\u0627\u0646\u0627\u062a"
+                        "\u0645\u0627\u0698\u0648\u0644 \u0627\u0639\u0644\u0627\u0646\u0627\u062a"
                       }
                     </div>
                   </div>
@@ -1915,18 +2164,21 @@ function PlasmicHomepage__RenderFunc(props: {
                     dir={"rtl"}
                   >
                     <Checkbox
-                      data-plasmic-name={"checkbox4"}
-                      data-plasmic-override={overrides.checkbox4}
-                      className={classNames("__wab_instance", sty.checkbox4)}
+                      data-plasmic-name={"announcementCheck"}
+                      data-plasmic-override={overrides.announcementCheck}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.announcementCheck
+                      )}
                       isChecked={
                         generateStateValueProp($state, [
-                          "checkbox4",
+                          "announcementCheck",
                           "isChecked"
                         ]) ?? false
                       }
                       onChange={(...eventArgs) => {
                         generateStateOnChangeProp($state, [
-                          "checkbox4",
+                          "announcementCheck",
                           "isChecked"
                         ])(eventArgs[0]);
                       }}
@@ -1948,7 +2200,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "\u0645\u0627\u0632\u0648\u0644 \u0645\u062d\u0627\u0633\u0628\u0627\u062a"
+                        "\u0645\u0627\u0698\u0648\u0644 \u0645\u062d\u0627\u0633\u0628\u0627\u062a"
                       }
                     </div>
                   </div>
@@ -1957,18 +2209,21 @@ function PlasmicHomepage__RenderFunc(props: {
                     dir={"rtl"}
                   >
                     <Checkbox
-                      data-plasmic-name={"checkbox5"}
-                      data-plasmic-override={overrides.checkbox5}
-                      className={classNames("__wab_instance", sty.checkbox5)}
+                      data-plasmic-name={"calculationCheck"}
+                      data-plasmic-override={overrides.calculationCheck}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.calculationCheck
+                      )}
                       isChecked={
                         generateStateValueProp($state, [
-                          "checkbox5",
+                          "calculationCheck",
                           "isChecked"
                         ]) ?? false
                       }
                       onChange={(...eventArgs) => {
                         generateStateOnChangeProp($state, [
-                          "checkbox5",
+                          "calculationCheck",
                           "isChecked"
                         ])(eventArgs[0]);
                       }}
@@ -1990,7 +2245,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "\u0645\u0627\u0632\u0648\u0644 \u067e\u0631\u062f\u0627\u062e\u062a \u0622\u0646\u0644\u0627\u06cc\u0646"
+                        "\u0645\u0627\u0698\u0648\u0644 \u067e\u0631\u062f\u0627\u062e\u062a \u0622\u0646\u0644\u0627\u06cc\u0646"
                       }
                     </div>
                   </div>
@@ -1999,18 +2254,21 @@ function PlasmicHomepage__RenderFunc(props: {
                     dir={"rtl"}
                   >
                     <Checkbox
-                      data-plasmic-name={"checkbox6"}
-                      data-plasmic-override={overrides.checkbox6}
-                      className={classNames("__wab_instance", sty.checkbox6)}
+                      data-plasmic-name={"onlinepaymentCheck"}
+                      data-plasmic-override={overrides.onlinepaymentCheck}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.onlinepaymentCheck
+                      )}
                       isChecked={
                         generateStateValueProp($state, [
-                          "checkbox6",
+                          "onlinepaymentCheck",
                           "isChecked"
                         ]) ?? false
                       }
                       onChange={(...eventArgs) => {
                         generateStateOnChangeProp($state, [
-                          "checkbox6",
+                          "onlinepaymentCheck",
                           "isChecked"
                         ])(eventArgs[0]);
                       }}
@@ -2032,7 +2290,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "\u0645\u0627\u0632\u0648\u0644 \u0627\u0631\u062a\u0628\u0627\u0637 \u0628\u0627 \u0633\u0627\u06cc\u0631 \u0646\u0631\u0645 \u0627\u0641\u0632\u0627\u0631 \u0647\u0627"
+                        "\u0645\u0627\u0698\u0648\u0644 \u0627\u0631\u062a\u0628\u0627\u0637 \u0628\u0627 \u0633\u0627\u06cc\u0631 \u0646\u0631\u0645 \u0627\u0641\u0632\u0627\u0631 \u0647\u0627"
                       }
                     </div>
                   </div>
@@ -2041,18 +2299,18 @@ function PlasmicHomepage__RenderFunc(props: {
                     dir={"rtl"}
                   >
                     <Checkbox
-                      data-plasmic-name={"checkbox7"}
-                      data-plasmic-override={overrides.checkbox7}
-                      className={classNames("__wab_instance", sty.checkbox7)}
+                      data-plasmic-name={"apiCheck"}
+                      data-plasmic-override={overrides.apiCheck}
+                      className={classNames("__wab_instance", sty.apiCheck)}
                       isChecked={
                         generateStateValueProp($state, [
-                          "checkbox7",
+                          "apiCheck",
                           "isChecked"
                         ]) ?? false
                       }
                       onChange={(...eventArgs) => {
                         generateStateOnChangeProp($state, [
-                          "checkbox7",
+                          "apiCheck",
                           "isChecked"
                         ])(eventArgs[0]);
                       }}
@@ -2074,7 +2332,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "\u0645\u0627\u0632\u0648\u0644 \u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631"
+                        "\u0645\u0627\u0698\u0648\u0644 \u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631"
                       }
                     </div>
                   </div>
@@ -2083,18 +2341,18 @@ function PlasmicHomepage__RenderFunc(props: {
                     dir={"rtl"}
                   >
                     <Checkbox
-                      data-plasmic-name={"checkbox8"}
-                      data-plasmic-override={overrides.checkbox8}
-                      className={classNames("__wab_instance", sty.checkbox8)}
+                      data-plasmic-name={"ehrCheck"}
+                      data-plasmic-override={overrides.ehrCheck}
+                      className={classNames("__wab_instance", sty.ehrCheck)}
                       isChecked={
                         generateStateValueProp($state, [
-                          "checkbox8",
+                          "ehrCheck",
                           "isChecked"
                         ]) ?? false
                       }
                       onChange={(...eventArgs) => {
                         generateStateOnChangeProp($state, [
-                          "checkbox8",
+                          "ehrCheck",
                           "isChecked"
                         ])(eventArgs[0]);
                       }}
@@ -2125,18 +2383,21 @@ function PlasmicHomepage__RenderFunc(props: {
                     dir={"rtl"}
                   >
                     <Checkbox
-                      data-plasmic-name={"checkbox9"}
-                      data-plasmic-override={overrides.checkbox9}
-                      className={classNames("__wab_instance", sty.checkbox9)}
+                      data-plasmic-name={"specialSiteCheck"}
+                      data-plasmic-override={overrides.specialSiteCheck}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.specialSiteCheck
+                      )}
                       isChecked={
                         generateStateValueProp($state, [
-                          "checkbox9",
+                          "specialSiteCheck",
                           "isChecked"
                         ]) ?? false
                       }
                       onChange={(...eventArgs) => {
                         generateStateOnChangeProp($state, [
-                          "checkbox9",
+                          "specialSiteCheck",
                           "isChecked"
                         ])(eventArgs[0]);
                       }}
@@ -2167,18 +2428,21 @@ function PlasmicHomepage__RenderFunc(props: {
                     dir={"rtl"}
                   >
                     <Checkbox
-                      data-plasmic-name={"checkbox10"}
-                      data-plasmic-override={overrides.checkbox10}
-                      className={classNames("__wab_instance", sty.checkbox10)}
+                      data-plasmic-name={"dashboardCheck"}
+                      data-plasmic-override={overrides.dashboardCheck}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.dashboardCheck
+                      )}
                       isChecked={
                         generateStateValueProp($state, [
-                          "checkbox10",
+                          "dashboardCheck",
                           "isChecked"
                         ]) ?? false
                       }
                       onChange={(...eventArgs) => {
                         generateStateOnChangeProp($state, [
-                          "checkbox10",
+                          "dashboardCheck",
                           "isChecked"
                         ])(eventArgs[0]);
                       }}
@@ -2212,13 +2476,15 @@ const PlasmicDescendants = {
     "txtReservationInternetResult",
     "txtReservationPhoneResult",
     "txtReservationKioskResult",
-    "txtReservationKioskResult2",
-    "txtReservationKioskResult3",
-    "txtReservationKioskResult4",
-    "txtReservationKioskResult5",
+    "txtAnnouncementResult",
+    "txtCalculationResult",
+    "txtOnlinePaymentResult",
+    "txtapiResult",
+    "txtEhrResult",
     "txtReservationKioskResult6",
-    "txtReservationKioskResult7",
-    "txtReservationKioskResult8",
+    "txtSpecialSiteResult",
+    "txtDashboardResult",
+    "txtSumInvoice",
     "columns",
     "clReservation",
     "txtInternetReservation",
@@ -2234,16 +2500,16 @@ const PlasmicDescendants = {
     "clDashboard",
     "clMain",
     "txtResevationCount",
-    "checkbox",
-    "checkbox2",
-    "checkbox3",
-    "checkbox4",
-    "checkbox5",
-    "checkbox6",
-    "checkbox7",
-    "checkbox8",
-    "checkbox9",
-    "checkbox10"
+    "reservationCheck",
+    "reservationPhoneCheck",
+    "kioskResevationCheck",
+    "announcementCheck",
+    "calculationCheck",
+    "onlinepaymentCheck",
+    "apiCheck",
+    "ehrCheck",
+    "specialSiteCheck",
+    "dashboardCheck"
   ],
   sideEffect: ["sideEffect"],
   h1: ["h1"],
@@ -2258,13 +2524,15 @@ const PlasmicDescendants = {
   txtReservationInternetResult: ["txtReservationInternetResult"],
   txtReservationPhoneResult: ["txtReservationPhoneResult"],
   txtReservationKioskResult: ["txtReservationKioskResult"],
-  txtReservationKioskResult2: ["txtReservationKioskResult2"],
-  txtReservationKioskResult3: ["txtReservationKioskResult3"],
-  txtReservationKioskResult4: ["txtReservationKioskResult4"],
-  txtReservationKioskResult5: ["txtReservationKioskResult5"],
+  txtAnnouncementResult: ["txtAnnouncementResult"],
+  txtCalculationResult: ["txtCalculationResult"],
+  txtOnlinePaymentResult: ["txtOnlinePaymentResult"],
+  txtapiResult: ["txtapiResult"],
+  txtEhrResult: ["txtEhrResult", "txtReservationKioskResult6"],
   txtReservationKioskResult6: ["txtReservationKioskResult6"],
-  txtReservationKioskResult7: ["txtReservationKioskResult7"],
-  txtReservationKioskResult8: ["txtReservationKioskResult8"],
+  txtSpecialSiteResult: ["txtSpecialSiteResult"],
+  txtDashboardResult: ["txtDashboardResult"],
+  txtSumInvoice: ["txtSumInvoice"],
   columns: [
     "columns",
     "clReservation",
@@ -2301,16 +2569,16 @@ const PlasmicDescendants = {
   clDashboard: ["clDashboard"],
   clMain: ["clMain"],
   txtResevationCount: ["txtResevationCount"],
-  checkbox: ["checkbox"],
-  checkbox2: ["checkbox2"],
-  checkbox3: ["checkbox3"],
-  checkbox4: ["checkbox4"],
-  checkbox5: ["checkbox5"],
-  checkbox6: ["checkbox6"],
-  checkbox7: ["checkbox7"],
-  checkbox8: ["checkbox8"],
-  checkbox9: ["checkbox9"],
-  checkbox10: ["checkbox10"]
+  reservationCheck: ["reservationCheck"],
+  reservationPhoneCheck: ["reservationPhoneCheck"],
+  kioskResevationCheck: ["kioskResevationCheck"],
+  announcementCheck: ["announcementCheck"],
+  calculationCheck: ["calculationCheck"],
+  onlinepaymentCheck: ["onlinepaymentCheck"],
+  apiCheck: ["apiCheck"],
+  ehrCheck: ["ehrCheck"],
+  specialSiteCheck: ["specialSiteCheck"],
+  dashboardCheck: ["dashboardCheck"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -2330,13 +2598,15 @@ type NodeDefaultElementType = {
   txtReservationInternetResult: "div";
   txtReservationPhoneResult: "div";
   txtReservationKioskResult: "div";
-  txtReservationKioskResult2: "div";
-  txtReservationKioskResult3: "div";
-  txtReservationKioskResult4: "div";
-  txtReservationKioskResult5: "div";
+  txtAnnouncementResult: "div";
+  txtCalculationResult: "div";
+  txtOnlinePaymentResult: "div";
+  txtapiResult: "div";
+  txtEhrResult: "div";
   txtReservationKioskResult6: "div";
-  txtReservationKioskResult7: "div";
-  txtReservationKioskResult8: "div";
+  txtSpecialSiteResult: "div";
+  txtDashboardResult: "div";
+  txtSumInvoice: "div";
   columns: "div";
   clReservation: "div";
   txtInternetReservation: typeof TextInput;
@@ -2352,16 +2622,16 @@ type NodeDefaultElementType = {
   clDashboard: "div";
   clMain: "div";
   txtResevationCount: typeof TextInput;
-  checkbox: typeof Checkbox;
-  checkbox2: typeof Checkbox;
-  checkbox3: typeof Checkbox;
-  checkbox4: typeof Checkbox;
-  checkbox5: typeof Checkbox;
-  checkbox6: typeof Checkbox;
-  checkbox7: typeof Checkbox;
-  checkbox8: typeof Checkbox;
-  checkbox9: typeof Checkbox;
-  checkbox10: typeof Checkbox;
+  reservationCheck: typeof Checkbox;
+  reservationPhoneCheck: typeof Checkbox;
+  kioskResevationCheck: typeof Checkbox;
+  announcementCheck: typeof Checkbox;
+  calculationCheck: typeof Checkbox;
+  onlinepaymentCheck: typeof Checkbox;
+  apiCheck: typeof Checkbox;
+  ehrCheck: typeof Checkbox;
+  specialSiteCheck: typeof Checkbox;
+  dashboardCheck: typeof Checkbox;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -2439,13 +2709,15 @@ export const PlasmicHomepage = Object.assign(
     ),
     txtReservationPhoneResult: makeNodeComponent("txtReservationPhoneResult"),
     txtReservationKioskResult: makeNodeComponent("txtReservationKioskResult"),
-    txtReservationKioskResult2: makeNodeComponent("txtReservationKioskResult2"),
-    txtReservationKioskResult3: makeNodeComponent("txtReservationKioskResult3"),
-    txtReservationKioskResult4: makeNodeComponent("txtReservationKioskResult4"),
-    txtReservationKioskResult5: makeNodeComponent("txtReservationKioskResult5"),
+    txtAnnouncementResult: makeNodeComponent("txtAnnouncementResult"),
+    txtCalculationResult: makeNodeComponent("txtCalculationResult"),
+    txtOnlinePaymentResult: makeNodeComponent("txtOnlinePaymentResult"),
+    txtapiResult: makeNodeComponent("txtapiResult"),
+    txtEhrResult: makeNodeComponent("txtEhrResult"),
     txtReservationKioskResult6: makeNodeComponent("txtReservationKioskResult6"),
-    txtReservationKioskResult7: makeNodeComponent("txtReservationKioskResult7"),
-    txtReservationKioskResult8: makeNodeComponent("txtReservationKioskResult8"),
+    txtSpecialSiteResult: makeNodeComponent("txtSpecialSiteResult"),
+    txtDashboardResult: makeNodeComponent("txtDashboardResult"),
+    txtSumInvoice: makeNodeComponent("txtSumInvoice"),
     columns: makeNodeComponent("columns"),
     clReservation: makeNodeComponent("clReservation"),
     txtInternetReservation: makeNodeComponent("txtInternetReservation"),
@@ -2461,16 +2733,16 @@ export const PlasmicHomepage = Object.assign(
     clDashboard: makeNodeComponent("clDashboard"),
     clMain: makeNodeComponent("clMain"),
     txtResevationCount: makeNodeComponent("txtResevationCount"),
-    checkbox: makeNodeComponent("checkbox"),
-    checkbox2: makeNodeComponent("checkbox2"),
-    checkbox3: makeNodeComponent("checkbox3"),
-    checkbox4: makeNodeComponent("checkbox4"),
-    checkbox5: makeNodeComponent("checkbox5"),
-    checkbox6: makeNodeComponent("checkbox6"),
-    checkbox7: makeNodeComponent("checkbox7"),
-    checkbox8: makeNodeComponent("checkbox8"),
-    checkbox9: makeNodeComponent("checkbox9"),
-    checkbox10: makeNodeComponent("checkbox10"),
+    reservationCheck: makeNodeComponent("reservationCheck"),
+    reservationPhoneCheck: makeNodeComponent("reservationPhoneCheck"),
+    kioskResevationCheck: makeNodeComponent("kioskResevationCheck"),
+    announcementCheck: makeNodeComponent("announcementCheck"),
+    calculationCheck: makeNodeComponent("calculationCheck"),
+    onlinepaymentCheck: makeNodeComponent("onlinepaymentCheck"),
+    apiCheck: makeNodeComponent("apiCheck"),
+    ehrCheck: makeNodeComponent("ehrCheck"),
+    specialSiteCheck: makeNodeComponent("specialSiteCheck"),
+    dashboardCheck: makeNodeComponent("dashboardCheck"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
