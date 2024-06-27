@@ -75,6 +75,7 @@ import sty from "./PlasmicHomepage.module.css"; // plasmic-import: g64VYoCfAKTS/
 
 import Icon11Icon from "./icons/PlasmicIcon__Icon11"; // plasmic-import: YXzAIe4mJWDL/icon
 import Icon10Icon from "./icons/PlasmicIcon__Icon10"; // plasmic-import: 5Kdxmn_uOBnI/icon
+import Icon12Icon from "./icons/PlasmicIcon__Icon12"; // plasmic-import: 8GqB7Ju9fvrK/icon
 import Icon9Icon from "./icons/PlasmicIcon__Icon9"; // plasmic-import: JK4sPT7lqUH1/icon
 import Icon8Icon from "./icons/PlasmicIcon__Icon8"; // plasmic-import: fEKKJ-2F5BD1/icon
 import Icon7Icon from "./icons/PlasmicIcon__Icon7"; // plasmic-import: 1eqoHYLc_fOB/icon
@@ -99,7 +100,6 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
-  sideEffect?: Flex__<typeof SideEffect>;
   h1?: Flex__<"h1">;
   btnDashboard?: Flex__<"div">;
   btnSpecialsite?: Flex__<"div">;
@@ -492,9 +492,7 @@ function PlasmicHomepage__RenderFunc(props: {
           )}
         >
           <SideEffect
-            data-plasmic-name={"sideEffect"}
-            data-plasmic-override={overrides.sideEffect}
-            className={classNames("__wab_instance", sty.sideEffect)}
+            className={classNames("__wab_instance", sty.sideEffect___7Iy1R)}
             onMount={async () => {
               const $steps = {};
 
@@ -654,7 +652,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-override={overrides.btnSpecialsite}
                   className={classNames(projectcss.all, sty.btnSpecialsite)}
                 >
-                  <Icon9Icon
+                  <Icon12Icon
                     className={classNames(projectcss.all, sty.svg___6EjZr)}
                     role={"img"}
                   />
@@ -806,6 +804,121 @@ function PlasmicHomepage__RenderFunc(props: {
                 className={classNames(projectcss.all, sty.freeBox__pbNpV)}
                 dir={"rtl"}
               >
+                <SideEffect
+                  className={classNames(
+                    "__wab_instance",
+                    sty.sideEffect__yyEnr
+                  )}
+                  deps={(() => {
+                    try {
+                      return [
+                        $state.reservationCheck.isChecked,
+                        $state.dashboardCheck.isChecked,
+                        $state.specialSiteCheck.isChecked,
+                        $state.ehrCheck.isChecked,
+                        $state.calculationCheck.isChecked,
+                        $state.announcementCheck.isChecked,
+                        $state.onlinepaymentCheck.isChecked,
+                        $state.kioskResevationCheck.isChecked,
+                        $state.reservationPhoneCheck.isChecked,
+                        $state.apiCheck.isChecked,
+                        $state.txtResevationCount.value
+                      ];
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return undefined;
+                      }
+                      throw e;
+                    }
+                  })()}
+                  onMount={async () => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                $state.reservationCheck.isChecked
+                                  ? ($state.reservationInternetResult =
+                                      $state.reservationInternetPrice *
+                                      $state.txtResevationCount.value)
+                                  : ($state.reservationInternetResult = 0);
+                                $state.reservationPhoneCheck.isChecked
+                                  ? ($state.reservsationPhoneResult =
+                                      $state.reservationPhonePrice *
+                                      $state.txtResevationCount.value)
+                                  : ($state.reservsationPhoneResult = 0);
+                                $state.kioskResevationCheck.isChecked
+                                  ? ($state.reservationKioskResult =
+                                      $state.reservationKioskPrice *
+                                      $state.txtResevationCount.value)
+                                  : ($state.reservationKioskResult = 0);
+                                $state.announcementCheck.isChecked
+                                  ? ($state.announcementResult =
+                                      $state.announcementPrice *
+                                      $state.txtResevationCount.value)
+                                  : ($state.announcementResult = 0);
+                                $state.calculationCheck.isChecked
+                                  ? ($state.calculationResult =
+                                      $state.calculationPrice *
+                                      $state.txtResevationCount.value)
+                                  : ($state.calculationResult = 0);
+                                $state.onlinepaymentCheck.isChecked
+                                  ? ($state.onlinePayemntResult =
+                                      $state.onlinePayemntPrice *
+                                      $state.txtResevationCount.value)
+                                  : ($state.onlinePayemntResult = 0);
+                                $state.apiCheck.isChecked
+                                  ? ($state.apiResult =
+                                      $state.apiPrice *
+                                      $state.txtResevationCount.value)
+                                  : ($state.apiResult = 0);
+                                $state.ehrCheck.isChecked
+                                  ? ($state.ehrResult =
+                                      $state.ehrPrice *
+                                      $state.txtResevationCount.value)
+                                  : ($state.ehrResult = 0);
+                                $state.specialSiteCheck.isChecked
+                                  ? ($state.specialSiteResult =
+                                      $state.specialSitePrice)
+                                  : ($state.specialSiteResult = 0);
+                                $state.dashboardCheck.isChecked
+                                  ? ($state.dashboardResult =
+                                      $state.dashboardPrice)
+                                  : ($state.dashboardResult = 0);
+                                return ($state.suminvoiceResult =
+                                  $state.dashboardResult +
+                                  $state.specialSiteResult +
+                                  $state.ehrResult +
+                                  $state.apiResult +
+                                  $state.onlinePayemntResult +
+                                  $state.calculationResult +
+                                  $state.announcementResult +
+                                  $state.reservationKioskResult +
+                                  $state.reservsationPhoneResult +
+                                  $state.reservationInternetResult);
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
+                    ) {
+                      $steps["runCode"] = await $steps["runCode"];
+                    }
+                  }}
+                />
+
                 <div
                   className={classNames(
                     projectcss.all,
@@ -1891,86 +2004,6 @@ function PlasmicHomepage__RenderFunc(props: {
                         }).apply(null, eventArgs);
                         (async event => {
                           const $steps = {};
-
-                          $steps["runCode"] = true
-                            ? (() => {
-                                const actionArgs = {
-                                  customFunction: async () => {
-                                    return (() => {
-                                      $state.reservationCheck.isChecked
-                                        ? ($state.reservationInternetResult =
-                                            $state.reservationInternetPrice *
-                                            $state.txtResevationCount.value)
-                                        : ($state.reservationInternetResult = 0);
-                                      $state.reservationPhoneCheck.isChecked
-                                        ? ($state.reservsationPhoneResult =
-                                            $state.reservationPhonePrice *
-                                            $state.txtResevationCount.value)
-                                        : ($state.reservsationPhoneResult = 0);
-                                      $state.kioskResevationCheck.isChecked
-                                        ? ($state.reservationKioskResult =
-                                            $state.reservationKioskPrice *
-                                            $state.txtResevationCount.value)
-                                        : ($state.reservationKioskResult = 0);
-                                      $state.announcementCheck.isChecked
-                                        ? ($state.announcementResult =
-                                            $state.announcementPrice *
-                                            $state.txtResevationCount.value)
-                                        : ($state.announcementResult = 0);
-                                      $state.calculationCheck.isChecked
-                                        ? ($state.calculationResult =
-                                            $state.calculationPrice *
-                                            $state.txtResevationCount.value)
-                                        : ($state.calculationResult = 0);
-                                      $state.onlinepaymentCheck.isChecked
-                                        ? ($state.onlinePayemntResult =
-                                            $state.onlinePayemntPrice *
-                                            $state.txtResevationCount.value)
-                                        : ($state.onlinePayemntResult = 0);
-                                      $state.apiCheck.isChecked
-                                        ? ($state.apiResult =
-                                            $state.apiPrice *
-                                            $state.txtResevationCount.value)
-                                        : ($state.apiResult = 0);
-                                      $state.ehrCheck.isChecked
-                                        ? ($state.ehrResult =
-                                            $state.ehrPrice *
-                                            $state.txtResevationCount.value)
-                                        : ($state.ehrResult = 0);
-                                      $state.specialSiteCheck.isChecked
-                                        ? ($state.specialSiteResult =
-                                            $state.specialSitePrice)
-                                        : ($state.specialSiteResult = 0);
-                                      $state.dashboardCheck.isChecked
-                                        ? ($state.dashboardResult =
-                                            $state.dashboardPrice)
-                                        : ($state.dashboardResult = 0);
-                                      return ($state.suminvoiceResult =
-                                        $state.dashboardResult +
-                                        $state.specialSiteResult +
-                                        $state.ehrResult +
-                                        $state.apiResult +
-                                        $state.onlinePayemntResult +
-                                        $state.calculationResult +
-                                        $state.announcementResult +
-                                        $state.reservationKioskResult +
-                                        $state.reservsationPhoneResult +
-                                        $state.reservationInternetResult);
-                                    })();
-                                  }
-                                };
-                                return (({ customFunction }) => {
-                                  return customFunction();
-                                })?.apply(null, [actionArgs]);
-                              })()
-                            : undefined;
-                          if (
-                            $steps["runCode"] != null &&
-                            typeof $steps["runCode"] === "object" &&
-                            typeof $steps["runCode"].then === "function"
-                          ) {
-                            $steps["runCode"] = await $steps["runCode"];
-                          }
                         }).apply(null, eventArgs);
                       }}
                       placeholder={
@@ -2035,49 +2068,11 @@ function PlasmicHomepage__RenderFunc(props: {
                           "isChecked"
                         ]) ?? false
                       }
-                      onChange={async (...eventArgs: any) => {
-                        ((...eventArgs) => {
-                          generateStateOnChangeProp($state, [
-                            "reservationCheck",
-                            "isChecked"
-                          ])(eventArgs[0]);
-                        }).apply(null, eventArgs);
-                        (async isChecked => {
-                          const $steps = {};
-
-                          $steps["updateUser"] = true
-                            ? (() => {
-                                const actionArgs = {
-                                  variable: {
-                                    objRoot: $state,
-                                    variablePath: ["user"]
-                                  },
-                                  operation: 0
-                                };
-                                return (({
-                                  variable,
-                                  value,
-                                  startIndex,
-                                  deleteCount
-                                }) => {
-                                  if (!variable) {
-                                    return;
-                                  }
-                                  const { objRoot, variablePath } = variable;
-
-                                  $stateSet(objRoot, variablePath, value);
-                                  return value;
-                                })?.apply(null, [actionArgs]);
-                              })()
-                            : undefined;
-                          if (
-                            $steps["updateUser"] != null &&
-                            typeof $steps["updateUser"] === "object" &&
-                            typeof $steps["updateUser"].then === "function"
-                          ) {
-                            $steps["updateUser"] = await $steps["updateUser"];
-                          }
-                        }).apply(null, eventArgs);
+                      onChange={(...eventArgs) => {
+                        generateStateOnChangeProp($state, [
+                          "reservationCheck",
+                          "isChecked"
+                        ])(eventArgs[0]);
                       }}
                     >
                       {""}
@@ -2495,7 +2490,6 @@ function PlasmicHomepage__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
-    "sideEffect",
     "h1",
     "btnDashboard",
     "btnSpecialsite",
@@ -2543,7 +2537,6 @@ const PlasmicDescendants = {
     "specialSiteCheck",
     "dashboardCheck"
   ],
-  sideEffect: ["sideEffect"],
   h1: ["h1"],
   btnDashboard: ["btnDashboard"],
   btnSpecialsite: ["btnSpecialsite"],
@@ -2617,7 +2610,6 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  sideEffect: typeof SideEffect;
   h1: "h1";
   btnDashboard: "div";
   btnSpecialsite: "div";
@@ -2726,7 +2718,6 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    sideEffect: makeNodeComponent("sideEffect"),
     h1: makeNodeComponent("h1"),
     btnDashboard: makeNodeComponent("btnDashboard"),
     btnSpecialsite: makeNodeComponent("btnSpecialsite"),

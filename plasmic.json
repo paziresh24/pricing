@@ -680,6 +680,11 @@
           "id": "gqt0H-uJ-Xg8",
           "name": "SquareMinussvgIcon",
           "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__SquareMinussvg.tsx"
+        },
+        {
+          "id": "8GqB7Ju9fvrK",
+          "name": "Icon12Icon",
+          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__Icon12.tsx"
         }
       ],
       "images": [],
