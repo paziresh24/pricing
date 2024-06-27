@@ -93,6 +93,24 @@ export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
   sideEffect?: Flex__<typeof SideEffect>;
   h1?: Flex__<"h1">;
+  btnDashboard?: Flex__<"div">;
+  btnSpecialsite?: Flex__<"div">;
+  btnEhr?: Flex__<"div">;
+  btnApi?: Flex__<"div">;
+  btnOnlinepayment?: Flex__<"div">;
+  btnCalculation?: Flex__<"div">;
+  btnAnnouncement?: Flex__<"div">;
+  btnReservation?: Flex__<"div">;
+  columns?: Flex__<"div">;
+  clReservation?: Flex__<"div">;
+  clAnnouncement?: Flex__<"div">;
+  clCalculations?: Flex__<"div">;
+  clOnlinepayment?: Flex__<"div">;
+  clApi?: Flex__<"div">;
+  clEhr?: Flex__<"div">;
+  clSpecialsite?: Flex__<"div">;
+  clDashboard?: Flex__<"div">;
+  clMain?: Flex__<"div">;
 };
 
 export interface DefaultHomepageProps {}
@@ -141,6 +159,18 @@ function PlasmicHomepage__RenderFunc(props: {
         type: "private",
         variableType: "object",
         initFunc: ({ $props, $state, $queries, $ctx }) => ({})
+      },
+      {
+        path: "clReservationState",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "clAnnouncementState",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       }
     ],
     [$props, $ctx, $refs]
@@ -301,13 +331,15 @@ function PlasmicHomepage__RenderFunc(props: {
               )}
             >
               {
-                "\u062a\u0639\u0631\u0641\u0647 \u062e\u062f\u0645\u0627\u062a \u067e\u0630\u06cc\u0631\u063424"
+                "\n\u062a\u0639\u0631\u0641\u0647 \u062e\u062f\u0645\u0627\u062a \u067e\u0630\u06cc\u0631\u063424\n"
               }
             </h1>
             <section className={classNames(projectcss.all, sty.section__wtTOr)}>
               <div className={classNames(projectcss.all, sty.freeBox___7DSvw)}>
                 <div
-                  className={classNames(projectcss.all, sty.freeBox___0Og76)}
+                  data-plasmic-name={"btnDashboard"}
+                  data-plasmic-override={overrides.btnDashboard}
+                  className={classNames(projectcss.all, sty.btnDashboard)}
                 >
                   <Icon10Icon
                     className={classNames(projectcss.all, sty.svg__cbLBw)}
@@ -326,7 +358,11 @@ function PlasmicHomepage__RenderFunc(props: {
                     }
                   </div>
                 </div>
-                <div className={classNames(projectcss.all, sty.freeBox__ykxKl)}>
+                <div
+                  data-plasmic-name={"btnSpecialsite"}
+                  data-plasmic-override={overrides.btnSpecialsite}
+                  className={classNames(projectcss.all, sty.btnSpecialsite)}
+                >
                   <Icon9Icon
                     className={classNames(projectcss.all, sty.svg___6EjZr)}
                     role={"img"}
@@ -344,7 +380,11 @@ function PlasmicHomepage__RenderFunc(props: {
                     }
                   </div>
                 </div>
-                <div className={classNames(projectcss.all, sty.freeBox__aBQo)}>
+                <div
+                  data-plasmic-name={"btnEhr"}
+                  data-plasmic-override={overrides.btnEhr}
+                  className={classNames(projectcss.all, sty.btnEhr)}
+                >
                   <Icon9Icon
                     className={classNames(projectcss.all, sty.svg__rXLkj)}
                     role={"img"}
@@ -362,7 +402,11 @@ function PlasmicHomepage__RenderFunc(props: {
                     }
                   </div>
                 </div>
-                <div className={classNames(projectcss.all, sty.freeBox__raxBh)}>
+                <div
+                  data-plasmic-name={"btnApi"}
+                  data-plasmic-override={overrides.btnApi}
+                  className={classNames(projectcss.all, sty.btnApi)}
+                >
                   <Icon8Icon
                     className={classNames(projectcss.all, sty.svg__sd3Vz)}
                     role={"img"}
@@ -380,7 +424,11 @@ function PlasmicHomepage__RenderFunc(props: {
                     }
                   </div>
                 </div>
-                <div className={classNames(projectcss.all, sty.freeBox__zJNdj)}>
+                <div
+                  data-plasmic-name={"btnOnlinepayment"}
+                  data-plasmic-override={overrides.btnOnlinepayment}
+                  className={classNames(projectcss.all, sty.btnOnlinepayment)}
+                >
                   <Icon7Icon
                     className={classNames(projectcss.all, sty.svg___8W1Xb)}
                     role={"img"}
@@ -398,7 +446,11 @@ function PlasmicHomepage__RenderFunc(props: {
                     }
                   </div>
                 </div>
-                <div className={classNames(projectcss.all, sty.freeBox__oAbc0)}>
+                <div
+                  data-plasmic-name={"btnCalculation"}
+                  data-plasmic-override={overrides.btnCalculation}
+                  className={classNames(projectcss.all, sty.btnCalculation)}
+                >
                   <Icon6Icon
                     className={classNames(projectcss.all, sty.svg__yUwH)}
                     role={"img"}
@@ -414,7 +466,11 @@ function PlasmicHomepage__RenderFunc(props: {
                     {"\u0645\u062d\u0627\u0633\u0628\u0627\u062a"}
                   </div>
                 </div>
-                <div className={classNames(projectcss.all, sty.freeBox__p9XLf)}>
+                <div
+                  data-plasmic-name={"btnAnnouncement"}
+                  data-plasmic-override={overrides.btnAnnouncement}
+                  className={classNames(projectcss.all, sty.btnAnnouncement)}
+                >
                   <Icon5Icon
                     className={classNames(projectcss.all, sty.svg__ph7A)}
                     role={"img"}
@@ -430,7 +486,11 @@ function PlasmicHomepage__RenderFunc(props: {
                     {"\u0627\u0639\u0644\u0627\u0646\u0627\u062a"}
                   </div>
                 </div>
-                <div className={classNames(projectcss.all, sty.freeBox__sTmC)}>
+                <div
+                  data-plasmic-name={"btnReservation"}
+                  data-plasmic-override={overrides.btnReservation}
+                  className={classNames(projectcss.all, sty.btnReservation)}
+                >
                   <Icon3Icon
                     className={classNames(projectcss.all, sty.svg___4NJPi)}
                     role={"img"}
@@ -449,43 +509,179 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </section>
           </section>
-          <section className={classNames(projectcss.all, sty.section___57Psv)}>
-            <div className={classNames(projectcss.all, sty.columns__heYiu)}>
-              <div className={classNames(projectcss.all, sty.column__tKKlR)} />
+          <section className={classNames(projectcss.all, sty.section__sTanX)}>
+            <div className={classNames(projectcss.all, sty.freeBox___6V1K)}>
+              <div className={classNames(projectcss.all, sty.freeBox__pbNpV)} />
 
-              <div className={classNames(projectcss.all, sty.column__hWjMp)} />
-
-              <div className={classNames(projectcss.all, sty.column__bsWoQ)} />
-
-              <div className={classNames(projectcss.all, sty.column__lmph6)} />
-
-              <div className={classNames(projectcss.all, sty.column__hknzg)} />
-
-              <div className={classNames(projectcss.all, sty.column__swPd3)} />
-
-              <div className={classNames(projectcss.all, sty.column__uMymJ)} />
-
-              <div className={classNames(projectcss.all, sty.column__sj5Bz)}>
+              <div className={classNames(projectcss.all, sty.freeBox___6LVp)}>
                 <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__s7Bdt
-                  )}
+                  data-plasmic-name={"columns"}
+                  data-plasmic-override={overrides.columns}
+                  className={classNames(projectcss.all, sty.columns)}
                 >
-                  {
-                    "\u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u062a\u0644\u0641\u0646\u06cc"
-                  }
+                  {(() => {
+                    try {
+                      return $state.clReservationState;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })() ? (
+                    <div
+                      data-plasmic-name={"clReservation"}
+                      data-plasmic-override={overrides.clReservation}
+                      className={classNames(projectcss.all, sty.clReservation)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__w6AX6
+                        )}
+                      >
+                        {"\u0646\u0648\u0628\u062a \u062f\u0647\u06cc"}
+                      </div>
+                    </div>
+                  ) : null}
+                  <div
+                    data-plasmic-name={"clAnnouncement"}
+                    data-plasmic-override={overrides.clAnnouncement}
+                    className={classNames(projectcss.all, sty.clAnnouncement)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__x2Jmq
+                      )}
+                    >
+                      {"\u0627\u0639\u0644\u0627\u0646\u0627\u062a"}
+                    </div>
+                  </div>
+                  <div
+                    data-plasmic-name={"clCalculations"}
+                    data-plasmic-override={overrides.clCalculations}
+                    className={classNames(projectcss.all, sty.clCalculations)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__yHvEa
+                      )}
+                    >
+                      {"\u0645\u062d\u0627\u0633\u0628\u0627\u062a"}
+                    </div>
+                  </div>
+                  <div
+                    data-plasmic-name={"clOnlinepayment"}
+                    data-plasmic-override={overrides.clOnlinepayment}
+                    className={classNames(projectcss.all, sty.clOnlinepayment)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___2Jdcw
+                      )}
+                    >
+                      {
+                        "\u067e\u0631\u062f\u0627\u062e\u062a \u0622\u0646\u0644\u0627\u06cc\u0646"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    data-plasmic-name={"clApi"}
+                    data-plasmic-override={overrides.clApi}
+                    className={classNames(projectcss.all, sty.clApi)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__ddw3B
+                      )}
+                    >
+                      {
+                        "\u0627\u0631\u062a\u0628\u0627\u0637 \u0628\u0627 \u0633\u0627\u06cc\u0631 \u0646\u0631\u0645 \u0627\u0641\u0632\u0627\u0631 \u0647\u0627"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    data-plasmic-name={"clEhr"}
+                    data-plasmic-override={overrides.clEhr}
+                    className={classNames(projectcss.all, sty.clEhr)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__ws91A
+                      )}
+                    >
+                      {
+                        "\u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    data-plasmic-name={"clSpecialsite"}
+                    data-plasmic-override={overrides.clSpecialsite}
+                    className={classNames(projectcss.all, sty.clSpecialsite)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__xjtg5
+                      )}
+                    >
+                      {
+                        "\u0633\u0627\u06cc\u062a \u0627\u062e\u062a\u0635\u0627\u0635\u06cc"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    data-plasmic-name={"clDashboard"}
+                    data-plasmic-override={overrides.clDashboard}
+                    className={classNames(projectcss.all, sty.clDashboard)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__vcuHr
+                      )}
+                    >
+                      {
+                        "\u062f\u0627\u0634\u0628\u0648\u0631\u062f \u06af\u0632\u0627\u0631\u0634\u0627\u062a \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    data-plasmic-name={"clMain"}
+                    data-plasmic-override={overrides.clMain}
+                    className={classNames(projectcss.all, sty.clMain)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__qqROb
+                      )}
+                    >
+                      {
+                        "\u062c\u0647\u062a \u0628\u0631\u0622\u0648\u0631\u062f \u0642\u06cc\u0645\u062a \u0627\u0628\u062a\u062f\u0627 \u06cc\u06a9 \u0645\u0627\u0698\u0648\u0644 \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u0646\u0645\u0627\u06cc\u06cc\u062f"
+                      }
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className={classNames(projectcss.all, sty.column__uPhHl)} />
-            </div>
-          </section>
-          <section className={classNames(projectcss.all, sty.section__ufWus)}>
-            <div className={classNames(projectcss.all, sty.columns__tjMQz)}>
-              <div className={classNames(projectcss.all, sty.column__w2FvU)} />
-
-              <div className={classNames(projectcss.all, sty.column___7Mqbp)} />
             </div>
           </section>
         </div>
@@ -495,9 +691,60 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "sideEffect", "h1"],
+  root: [
+    "root",
+    "sideEffect",
+    "h1",
+    "btnDashboard",
+    "btnSpecialsite",
+    "btnEhr",
+    "btnApi",
+    "btnOnlinepayment",
+    "btnCalculation",
+    "btnAnnouncement",
+    "btnReservation",
+    "columns",
+    "clReservation",
+    "clAnnouncement",
+    "clCalculations",
+    "clOnlinepayment",
+    "clApi",
+    "clEhr",
+    "clSpecialsite",
+    "clDashboard",
+    "clMain"
+  ],
   sideEffect: ["sideEffect"],
-  h1: ["h1"]
+  h1: ["h1"],
+  btnDashboard: ["btnDashboard"],
+  btnSpecialsite: ["btnSpecialsite"],
+  btnEhr: ["btnEhr"],
+  btnApi: ["btnApi"],
+  btnOnlinepayment: ["btnOnlinepayment"],
+  btnCalculation: ["btnCalculation"],
+  btnAnnouncement: ["btnAnnouncement"],
+  btnReservation: ["btnReservation"],
+  columns: [
+    "columns",
+    "clReservation",
+    "clAnnouncement",
+    "clCalculations",
+    "clOnlinepayment",
+    "clApi",
+    "clEhr",
+    "clSpecialsite",
+    "clDashboard",
+    "clMain"
+  ],
+  clReservation: ["clReservation"],
+  clAnnouncement: ["clAnnouncement"],
+  clCalculations: ["clCalculations"],
+  clOnlinepayment: ["clOnlinepayment"],
+  clApi: ["clApi"],
+  clEhr: ["clEhr"],
+  clSpecialsite: ["clSpecialsite"],
+  clDashboard: ["clDashboard"],
+  clMain: ["clMain"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -506,6 +753,24 @@ type NodeDefaultElementType = {
   root: "div";
   sideEffect: typeof SideEffect;
   h1: "h1";
+  btnDashboard: "div";
+  btnSpecialsite: "div";
+  btnEhr: "div";
+  btnApi: "div";
+  btnOnlinepayment: "div";
+  btnCalculation: "div";
+  btnAnnouncement: "div";
+  btnReservation: "div";
+  columns: "div";
+  clReservation: "div";
+  clAnnouncement: "div";
+  clCalculations: "div";
+  clOnlinepayment: "div";
+  clApi: "div";
+  clEhr: "div";
+  clSpecialsite: "div";
+  clDashboard: "div";
+  clMain: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -570,6 +835,24 @@ export const PlasmicHomepage = Object.assign(
     // Helper components rendering sub-elements
     sideEffect: makeNodeComponent("sideEffect"),
     h1: makeNodeComponent("h1"),
+    btnDashboard: makeNodeComponent("btnDashboard"),
+    btnSpecialsite: makeNodeComponent("btnSpecialsite"),
+    btnEhr: makeNodeComponent("btnEhr"),
+    btnApi: makeNodeComponent("btnApi"),
+    btnOnlinepayment: makeNodeComponent("btnOnlinepayment"),
+    btnCalculation: makeNodeComponent("btnCalculation"),
+    btnAnnouncement: makeNodeComponent("btnAnnouncement"),
+    btnReservation: makeNodeComponent("btnReservation"),
+    columns: makeNodeComponent("columns"),
+    clReservation: makeNodeComponent("clReservation"),
+    clAnnouncement: makeNodeComponent("clAnnouncement"),
+    clCalculations: makeNodeComponent("clCalculations"),
+    clOnlinepayment: makeNodeComponent("clOnlinepayment"),
+    clApi: makeNodeComponent("clApi"),
+    clEhr: makeNodeComponent("clEhr"),
+    clSpecialsite: makeNodeComponent("clSpecialsite"),
+    clDashboard: makeNodeComponent("clDashboard"),
+    clMain: makeNodeComponent("clMain"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
