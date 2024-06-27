@@ -74,14 +74,14 @@ import projectcss from "./plasmic.module.css"; // plasmic-import: seYsnBL1P3AiXa
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: g64VYoCfAKTS/css
 
 import Icon11Icon from "./icons/PlasmicIcon__Icon11"; // plasmic-import: YXzAIe4mJWDL/icon
-import Icon10Icon from "./icons/PlasmicIcon__Icon10"; // plasmic-import: 5Kdxmn_uOBnI/icon
-import Icon12Icon from "./icons/PlasmicIcon__Icon12"; // plasmic-import: 8GqB7Ju9fvrK/icon
-import Icon9Icon from "./icons/PlasmicIcon__Icon9"; // plasmic-import: JK4sPT7lqUH1/icon
-import Icon8Icon from "./icons/PlasmicIcon__Icon8"; // plasmic-import: fEKKJ-2F5BD1/icon
-import Icon7Icon from "./icons/PlasmicIcon__Icon7"; // plasmic-import: 1eqoHYLc_fOB/icon
-import Icon6Icon from "./icons/PlasmicIcon__Icon6"; // plasmic-import: WvR12xDIGLgz/icon
-import Icon5Icon from "./icons/PlasmicIcon__Icon5"; // plasmic-import: HAnMzYJg5d76/icon
 import Icon3Icon from "./icons/PlasmicIcon__Icon3"; // plasmic-import: jRHPVqrBy9SV/icon
+import Icon5Icon from "./icons/PlasmicIcon__Icon5"; // plasmic-import: HAnMzYJg5d76/icon
+import Icon6Icon from "./icons/PlasmicIcon__Icon6"; // plasmic-import: WvR12xDIGLgz/icon
+import Icon7Icon from "./icons/PlasmicIcon__Icon7"; // plasmic-import: 1eqoHYLc_fOB/icon
+import Icon8Icon from "./icons/PlasmicIcon__Icon8"; // plasmic-import: fEKKJ-2F5BD1/icon
+import Icon9Icon from "./icons/PlasmicIcon__Icon9"; // plasmic-import: JK4sPT7lqUH1/icon
+import Icon12Icon from "./icons/PlasmicIcon__Icon12"; // plasmic-import: 8GqB7Ju9fvrK/icon
+import Icon10Icon from "./icons/PlasmicIcon__Icon10"; // plasmic-import: 5Kdxmn_uOBnI/icon
 import SearchsvgIcon from "./icons/PlasmicIcon__Searchsvg"; // plasmic-import: 2VY19-xmXXIp/icon
 import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: 22TzxIplc3cE/icon
 import ChevronRightIcon from "../fragment_icons/icons/PlasmicIcon__ChevronRight"; // plasmic-import: GHdF3hS-oP_3/icon
@@ -101,26 +101,14 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
   h1?: Flex__<"h1">;
-  btnDashboard?: Flex__<"div">;
-  btnSpecialsite?: Flex__<"div">;
-  btnEhr?: Flex__<"div">;
-  btnApi?: Flex__<"div">;
-  btnOnlinepayment?: Flex__<"div">;
-  btnCalculation?: Flex__<"div">;
-  btnAnnouncement?: Flex__<"div">;
   btnReservation?: Flex__<"div">;
-  txtReservationInternetResult?: Flex__<"div">;
-  txtReservationPhoneResult?: Flex__<"div">;
-  txtReservationKioskResult?: Flex__<"div">;
-  txtAnnouncementResult?: Flex__<"div">;
-  txtCalculationResult?: Flex__<"div">;
-  txtOnlinePaymentResult?: Flex__<"div">;
-  txtapiResult?: Flex__<"div">;
-  txtEhrResult?: Flex__<"div">;
-  txtReservationKioskResult6?: Flex__<"div">;
-  txtSpecialSiteResult?: Flex__<"div">;
-  txtDashboardResult?: Flex__<"div">;
-  txtSumInvoice?: Flex__<"div">;
+  btnAnnouncement?: Flex__<"div">;
+  btnCalculation?: Flex__<"div">;
+  btnOnlinepayment?: Flex__<"div">;
+  btnApi?: Flex__<"div">;
+  btnEhr?: Flex__<"div">;
+  btnSpecialsite?: Flex__<"div">;
+  btnDashboard?: Flex__<"div">;
   columns?: Flex__<"div">;
   clReservation?: Flex__<"div">;
   txtInternetReservation?: Flex__<typeof TextInput>;
@@ -146,6 +134,18 @@ export type PlasmicHomepage__OverridesType = {
   ehrCheck?: Flex__<typeof Checkbox>;
   specialSiteCheck?: Flex__<typeof Checkbox>;
   dashboardCheck?: Flex__<typeof Checkbox>;
+  txtReservationInternetResult?: Flex__<"div">;
+  txtReservationPhoneResult?: Flex__<"div">;
+  txtReservationKioskResult?: Flex__<"div">;
+  txtAnnouncementResult?: Flex__<"div">;
+  txtCalculationResult?: Flex__<"div">;
+  txtOnlinePaymentResult?: Flex__<"div">;
+  txtapiResult?: Flex__<"div">;
+  txtEhrResult?: Flex__<"div">;
+  txtReservationKioskResult6?: Flex__<"div">;
+  txtSpecialSiteResult?: Flex__<"div">;
+  txtDashboardResult?: Flex__<"div">;
+  txtSumInvoice?: Flex__<"div">;
 };
 
 export interface DefaultHomepageProps {}
@@ -490,6 +490,7 @@ function PlasmicHomepage__RenderFunc(props: {
             plasmic_plasmic_rich_components_css.plasmic_tokens,
             sty.root
           )}
+          dir={"rtl"}
         >
           <SideEffect
             className={classNames("__wab_instance", sty.sideEffect___7Iy1R)}
@@ -599,39 +600,40 @@ function PlasmicHomepage__RenderFunc(props: {
           />
 
           <section className={classNames(projectcss.all, sty.section__dkFyp)}>
-            <div className={classNames(projectcss.all, sty.freeBox___0ZMo0)}>
-              <div className={classNames(projectcss.all, sty.freeBox__vst7D)}>
-                <h1
-                  data-plasmic-name={"h1"}
-                  data-plasmic-override={overrides.h1}
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.h1,
-                    projectcss.__wab_text,
-                    sty.h1
-                  )}
-                >
-                  {
-                    "\u062a\u0639\u0631\u0641\u0647 \u062e\u062f\u0645\u0627\u062a \u067e\u0630\u06cc\u0631\u063424"
-                  }
-                </h1>
-              </div>
-              <div className={classNames(projectcss.all, sty.freeBox___8CihT)}>
-                <Icon11Icon
-                  className={classNames(projectcss.all, sty.svg___0HXtL)}
-                  role={"img"}
-                />
-              </div>
-            </div>
+            <Stack__
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__vst7D)}
+            >
+              <Icon11Icon
+                className={classNames(projectcss.all, sty.svg___0HXtL)}
+                role={"img"}
+              />
+
+              <h1
+                data-plasmic-name={"h1"}
+                data-plasmic-override={overrides.h1}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h1,
+                  projectcss.__wab_text,
+                  sty.h1
+                )}
+              >
+                {
+                  "\u062a\u0639\u0631\u0641\u0647 \u062e\u062f\u0645\u0627\u062a \u067e\u0630\u06cc\u0631\u063424"
+                }
+              </h1>
+            </Stack__>
             <section className={classNames(projectcss.all, sty.section__wtTOr)}>
               <div className={classNames(projectcss.all, sty.freeBox___7DSvw)}>
                 <div
-                  data-plasmic-name={"btnDashboard"}
-                  data-plasmic-override={overrides.btnDashboard}
-                  className={classNames(projectcss.all, sty.btnDashboard)}
+                  data-plasmic-name={"btnReservation"}
+                  data-plasmic-override={overrides.btnReservation}
+                  className={classNames(projectcss.all, sty.btnReservation)}
                 >
-                  <Icon10Icon
-                    className={classNames(projectcss.all, sty.svg__cbLBw)}
+                  <Icon3Icon
+                    className={classNames(projectcss.all, sty.svg___4NJPi)}
                     role={"img"}
                   />
 
@@ -639,21 +641,19 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__vlDsf
+                      sty.text__n3W1V
                     )}
                   >
-                    {
-                      "\u062f \u0627\u0634\u0628\u0648\u0631\u062f \u06af\u0632\u0627\u0631\u0634\u0627\u062a \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc"
-                    }
+                    {"\u0646\u0648\u0628\u062a \u062f\u0647\u06cc"}
                   </div>
                 </div>
                 <div
-                  data-plasmic-name={"btnSpecialsite"}
-                  data-plasmic-override={overrides.btnSpecialsite}
-                  className={classNames(projectcss.all, sty.btnSpecialsite)}
+                  data-plasmic-name={"btnAnnouncement"}
+                  data-plasmic-override={overrides.btnAnnouncement}
+                  className={classNames(projectcss.all, sty.btnAnnouncement)}
                 >
-                  <Icon12Icon
-                    className={classNames(projectcss.all, sty.svg___6EjZr)}
+                  <Icon5Icon
+                    className={classNames(projectcss.all, sty.svg__ph7A)}
                     role={"img"}
                   />
 
@@ -661,21 +661,19 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__hE1Zn
+                      sty.text__utGl
                     )}
                   >
-                    {
-                      "\u0633\u0627\u06cc\u062a \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u0645\u0631\u06a9\u0632"
-                    }
+                    {"\u0627\u0639\u0644\u0627\u0646\u0627\u062a"}
                   </div>
                 </div>
                 <div
-                  data-plasmic-name={"btnEhr"}
-                  data-plasmic-override={overrides.btnEhr}
-                  className={classNames(projectcss.all, sty.btnEhr)}
+                  data-plasmic-name={"btnCalculation"}
+                  data-plasmic-override={overrides.btnCalculation}
+                  className={classNames(projectcss.all, sty.btnCalculation)}
                 >
-                  <Icon9Icon
-                    className={classNames(projectcss.all, sty.svg__rXLkj)}
+                  <Icon6Icon
+                    className={classNames(projectcss.all, sty.svg__yUwH)}
                     role={"img"}
                   />
 
@@ -683,11 +681,31 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__nDe4N
+                      sty.text__fu9J9
+                    )}
+                  >
+                    {"\u0645\u062d\u0627\u0633\u0628\u0627\u062a"}
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"btnOnlinepayment"}
+                  data-plasmic-override={overrides.btnOnlinepayment}
+                  className={classNames(projectcss.all, sty.btnOnlinepayment)}
+                >
+                  <Icon7Icon
+                    className={classNames(projectcss.all, sty.svg___8W1Xb)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___143Wr
                     )}
                   >
                     {
-                      "\u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631"
+                      "\u067e\u0631\u062f\u0627\u062e\u062a \u0622\u0646\u0644\u0627\u06cc\u0646"
                     }
                   </div>
                 </div>
@@ -714,12 +732,12 @@ function PlasmicHomepage__RenderFunc(props: {
                   </div>
                 </div>
                 <div
-                  data-plasmic-name={"btnOnlinepayment"}
-                  data-plasmic-override={overrides.btnOnlinepayment}
-                  className={classNames(projectcss.all, sty.btnOnlinepayment)}
+                  data-plasmic-name={"btnEhr"}
+                  data-plasmic-override={overrides.btnEhr}
+                  className={classNames(projectcss.all, sty.btnEhr)}
                 >
-                  <Icon7Icon
-                    className={classNames(projectcss.all, sty.svg___8W1Xb)}
+                  <Icon9Icon
+                    className={classNames(projectcss.all, sty.svg__rXLkj)}
                     role={"img"}
                   />
 
@@ -727,21 +745,21 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text___143Wr
+                      sty.text__nDe4N
                     )}
                   >
                     {
-                      "\u067e\u0631\u062f\u0627\u062e\u062a \u0622\u0646\u0644\u0627\u06cc\u0646"
+                      "\u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631"
                     }
                   </div>
                 </div>
                 <div
-                  data-plasmic-name={"btnCalculation"}
-                  data-plasmic-override={overrides.btnCalculation}
-                  className={classNames(projectcss.all, sty.btnCalculation)}
+                  data-plasmic-name={"btnSpecialsite"}
+                  data-plasmic-override={overrides.btnSpecialsite}
+                  className={classNames(projectcss.all, sty.btnSpecialsite)}
                 >
-                  <Icon6Icon
-                    className={classNames(projectcss.all, sty.svg__yUwH)}
+                  <Icon12Icon
+                    className={classNames(projectcss.all, sty.svg___6EjZr)}
                     role={"img"}
                   />
 
@@ -749,19 +767,21 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__fu9J9
+                      sty.text__hE1Zn
                     )}
                   >
-                    {"\u0645\u062d\u0627\u0633\u0628\u0627\u062a"}
+                    {
+                      "\u0633\u0627\u06cc\u062a \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u0645\u0631\u06a9\u0632"
+                    }
                   </div>
                 </div>
                 <div
-                  data-plasmic-name={"btnAnnouncement"}
-                  data-plasmic-override={overrides.btnAnnouncement}
-                  className={classNames(projectcss.all, sty.btnAnnouncement)}
+                  data-plasmic-name={"btnDashboard"}
+                  data-plasmic-override={overrides.btnDashboard}
+                  className={classNames(projectcss.all, sty.btnDashboard)}
                 >
-                  <Icon5Icon
-                    className={classNames(projectcss.all, sty.svg__ph7A)}
+                  <Icon10Icon
+                    className={classNames(projectcss.all, sty.svg__cbLBw)}
                     role={"img"}
                   />
 
@@ -769,30 +789,12 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__utGl
+                      sty.text__vlDsf
                     )}
                   >
-                    {"\u0627\u0639\u0644\u0627\u0646\u0627\u062a"}
-                  </div>
-                </div>
-                <div
-                  data-plasmic-name={"btnReservation"}
-                  data-plasmic-override={overrides.btnReservation}
-                  className={classNames(projectcss.all, sty.btnReservation)}
-                >
-                  <Icon3Icon
-                    className={classNames(projectcss.all, sty.svg___4NJPi)}
-                    role={"img"}
-                  />
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__n3W1V
-                    )}
-                  >
-                    {"\u0646\u0648\u0628\u062a \u062f\u0647\u06cc"}
+                    {
+                      "\u062f \u0627\u0634\u0628\u0648\u0631\u062f \u06af\u0632\u0627\u0631\u0634\u0627\u062a \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc"
+                    }
                   </div>
                 </div>
               </div>
@@ -800,6 +802,1016 @@ function PlasmicHomepage__RenderFunc(props: {
           </section>
           <section className={classNames(projectcss.all, sty.section__sTanX)}>
             <div className={classNames(projectcss.all, sty.freeBox___6V1K)}>
+              <div className={classNames(projectcss.all, sty.freeBox___6LVp)}>
+                <div
+                  data-plasmic-name={"columns"}
+                  data-plasmic-override={overrides.columns}
+                  className={classNames(projectcss.all, sty.columns)}
+                >
+                  {(() => {
+                    try {
+                      return $state.clReservationState;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })() ? (
+                    <div
+                      data-plasmic-name={"clReservation"}
+                      data-plasmic-override={overrides.clReservation}
+                      className={classNames(projectcss.all, sty.clReservation)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__w6AX6
+                        )}
+                      >
+                        {"\u0646\u0648\u0628\u062a \u062f\u0647\u06cc"}
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__rpnki
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__kzwO
+                          )}
+                          dir={"rtl"}
+                        >
+                          <TextInput
+                            data-plasmic-name={"txtInternetReservation"}
+                            data-plasmic-override={
+                              overrides.txtInternetReservation
+                            }
+                            className={classNames(
+                              "__wab_instance",
+                              sty.txtInternetReservation
+                            )}
+                            onChange={(...eventArgs) => {
+                              generateStateOnChangeProp($state, [
+                                "txtInternetReservation",
+                                "value"
+                              ])((e => e.target?.value).apply(null, eventArgs));
+                            }}
+                            placeholder={
+                              "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u0647\u0627\u06cc \u0627\u06cc\u0646\u062a\u0631\u0646\u062a\u06cc \u0631\u0627 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f"
+                            }
+                            value={
+                              generateStateValueProp($state, [
+                                "txtInternetReservation",
+                                "value"
+                              ]) ?? ""
+                            }
+                          />
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__sEn0F
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__cgsHj
+                            )}
+                          >
+                            {
+                              "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u0627\u06cc\u0646\u062a\u0631\u0646\u062a\u06cc:"
+                            }
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__g8Pc
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__vSifj
+                          )}
+                          dir={"rtl"}
+                        >
+                          <TextInput
+                            data-plasmic-name={"txtPhoneReservation"}
+                            data-plasmic-override={
+                              overrides.txtPhoneReservation
+                            }
+                            className={classNames(
+                              "__wab_instance",
+                              sty.txtPhoneReservation
+                            )}
+                            onChange={(...eventArgs) => {
+                              generateStateOnChangeProp($state, [
+                                "txtPhoneReservation",
+                                "value"
+                              ])((e => e.target?.value).apply(null, eventArgs));
+                            }}
+                            placeholder={
+                              "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u0647\u0627\u06cc \u062a\u0644\u0641\u0646\u06cc \u0631\u0627 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f"
+                            }
+                            value={
+                              generateStateValueProp($state, [
+                                "txtPhoneReservation",
+                                "value"
+                              ]) ?? ""
+                            }
+                          />
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__b0K0E
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__n3Kp0
+                            )}
+                            dir={"rtl"}
+                          >
+                            {
+                              "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u062a\u0644\u0641\u0646\u06cc:"
+                            }
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox___1ZgP
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__oLvKu
+                          )}
+                          dir={"rtl"}
+                        >
+                          <TextInput
+                            data-plasmic-name={"txtKioskReservation"}
+                            data-plasmic-override={
+                              overrides.txtKioskReservation
+                            }
+                            className={classNames(
+                              "__wab_instance",
+                              sty.txtKioskReservation
+                            )}
+                            onChange={(...eventArgs) => {
+                              generateStateOnChangeProp($state, [
+                                "txtKioskReservation",
+                                "value"
+                              ])((e => e.target?.value).apply(null, eventArgs));
+                            }}
+                            placeholder={
+                              "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u0647\u0627\u06cc \u06a9\u06cc\u0648\u0633\u06a9 \u0631\u0627 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f"
+                            }
+                            value={
+                              generateStateValueProp($state, [
+                                "txtKioskReservation",
+                                "value"
+                              ]) ?? ""
+                            }
+                          />
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__tdneg
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__tHMbr
+                            )}
+                          >
+                            {
+                              "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u06a9\u06cc\u0648\u0633\u06a9:"
+                            }
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__aZe2N
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___6YCaW
+                          )}
+                        >
+                          <Button
+                            data-plasmic-name={"button"}
+                            data-plasmic-override={overrides.button}
+                            children2={"\u062b\u0628\u062a"}
+                            className={classNames("__wab_instance", sty.button)}
+                            onClick={async event => {
+                              const $steps = {};
+
+                              $steps["runCode"] = true
+                                ? (() => {
+                                    const actionArgs = {
+                                      customFunction: async () => {
+                                        return (() => {
+                                          $state.reservationInternetResult =
+                                            $state.reservationInternetPrice *
+                                            $state.txtInternetReservation.value;
+                                          $state.reservsationPhoneResult =
+                                            $state.reservationPhonePrice *
+                                            $state.txtPhoneReservation.value;
+                                          return ($state.reservationKioskResult =
+                                            $state.reservationKioskPrice *
+                                            $state.txtKioskReservation.value);
+                                        })();
+                                      }
+                                    };
+                                    return (({ customFunction }) => {
+                                      return customFunction();
+                                    })?.apply(null, [actionArgs]);
+                                  })()
+                                : undefined;
+                              if (
+                                $steps["runCode"] != null &&
+                                typeof $steps["runCode"] === "object" &&
+                                typeof $steps["runCode"].then === "function"
+                              ) {
+                                $steps["runCode"] = await $steps["runCode"];
+                              }
+                            }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  ) : null}
+                  {(() => {
+                    try {
+                      return $state.clAnnouncementState;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })() ? (
+                    <div
+                      data-plasmic-name={"clAnnouncement"}
+                      data-plasmic-override={overrides.clAnnouncement}
+                      className={classNames(projectcss.all, sty.clAnnouncement)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__x2Jmq
+                        )}
+                      >
+                        {"\u0627\u0639\u0644\u0627\u0646\u0627\u062a"}
+                      </div>
+                    </div>
+                  ) : null}
+                  {(() => {
+                    try {
+                      return $state.clCalculationState;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })() ? (
+                    <div
+                      data-plasmic-name={"clCalculations"}
+                      data-plasmic-override={overrides.clCalculations}
+                      className={classNames(projectcss.all, sty.clCalculations)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__yHvEa
+                        )}
+                      >
+                        {"\u0645\u062d\u0627\u0633\u0628\u0627\u062a"}
+                      </div>
+                    </div>
+                  ) : null}
+                  {(() => {
+                    try {
+                      return $state.clOnlinepaymentState;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })() ? (
+                    <div
+                      data-plasmic-name={"clOnlinepayment"}
+                      data-plasmic-override={overrides.clOnlinepayment}
+                      className={classNames(
+                        projectcss.all,
+                        sty.clOnlinepayment
+                      )}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___2Jdcw
+                        )}
+                      >
+                        {
+                          "\u067e\u0631\u062f\u0627\u062e\u062a \u0622\u0646\u0644\u0627\u06cc\u0646"
+                        }
+                      </div>
+                    </div>
+                  ) : null}
+                  {(() => {
+                    try {
+                      return $state.clApiState;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })() ? (
+                    <div
+                      data-plasmic-name={"clApi"}
+                      data-plasmic-override={overrides.clApi}
+                      className={classNames(projectcss.all, sty.clApi)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__ddw3B
+                        )}
+                      >
+                        {
+                          "\u0627\u0631\u062a\u0628\u0627\u0637 \u0628\u0627 \u0633\u0627\u06cc\u0631 \u0646\u0631\u0645 \u0627\u0641\u0632\u0627\u0631 \u0647\u0627"
+                        }
+                      </div>
+                    </div>
+                  ) : null}
+                  {(() => {
+                    try {
+                      return $state.clEhrState;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })() ? (
+                    <div
+                      data-plasmic-name={"clEhr"}
+                      data-plasmic-override={overrides.clEhr}
+                      className={classNames(projectcss.all, sty.clEhr)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__ws91A
+                        )}
+                      >
+                        {
+                          "\u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631"
+                        }
+                      </div>
+                    </div>
+                  ) : null}
+                  {(() => {
+                    try {
+                      return $state.clSpecialsiteState;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })() ? (
+                    <div
+                      data-plasmic-name={"clSpecialsite"}
+                      data-plasmic-override={overrides.clSpecialsite}
+                      className={classNames(projectcss.all, sty.clSpecialsite)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__xjtg5
+                        )}
+                      >
+                        {
+                          "\u0633\u0627\u06cc\u062a \u0627\u062e\u062a\u0635\u0627\u0635\u06cc"
+                        }
+                      </div>
+                    </div>
+                  ) : null}
+                  {(() => {
+                    try {
+                      return $state.clDashboardState;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })() ? (
+                    <div
+                      data-plasmic-name={"clDashboard"}
+                      data-plasmic-override={overrides.clDashboard}
+                      className={classNames(projectcss.all, sty.clDashboard)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__vcuHr
+                        )}
+                      >
+                        {
+                          "\u062f\u0627\u0634\u0628\u0648\u0631\u062f \u06af\u0632\u0627\u0631\u0634\u0627\u062a \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc"
+                        }
+                      </div>
+                    </div>
+                  ) : null}
+                  {(() => {
+                    try {
+                      return $state.clMainState;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })() ? (
+                    <div
+                      data-plasmic-name={"clMain"}
+                      data-plasmic-override={overrides.clMain}
+                      className={classNames(projectcss.all, sty.clMain)}
+                      dir={"rtl"}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__qqROb
+                        )}
+                      >
+                        {
+                          "\u062c\u0647\u062a \u0628\u0631\u0622\u0648\u0631\u062f \u0642\u06cc\u0645\u062a \u0627\u0628\u062a\u062f\u0627 \u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u0647\u0627\u06cc \u0645\u0627\u0647\u06cc\u0627\u0646\u0647 \u0645\u062f\u0646\u0638\u0631 \u0631\u0627 \u0648\u0627\u0631\u062f \u06a9\u0631\u062f\u0647 \u0648 \u0645\u0627\u0698\u0648\u0644 \u0647\u0627\u06cc \u0645\u0648\u0631\u062f \u0646\u06cc\u0627\u0632 \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u0646\u0645\u0627\u06cc\u06cc\u062f:"
+                        }
+                      </div>
+                    </div>
+                  ) : null}
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__xNvEz)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__rHtRv)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___8Qi4Y
+                      )}
+                    >
+                      {
+                        "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a:"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__czMkd)}
+                    dir={"rtl"}
+                  >
+                    <TextInput
+                      data-plasmic-name={"txtResevationCount"}
+                      data-plasmic-override={overrides.txtResevationCount}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.txtResevationCount
+                      )}
+                      onChange={async (...eventArgs: any) => {
+                        ((...eventArgs) => {
+                          generateStateOnChangeProp($state, [
+                            "txtResevationCount",
+                            "value"
+                          ])((e => e.target?.value).apply(null, eventArgs));
+                        }).apply(null, eventArgs);
+                        (async event => {
+                          const $steps = {};
+                        }).apply(null, eventArgs);
+                      }}
+                      placeholder={
+                        "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a"
+                      }
+                      value={
+                        generateStateValueProp($state, [
+                          "txtResevationCount",
+                          "value"
+                        ]) ?? ""
+                      }
+                    />
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__wX9TB)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__an2Xd)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__l7SdE
+                      )}
+                    >
+                      {
+                        "\u0645\u0627\u0698\u0648\u0644 \u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u067e\u0627\u06cc\u0647"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__grh2Y)}
+                    dir={"rtl"}
+                  >
+                    <Checkbox
+                      data-plasmic-name={"reservationCheck"}
+                      data-plasmic-override={overrides.reservationCheck}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.reservationCheck
+                      )}
+                      isChecked={
+                        generateStateValueProp($state, [
+                          "reservationCheck",
+                          "isChecked"
+                        ]) ?? false
+                      }
+                      onChange={(...eventArgs) => {
+                        generateStateOnChangeProp($state, [
+                          "reservationCheck",
+                          "isChecked"
+                        ])(eventArgs[0]);
+                      }}
+                    >
+                      {""}
+                    </Checkbox>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__yfMB)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___81XZh)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__gxjEp
+                      )}
+                    >
+                      {
+                        "\u0645\u0627\u0698\u0648\u0644 \u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u062a\u0644\u0641\u0646\u06cc"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___4OZzs)}
+                    dir={"rtl"}
+                  >
+                    <Checkbox
+                      data-plasmic-name={"reservationPhoneCheck"}
+                      data-plasmic-override={overrides.reservationPhoneCheck}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.reservationPhoneCheck
+                      )}
+                      isChecked={
+                        generateStateValueProp($state, [
+                          "reservationPhoneCheck",
+                          "isChecked"
+                        ]) ?? false
+                      }
+                      onChange={(...eventArgs) => {
+                        generateStateOnChangeProp($state, [
+                          "reservationPhoneCheck",
+                          "isChecked"
+                        ])(eventArgs[0]);
+                      }}
+                    >
+                      {""}
+                    </Checkbox>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__cSq4C)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___83JL)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__xstgH
+                      )}
+                    >
+                      {
+                        "\u0645\u062f\u06cc\u0631\u06cc\u062a \u0635\u0641 \u0648 \u0641\u0631\u0627\u062e\u0648\u0627\u0646"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__sqHf9)}
+                    dir={"rtl"}
+                  >
+                    <Checkbox
+                      data-plasmic-name={"kioskResevationCheck"}
+                      data-plasmic-override={overrides.kioskResevationCheck}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.kioskResevationCheck
+                      )}
+                      isChecked={
+                        generateStateValueProp($state, [
+                          "kioskResevationCheck",
+                          "isChecked"
+                        ]) ?? false
+                      }
+                      onChange={(...eventArgs) => {
+                        generateStateOnChangeProp($state, [
+                          "kioskResevationCheck",
+                          "isChecked"
+                        ])(eventArgs[0]);
+                      }}
+                    >
+                      {""}
+                    </Checkbox>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__ypsB0)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__qMtKh)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__j84I
+                      )}
+                    >
+                      {
+                        "\u0645\u0627\u0698\u0648\u0644 \u0627\u0639\u0644\u0627\u0646\u0627\u062a"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__utNh)}
+                    dir={"rtl"}
+                  >
+                    <Checkbox
+                      data-plasmic-name={"announcementCheck"}
+                      data-plasmic-override={overrides.announcementCheck}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.announcementCheck
+                      )}
+                      isChecked={
+                        generateStateValueProp($state, [
+                          "announcementCheck",
+                          "isChecked"
+                        ]) ?? false
+                      }
+                      onChange={(...eventArgs) => {
+                        generateStateOnChangeProp($state, [
+                          "announcementCheck",
+                          "isChecked"
+                        ])(eventArgs[0]);
+                      }}
+                    >
+                      {""}
+                    </Checkbox>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__a44Iy)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__zJYbx)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__xiDui
+                      )}
+                    >
+                      {
+                        "\u0645\u0627\u0698\u0648\u0644 \u0645\u062d\u0627\u0633\u0628\u0627\u062a"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__eBe7H)}
+                    dir={"rtl"}
+                  >
+                    <Checkbox
+                      data-plasmic-name={"calculationCheck"}
+                      data-plasmic-override={overrides.calculationCheck}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.calculationCheck
+                      )}
+                      isChecked={
+                        generateStateValueProp($state, [
+                          "calculationCheck",
+                          "isChecked"
+                        ]) ?? false
+                      }
+                      onChange={(...eventArgs) => {
+                        generateStateOnChangeProp($state, [
+                          "calculationCheck",
+                          "isChecked"
+                        ])(eventArgs[0]);
+                      }}
+                    >
+                      {""}
+                    </Checkbox>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__vstLs)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__cHbRg)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__mFmSg
+                      )}
+                    >
+                      {
+                        "\u0645\u0627\u0698\u0648\u0644 \u067e\u0631\u062f\u0627\u062e\u062a \u0622\u0646\u0644\u0627\u06cc\u0646"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__ctwHa)}
+                    dir={"rtl"}
+                  >
+                    <Checkbox
+                      data-plasmic-name={"onlinepaymentCheck"}
+                      data-plasmic-override={overrides.onlinepaymentCheck}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.onlinepaymentCheck
+                      )}
+                      isChecked={
+                        generateStateValueProp($state, [
+                          "onlinepaymentCheck",
+                          "isChecked"
+                        ]) ?? false
+                      }
+                      onChange={(...eventArgs) => {
+                        generateStateOnChangeProp($state, [
+                          "onlinepaymentCheck",
+                          "isChecked"
+                        ])(eventArgs[0]);
+                      }}
+                    >
+                      {""}
+                    </Checkbox>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__eDdxo)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__ubeCl)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__mqwTe
+                      )}
+                    >
+                      {
+                        "\u0645\u0627\u0698\u0648\u0644 \u0627\u0631\u062a\u0628\u0627\u0637 \u0628\u0627 \u0633\u0627\u06cc\u0631 \u0646\u0631\u0645 \u0627\u0641\u0632\u0627\u0631 \u0647\u0627"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__lQiZc)}
+                    dir={"rtl"}
+                  >
+                    <Checkbox
+                      data-plasmic-name={"apiCheck"}
+                      data-plasmic-override={overrides.apiCheck}
+                      className={classNames("__wab_instance", sty.apiCheck)}
+                      isChecked={
+                        generateStateValueProp($state, [
+                          "apiCheck",
+                          "isChecked"
+                        ]) ?? false
+                      }
+                      onChange={(...eventArgs) => {
+                        generateStateOnChangeProp($state, [
+                          "apiCheck",
+                          "isChecked"
+                        ])(eventArgs[0]);
+                      }}
+                    >
+                      {""}
+                    </Checkbox>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__th79A)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__oanOw)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__zzTaF
+                      )}
+                    >
+                      {
+                        "\u0645\u0627\u0698\u0648\u0644 \u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__hxRxo)}
+                    dir={"rtl"}
+                  >
+                    <Checkbox
+                      data-plasmic-name={"ehrCheck"}
+                      data-plasmic-override={overrides.ehrCheck}
+                      className={classNames("__wab_instance", sty.ehrCheck)}
+                      isChecked={
+                        generateStateValueProp($state, [
+                          "ehrCheck",
+                          "isChecked"
+                        ]) ?? false
+                      }
+                      onChange={(...eventArgs) => {
+                        generateStateOnChangeProp($state, [
+                          "ehrCheck",
+                          "isChecked"
+                        ])(eventArgs[0]);
+                      }}
+                    >
+                      {""}
+                    </Checkbox>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__ufKuf)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__dnhQr)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__dXYjf
+                      )}
+                    >
+                      {
+                        "\u0633\u0627\u06cc\u062a \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u0645\u0631\u06a9\u0632"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__fKKm5)}
+                    dir={"rtl"}
+                  >
+                    <Checkbox
+                      data-plasmic-name={"specialSiteCheck"}
+                      data-plasmic-override={overrides.specialSiteCheck}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.specialSiteCheck
+                      )}
+                      isChecked={
+                        generateStateValueProp($state, [
+                          "specialSiteCheck",
+                          "isChecked"
+                        ]) ?? false
+                      }
+                      onChange={(...eventArgs) => {
+                        generateStateOnChangeProp($state, [
+                          "specialSiteCheck",
+                          "isChecked"
+                        ])(eventArgs[0]);
+                      }}
+                    >
+                      {""}
+                    </Checkbox>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__swDcY)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__ple)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__rgMxE
+                      )}
+                    >
+                      {
+                        "\u062f\u0627\u0634\u0628\u0648\u0631\u062f \u06af\u0632\u0627\u0631\u0634\u0627\u062a \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__yfTLj)}
+                    dir={"rtl"}
+                  >
+                    <Checkbox
+                      data-plasmic-name={"dashboardCheck"}
+                      data-plasmic-override={overrides.dashboardCheck}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.dashboardCheck
+                      )}
+                      isChecked={
+                        generateStateValueProp($state, [
+                          "dashboardCheck",
+                          "isChecked"
+                        ]) ?? false
+                      }
+                      onChange={(...eventArgs) => {
+                        generateStateOnChangeProp($state, [
+                          "dashboardCheck",
+                          "isChecked"
+                        ])(eventArgs[0]);
+                      }}
+                    >
+                      {""}
+                    </Checkbox>
+                  </div>
+                </div>
+              </div>
               <div
                 className={classNames(projectcss.all, sty.freeBox__pbNpV)}
                 dir={"rtl"}
@@ -1469,1018 +2481,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   </div>
                 </div>
               </div>
-              <div className={classNames(projectcss.all, sty.freeBox___6LVp)}>
-                <div
-                  data-plasmic-name={"columns"}
-                  data-plasmic-override={overrides.columns}
-                  className={classNames(projectcss.all, sty.columns)}
-                >
-                  {(() => {
-                    try {
-                      return $state.clReservationState;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <div
-                      data-plasmic-name={"clReservation"}
-                      data-plasmic-override={overrides.clReservation}
-                      className={classNames(projectcss.all, sty.clReservation)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__w6AX6
-                        )}
-                      >
-                        {"\u0646\u0648\u0628\u062a \u062f\u0647\u06cc"}
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__rpnki
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__kzwO
-                          )}
-                          dir={"rtl"}
-                        >
-                          <TextInput
-                            data-plasmic-name={"txtInternetReservation"}
-                            data-plasmic-override={
-                              overrides.txtInternetReservation
-                            }
-                            className={classNames(
-                              "__wab_instance",
-                              sty.txtInternetReservation
-                            )}
-                            onChange={(...eventArgs) => {
-                              generateStateOnChangeProp($state, [
-                                "txtInternetReservation",
-                                "value"
-                              ])((e => e.target?.value).apply(null, eventArgs));
-                            }}
-                            placeholder={
-                              "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u0647\u0627\u06cc \u0627\u06cc\u0646\u062a\u0631\u0646\u062a\u06cc \u0631\u0627 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f"
-                            }
-                            value={
-                              generateStateValueProp($state, [
-                                "txtInternetReservation",
-                                "value"
-                              ]) ?? ""
-                            }
-                          />
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__sEn0F
-                          )}
-                          dir={"rtl"}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__cgsHj
-                            )}
-                          >
-                            {
-                              "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u0627\u06cc\u0646\u062a\u0631\u0646\u062a\u06cc:"
-                            }
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__g8Pc
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__vSifj
-                          )}
-                          dir={"rtl"}
-                        >
-                          <TextInput
-                            data-plasmic-name={"txtPhoneReservation"}
-                            data-plasmic-override={
-                              overrides.txtPhoneReservation
-                            }
-                            className={classNames(
-                              "__wab_instance",
-                              sty.txtPhoneReservation
-                            )}
-                            onChange={(...eventArgs) => {
-                              generateStateOnChangeProp($state, [
-                                "txtPhoneReservation",
-                                "value"
-                              ])((e => e.target?.value).apply(null, eventArgs));
-                            }}
-                            placeholder={
-                              "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u0647\u0627\u06cc \u062a\u0644\u0641\u0646\u06cc \u0631\u0627 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f"
-                            }
-                            value={
-                              generateStateValueProp($state, [
-                                "txtPhoneReservation",
-                                "value"
-                              ]) ?? ""
-                            }
-                          />
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__b0K0E
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__n3Kp0
-                            )}
-                            dir={"rtl"}
-                          >
-                            {
-                              "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u062a\u0644\u0641\u0646\u06cc:"
-                            }
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox___1ZgP
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__oLvKu
-                          )}
-                          dir={"rtl"}
-                        >
-                          <TextInput
-                            data-plasmic-name={"txtKioskReservation"}
-                            data-plasmic-override={
-                              overrides.txtKioskReservation
-                            }
-                            className={classNames(
-                              "__wab_instance",
-                              sty.txtKioskReservation
-                            )}
-                            onChange={(...eventArgs) => {
-                              generateStateOnChangeProp($state, [
-                                "txtKioskReservation",
-                                "value"
-                              ])((e => e.target?.value).apply(null, eventArgs));
-                            }}
-                            placeholder={
-                              "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u0647\u0627\u06cc \u06a9\u06cc\u0648\u0633\u06a9 \u0631\u0627 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f"
-                            }
-                            value={
-                              generateStateValueProp($state, [
-                                "txtKioskReservation",
-                                "value"
-                              ]) ?? ""
-                            }
-                          />
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__tdneg
-                          )}
-                          dir={"rtl"}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__tHMbr
-                            )}
-                          >
-                            {
-                              "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u06a9\u06cc\u0648\u0633\u06a9:"
-                            }
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__aZe2N
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox___6YCaW
-                          )}
-                        >
-                          <Button
-                            data-plasmic-name={"button"}
-                            data-plasmic-override={overrides.button}
-                            children2={"\u062b\u0628\u062a"}
-                            className={classNames("__wab_instance", sty.button)}
-                            onClick={async event => {
-                              const $steps = {};
-
-                              $steps["runCode"] = true
-                                ? (() => {
-                                    const actionArgs = {
-                                      customFunction: async () => {
-                                        return (() => {
-                                          $state.reservationInternetResult =
-                                            $state.reservationInternetPrice *
-                                            $state.txtInternetReservation.value;
-                                          $state.reservsationPhoneResult =
-                                            $state.reservationPhonePrice *
-                                            $state.txtPhoneReservation.value;
-                                          return ($state.reservationKioskResult =
-                                            $state.reservationKioskPrice *
-                                            $state.txtKioskReservation.value);
-                                        })();
-                                      }
-                                    };
-                                    return (({ customFunction }) => {
-                                      return customFunction();
-                                    })?.apply(null, [actionArgs]);
-                                  })()
-                                : undefined;
-                              if (
-                                $steps["runCode"] != null &&
-                                typeof $steps["runCode"] === "object" &&
-                                typeof $steps["runCode"].then === "function"
-                              ) {
-                                $steps["runCode"] = await $steps["runCode"];
-                              }
-                            }}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  ) : null}
-                  {(() => {
-                    try {
-                      return $state.clAnnouncementState;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <div
-                      data-plasmic-name={"clAnnouncement"}
-                      data-plasmic-override={overrides.clAnnouncement}
-                      className={classNames(projectcss.all, sty.clAnnouncement)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__x2Jmq
-                        )}
-                      >
-                        {"\u0627\u0639\u0644\u0627\u0646\u0627\u062a"}
-                      </div>
-                    </div>
-                  ) : null}
-                  {(() => {
-                    try {
-                      return $state.clCalculationState;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <div
-                      data-plasmic-name={"clCalculations"}
-                      data-plasmic-override={overrides.clCalculations}
-                      className={classNames(projectcss.all, sty.clCalculations)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__yHvEa
-                        )}
-                      >
-                        {"\u0645\u062d\u0627\u0633\u0628\u0627\u062a"}
-                      </div>
-                    </div>
-                  ) : null}
-                  {(() => {
-                    try {
-                      return $state.clOnlinepaymentState;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <div
-                      data-plasmic-name={"clOnlinepayment"}
-                      data-plasmic-override={overrides.clOnlinepayment}
-                      className={classNames(
-                        projectcss.all,
-                        sty.clOnlinepayment
-                      )}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___2Jdcw
-                        )}
-                      >
-                        {
-                          "\u067e\u0631\u062f\u0627\u062e\u062a \u0622\u0646\u0644\u0627\u06cc\u0646"
-                        }
-                      </div>
-                    </div>
-                  ) : null}
-                  {(() => {
-                    try {
-                      return $state.clApiState;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <div
-                      data-plasmic-name={"clApi"}
-                      data-plasmic-override={overrides.clApi}
-                      className={classNames(projectcss.all, sty.clApi)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__ddw3B
-                        )}
-                      >
-                        {
-                          "\u0627\u0631\u062a\u0628\u0627\u0637 \u0628\u0627 \u0633\u0627\u06cc\u0631 \u0646\u0631\u0645 \u0627\u0641\u0632\u0627\u0631 \u0647\u0627"
-                        }
-                      </div>
-                    </div>
-                  ) : null}
-                  {(() => {
-                    try {
-                      return $state.clEhrState;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <div
-                      data-plasmic-name={"clEhr"}
-                      data-plasmic-override={overrides.clEhr}
-                      className={classNames(projectcss.all, sty.clEhr)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__ws91A
-                        )}
-                      >
-                        {
-                          "\u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631"
-                        }
-                      </div>
-                    </div>
-                  ) : null}
-                  {(() => {
-                    try {
-                      return $state.clSpecialsiteState;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <div
-                      data-plasmic-name={"clSpecialsite"}
-                      data-plasmic-override={overrides.clSpecialsite}
-                      className={classNames(projectcss.all, sty.clSpecialsite)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__xjtg5
-                        )}
-                      >
-                        {
-                          "\u0633\u0627\u06cc\u062a \u0627\u062e\u062a\u0635\u0627\u0635\u06cc"
-                        }
-                      </div>
-                    </div>
-                  ) : null}
-                  {(() => {
-                    try {
-                      return $state.clDashboardState;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <div
-                      data-plasmic-name={"clDashboard"}
-                      data-plasmic-override={overrides.clDashboard}
-                      className={classNames(projectcss.all, sty.clDashboard)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__vcuHr
-                        )}
-                      >
-                        {
-                          "\u062f\u0627\u0634\u0628\u0648\u0631\u062f \u06af\u0632\u0627\u0631\u0634\u0627\u062a \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc"
-                        }
-                      </div>
-                    </div>
-                  ) : null}
-                  {(() => {
-                    try {
-                      return $state.clMainState;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <div
-                      data-plasmic-name={"clMain"}
-                      data-plasmic-override={overrides.clMain}
-                      className={classNames(projectcss.all, sty.clMain)}
-                      dir={"rtl"}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__qqROb
-                        )}
-                      >
-                        {
-                          "\u062c\u0647\u062a \u0628\u0631\u0622\u0648\u0631\u062f \u0642\u06cc\u0645\u062a \u0627\u0628\u062a\u062f\u0627 \u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u0647\u0627\u06cc \u0645\u0627\u0647\u06cc\u0627\u0646\u0647 \u0645\u062f\u0646\u0638\u0631 \u0631\u0627 \u0648\u0627\u0631\u062f \u06a9\u0631\u062f\u0647 \u0648 \u0645\u0627\u0698\u0648\u0644 \u0647\u0627\u06cc \u0645\u0648\u0631\u062f \u0646\u06cc\u0627\u0632 \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u0646\u0645\u0627\u06cc\u06cc\u062f:"
-                        }
-                      </div>
-                    </div>
-                  ) : null}
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__xNvEz)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__czMkd)}
-                    dir={"rtl"}
-                  >
-                    <TextInput
-                      data-plasmic-name={"txtResevationCount"}
-                      data-plasmic-override={overrides.txtResevationCount}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.txtResevationCount
-                      )}
-                      onChange={async (...eventArgs: any) => {
-                        ((...eventArgs) => {
-                          generateStateOnChangeProp($state, [
-                            "txtResevationCount",
-                            "value"
-                          ])((e => e.target?.value).apply(null, eventArgs));
-                        }).apply(null, eventArgs);
-                        (async event => {
-                          const $steps = {};
-                        }).apply(null, eventArgs);
-                      }}
-                      placeholder={
-                        "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a"
-                      }
-                      value={
-                        generateStateValueProp($state, [
-                          "txtResevationCount",
-                          "value"
-                        ]) ?? ""
-                      }
-                    />
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__rHtRv)}
-                    dir={"rtl"}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___8Qi4Y
-                      )}
-                    >
-                      {
-                        "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a:"
-                      }
-                    </div>
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__wX9TB)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__an2Xd)}
-                    dir={"rtl"}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__l7SdE
-                      )}
-                    >
-                      {
-                        "\u0645\u0627\u0698\u0648\u0644 \u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u067e\u0627\u06cc\u0647"
-                      }
-                    </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__grh2Y)}
-                    dir={"rtl"}
-                  >
-                    <Checkbox
-                      data-plasmic-name={"reservationCheck"}
-                      data-plasmic-override={overrides.reservationCheck}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.reservationCheck
-                      )}
-                      isChecked={
-                        generateStateValueProp($state, [
-                          "reservationCheck",
-                          "isChecked"
-                        ]) ?? false
-                      }
-                      onChange={(...eventArgs) => {
-                        generateStateOnChangeProp($state, [
-                          "reservationCheck",
-                          "isChecked"
-                        ])(eventArgs[0]);
-                      }}
-                    >
-                      {""}
-                    </Checkbox>
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__yfMB)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox___81XZh)}
-                    dir={"rtl"}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__gxjEp
-                      )}
-                    >
-                      {
-                        "\u0645\u0627\u0698\u0648\u0644 \u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u062a\u0644\u0641\u0646\u06cc"
-                      }
-                    </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox___4OZzs)}
-                    dir={"rtl"}
-                  >
-                    <Checkbox
-                      data-plasmic-name={"reservationPhoneCheck"}
-                      data-plasmic-override={overrides.reservationPhoneCheck}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.reservationPhoneCheck
-                      )}
-                      isChecked={
-                        generateStateValueProp($state, [
-                          "reservationPhoneCheck",
-                          "isChecked"
-                        ]) ?? false
-                      }
-                      onChange={(...eventArgs) => {
-                        generateStateOnChangeProp($state, [
-                          "reservationPhoneCheck",
-                          "isChecked"
-                        ])(eventArgs[0]);
-                      }}
-                    >
-                      {""}
-                    </Checkbox>
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__cSq4C)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox___83JL)}
-                    dir={"rtl"}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__xstgH
-                      )}
-                    >
-                      {
-                        "\u0645\u062f\u06cc\u0631\u06cc\u062a \u0635\u0641 \u0648 \u0641\u0631\u0627\u062e\u0648\u0627\u0646"
-                      }
-                    </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__sqHf9)}
-                    dir={"rtl"}
-                  >
-                    <Checkbox
-                      data-plasmic-name={"kioskResevationCheck"}
-                      data-plasmic-override={overrides.kioskResevationCheck}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.kioskResevationCheck
-                      )}
-                      isChecked={
-                        generateStateValueProp($state, [
-                          "kioskResevationCheck",
-                          "isChecked"
-                        ]) ?? false
-                      }
-                      onChange={(...eventArgs) => {
-                        generateStateOnChangeProp($state, [
-                          "kioskResevationCheck",
-                          "isChecked"
-                        ])(eventArgs[0]);
-                      }}
-                    >
-                      {""}
-                    </Checkbox>
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__ypsB0)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__qMtKh)}
-                    dir={"rtl"}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__j84I
-                      )}
-                    >
-                      {
-                        "\u0645\u0627\u0698\u0648\u0644 \u0627\u0639\u0644\u0627\u0646\u0627\u062a"
-                      }
-                    </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__utNh)}
-                    dir={"rtl"}
-                  >
-                    <Checkbox
-                      data-plasmic-name={"announcementCheck"}
-                      data-plasmic-override={overrides.announcementCheck}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.announcementCheck
-                      )}
-                      isChecked={
-                        generateStateValueProp($state, [
-                          "announcementCheck",
-                          "isChecked"
-                        ]) ?? false
-                      }
-                      onChange={(...eventArgs) => {
-                        generateStateOnChangeProp($state, [
-                          "announcementCheck",
-                          "isChecked"
-                        ])(eventArgs[0]);
-                      }}
-                    >
-                      {""}
-                    </Checkbox>
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__a44Iy)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__zJYbx)}
-                    dir={"rtl"}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__xiDui
-                      )}
-                    >
-                      {
-                        "\u0645\u0627\u0698\u0648\u0644 \u0645\u062d\u0627\u0633\u0628\u0627\u062a"
-                      }
-                    </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__eBe7H)}
-                    dir={"rtl"}
-                  >
-                    <Checkbox
-                      data-plasmic-name={"calculationCheck"}
-                      data-plasmic-override={overrides.calculationCheck}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.calculationCheck
-                      )}
-                      isChecked={
-                        generateStateValueProp($state, [
-                          "calculationCheck",
-                          "isChecked"
-                        ]) ?? false
-                      }
-                      onChange={(...eventArgs) => {
-                        generateStateOnChangeProp($state, [
-                          "calculationCheck",
-                          "isChecked"
-                        ])(eventArgs[0]);
-                      }}
-                    >
-                      {""}
-                    </Checkbox>
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__vstLs)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__cHbRg)}
-                    dir={"rtl"}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__mFmSg
-                      )}
-                    >
-                      {
-                        "\u0645\u0627\u0698\u0648\u0644 \u067e\u0631\u062f\u0627\u062e\u062a \u0622\u0646\u0644\u0627\u06cc\u0646"
-                      }
-                    </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__ctwHa)}
-                    dir={"rtl"}
-                  >
-                    <Checkbox
-                      data-plasmic-name={"onlinepaymentCheck"}
-                      data-plasmic-override={overrides.onlinepaymentCheck}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.onlinepaymentCheck
-                      )}
-                      isChecked={
-                        generateStateValueProp($state, [
-                          "onlinepaymentCheck",
-                          "isChecked"
-                        ]) ?? false
-                      }
-                      onChange={(...eventArgs) => {
-                        generateStateOnChangeProp($state, [
-                          "onlinepaymentCheck",
-                          "isChecked"
-                        ])(eventArgs[0]);
-                      }}
-                    >
-                      {""}
-                    </Checkbox>
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__eDdxo)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__ubeCl)}
-                    dir={"rtl"}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__mqwTe
-                      )}
-                    >
-                      {
-                        "\u0645\u0627\u0698\u0648\u0644 \u0627\u0631\u062a\u0628\u0627\u0637 \u0628\u0627 \u0633\u0627\u06cc\u0631 \u0646\u0631\u0645 \u0627\u0641\u0632\u0627\u0631 \u0647\u0627"
-                      }
-                    </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__lQiZc)}
-                    dir={"rtl"}
-                  >
-                    <Checkbox
-                      data-plasmic-name={"apiCheck"}
-                      data-plasmic-override={overrides.apiCheck}
-                      className={classNames("__wab_instance", sty.apiCheck)}
-                      isChecked={
-                        generateStateValueProp($state, [
-                          "apiCheck",
-                          "isChecked"
-                        ]) ?? false
-                      }
-                      onChange={(...eventArgs) => {
-                        generateStateOnChangeProp($state, [
-                          "apiCheck",
-                          "isChecked"
-                        ])(eventArgs[0]);
-                      }}
-                    >
-                      {""}
-                    </Checkbox>
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__th79A)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__oanOw)}
-                    dir={"rtl"}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__zzTaF
-                      )}
-                    >
-                      {
-                        "\u0645\u0627\u0698\u0648\u0644 \u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631"
-                      }
-                    </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__hxRxo)}
-                    dir={"rtl"}
-                  >
-                    <Checkbox
-                      data-plasmic-name={"ehrCheck"}
-                      data-plasmic-override={overrides.ehrCheck}
-                      className={classNames("__wab_instance", sty.ehrCheck)}
-                      isChecked={
-                        generateStateValueProp($state, [
-                          "ehrCheck",
-                          "isChecked"
-                        ]) ?? false
-                      }
-                      onChange={(...eventArgs) => {
-                        generateStateOnChangeProp($state, [
-                          "ehrCheck",
-                          "isChecked"
-                        ])(eventArgs[0]);
-                      }}
-                    >
-                      {""}
-                    </Checkbox>
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__ufKuf)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__dnhQr)}
-                    dir={"rtl"}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__dXYjf
-                      )}
-                    >
-                      {
-                        "\u0633\u0627\u06cc\u062a \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u0645\u0631\u06a9\u0632"
-                      }
-                    </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__fKKm5)}
-                    dir={"rtl"}
-                  >
-                    <Checkbox
-                      data-plasmic-name={"specialSiteCheck"}
-                      data-plasmic-override={overrides.specialSiteCheck}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.specialSiteCheck
-                      )}
-                      isChecked={
-                        generateStateValueProp($state, [
-                          "specialSiteCheck",
-                          "isChecked"
-                        ]) ?? false
-                      }
-                      onChange={(...eventArgs) => {
-                        generateStateOnChangeProp($state, [
-                          "specialSiteCheck",
-                          "isChecked"
-                        ])(eventArgs[0]);
-                      }}
-                    >
-                      {""}
-                    </Checkbox>
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__swDcY)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__ple)}
-                    dir={"rtl"}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__rgMxE
-                      )}
-                    >
-                      {
-                        "\u062f\u0627\u0634\u0628\u0648\u0631\u062f \u06af\u0632\u0627\u0631\u0634\u0627\u062a \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc"
-                      }
-                    </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__yfTLj)}
-                    dir={"rtl"}
-                  >
-                    <Checkbox
-                      data-plasmic-name={"dashboardCheck"}
-                      data-plasmic-override={overrides.dashboardCheck}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.dashboardCheck
-                      )}
-                      isChecked={
-                        generateStateValueProp($state, [
-                          "dashboardCheck",
-                          "isChecked"
-                        ]) ?? false
-                      }
-                      onChange={(...eventArgs) => {
-                        generateStateOnChangeProp($state, [
-                          "dashboardCheck",
-                          "isChecked"
-                        ])(eventArgs[0]);
-                      }}
-                    >
-                      {""}
-                    </Checkbox>
-                  </div>
-                </div>
-              </div>
             </div>
           </section>
+          <div className={classNames(projectcss.all, sty.freeBox__xby)} />
         </div>
       </div>
     </React.Fragment>
@@ -2491,26 +2494,14 @@ const PlasmicDescendants = {
   root: [
     "root",
     "h1",
-    "btnDashboard",
-    "btnSpecialsite",
-    "btnEhr",
-    "btnApi",
-    "btnOnlinepayment",
-    "btnCalculation",
-    "btnAnnouncement",
     "btnReservation",
-    "txtReservationInternetResult",
-    "txtReservationPhoneResult",
-    "txtReservationKioskResult",
-    "txtAnnouncementResult",
-    "txtCalculationResult",
-    "txtOnlinePaymentResult",
-    "txtapiResult",
-    "txtEhrResult",
-    "txtReservationKioskResult6",
-    "txtSpecialSiteResult",
-    "txtDashboardResult",
-    "txtSumInvoice",
+    "btnAnnouncement",
+    "btnCalculation",
+    "btnOnlinepayment",
+    "btnApi",
+    "btnEhr",
+    "btnSpecialsite",
+    "btnDashboard",
     "columns",
     "clReservation",
     "txtInternetReservation",
@@ -2535,29 +2526,29 @@ const PlasmicDescendants = {
     "apiCheck",
     "ehrCheck",
     "specialSiteCheck",
-    "dashboardCheck"
+    "dashboardCheck",
+    "txtReservationInternetResult",
+    "txtReservationPhoneResult",
+    "txtReservationKioskResult",
+    "txtAnnouncementResult",
+    "txtCalculationResult",
+    "txtOnlinePaymentResult",
+    "txtapiResult",
+    "txtEhrResult",
+    "txtReservationKioskResult6",
+    "txtSpecialSiteResult",
+    "txtDashboardResult",
+    "txtSumInvoice"
   ],
   h1: ["h1"],
-  btnDashboard: ["btnDashboard"],
-  btnSpecialsite: ["btnSpecialsite"],
-  btnEhr: ["btnEhr"],
-  btnApi: ["btnApi"],
-  btnOnlinepayment: ["btnOnlinepayment"],
-  btnCalculation: ["btnCalculation"],
-  btnAnnouncement: ["btnAnnouncement"],
   btnReservation: ["btnReservation"],
-  txtReservationInternetResult: ["txtReservationInternetResult"],
-  txtReservationPhoneResult: ["txtReservationPhoneResult"],
-  txtReservationKioskResult: ["txtReservationKioskResult"],
-  txtAnnouncementResult: ["txtAnnouncementResult"],
-  txtCalculationResult: ["txtCalculationResult"],
-  txtOnlinePaymentResult: ["txtOnlinePaymentResult"],
-  txtapiResult: ["txtapiResult"],
-  txtEhrResult: ["txtEhrResult", "txtReservationKioskResult6"],
-  txtReservationKioskResult6: ["txtReservationKioskResult6"],
-  txtSpecialSiteResult: ["txtSpecialSiteResult"],
-  txtDashboardResult: ["txtDashboardResult"],
-  txtSumInvoice: ["txtSumInvoice"],
+  btnAnnouncement: ["btnAnnouncement"],
+  btnCalculation: ["btnCalculation"],
+  btnOnlinepayment: ["btnOnlinepayment"],
+  btnApi: ["btnApi"],
+  btnEhr: ["btnEhr"],
+  btnSpecialsite: ["btnSpecialsite"],
+  btnDashboard: ["btnDashboard"],
   columns: [
     "columns",
     "clReservation",
@@ -2603,7 +2594,19 @@ const PlasmicDescendants = {
   apiCheck: ["apiCheck"],
   ehrCheck: ["ehrCheck"],
   specialSiteCheck: ["specialSiteCheck"],
-  dashboardCheck: ["dashboardCheck"]
+  dashboardCheck: ["dashboardCheck"],
+  txtReservationInternetResult: ["txtReservationInternetResult"],
+  txtReservationPhoneResult: ["txtReservationPhoneResult"],
+  txtReservationKioskResult: ["txtReservationKioskResult"],
+  txtAnnouncementResult: ["txtAnnouncementResult"],
+  txtCalculationResult: ["txtCalculationResult"],
+  txtOnlinePaymentResult: ["txtOnlinePaymentResult"],
+  txtapiResult: ["txtapiResult"],
+  txtEhrResult: ["txtEhrResult", "txtReservationKioskResult6"],
+  txtReservationKioskResult6: ["txtReservationKioskResult6"],
+  txtSpecialSiteResult: ["txtSpecialSiteResult"],
+  txtDashboardResult: ["txtDashboardResult"],
+  txtSumInvoice: ["txtSumInvoice"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -2611,26 +2614,14 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   h1: "h1";
-  btnDashboard: "div";
-  btnSpecialsite: "div";
-  btnEhr: "div";
-  btnApi: "div";
-  btnOnlinepayment: "div";
-  btnCalculation: "div";
-  btnAnnouncement: "div";
   btnReservation: "div";
-  txtReservationInternetResult: "div";
-  txtReservationPhoneResult: "div";
-  txtReservationKioskResult: "div";
-  txtAnnouncementResult: "div";
-  txtCalculationResult: "div";
-  txtOnlinePaymentResult: "div";
-  txtapiResult: "div";
-  txtEhrResult: "div";
-  txtReservationKioskResult6: "div";
-  txtSpecialSiteResult: "div";
-  txtDashboardResult: "div";
-  txtSumInvoice: "div";
+  btnAnnouncement: "div";
+  btnCalculation: "div";
+  btnOnlinepayment: "div";
+  btnApi: "div";
+  btnEhr: "div";
+  btnSpecialsite: "div";
+  btnDashboard: "div";
   columns: "div";
   clReservation: "div";
   txtInternetReservation: typeof TextInput;
@@ -2656,6 +2647,18 @@ type NodeDefaultElementType = {
   ehrCheck: typeof Checkbox;
   specialSiteCheck: typeof Checkbox;
   dashboardCheck: typeof Checkbox;
+  txtReservationInternetResult: "div";
+  txtReservationPhoneResult: "div";
+  txtReservationKioskResult: "div";
+  txtAnnouncementResult: "div";
+  txtCalculationResult: "div";
+  txtOnlinePaymentResult: "div";
+  txtapiResult: "div";
+  txtEhrResult: "div";
+  txtReservationKioskResult6: "div";
+  txtSpecialSiteResult: "div";
+  txtDashboardResult: "div";
+  txtSumInvoice: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -2719,28 +2722,14 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     h1: makeNodeComponent("h1"),
-    btnDashboard: makeNodeComponent("btnDashboard"),
-    btnSpecialsite: makeNodeComponent("btnSpecialsite"),
-    btnEhr: makeNodeComponent("btnEhr"),
-    btnApi: makeNodeComponent("btnApi"),
-    btnOnlinepayment: makeNodeComponent("btnOnlinepayment"),
-    btnCalculation: makeNodeComponent("btnCalculation"),
-    btnAnnouncement: makeNodeComponent("btnAnnouncement"),
     btnReservation: makeNodeComponent("btnReservation"),
-    txtReservationInternetResult: makeNodeComponent(
-      "txtReservationInternetResult"
-    ),
-    txtReservationPhoneResult: makeNodeComponent("txtReservationPhoneResult"),
-    txtReservationKioskResult: makeNodeComponent("txtReservationKioskResult"),
-    txtAnnouncementResult: makeNodeComponent("txtAnnouncementResult"),
-    txtCalculationResult: makeNodeComponent("txtCalculationResult"),
-    txtOnlinePaymentResult: makeNodeComponent("txtOnlinePaymentResult"),
-    txtapiResult: makeNodeComponent("txtapiResult"),
-    txtEhrResult: makeNodeComponent("txtEhrResult"),
-    txtReservationKioskResult6: makeNodeComponent("txtReservationKioskResult6"),
-    txtSpecialSiteResult: makeNodeComponent("txtSpecialSiteResult"),
-    txtDashboardResult: makeNodeComponent("txtDashboardResult"),
-    txtSumInvoice: makeNodeComponent("txtSumInvoice"),
+    btnAnnouncement: makeNodeComponent("btnAnnouncement"),
+    btnCalculation: makeNodeComponent("btnCalculation"),
+    btnOnlinepayment: makeNodeComponent("btnOnlinepayment"),
+    btnApi: makeNodeComponent("btnApi"),
+    btnEhr: makeNodeComponent("btnEhr"),
+    btnSpecialsite: makeNodeComponent("btnSpecialsite"),
+    btnDashboard: makeNodeComponent("btnDashboard"),
     columns: makeNodeComponent("columns"),
     clReservation: makeNodeComponent("clReservation"),
     txtInternetReservation: makeNodeComponent("txtInternetReservation"),
@@ -2766,6 +2755,20 @@ export const PlasmicHomepage = Object.assign(
     ehrCheck: makeNodeComponent("ehrCheck"),
     specialSiteCheck: makeNodeComponent("specialSiteCheck"),
     dashboardCheck: makeNodeComponent("dashboardCheck"),
+    txtReservationInternetResult: makeNodeComponent(
+      "txtReservationInternetResult"
+    ),
+    txtReservationPhoneResult: makeNodeComponent("txtReservationPhoneResult"),
+    txtReservationKioskResult: makeNodeComponent("txtReservationKioskResult"),
+    txtAnnouncementResult: makeNodeComponent("txtAnnouncementResult"),
+    txtCalculationResult: makeNodeComponent("txtCalculationResult"),
+    txtOnlinePaymentResult: makeNodeComponent("txtOnlinePaymentResult"),
+    txtapiResult: makeNodeComponent("txtapiResult"),
+    txtEhrResult: makeNodeComponent("txtEhrResult"),
+    txtReservationKioskResult6: makeNodeComponent("txtReservationKioskResult6"),
+    txtSpecialSiteResult: makeNodeComponent("txtSpecialSiteResult"),
+    txtDashboardResult: makeNodeComponent("txtDashboardResult"),
+    txtSumInvoice: makeNodeComponent("txtSumInvoice"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
