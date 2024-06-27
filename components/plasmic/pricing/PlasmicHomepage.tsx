@@ -60,22 +60,23 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import { SideEffect } from "@plasmicpkgs/plasmic-basic-components";
-import TextInput from "../../TextInput"; // plasmic-import: ZdzGQGZE4mJ7/component
-import Button from "../../Button"; // plasmic-import: oVzoHzMf1TLl/component
-import { DataFetcher } from "@plasmicpkgs/plasmic-query";
-import Avatar from "../../Avatar"; // plasmic-import: 3i84rYjQRrs4/component
+import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_fragment_design_system_css from "../fragment_design_system/plasmic.module.css"; // plasmic-import: h9Dbk9ygddw7UVEq1NNhKi/projectcss
+import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
+import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: seYsnBL1P3AiXaFGNEMUUM/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: g64VYoCfAKTS/css
 
-import SearchsvgIcon from "./icons/PlasmicIcon__Searchsvg"; // plasmic-import: 2VY19-xmXXIp/icon
-import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: 22TzxIplc3cE/icon
-import ChevronRightIcon from "../fragment_icons/icons/PlasmicIcon__ChevronRight"; // plasmic-import: GHdF3hS-oP_3/icon
-import ChevronLeftIcon from "../fragment_icons/icons/PlasmicIcon__ChevronLeft"; // plasmic-import: r9Upp9NbiZkf/icon
-import Icon2Icon from "./icons/PlasmicIcon__Icon2"; // plasmic-import: mWyKgupBp1Cr/icon
+import Icon10Icon from "./icons/PlasmicIcon__Icon10"; // plasmic-import: 5Kdxmn_uOBnI/icon
+import Icon9Icon from "./icons/PlasmicIcon__Icon9"; // plasmic-import: JK4sPT7lqUH1/icon
+import Icon8Icon from "./icons/PlasmicIcon__Icon8"; // plasmic-import: fEKKJ-2F5BD1/icon
+import Icon7Icon from "./icons/PlasmicIcon__Icon7"; // plasmic-import: 1eqoHYLc_fOB/icon
+import Icon6Icon from "./icons/PlasmicIcon__Icon6"; // plasmic-import: WvR12xDIGLgz/icon
+import Icon5Icon from "./icons/PlasmicIcon__Icon5"; // plasmic-import: HAnMzYJg5d76/icon
+import Icon3Icon from "./icons/PlasmicIcon__Icon3"; // plasmic-import: jRHPVqrBy9SV/icon
 
 createPlasmicElementProxy;
 
@@ -91,12 +92,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
   sideEffect?: Flex__<typeof SideEffect>;
-  section?: Flex__<"section">;
-  nameInput?: Flex__<typeof TextInput>;
-  button?: Flex__<typeof Button>;
-  getList?: Flex__<typeof DataFetcher>;
-  svg?: Flex__<"svg">;
-  avatar?: Flex__<typeof Avatar>;
+  h1?: Flex__<"h1">;
 };
 
 export interface DefaultHomepageProps {}
@@ -145,12 +141,6 @@ function PlasmicHomepage__RenderFunc(props: {
         type: "private",
         variableType: "object",
         initFunc: ({ $props, $state, $queries, $ctx }) => ({})
-      },
-      {
-        path: "nameInput.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ""
       }
     ],
     [$props, $ctx, $refs]
@@ -185,6 +175,8 @@ function PlasmicHomepage__RenderFunc(props: {
             projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
             plasmic_fragment_design_system_css.plasmic_tokens,
+            plasmic_antd_5_hostless_css.plasmic_tokens,
+            plasmic_plasmic_rich_components_css.plasmic_tokens,
             sty.root
           )}
         >
@@ -292,232 +284,209 @@ function PlasmicHomepage__RenderFunc(props: {
                 ];
               }
             }}
+            onUnmount={async () => {
+              const $steps = {};
+            }}
           />
 
-          <section
-            data-plasmic-name={"section"}
-            data-plasmic-override={overrides.section}
-            className={classNames(projectcss.all, sty.section)}
-          >
-            <div
+          <section className={classNames(projectcss.all, sty.section__dkFyp)}>
+            <h1
+              data-plasmic-name={"h1"}
+              data-plasmic-override={overrides.h1}
               className={classNames(
                 projectcss.all,
+                projectcss.h1,
                 projectcss.__wab_text,
-                sty.text__rL9L8
+                sty.h1
               )}
             >
-              <React.Fragment>
-                {(() => {
-                  try {
-                    return $state.user.name;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "";
-                    }
-                    throw e;
-                  }
-                })()}
-              </React.Fragment>
-            </div>
-            <TextInput
-              data-plasmic-name={"nameInput"}
-              data-plasmic-override={overrides.nameInput}
-              className={classNames("__wab_instance", sty.nameInput)}
-              onChange={(...eventArgs) => {
-                generateStateOnChangeProp($state, ["nameInput", "value"])(
-                  (e => e.target?.value).apply(null, eventArgs)
-                );
-              }}
-              value={
-                generateStateValueProp($state, ["nameInput", "value"]) ?? ""
+              {
+                "\u062a\u0639\u0631\u0641\u0647 \u062e\u062f\u0645\u0627\u062a \u067e\u0630\u06cc\u0631\u063424"
               }
-            />
+            </h1>
+            <section className={classNames(projectcss.all, sty.section__wtTOr)}>
+              <div className={classNames(projectcss.all, sty.freeBox___7DSvw)}>
+                <div
+                  className={classNames(projectcss.all, sty.freeBox___0Og76)}
+                >
+                  <Icon10Icon
+                    className={classNames(projectcss.all, sty.svg__cbLBw)}
+                    role={"img"}
+                  />
 
-            <Button
-              data-plasmic-name={"button"}
-              data-plasmic-override={overrides.button}
-              children2={"\u0622\u067e\u062f\u06cc\u062a"}
-              className={classNames("__wab_instance", sty.button)}
-              onClick={async event => {
-                const $steps = {};
-
-                $steps["invokeGlobalAction"] = true
-                  ? (() => {
-                      const actionArgs = {
-                        args: [
-                          "PATCH",
-                          (() => {
-                            try {
-                              return (
-                                "https://apigw.paziresh24.com/v1/users/" +
-                                $state.user.id
-                              );
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return undefined;
-                              }
-                              throw e;
-                            }
-                          })(),
-                          undefined,
-                          (() => {
-                            try {
-                              return {
-                                name: $state.nameInput.value
-                              };
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return undefined;
-                              }
-                              throw e;
-                            }
-                          })()
-                        ]
-                      };
-                      return $globalActions["Fragment.apiRequest"]?.apply(
-                        null,
-                        [...actionArgs.args]
-                      );
-                    })()
-                  : undefined;
-                if (
-                  $steps["invokeGlobalAction"] != null &&
-                  typeof $steps["invokeGlobalAction"] === "object" &&
-                  typeof $steps["invokeGlobalAction"].then === "function"
-                ) {
-                  $steps["invokeGlobalAction"] = await $steps[
-                    "invokeGlobalAction"
-                  ];
-                }
-              }}
-            />
-
-            <DataFetcher
-              data-plasmic-name={"getList"}
-              data-plasmic-override={overrides.getList}
-              className={classNames("__wab_instance", sty.getList)}
-              dataName={"response"}
-              errorDisplay={
-                <DataCtxReader__>
-                  {$ctx => "Error fetching data"}
-                </DataCtxReader__>
-              }
-              errorName={"fetchError"}
-              headers={{
-                "Content-Type": "application/json",
-                Accept: "application/json"
-              }}
-              loadingDisplay={
-                <DataCtxReader__>
-                  {$ctx => (
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.freeBox__aDnE)}
-                    >
-                      <Icon2Icon
-                        data-plasmic-name={"svg"}
-                        data-plasmic-override={overrides.svg}
-                        className={classNames(projectcss.all, sty.svg)}
-                        role={"img"}
-                      />
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__zUjoy
-                        )}
-                      >
-                        {"\u0635\u0628\u0631 \u06a9\u0646\u06cc\u062f..."}
-                      </div>
-                    </Stack__>
-                  )}
-                </DataCtxReader__>
-              }
-              method={"GET"}
-              noLayout={false}
-              previewSpinner={false}
-              url={"https://api.github.com/users/plasmicapp/repos"}
-            >
-              <DataCtxReader__>
-                {$ctx => (
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__bIblx)}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__vlDsf
+                    )}
                   >
-                    {(_par =>
-                      !_par ? [] : Array.isArray(_par) ? _par : [_par])(
-                      (() => {
-                        try {
-                          return $ctx.response;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return [];
-                          }
-                          throw e;
-                        }
-                      })()
-                    ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                      const currentItem = __plasmic_item_0;
-                      const currentIndex = __plasmic_idx_0;
-                      return (
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__elbUa
-                          )}
-                          key={currentIndex}
-                        >
-                          <Avatar
-                            data-plasmic-name={"avatar"}
-                            data-plasmic-override={overrides.avatar}
-                            className={classNames("__wab_instance", sty.avatar)}
-                            src={"https://avatar.iran.liara.run/public/43"}
-                          />
-
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__yctst
-                            )}
-                          >
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return currentItem.name;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "";
-                                  }
-                                  throw e;
-                                }
-                              })()}
-                            </React.Fragment>
-                          </div>
-                        </div>
-                      );
-                    })}
+                    {
+                      "\u062f \u0627\u0634\u0628\u0648\u0631\u062f \u06af\u0632\u0627\u0631\u0634\u0627\u062a \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc"
+                    }
                   </div>
-                )}
-              </DataCtxReader__>
-            </DataFetcher>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__ykxKl)}>
+                  <Icon9Icon
+                    className={classNames(projectcss.all, sty.svg___6EjZr)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__hE1Zn
+                    )}
+                  >
+                    {
+                      "\u0633\u0627\u06cc\u062a \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u0645\u0631\u06a9\u0632"
+                    }
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__aBQo)}>
+                  <Icon9Icon
+                    className={classNames(projectcss.all, sty.svg__rXLkj)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__nDe4N
+                    )}
+                  >
+                    {
+                      "\u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631"
+                    }
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__raxBh)}>
+                  <Icon8Icon
+                    className={classNames(projectcss.all, sty.svg__sd3Vz)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___0Xlf1
+                    )}
+                  >
+                    {
+                      "\u0627\u0631\u062a\u0628\u0627\u0637 \u0628\u0627 \u0633\u0627\u06cc\u0631 \u0646\u0631\u0645 \u0627\u0641\u0632\u0627\u0631 \u0647\u0627"
+                    }
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__zJNdj)}>
+                  <Icon7Icon
+                    className={classNames(projectcss.all, sty.svg___8W1Xb)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___143Wr
+                    )}
+                  >
+                    {
+                      "\u067e\u0631\u062f\u0627\u062e\u062a \u0622\u0646\u0644\u0627\u06cc\u0646"
+                    }
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__oAbc0)}>
+                  <Icon6Icon
+                    className={classNames(projectcss.all, sty.svg__yUwH)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__fu9J9
+                    )}
+                  >
+                    {"\u0645\u062d\u0627\u0633\u0628\u0627\u062a"}
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__p9XLf)}>
+                  <Icon5Icon
+                    className={classNames(projectcss.all, sty.svg__ph7A)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__utGl
+                    )}
+                  >
+                    {"\u0627\u0639\u0644\u0627\u0646\u0627\u062a"}
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__sTmC)}>
+                  <Icon3Icon
+                    className={classNames(projectcss.all, sty.svg___4NJPi)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__n3W1V
+                    )}
+                  >
+                    {"\u0646\u0648\u0628\u062a \u062f\u0647\u06cc"}
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+          <section className={classNames(projectcss.all, sty.section___57Psv)}>
+            <div className={classNames(projectcss.all, sty.columns__heYiu)}>
+              <div className={classNames(projectcss.all, sty.column__tKKlR)} />
+
+              <div className={classNames(projectcss.all, sty.column__hWjMp)} />
+
+              <div className={classNames(projectcss.all, sty.column__bsWoQ)} />
+
+              <div className={classNames(projectcss.all, sty.column__lmph6)} />
+
+              <div className={classNames(projectcss.all, sty.column__hknzg)} />
+
+              <div className={classNames(projectcss.all, sty.column__swPd3)} />
+
+              <div className={classNames(projectcss.all, sty.column__uMymJ)} />
+
+              <div className={classNames(projectcss.all, sty.column__sj5Bz)}>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__s7Bdt
+                  )}
+                >
+                  {
+                    "\u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u062a\u0644\u0641\u0646\u06cc"
+                  }
+                </div>
+              </div>
+              <div className={classNames(projectcss.all, sty.column__uPhHl)} />
+            </div>
+          </section>
+          <section className={classNames(projectcss.all, sty.section__ufWus)}>
+            <div className={classNames(projectcss.all, sty.columns__tjMQz)}>
+              <div className={classNames(projectcss.all, sty.column__w2FvU)} />
+
+              <div className={classNames(projectcss.all, sty.column___7Mqbp)} />
+            </div>
           </section>
         </div>
       </div>
@@ -526,23 +495,9 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
-    "sideEffect",
-    "section",
-    "nameInput",
-    "button",
-    "getList",
-    "svg",
-    "avatar"
-  ],
+  root: ["root", "sideEffect", "h1"],
   sideEffect: ["sideEffect"],
-  section: ["section", "nameInput", "button", "getList", "svg", "avatar"],
-  nameInput: ["nameInput"],
-  button: ["button"],
-  getList: ["getList", "svg", "avatar"],
-  svg: ["svg"],
-  avatar: ["avatar"]
+  h1: ["h1"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -550,12 +505,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   sideEffect: typeof SideEffect;
-  section: "section";
-  nameInput: typeof TextInput;
-  button: typeof Button;
-  getList: typeof DataFetcher;
-  svg: "svg";
-  avatar: typeof Avatar;
+  h1: "h1";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -619,12 +569,7 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     sideEffect: makeNodeComponent("sideEffect"),
-    section: makeNodeComponent("section"),
-    nameInput: makeNodeComponent("nameInput"),
-    button: makeNodeComponent("button"),
-    getList: makeNodeComponent("getList"),
-    svg: makeNodeComponent("svg"),
-    avatar: makeNodeComponent("avatar"),
+    h1: makeNodeComponent("h1"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
