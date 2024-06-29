@@ -60,6 +60,7 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import { SideEffect } from "@plasmicpkgs/plasmic-basic-components";
+import MenuFeature from "../../MenuFeature"; // plasmic-import: 0FMc41XIUA0C/component
 import TextInput from "../../TextInput"; // plasmic-import: ZdzGQGZE4mJ7/component
 import Button from "../../Button"; // plasmic-import: oVzoHzMf1TLl/component
 import Checkbox from "../../Checkbox"; // plasmic-import: dk4vJhcf_j2D/component
@@ -74,14 +75,6 @@ import projectcss from "./plasmic.module.css"; // plasmic-import: seYsnBL1P3AiXa
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: g64VYoCfAKTS/css
 
 import Icon11Icon from "./icons/PlasmicIcon__Icon11"; // plasmic-import: YXzAIe4mJWDL/icon
-import Icon3Icon from "./icons/PlasmicIcon__Icon3"; // plasmic-import: jRHPVqrBy9SV/icon
-import Icon5Icon from "./icons/PlasmicIcon__Icon5"; // plasmic-import: HAnMzYJg5d76/icon
-import Icon6Icon from "./icons/PlasmicIcon__Icon6"; // plasmic-import: WvR12xDIGLgz/icon
-import Icon7Icon from "./icons/PlasmicIcon__Icon7"; // plasmic-import: 1eqoHYLc_fOB/icon
-import Icon8Icon from "./icons/PlasmicIcon__Icon8"; // plasmic-import: fEKKJ-2F5BD1/icon
-import Icon9Icon from "./icons/PlasmicIcon__Icon9"; // plasmic-import: JK4sPT7lqUH1/icon
-import Icon12Icon from "./icons/PlasmicIcon__Icon12"; // plasmic-import: 8GqB7Ju9fvrK/icon
-import Icon10Icon from "./icons/PlasmicIcon__Icon10"; // plasmic-import: 5Kdxmn_uOBnI/icon
 import SearchsvgIcon from "./icons/PlasmicIcon__Searchsvg"; // plasmic-import: 2VY19-xmXXIp/icon
 import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: 22TzxIplc3cE/icon
 import ChevronRightIcon from "../fragment_icons/icons/PlasmicIcon__ChevronRight"; // plasmic-import: GHdF3hS-oP_3/icon
@@ -100,15 +93,9 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
+  svg?: Flex__<"svg">;
   h1?: Flex__<"h1">;
-  btnReservation?: Flex__<"div">;
-  btnAnnouncement?: Flex__<"div">;
-  btnCalculation?: Flex__<"div">;
-  btnOnlinepayment?: Flex__<"div">;
-  btnApi?: Flex__<"div">;
-  btnEhr?: Flex__<"div">;
-  btnSpecialsite?: Flex__<"div">;
-  btnDashboard?: Flex__<"div">;
+  menuFeature?: Flex__<typeof MenuFeature>;
   columns?: Flex__<"div">;
   clReservation?: Flex__<"div">;
   txtInternetReservation?: Flex__<typeof TextInput>;
@@ -465,7 +452,20 @@ function PlasmicHomepage__RenderFunc(props: {
 
   return (
     <React.Fragment>
-      <Head></Head>
+      <Head>
+        <meta name="twitter:card" content="summary" />
+        <title key="title">{PlasmicHomepage.pageMetadata.title}</title>
+        <meta
+          key="og:title"
+          property="og:title"
+          content={PlasmicHomepage.pageMetadata.title}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={PlasmicHomepage.pageMetadata.title}
+        />
+      </Head>
 
       <style>{`
         body {
@@ -606,7 +606,9 @@ function PlasmicHomepage__RenderFunc(props: {
               className={classNames(projectcss.all, sty.freeBox__vst7D)}
             >
               <Icon11Icon
-                className={classNames(projectcss.all, sty.svg___0HXtL)}
+                data-plasmic-name={"svg"}
+                data-plasmic-override={overrides.svg}
+                className={classNames(projectcss.all, sty.svg)}
                 role={"img"}
               />
 
@@ -621,183 +623,16 @@ function PlasmicHomepage__RenderFunc(props: {
                 )}
               >
                 {
-                  "\u062a\u0639\u0631\u0641\u0647 \u062e\u062f\u0645\u0627\u062a \u067e\u0630\u06cc\u0631\u063424"
+                  "\u0645\u0627\u0634\u06cc\u0646 \u062d\u0633\u0627\u0628 \u067e\u0630\u06cc\u0631\u063424"
                 }
               </h1>
             </Stack__>
             <section className={classNames(projectcss.all, sty.section__wtTOr)}>
-              <div className={classNames(projectcss.all, sty.freeBox___7DSvw)}>
-                <div
-                  data-plasmic-name={"btnReservation"}
-                  data-plasmic-override={overrides.btnReservation}
-                  className={classNames(projectcss.all, sty.btnReservation)}
-                >
-                  <Icon3Icon
-                    className={classNames(projectcss.all, sty.svg___4NJPi)}
-                    role={"img"}
-                  />
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__n3W1V
-                    )}
-                  >
-                    {"\u0646\u0648\u0628\u062a \u062f\u0647\u06cc"}
-                  </div>
-                </div>
-                <div
-                  data-plasmic-name={"btnAnnouncement"}
-                  data-plasmic-override={overrides.btnAnnouncement}
-                  className={classNames(projectcss.all, sty.btnAnnouncement)}
-                >
-                  <Icon5Icon
-                    className={classNames(projectcss.all, sty.svg__ph7A)}
-                    role={"img"}
-                  />
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__utGl
-                    )}
-                  >
-                    {"\u0627\u0639\u0644\u0627\u0646\u0627\u062a"}
-                  </div>
-                </div>
-                <div
-                  data-plasmic-name={"btnCalculation"}
-                  data-plasmic-override={overrides.btnCalculation}
-                  className={classNames(projectcss.all, sty.btnCalculation)}
-                >
-                  <Icon6Icon
-                    className={classNames(projectcss.all, sty.svg__yUwH)}
-                    role={"img"}
-                  />
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__fu9J9
-                    )}
-                  >
-                    {"\u0645\u062d\u0627\u0633\u0628\u0627\u062a"}
-                  </div>
-                </div>
-                <div
-                  data-plasmic-name={"btnOnlinepayment"}
-                  data-plasmic-override={overrides.btnOnlinepayment}
-                  className={classNames(projectcss.all, sty.btnOnlinepayment)}
-                >
-                  <Icon7Icon
-                    className={classNames(projectcss.all, sty.svg___8W1Xb)}
-                    role={"img"}
-                  />
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___143Wr
-                    )}
-                  >
-                    {
-                      "\u067e\u0631\u062f\u0627\u062e\u062a \u0622\u0646\u0644\u0627\u06cc\u0646"
-                    }
-                  </div>
-                </div>
-                <div
-                  data-plasmic-name={"btnApi"}
-                  data-plasmic-override={overrides.btnApi}
-                  className={classNames(projectcss.all, sty.btnApi)}
-                >
-                  <Icon8Icon
-                    className={classNames(projectcss.all, sty.svg__sd3Vz)}
-                    role={"img"}
-                  />
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___0Xlf1
-                    )}
-                  >
-                    {
-                      "\u0627\u0631\u062a\u0628\u0627\u0637 \u0628\u0627 \u0633\u0627\u06cc\u0631 \u0646\u0631\u0645 \u0627\u0641\u0632\u0627\u0631 \u0647\u0627"
-                    }
-                  </div>
-                </div>
-                <div
-                  data-plasmic-name={"btnEhr"}
-                  data-plasmic-override={overrides.btnEhr}
-                  className={classNames(projectcss.all, sty.btnEhr)}
-                >
-                  <Icon9Icon
-                    className={classNames(projectcss.all, sty.svg__rXLkj)}
-                    role={"img"}
-                  />
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__nDe4N
-                    )}
-                  >
-                    {
-                      "\u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631"
-                    }
-                  </div>
-                </div>
-                <div
-                  data-plasmic-name={"btnSpecialsite"}
-                  data-plasmic-override={overrides.btnSpecialsite}
-                  className={classNames(projectcss.all, sty.btnSpecialsite)}
-                >
-                  <Icon12Icon
-                    className={classNames(projectcss.all, sty.svg___6EjZr)}
-                    role={"img"}
-                  />
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__hE1Zn
-                    )}
-                  >
-                    {
-                      "\u0633\u0627\u06cc\u062a \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u0645\u0631\u06a9\u0632"
-                    }
-                  </div>
-                </div>
-                <div
-                  data-plasmic-name={"btnDashboard"}
-                  data-plasmic-override={overrides.btnDashboard}
-                  className={classNames(projectcss.all, sty.btnDashboard)}
-                >
-                  <Icon10Icon
-                    className={classNames(projectcss.all, sty.svg__cbLBw)}
-                    role={"img"}
-                  />
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__vlDsf
-                    )}
-                  >
-                    {
-                      "\u062f \u0627\u0634\u0628\u0648\u0631\u062f \u06af\u0632\u0627\u0631\u0634\u0627\u062a \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc"
-                    }
-                  </div>
-                </div>
-              </div>
+              <MenuFeature
+                data-plasmic-name={"menuFeature"}
+                data-plasmic-override={overrides.menuFeature}
+                className={classNames("__wab_instance", sty.menuFeature)}
+              />
             </section>
           </section>
           <section className={classNames(projectcss.all, sty.section__sTanX)}>
@@ -2493,15 +2328,9 @@ function PlasmicHomepage__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "svg",
     "h1",
-    "btnReservation",
-    "btnAnnouncement",
-    "btnCalculation",
-    "btnOnlinepayment",
-    "btnApi",
-    "btnEhr",
-    "btnSpecialsite",
-    "btnDashboard",
+    "menuFeature",
     "columns",
     "clReservation",
     "txtInternetReservation",
@@ -2540,15 +2369,9 @@ const PlasmicDescendants = {
     "txtDashboardResult",
     "txtSumInvoice"
   ],
+  svg: ["svg"],
   h1: ["h1"],
-  btnReservation: ["btnReservation"],
-  btnAnnouncement: ["btnAnnouncement"],
-  btnCalculation: ["btnCalculation"],
-  btnOnlinepayment: ["btnOnlinepayment"],
-  btnApi: ["btnApi"],
-  btnEhr: ["btnEhr"],
-  btnSpecialsite: ["btnSpecialsite"],
-  btnDashboard: ["btnDashboard"],
+  menuFeature: ["menuFeature"],
   columns: [
     "columns",
     "clReservation",
@@ -2613,15 +2436,9 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  svg: "svg";
   h1: "h1";
-  btnReservation: "div";
-  btnAnnouncement: "div";
-  btnCalculation: "div";
-  btnOnlinepayment: "div";
-  btnApi: "div";
-  btnEhr: "div";
-  btnSpecialsite: "div";
-  btnDashboard: "div";
+  menuFeature: typeof MenuFeature;
   columns: "div";
   clReservation: "div";
   txtInternetReservation: typeof TextInput;
@@ -2721,15 +2538,9 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    svg: makeNodeComponent("svg"),
     h1: makeNodeComponent("h1"),
-    btnReservation: makeNodeComponent("btnReservation"),
-    btnAnnouncement: makeNodeComponent("btnAnnouncement"),
-    btnCalculation: makeNodeComponent("btnCalculation"),
-    btnOnlinepayment: makeNodeComponent("btnOnlinepayment"),
-    btnApi: makeNodeComponent("btnApi"),
-    btnEhr: makeNodeComponent("btnEhr"),
-    btnSpecialsite: makeNodeComponent("btnSpecialsite"),
-    btnDashboard: makeNodeComponent("btnDashboard"),
+    menuFeature: makeNodeComponent("menuFeature"),
     columns: makeNodeComponent("columns"),
     clReservation: makeNodeComponent("clReservation"),
     txtInternetReservation: makeNodeComponent("txtInternetReservation"),
@@ -2776,7 +2587,7 @@ export const PlasmicHomepage = Object.assign(
 
     // Page metadata
     pageMetadata: {
-      title: "",
+      title: "ماشین حساب پذیرش24",
       description: "",
       ogImageSrc: "",
       canonical: ""

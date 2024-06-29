@@ -588,6 +588,33 @@
           "scheme": "blackbox",
           "componentType": "component",
           "plumeType": "checkbox"
+        },
+        {
+          "id": "0FMc41XIUA0C",
+          "name": "MenuFeature",
+          "type": "managed",
+          "projectId": "seYsnBL1P3AiXaFGNEMUUM",
+          "renderModuleFilePath": "plasmic/pricing/PlasmicMenuFeature.tsx",
+          "importSpec": {
+            "modulePath": "MenuFeature.tsx"
+          },
+          "cssFilePath": "plasmic/pricing/PlasmicMenuFeature.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "IXVCbPZ5-8gj",
+          "name": "Pricing",
+          "type": "managed",
+          "projectId": "seYsnBL1P3AiXaFGNEMUUM",
+          "renderModuleFilePath": "plasmic/pricing/PlasmicPricing.tsx",
+          "importSpec": {
+            "modulePath": "../src/pages/pricing.tsx"
+          },
+          "cssFilePath": "plasmic/pricing/PlasmicPricing.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/pricing"
         }
       ],
       "icons": [
