@@ -712,6 +712,11 @@
           "id": "8GqB7Ju9fvrK",
           "name": "Icon12Icon",
           "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__Icon12.tsx"
+        },
+        {
+          "id": "pmluLmEGECI6",
+          "name": "Icon13Icon",
+          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__Icon13.tsx"
         }
       ],
       "images": [],
