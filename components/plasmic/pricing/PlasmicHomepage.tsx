@@ -435,6 +435,18 @@ function PlasmicHomepage__RenderFunc(props: {
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => true
+      },
+      {
+        path: "minCount",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 1000
+      },
+      {
+        path: "maxCount",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 10000
       }
     ],
     [$props, $ctx, $refs]
@@ -523,7 +535,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   )}
                 >
                   {
-                    "\u062a\u0639\u0631\u0641\u0647 \u062e\u062f\u0645\u0627\u062a \u067e\u0630\u06cc\u0631\u0634\u06f2\u06f4"
+                    "\u062a\u0639\u0631\u0641\u0647 \u0645\u062d\u0635\u0648\u0644\u0627\u062a \u067e\u0630\u06cc\u0631\u0634\u06f2\u06f4"
                   }
                 </h1>
               </Stack__>
@@ -969,7 +981,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "\u062f \u0627\u0634\u0628\u0648\u0631\u062f \u06af\u0632\u0627\u0631\u0634\u0627\u062a \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc"
+                        "\u062f\u0627\u0634\u0628\u0648\u0631\u062f \u06af\u0632\u0627\u0631\u0634\u0627\u062a \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc"
                       }
                     </div>
                   </div>
@@ -1082,7 +1094,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           )}
                         >
                           {
-                            "\u0645\u0627\u0634\u06cc\u0646 \u062d\u0633\u0627\u0628 \u062e\u062f\u0645\u0627\u062a"
+                            "\u0645\u0627\u0634\u06cc\u0646 \u062d\u0633\u0627\u0628 \u0645\u062d\u0635\u0648\u0644\u0627\u062a"
                           }
                         </h2>
                         <div
@@ -1113,13 +1125,47 @@ function PlasmicHomepage__RenderFunc(props: {
                           <div
                             className={classNames(
                               projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___8Qi4Y
+                              sty.freeBox__gnoMt
                             )}
                           >
-                            {
-                              "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a:"
-                            }
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text___8Qi4Y
+                              )}
+                            >
+                              {
+                                "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a:"
+                              }
+                            </div>
+                            <TextInput
+                              data-plasmic-name={"txtResevationCount"}
+                              data-plasmic-override={
+                                overrides.txtResevationCount
+                              }
+                              className={classNames(
+                                "__wab_instance",
+                                sty.txtResevationCount
+                              )}
+                              onChange={(...eventArgs) => {
+                                generateStateOnChangeProp($state, [
+                                  "txtResevationCount",
+                                  "value"
+                                ])(
+                                  (e => e.target?.value).apply(null, eventArgs)
+                                );
+                              }}
+                              placeholder={
+                                "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a"
+                              }
+                              value={
+                                generateStateValueProp($state, [
+                                  "txtResevationCount",
+                                  "value"
+                                ]) ?? ""
+                              }
+                            />
                           </div>
                         </div>
                         <div
@@ -1128,37 +1174,61 @@ function PlasmicHomepage__RenderFunc(props: {
                             sty.freeBox__czMkd
                           )}
                           dir={"rtl"}
+                        />
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__waSp
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__rzAu3
+                          )}
                         >
-                          <TextInput
-                            data-plasmic-name={"txtResevationCount"}
-                            data-plasmic-override={overrides.txtResevationCount}
+                          <div
                             className={classNames(
-                              "__wab_instance",
-                              sty.txtResevationCount
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__sGrp
                             )}
-                            onChange={async (...eventArgs: any) => {
-                              ((...eventArgs) => {
-                                generateStateOnChangeProp($state, [
-                                  "txtResevationCount",
-                                  "value"
-                                ])(
-                                  (e => e.target?.value).apply(null, eventArgs)
-                                );
-                              }).apply(null, eventArgs);
-                              (async event => {
-                                const $steps = {};
-                              }).apply(null, eventArgs);
-                            }}
-                            placeholder={
-                              "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a"
-                            }
-                            value={
-                              generateStateValueProp($state, [
-                                "txtResevationCount",
-                                "value"
-                              ]) ?? ""
-                            }
-                          />
+                          >
+                            {"\u0639\u0646\u0648\u0627\u0646"}
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___7W9B
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__mNsbb
+                            )}
+                          >
+                            {"\u062a\u0639\u0631\u0641\u0647"}
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__z2JNu
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__hkUm
+                            )}
+                          >
+                            {"\u062c\u0645\u0639"}
+                          </div>
                         </div>
                       </div>
                       <div
@@ -1229,6 +1299,39 @@ function PlasmicHomepage__RenderFunc(props: {
                             sty.freeBox__grh2Y
                           )}
                           dir={"rtl"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__wxOEm
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $state.reservationInternetPrice
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "0";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___7U4Sl
+                          )}
                         >
                           <div
                             data-plasmic-name={"txtReservationInternetResult"}
@@ -1324,6 +1427,39 @@ function PlasmicHomepage__RenderFunc(props: {
                                 {""}
                               </div>
                             </Checkbox>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__lYlc3
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__nPz5Y
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $state.reservationPhonePrice
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "\u062a\u0639\u0631\u0641\u0647";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
                           </div>
                         </div>
                         <div
@@ -1432,6 +1568,39 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
+                            sty.freeBox__bzk26
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__bMZL
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $state.reservationKioskPrice
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "\u062a\u0639\u0631\u0641\u0647";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
                             sty.freeBox__sqHf9
                           )}
                           dir={"rtl"}
@@ -1535,6 +1704,39 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
+                            sty.freeBox__sjGz
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__el3ZR
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $state.announcementPrice
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "\u062a\u0639\u0631\u0641\u0647";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
                             sty.freeBox__utNh
                           )}
                           dir={"rtl"}
@@ -1631,6 +1833,39 @@ function PlasmicHomepage__RenderFunc(props: {
                                 {""}
                               </div>
                             </Checkbox>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__onh2V
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__fKaUx
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $state.calculationPrice
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "\u062a\u0639\u0631\u0641\u0647";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
                           </div>
                         </div>
                         <div
@@ -1739,6 +1974,39 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
+                            sty.freeBox__gelw8
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__g0J6P
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $state.onlinePayemntPrice
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "\u062a\u0639\u0631\u0641\u0647";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
                             sty.freeBox__ctwHa
                           )}
                           dir={"rtl"}
@@ -1840,6 +2108,39 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
+                            sty.freeBox___79ONb
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__gVSd4
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $state.apiPrice
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "\u062a\u0639\u0631\u0641\u0647";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
                             sty.freeBox__lQiZc
                           )}
                           dir={"rtl"}
@@ -1934,6 +2235,39 @@ function PlasmicHomepage__RenderFunc(props: {
                                 {""}
                               </div>
                             </Checkbox>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__uy11O
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___1B53V
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $state.ehrPrice
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "\u062a\u0639\u0631\u0641\u0647";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
                           </div>
                         </div>
                         <div
@@ -2040,6 +2374,39 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
+                            sty.freeBox__k5HGh
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___81R5A
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $state.specialSitePrice
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "\u062a\u0639\u0631\u0641\u0647";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
                             sty.freeBox__fKKm5
                           )}
                           dir={"rtl"}
@@ -2141,6 +2508,39 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
+                            sty.freeBox__kvblj
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__ilj0C
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $state.dashboardPrice
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "\u062a\u0639\u0631\u0641\u0647";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
                             sty.freeBox__yfTLj
                           )}
                           dir={"rtl"}
@@ -2193,16 +2593,22 @@ function PlasmicHomepage__RenderFunc(props: {
                               projectcss.all,
                               sty.freeBox__kpiXf
                             )}
+                          />
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___0BfO
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___7T6Q
+                            )}
                           >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text___7T6Q
-                              )}
-                            >
-                              {"\u062c\u0645\u0639 \u06a9\u0644:"}
-                            </div>
+                            {"\u062c\u0645\u0639 \u06a9\u0644:"}
                           </div>
                         </div>
                         <div
@@ -2213,32 +2619,48 @@ function PlasmicHomepage__RenderFunc(props: {
                           dir={"rtl"}
                         >
                           <div
-                            data-plasmic-name={"txtSumInvoice"}
-                            data-plasmic-override={overrides.txtSumInvoice}
                             className={classNames(
                               projectcss.all,
-                              projectcss.__wab_text,
-                              sty.txtSumInvoice
+                              sty.freeBox__rgO4F
                             )}
                           >
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return $state.suminvoiceResult
-                                    .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "";
+                            <div
+                              data-plasmic-name={"txtSumInvoice"}
+                              data-plasmic-override={overrides.txtSumInvoice}
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.txtSumInvoice
+                              )}
+                            >
+                              <React.Fragment>
+                                {(() => {
+                                  try {
+                                    return $state.suminvoiceResult
+                                      .toString()
+                                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                  } catch (e) {
+                                    if (
+                                      e instanceof TypeError ||
+                                      e?.plasmicType ===
+                                        "PlasmicUndefinedDataError"
+                                    ) {
+                                      return "";
+                                    }
+                                    throw e;
                                   }
-                                  throw e;
-                                }
-                              })()}
-                            </React.Fragment>
+                                })()}
+                              </React.Fragment>
+                            </div>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__iFjo
+                              )}
+                            >
+                              {"\u062a\u0648\u0645\u0627\u0646"}
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -2358,6 +2780,54 @@ function PlasmicHomepage__RenderFunc(props: {
                           }
                         }}
                       />
+                    </div>
+                  ) : null}
+                  {(() => {
+                    try {
+                      return $state.clCalculatorStatus;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })() ? (
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__ebkVj)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__lJuo9
+                        )}
+                      >
+                        <h2
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h2,
+                            projectcss.__wab_text,
+                            sty.h2__c6NHj
+                          )}
+                        >
+                          {
+                            "\u062a\u0639\u0631\u0641\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc"
+                          }
+                        </h2>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___5Vfrt
+                          )}
+                        >
+                          {
+                            "\u062a\u0648\u0636\u06cc\u062d\u0627\u062a \u062a\u0639\u0631\u0641\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc...."
+                          }
+                        </div>
+                      </div>
                     </div>
                   ) : null}
                 </div>
@@ -5488,6 +5958,3134 @@ function PlasmicHomepage__RenderFunc(props: {
                         projectcss.all,
                         projectcss.__wab_text,
                         sty.text__fJ9TG
+                      )}
+                    >
+                      {
+                        " \u0645\u0634\u0627\u0647\u062f\u0647 \u062a\u0627\u0631\u06cc\u062e\u0686\u0647 \u0627\u0637\u0644\u0627\u0639\u0627\u062a \u062b\u0628\u062a \u0634\u062f\u0647 \u062f\u0627\u062e\u0644 \u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631"
+                      }
+                    </div>
+                  </div>
+                </div>
+              ) : null}
+            </section>
+            <section className={classNames(projectcss.all, sty.section__gJv2C)}>
+              {(() => {
+                try {
+                  return $state.clReservationState;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__gdGyc)}
+                  dir={"rtl"}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___2ZMvo)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__hobCm)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox___7E4Fh
+                        )}
+                      >
+                        <h2
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h2,
+                            projectcss.__wab_text,
+                            sty.h2__r8YAl
+                          )}
+                        >
+                          {"\u0646\u0648\u0628\u062a \u062f\u0647\u06cc"}
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___0FMb9)}
+                  />
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__sqRst)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__wpw45)}
+                    >
+                      <h3
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h3,
+                          projectcss.__wab_text,
+                          sty.h3__yBfm8
+                        )}
+                      >
+                        {"\u0646\u0648\u0628\u062a \u062f\u0647\u06cc"}
+                      </h3>
+                    </div>
+                    <ul
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.ul,
+                        sty.ul__diRuq
+                      )}
+                      dir={"rtl"}
+                    >
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li___0CWwI
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___8Nlng
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__o5Ld
+                            )}
+                          >
+                            {
+                              "\u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u0628\u0647 \u0634\u06cc\u0648\u0647 \u0627\u06cc\u0646\u062a\u0631\u0646\u062a\u06cc\u060c \u0627\u067e\u0644\u06cc\u06a9\u06cc\u0634\u0646 \u0648 \u062d\u0636\u0648\u0631\u06cc "
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__duNtY
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__wdLvr
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__cwWlA
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062b\u0628\u062a\u060c \u062d\u0630\u0641 \u0648 \u06cc\u0627 \u062c\u0627\u0628\u0647 \u062c\u0627\u06cc\u06cc \u0646\u0648\u0628\u062a \u062a\u0648\u0633\u0637 \u0628\u06cc\u0645\u0627\u0631 \u0648 \u06a9\u0627\u0631\u0628\u0631 \u0645\u0631\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__jFy7B
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__bEm6B
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__sQqjl
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062d\u0630\u0641 \u0648 \u06cc\u0627 \u062c\u0627\u0628\u0647 \u062c\u0627\u06cc\u06cc \u0646\u0648\u0628\u062a \u0647\u0627 \u0628\u0647 \u0635\u0648\u0631\u062a \u06af\u0631\u0648\u0647\u06cc"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__eKfWh
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___6NcKx
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__qFwiR
+                            )}
+                          >
+                            {
+                              "\u06cc\u06a9\u067e\u0627\u0631\u0686\u06af\u06cc \u06a9\u0627\u0645\u0644 \u0646\u0648\u0628\u062a \u0647\u0627\u06cc \u0631\u0632\u0631\u0648 \u0634\u062f\u0647 \u0627\u0632 \u06a9\u0627\u0646\u0627\u0644 \u0647\u0627\u06cc \u0645\u062e\u062a\u0644\u0641 \u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u062f\u0631 \u0633\u0627\u0645\u0627\u0646\u0647 \u0645\u0631\u06a9\u0632\u06cc"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__wj1VB
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__etd9P
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__ev2G
+                            )}
+                          >
+                            {
+                              "\u0627\u0646\u062a\u062e\u0627\u0628 \u0646\u0648\u0628\u062a \u0628\u0631\u0627\u0633\u0627\u0633 \u062a\u0627\u0631\u06cc\u062e \u0648 \u0632\u0645\u0627\u0646 \u062f\u0644\u062e\u0648\u0627\u0647 \u0648 \u062b\u0628\u062a \u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0628\u06cc\u0645\u0627\u0631 \u062c\u0647\u062a \u0627\u062e\u0630 \u0646\u0648\u0628\u062a"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__va1Vl
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__vfFa
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___6Hy6I
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062a\u0639\u06cc\u06cc\u0646 \u0645\u062f\u062a \u0632\u0645\u0627\u0646 \u0627\u0631\u0627\u0626\u0647 \u062e\u062f\u0645\u062a (\u0628\u0631\u0627\u06cc \u0645\u062b\u0627\u0644 \u0645\u062f\u062a \u0648\u06cc\u0632\u06cc\u062a \u067e\u0632\u0634\u06a9)"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li___8Ktc2
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__uHeyd
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__rIkDb
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062a\u0639\u06cc\u06cc\u0646 \u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u0642\u0627\u0628\u0644 \u0627\u0631\u0627\u0626\u0647 \u062f\u0631 \u0647\u0631 \u0633\u0627\u0639\u062a \u0628\u0647 \u0635\u0648\u0631\u062a \u062b\u0627\u0628\u062a \u0648 \u067e\u0648\u06cc\u0627"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__xeLy
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___3TXjH
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__d2AvY
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062a\u0639\u0631\u06cc\u0641 \u0633\u0627\u0639\u062a \u06a9\u0627\u0631\u06cc \u0628\u0647 \u0627\u0632\u0627\u06cc \u0647\u0631 \u067e\u0632\u0634\u06a9 \u0648 \u062e\u062f\u0645\u062a"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__gJdx
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__ozXtk
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___1QVb3
+                            )}
+                          >
+                            {
+                              "\u062a\u0639\u06cc\u06cc\u0646 \u0645\u06cc\u0632\u0627\u0646 \u0646\u0648\u0628\u062a \u0642\u0627\u0628\u0644 \u0627\u062e\u062a\u0635\u0627\u0635 \u0628\u0647 \u0631\u0648\u0634\u0647\u0627\u06cc \u0645\u062e\u062a\u0644\u0641 \u0646\u0648\u0628\u062a \u062f\u0647\u06cc"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__wTkS3
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__qAuDg
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__mPksU
+                            )}
+                          >
+                            {
+                              "\u062a\u0639\u06cc\u06cc\u0646 \u062d\u062f\u0627\u06a9\u062b\u0631 \u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u0645\u062c\u0627\u0632 \u0628\u0627 \u06cc\u06a9 \u0634\u0645\u0627\u0631\u0647 \u062a\u0644\u0641\u0646 \u06cc\u0627 \u06cc\u06a9 \u06a9\u062f\u0645\u0644\u06cc"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__kh3GO
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__hyjN
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__t7FgT
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u067e\u06cc\u0627\u062f\u0647 \u0633\u0627\u0632\u06cc \u0644\u06cc\u0633\u062a \u0633\u06cc\u0627\u0647"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__a4Jlf
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__hmsN
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__nSgio
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062b\u0628\u062a \u0686\u0646\u062f \u062e\u062f\u0645\u062a \u0628\u0631\u0627\u06cc \u06cc\u06a9 \u0646\u0648\u0628\u062a"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__rRgkq)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__ktnbM)}
+                    >
+                      <h3
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h3,
+                          projectcss.__wab_text,
+                          sty.h3__qP7W4
+                        )}
+                      >
+                        {
+                          "\u06a9\u0627\u0631\u0628\u0631\u0627\u0646 \u0648 \u067e\u0632\u0634\u06a9\u0627\u0646"
+                        }
+                      </h3>
+                    </div>
+                    <ul
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.ul,
+                        sty.ul__lNHcb
+                      )}
+                      dir={"rtl"}
+                    >
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__tFsAz
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__wft7J
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__vWxXg
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062a\u0639\u0631\u06cc\u0641 \u0644\u06cc\u0633\u062a \u06a9\u0627\u0631\u0628\u0631\u0627\u0646 \u0648 \u067e\u0632\u0634\u06a9\u0627\u0646 \u0645\u0631\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__ceoa
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__swm4L
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__w6P5C
+                            )}
+                          >
+                            {
+                              "\u062b\u0628\u062a \u06a9\u0644\u06cc\u0647 \u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0634\u062e\u0635\u06cc \u0648 \u062a\u062e\u0635\u0635\u06cc \u067e\u0632\u0634\u06a9 \u0648 \u067e\u0631\u0633\u0646\u0644 \u0645\u0631\u06a9\u0632"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li___8Q0E
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___0FVzG
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__gxPDi
+                            )}
+                          >
+                            {
+                              "\u062b\u0628\u062a \u0648 \u0648\u06cc\u0631\u0627\u06cc\u0634 \u0627\u0637\u0644\u0627\u0639\u0627\u062a \u067e\u0631\u0648\u0641\u0627\u06cc\u0644 \u0645\u0631\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__lF7LL)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__rry4T)}
+                    >
+                      <h3
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h3,
+                          projectcss.__wab_text,
+                          sty.h3__evT3K
+                        )}
+                      >
+                        {
+                          "\u062a\u0642\u0648\u06cc\u0645 \u06a9\u0627\u0631\u06cc:"
+                        }
+                      </h3>
+                    </div>
+                    <ul
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.ul,
+                        sty.ul__yDMuB
+                      )}
+                      dir={"rtl"}
+                    >
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__b5ZO8
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__rdL39
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__bQvpg
+                            )}
+                          >
+                            {
+                              "\u062a\u0642\u0648\u06cc\u0645 \u06a9\u0627\u0631\u06cc \u0628\u0627 \u0646\u0645\u0627\u06cc \u0647\u0641\u062a\u06af\u06cc \u062c\u0647\u062a \u0645\u062f\u06cc\u0631\u06cc\u062a \u0646\u0648\u0628\u062a \u0647\u0627"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__hatCs
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__xe7Ed
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__dXuMn
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u0645\u0634\u0627\u0647\u062f\u0647 \u0622\u0645\u0627\u0631 \u0646\u0648\u0628\u062a \u0647\u0627 \u0628\u0647 \u062a\u0641\u06a9\u06cc\u06a9 \u0631\u0648\u0632 \u0648 \u0646\u0648\u0639 \u0646\u0648\u0628\u062a"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__kJcVa
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__tooDz
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__i9RK8
+                            )}
+                          >
+                            {
+                              "\u062a\u0642\u0648\u06cc\u0645 \u06a9\u0627\u0631\u06cc \u0628\u0627 \u0646\u0645\u0627\u06cc \u0644\u06cc\u0633\u062a\u06cc"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li___8AwWk
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__wfcgS
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__k72Dx
+                            )}
+                          >
+                            {
+                              "\u062a\u0642\u0648\u06cc\u0645 \u06a9\u0627\u0631\u06cc \u0628\u0627 \u0646\u0645\u0627\u06cc \u0633\u0627\u0644\u0646 \u0627\u0646\u062a\u0638\u0627\u0631 \u0648 \u0644\u06cc\u0633\u062a \u0635\u0646\u062f\u0644\u06cc \u0647\u0627 \u0628\u0647 \u0635\u0648\u0631\u062a \u0646\u0648\u0628\u062a \u067e\u0631\u0634\u062f\u0647 \u0648 \u0646\u0648\u0628\u062a \u062e\u0627\u0644\u06cc"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__sVaer
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___5MwzZ
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__kOzjs
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062c\u0633\u062a\u062c\u0648 \u0628\u06cc\u0646 \u0646\u0648\u0628\u062a \u0647\u0627\u06cc \u062b\u0628\u062a \u0634\u062f\u0647 \u0628\u0631 \u0627\u0633\u0627\u0633 \u06a9\u0644\u06cc\u0647 \u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0646\u0648\u0628\u062a"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__elhnl)}
+                    dir={"rtl"}
+                  >
+                    <h3
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h3,
+                        projectcss.__wab_text,
+                        sty.h3___73PBm
+                      )}
+                    >
+                      {
+                        "\u0627\u0645\u06a9\u0627\u0646 \u062b\u0628\u062a \u0631\u0648\u0632\u0647\u0627\u06cc \u062a\u0639\u0637\u06cc\u0644 \u06cc\u0627 \u0645\u0631\u062e\u0635\u06cc:"
+                      }
+                    </h3>
+                    <ul
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.ul,
+                        sty.ul___5SYgB
+                      )}
+                      dir={"rtl"}
+                    >
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__triLa
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__vnWw0
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__mlVm2
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062a\u0639\u0631\u06cc\u0641 \u0631\u0648\u0632 \u062a\u0639\u0637\u06cc\u0644 \u0628\u0647 \u0627\u0632\u0627\u06cc \u0647\u0631 \u067e\u0632\u0634\u06a9 \u06cc\u0627 \u06a9\u0644 \u0645\u0631\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__htShz
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___7HIq
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__a2Ag4
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062a\u0639\u0631\u06cc\u0641 \u06cc\u06a9 \u0628\u0627\u0632\u0647 \u0632\u0645\u0627\u0646\u06cc \u062a\u0639\u0637\u06cc\u0644 \u0628\u0647 \u0627\u0632\u0627\u06cc \u0647\u0631 \u067e\u0632\u0634\u06a9 \u06cc\u0627 \u06a9\u0644 \u0645\u0631\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li___6NPkp
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__h5Q89
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__i6V0T
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062a\u0639\u0631\u06cc\u0641 \u0645\u0631\u062e\u0635\u06cc \u0628\u0647 \u0635\u0648\u0631\u062a \u0633\u0627\u0639\u062a\u06cc \u0628\u0631\u0627\u06cc \u067e\u0632\u0634\u06a9 "
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__g7VPz
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__lNtw2
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__q2Lg3
+                            )}
+                          >
+                            {
+                              "\u0648\u062c\u0648\u062f \u0644\u06cc\u0633\u062a \u06a9\u0644\u06cc\u0647 \u062a\u0639\u0637\u06cc\u0644\u0627\u062a \u0634\u0645\u0633\u06cc \u0648 \u0642\u0645\u0631\u06cc \u0648 \u0645\u06cc\u0644\u0627\u062f\u06cc"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___9FLh)}
+                    dir={"rtl"}
+                  >
+                    <h3
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h3,
+                        projectcss.__wab_text,
+                        sty.h3__vZe7H
+                      )}
+                    >
+                      {
+                        "\u06af\u0632\u0627\u0631\u0634 \u06af\u06cc\u0631\u06cc:"
+                      }
+                    </h3>
+                    <ul
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.ul,
+                        sty.ul__jGlyg
+                      )}
+                      dir={"rtl"}
+                    >
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__atz2F
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___6TqAa
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__h0IIo
+                            )}
+                          >
+                            {
+                              "\u06af\u0632\u0627\u0631\u0634 \u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u0645\u0631\u06a9\u0632 \u0628\u0627 \u0641\u06cc\u0644\u062a\u0631\u0647\u0627\u06cc \u0645\u062a\u0646\u0648\u0639"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__tPg83
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__eKDwg
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___45Tgo
+                            )}
+                          >
+                            {
+                              "\u0627\u0631\u0627\u0626\u0647 \u06af\u0632\u0627\u0631\u0634 \u06cc\u0647 \u0634\u06a9\u0644 \u0646\u0645\u0648\u062f\u0627\u0631\u06cc"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__hi19I
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__zfYhE
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__sNkjq
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062a\u0639\u06cc\u06cc\u0646 \u0644\u06cc\u0633\u062a \u0633\u062a\u0648\u0646 \u0647\u0627\u06cc \u06af\u0632\u0627\u0631\u0634 \u0648 \u0646\u0648\u0639 \u0645\u0631\u062a\u0628 \u0633\u0627\u0632\u06cc \u0628\u0647 \u0635\u0648\u0631\u062a \u067e\u0648\u06cc\u0627"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li___2Lu2D
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__keS33
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__x7B2
+                            )}
+                          >
+                            {
+                              "\u0686\u0627\u067e \u06af\u0632\u0627\u0631\u0634 \u0646\u0648\u0628\u062a \u0647\u0627 \u0648 \u06cc\u0627 \u06af\u0631\u0641\u062a\u0646 \u062e\u0631\u0648\u062c\u06cc \u0628\u0627 \u0641\u0631\u0645\u062a \u0627\u06a9\u0633\u0644"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___8Kk9O)}
+                    dir={"rtl"}
+                  >
+                    <h3
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h3,
+                        projectcss.__wab_text,
+                        sty.h3__xlxLl
+                      )}
+                    >
+                      {
+                        "\u0645\u062f\u06cc\u0631\u062a \u062f\u0633\u062a\u0631\u0633\u06cc:"
+                      }
+                    </h3>
+                    <ul
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.ul,
+                        sty.ul__kpClK
+                      )}
+                      dir={"rtl"}
+                    >
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li___5B1DG
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__wL4Zc
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__aiaA0
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062a\u0639\u0631\u06cc\u0641 \u062f\u0633\u062a\u0631\u0633\u06cc \u0628\u0647 \u0627\u0632\u0627\u06cc \u0647\u0631 \u0646\u0642\u0634 \u0633\u0627\u0632\u0645\u0627\u0646\u06cc"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__es5Cj
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__rdgjf
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___0Sbfl
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062a\u0639\u0631\u06cc\u0641 \u0648 \u062a\u062e\u0635\u06cc\u0635 \u0646\u0642\u0634 \u0647\u0627\u06cc \u0633\u0627\u0632\u0645\u0627\u0646\u06cc \u0628\u0647 \u06a9\u0627\u0631\u0628\u0631\u0627\u0646"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              ) : null}
+              {(() => {
+                try {
+                  return $state.clAnnouncementState;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__ube0M)}
+                  dir={"rtl"}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__q2J9)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__iPpuC)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox___8GfTm
+                        )}
+                      >
+                        <h2
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h2,
+                            projectcss.__wab_text,
+                            sty.h2__fThoQ
+                          )}
+                        >
+                          {
+                            "\u0645\u0627\u0698\u0648\u0644 \u0627\u0639\u0644\u0627\u0646\u0627\u062a"
+                          }
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___8IUe7)}
+                  />
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__g4ApX)}
+                    dir={"rtl"}
+                  >
+                    <h3
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h3,
+                        projectcss.__wab_text,
+                        sty.h3__vFkrD
+                      )}
+                    >
+                      {
+                        "\u0627\u0645\u06a9\u0627\u0646 \u06cc\u0627\u062f\u0622\u0648\u0631\u06cc \u0646\u0648\u0628\u062a:"
+                      }
+                    </h3>
+                    <ul
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.ul,
+                        sty.ul___3O2Pm
+                      )}
+                      dir={"rtl"}
+                    >
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__ltMxn
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__jtA7J
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__kChLc
+                            )}
+                          >
+                            {
+                              "\u062a\u0639\u0631\u06cc\u0641 \u0628\u0627\u0632\u0647 \u0647\u0627\u06cc \u06cc\u0627\u062f\u0622\u0648\u0631\u06cc (\u0686\u0646\u062f \u062f\u0642\u06cc\u0642\u0647/\u0633\u0627\u0639\u062a \u0642\u0628\u0644 \u0627\u0632 \u0646\u0648\u0628\u062a)"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__nuhRd
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__uyVyn
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__aVAiQ
+                            )}
+                          >
+                            {
+                              "\u062a\u0639\u0631\u06cc\u0641 \u0628\u0647 \u0627\u0632\u0627\u06cc \u0647\u0631 \u067e\u0632\u0634\u06a9 \u0648 \u062e\u062f\u0645\u062a"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__rsScj
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___4Sti
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__i1Ru
+                            )}
+                          >
+                            {
+                              "\u062a\u0639\u0631\u06cc\u0641 \u0631\u0648\u0634 \u06cc\u0627\u062f\u0622\u0648\u0631\u06cc (\u062a\u0644\u06af\u0631\u0627\u0645\u06cc\u060c \u062a\u0644\u0641\u0646\u06cc \u0648 \u067e\u06cc\u0627\u0645\u06a9\u06cc)"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__d6BPz)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__pAxas
+                      )}
+                    >
+                      {
+                        "\u0642\u0627\u0628\u0644\u06cc\u062a \u0627\u0637\u0644\u0627\u0639 \u0631\u0633\u0627\u0646\u06cc \u0646\u0648\u0628\u062a \u062b\u0628\u062a \u0634\u062f\u0647\u060c \u062c\u0627\u0628\u062c\u0627 \u0634\u062f\u0647 \u0648 \u062d\u0630\u0641 \u0634\u062f\u0647 \u0628\u0647 \u0628\u06cc\u0645\u0627\u0631\u0627\u0646 \u0628\u0647 \u0635\u0648\u0631\u062a \u0647\u0627\u06cc \u062a\u0644\u0641\u0646\u06cc\u060c \u067e\u06cc\u0627\u0645\u06a9\u06cc \u0648 \u0627\u06cc\u0645\u06cc\u0644\u06cc"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__nCxWa)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__wN6YF
+                      )}
+                    >
+                      {
+                        "\u0627\u0645\u06a9\u0627\u0646 \u062d\u0630\u0641 \u06af\u0631\u0648\u0647\u06cc \u0646\u0648\u0628\u062a \u0647\u0627 \u0628\u0627 \u0627\u0645\u06a9\u0627\u0646 \u0627\u0637\u0644\u0627\u0639 \u0631\u0633\u0627\u0646\u06cc \u062a\u0644\u0641\u0646\u06cc\u060c \u067e\u06cc\u0627\u0645\u06a9\u06cc \u0648 \u0627\u06cc\u0645\u06cc\u0644\u06cc \u0628\u0647 \u06a9\u0644\u06cc\u0647 \u0628\u06cc\u0645\u0627\u0631\u0627\u0646 \u0628\u0647 \u0635\u0648\u0631\u062a \u062e\u0648\u062f\u06a9\u0627\u0631"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__kRqQm)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__owDap
+                      )}
+                    >
+                      {
+                        "\u0627\u0645\u06a9\u0627\u0646 \u062c\u0627\u0628\u062c\u0627\u06cc\u06cc \u06af\u0631\u0648\u0647\u06cc \u0646\u0648\u0628\u062a \u0647\u0627 \u0628\u0647 \u0632\u0645\u0627\u0646 \u062f\u0644\u062e\u0648\u0627\u0647 \u0628\u0627 \u0627\u0645\u06a9\u0627\u0646 \u0627\u0637\u0644\u0627\u0639 \u0631\u0633\u0627\u0646\u06cc \u062a\u0644\u0641\u0646\u06cc\u060c \u067e\u06cc\u0627\u0645\u06a9\u06cc \u0648 \u0627\u06cc\u0645\u06cc\u0644\u06cc \u0628\u0647 \u06a9\u0644\u06cc\u0647 \u0628\u06cc\u0645\u0627\u0631\u0627\u0646 \u0628\u0647 \u0635\u0648\u0631\u062a \u062e\u0648\u062f\u06a9\u0627\u0631"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__foTy8)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__pwyw3
+                      )}
+                    >
+                      {
+                        "\u0627\u0645\u06a9\u0627\u0646 \u062a\u0639\u06cc\u06cc\u0646 \u0633\u0627\u0639\u062a \u0645\u062c\u0627\u0632 \u0627\u0637\u0644\u0627\u0639 \u0631\u0633\u0627\u0646\u06cc \u062a\u0644\u0641\u0646\u06cc"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__nmfL)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__jXqOj
+                      )}
+                    >
+                      {
+                        "\u062a\u0639\u06cc\u06cc\u0646 \u062a\u0646\u0638\u06cc\u0645\u0627\u062a \u062c\u0647\u062a \u062a\u0639\u062f\u0627\u062f \u062f\u0641\u0639\u0627\u062a \u062a\u0644\u0627\u0634 \u062f\u0631 \u0635\u0648\u0631\u062a \u0639\u062f\u0645 \u062f\u0633\u062a\u0631\u0633\u06cc \u062f\u0631 \u0627\u0637\u0644\u0627\u0639 \u0631\u0633\u0627\u0646\u06cc \u062a\u0644\u0641\u0646\u06cc"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___4Nzi3)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__qyiMk
+                      )}
+                    >
+                      {
+                        "\u0627\u0645\u06a9\u0627\u0646 \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u0633\u0627\u0632\u06cc \u0645\u062a\u0646 \u067e\u06cc\u0627\u0645\u06a9 \u0647\u0627\u06cc \u0627\u0631\u0633\u0627\u0644\u06cc \u0628\u0647 \u0645\u0634\u062a\u0631\u06cc\u0627\u0646 (\u062b\u0628\u062a\u060c \u0648\u06cc\u0631\u0627\u06cc\u0634\u060c \u062d\u0630\u0641\u060c \u067e\u06cc\u06af\u06cc\u0631\u06cc\u060c \u06cc\u0627\u062f\u0622\u0648\u0631\u06cc)"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___4KbDg)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__r29Sg
+                      )}
+                    >
+                      {
+                        "\u0627\u0645\u06a9\u0627\u0646 \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u0633\u0627\u0632\u06cc \u0645\u062a\u0646 \u067e\u06cc\u0627\u0645\u06a9 (\u062b\u0628\u062a\u060c \u0648\u06cc\u0631\u0627\u06cc\u0634\u060c \u062d\u0630\u0641\u060c \u06cc\u0627\u062f\u0622\u0648\u0631\u06cc \u0646\u0648\u0628\u062a \u0648 \u0627\u0639\u0644\u0627\u0645 \u0631\u0648\u0634 \u0647\u0627\u06cc \u0646\u0648\u0628\u062a \u062f\u0647\u06cc)"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__ejJc)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__mf2U3
+                      )}
+                    >
+                      {
+                        "\u0627\u0645\u06a9\u0627\u0646 \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u0648 \u0627\u0639\u0644\u0627\u0645 \u0644\u06cc\u0633\u062a \u0646\u0648\u0628\u062a \u0647\u0627\u06cc \u0641\u0631\u062f\u0627\u06cc \u067e\u0632\u0634\u06a9"
+                      }
+                    </div>
+                  </div>
+                </div>
+              ) : null}
+              {(() => {
+                try {
+                  return $state.clCalculationState;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox___7ESEk)}
+                  dir={"rtl"}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__uFdfE)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__vfQuV)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__kmcL
+                        )}
+                      >
+                        <h2
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h2,
+                            projectcss.__wab_text,
+                            sty.h2__vWvFt
+                          )}
+                        >
+                          {
+                            "\u0645\u0627\u0698\u0648\u0644 \u0645\u062d\u0627\u0633\u0628\u0627\u062a"
+                          }
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___8Tm7D)}
+                  />
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__oq6Pa)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__sCpw
+                      )}
+                    >
+                      {
+                        "\u0627\u0645\u06a9\u0627\u0646 \u062a\u0639\u0631\u06cc\u0641 \u062e\u062f\u0645\u0627\u062a \u0645\u0631\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc "
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__tN2Ln)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__jQKhG
+                      )}
+                    >
+                      {
+                        "\u0627\u0645\u06a9\u0627\u0646 \u062a\u0639\u0631\u06cc\u0641 \u0628\u06cc\u0645\u0647 \u0647\u0627\u06cc \u062a\u062d\u062a \u067e\u0648\u0634\u0634 \u0645\u0631\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__klC0B)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__ehCbJ
+                      )}
+                    >
+                      {
+                        "\u062a\u0639\u06cc\u06cc\u0646 \u062a\u0639\u0631\u0641\u0647 \u0647\u0631 \u062e\u062f\u0645\u062a \u0628\u0631 \u0627\u0633\u0627\u0633 \u062a\u062e\u0635\u0635 \u067e\u0632\u0634\u06a9\u060c \u0628\u06cc\u0645\u0647 \u0627\u0635\u0644\u06cc \u0648 \u062a\u06a9\u0645\u06cc\u0644\u06cc \u0648 \u062e\u062f\u0645\u062a"
+                      }
+                    </div>
+                  </div>
+                </div>
+              ) : null}
+              {(() => {
+                try {
+                  return $state.clOnlinepaymentState;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__edoLs)}
+                  dir={"rtl"}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__zHroT)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__foUcv)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__xbmsR
+                        )}
+                      >
+                        <h2
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h2,
+                            projectcss.__wab_text,
+                            sty.h2__nbMc
+                          )}
+                        >
+                          {
+                            "\u0645\u0627\u0698\u0648\u0644 \u067e\u0631\u062f\u0627\u062e\u062a \u0622\u0646\u0644\u0627\u06cc\u0646"
+                          }
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__xz0M)}
+                  />
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__f7MNk)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__bKiXw
+                      )}
+                    >
+                      {
+                        "\u067e\u0631\u062f\u0627\u062e\u062a \u0622\u0646\u0644\u0627\u06cc\u0646 \u062f\u0631 \u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u0627\u06cc\u0646\u062a\u0631\u0646\u062a\u06cc\u060c \u0627\u067e\u0644\u06cc\u06a9\u06cc\u0634\u0646 \u0648 \u0633\u0627\u06cc\u062a \u0645\u0631\u06a9\u0632"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__sQ39)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__gmGew
+                      )}
+                    >
+                      {
+                        "\u0642\u0627\u0628\u0644\u06cc\u062a \u0639\u0648\u062f\u062a \u0647\u0632\u06cc\u0646\u0647 \u067e\u0631\u062f\u0627\u062e\u062a\u06cc \u062f\u0631 \u0635\u0648\u0631\u062a \u06a9\u0646\u0633\u0644\u06cc \u0646\u0648\u0628\u062a"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__ifE1N)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__eNcx9
+                      )}
+                    >
+                      {
+                        "\u06af\u0632\u0627\u0631\u0634\u0627\u062a \u0645\u0627\u0644\u06cc "
+                      }
+                    </div>
+                  </div>
+                </div>
+              ) : null}
+              {(() => {
+                try {
+                  return $state.clPhoneReservationStatus;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__m7Ekd)}
+                  dir={"rtl"}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__oQfVn)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__r5XCi)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__eFYvM
+                        )}
+                      >
+                        <h2
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h2,
+                            projectcss.__wab_text,
+                            sty.h2__rih3V
+                          )}
+                        >
+                          {
+                            "\u0645\u0627\u0698\u0648\u0644 \u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u062a\u0644\u0641\u0646\u06cc"
+                          }
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__dxr5D)}
+                  />
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__yWSv)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__ieoWx)}
+                    >
+                      <h3
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h3,
+                          projectcss.__wab_text,
+                          sty.h3__xTjAh
+                        )}
+                      >
+                        {
+                          "\u0627\u0628\u0632\u0627\u0631 \u0686\u0627\u0631\u062a \u0633\u0627\u0632 \u062a\u0644\u0641\u0646\u06cc:"
+                        }
+                      </h3>
+                    </div>
+                    <ul
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.ul,
+                        sty.ul__frGwv
+                      )}
+                      dir={"rtl"}
+                    >
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__tjboq
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__zVqar
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__a9Ub
+                            )}
+                          >
+                            {
+                              "\u062a\u0639\u0631\u06cc\u0641 \u06a9\u0644\u06cc\u0647 \u0645\u0631\u0627\u062d\u0644 \u0686\u0627\u0631\u062a \u062a\u0644\u0641\u0646\u06cc \u0628\u0647 \u0635\u0648\u0631\u062a \u0641\u0644\u0648\u0686\u0627\u0631\u062a"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__dJy43
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__jPjQw
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__qlBg6
+                            )}
+                          >
+                            {
+                              "\u0622\u067e\u0644\u0648\u062f \u0641\u0627\u06cc\u0644 \u0647\u0627\u06cc \u0635\u0648\u062a\u06cc \u062f\u0627\u062e\u0644 \u0633\u0627\u062e\u062a\u0627\u0631 \u06cc\u06a9\u067e\u0627\u0631\u0686\u0647 \u0645\u062f\u06cc\u0631\u06cc\u062a \u0631\u0633\u0627\u0646\u0647"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__yLyGi
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___5H65Z
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__qLaV
+                            )}
+                          >
+                            {
+                              "\u0627\u062c\u0631\u0627\u06cc \u0639\u0645\u0644\u06cc\u0627\u062a \u0647\u0627\u06cc \u0645\u0642\u0627\u06cc\u0633\u0647 \u0627\u06cc\u06cc \u0628\u0631\u0627\u06cc \u0627\u0646\u062a\u062e\u0627\u0628 \u0632\u0648\u062f\u062a\u0631\u06cc\u0646 \u0646\u0648\u0628\u062a \u062e\u0627\u0644\u06cc"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li___6YKV
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__rttAp
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__g5Hs1
+                            )}
+                          >
+                            {
+                              "\u062a\u0639\u0631\u06cc\u0641 \u0634\u0631\u0637 \u0648 \u062d\u0644\u0642\u0647 \u0647\u0627\u06cc \u067e\u06cc\u0634\u0631\u0641\u062a\u0647"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__uD92W
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__kt7Pm
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__tcdm0
+                            )}
+                          >
+                            {
+                              "\u062b\u0628\u062a \u0644\u0627\u06af \u06a9\u0644\u06cc\u0647 \u0645\u0631\u0627\u062d\u0644 \u0627\u062c\u0631\u0627\u06cc \u0686\u0627\u0631\u062a \u062a\u0644\u0641\u0646\u06cc \u0627\u062e\u062a\u0635\u0627\u0635\u0627 \u0628\u0647 \u0627\u0632\u0627\u06cc \u0647\u0631 \u062a\u0645\u0627\u0633 \u0627\u0632 \u0647\u0631 \u0628\u06cc\u0645\u0627\u0631"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__ce6RT
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__oxMxc
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__hnHf
+                            )}
+                          >
+                            {
+                              "\u06af\u0632\u0627\u0631\u0634 \u0648\u0636\u0639\u06cc\u062a \u062a\u0645\u0627\u0633\u0647\u0627"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__xqXv
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__du7Qw
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__usDw
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u0636\u0628\u0637 \u0645\u06a9\u0627\u0644\u0645\u0627\u062a"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__pyJj7)}
+                    dir={"rtl"}
+                  >
+                    <h3
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h3,
+                        projectcss.__wab_text,
+                        sty.h3__iaRFl
+                      )}
+                    >
+                      {
+                        "\u0648\u062c\u0648\u062f \u062a\u0639\u062f\u0627\u062f\u06cc \u0627\u0632 \u0686\u0627\u0631\u062a\u0647\u0627\u06cc \u062a\u0644\u0641\u0646\u06cc \u067e\u0631\u06a9\u0627\u0631\u0628\u0631\u062f \u0628\u0647 \u0635\u0648\u0631\u062a \u067e\u06cc\u0634\u0641\u0631\u0636:"
+                      }
+                    </h3>
+                    <ul
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.ul,
+                        sty.ul__nbNPj
+                      )}
+                      dir={"rtl"}
+                    >
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__tUh7V
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__fsKl7
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__sBqgT
+                            )}
+                          >
+                            {
+                              "\u067e\u06cc\u0634\u0646\u0647\u0627\u062f \u0627\u0648\u0644\u06cc\u0646 \u0646\u0648\u0628\u062a \u062e\u0627\u0644\u06cc"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__upYwF
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__bFbqP
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__lx6Mf
+                            )}
+                          >
+                            {
+                              "\u067e\u06cc\u0634\u0646\u0647\u0627\u062f \u0646\u0648\u0628\u062a \u062f\u0631 \u0635\u0648\u0631\u062a \u0645\u0646\u0627\u0633\u0628 \u0646\u0628\u0648\u062f\u0646 \u0627\u06cc\u0646 \u0646\u0648\u0628\u062a"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__rp8Mi
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___0SOn1
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__bVjDs
+                            )}
+                          >
+                            {
+                              " \u06af\u0631\u0641\u062a\u0646 \u0646\u0648\u0628\u062a \u062f\u0631 \u062a\u0627\u0631\u06cc\u062e \u062e\u0627\u0635"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__se00M
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__f39O
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__uXl
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062c\u0627\u0628\u062c\u0627\u06cc\u06cc \u0646\u0648\u0628\u062a"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__u4Wg
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__ezoDd
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__w6ZvB
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062d\u0630\u0641 \u0646\u0648\u0628\u062a"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__wVjZy
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__fCrKr
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__ioWGl
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u067e\u06cc\u06af\u06cc\u0631\u06cc \u0646\u0648\u0628\u062a"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__wSss
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__mCEnO
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__v2OKo
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u0627\u062a\u0635\u0627\u0644 \u0628\u0647 \u0627\u067e\u0631\u0627\u062a\u0648\u0631"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              ) : null}
+              {(() => {
+                try {
+                  return $state.clKioskStatuc;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__ko6QD)}
+                  dir={"rtl"}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__hj4Rk)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__djx4P)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox___80Yjt
+                        )}
+                      >
+                        <h2
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h2,
+                            projectcss.__wab_text,
+                            sty.h2__ngtad
+                          )}
+                        >
+                          {
+                            "\u0645\u0627\u0698\u0648\u0644 \u0645\u062f\u06cc\u0631\u06cc\u062a \u0635\u0641 \u0648 \u0641\u0631\u0627\u062e\u0648\u0627\u0646 \u0628\u06cc\u0645\u0627\u0631"
+                          }
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__gV10N)}
+                  />
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__qfsEs)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__gF22F)}
+                    >
+                      <h3
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h3,
+                          projectcss.__wab_text,
+                          sty.h3__bfVh2
+                        )}
+                      >
+                        {
+                          "\u0646\u0631\u0645 \u0627\u0641\u0632\u0627\u0631 \u0641\u0631\u0627\u062e\u0648\u0627\u0646:"
+                        }
+                      </h3>
+                    </div>
+                    <ul
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.ul,
+                        sty.ul__neWjV
+                      )}
+                      dir={"rtl"}
+                    >
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__lhzFu
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__xu0Dk
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__wmK4S
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062a\u0639\u06cc\u06cc\u0646 \u062d\u062f\u0627\u06a9\u062b\u0631 \u0648 \u062d\u062f\u0627\u0642\u0644 \u0632\u0645\u0627\u0646 \u0642\u0627\u0628\u0644 \u0645\u0631\u0627\u062c\u0639\u0647 \u062a\u0648\u0633\u0637 \u0628\u06cc\u0645\u0627\u0631 (\u062c\u0647\u062a \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u062f\u0627\u062e\u0644 \u0641\u0631\u0627\u062e\u0648\u0627\u0646 \u0628\u06cc\u0645\u0627\u0631)"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__sik6
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__gb4Wh
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___8Ff9
+                            )}
+                          >
+                            {
+                              "\u06af\u0632\u0627\u0631\u0634 \u0641\u0631\u0627\u062e\u0648\u0627\u0646\u06cc \u0628\u06cc\u0645\u0627\u0631"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__enykw
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__lzc4A
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___4GKh5
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062a\u0639\u0631\u06cc\u0641 \u0648 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u0641\u0631\u0627\u062e\u0648\u0627\u0646 \u0628\u0647 \u0635\u0648\u0631\u062a \u06a9\u0644\u0648\u062f \u0648 \u0644\u0648\u06a9\u0627\u0644 (\u067e\u06cc\u0634\u0646\u0647\u0627\u062f \u0645\u0627 \u0628\u0647 \u062f\u0644\u06cc\u0644 \u0645\u0634\u06a9\u0644\u0627\u062a \u0627\u0631\u062a\u0628\u0627\u0637 \u0634\u0628\u06a9\u0647 \u0627\u06cc\u06cc \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0628\u0647 \u0635\u0648\u0631\u062a \u0644\u0648\u06a9\u0627\u0644 \u0645\u06cc \u0628\u0627\u0634\u062f)"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li___2LniG
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__z480N
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__eFUlH
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062a\u0639\u0631\u06cc\u0641 \u0635\u0641 \u0647\u0627\u06cc \u0641\u0631\u0627\u062e\u0648\u0627\u0646 \u0628\u0647 \u062a\u0639\u062f\u0627\u062f \u062f\u0644\u062e\u0648\u0627\u0647 \u0628\u0647 \u0647\u0645\u0631\u0627\u0647 \u0627\u0645\u06a9\u0627\u0646 \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u0633\u0627\u0632\u06cc \u0634\u0631\u0648\u0639 \u0648 \u067e\u0627\u06cc\u0627\u0646 \u0634\u0645\u0627\u0631\u0647\u060c \u067e\u0632\u0634\u06a9 \u0648 \u0628\u0627\u062c\u0647 \u062c\u0647\u062a \u062a\u0639\u0631\u06cc\u0641 \u0647\u0631 \u0646\u0648\u0639 \u0641\u0631\u0622\u06cc\u0646\u062f \u0633\u0627\u0632\u0645\u0627\u0646\u06cc"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__xeSv9)}
+                    dir={"rtl"}
+                  >
+                    <h3
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h3,
+                        projectcss.__wab_text,
+                        sty.h3__xHElW
+                      )}
+                    >
+                      {"\u0635\u0641"}
+                    </h3>
+                    <ul
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.ul,
+                        sty.ul___6AiU9
+                      )}
+                      dir={"rtl"}
+                    >
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__zTzr5
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___2ALyw
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__tbJnL
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u0645\u062d\u062f\u0648\u062f \u0633\u0627\u0632\u06cc \u0632\u0645\u0627\u0646 \u0627\u0631\u0627\u0626\u0647 \u062e\u062f\u0645\u062a \u062a\u0648\u0633\u0637 \u0647\u0631 \u0635\u0641"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__swzl
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__bdbLy
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__mApWb
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062a\u0639\u0631\u06cc\u0641 \u0634\u0645\u0627\u0631\u0647 \u0647\u0627\u06cc \u0631\u0632\u0631\u0648 \u0628\u0631\u0627\u06cc \u0647\u0631 \u0635\u0641"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__qkw6
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__v3Biu
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__kUdv4
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062a\u0639\u0631\u06cc\u0641 \u0635\u0641 \u067e\u06cc\u0634\u0646\u06cc\u0627\u0632 \u0628\u0631\u0627\u06cc \u0647\u0631 \u0635\u0641 \u0641\u0631\u0627\u062e\u0648\u0627\u0646"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__grqQp
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__vwNei
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__h0SHy
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062e\u0627\u0644\u06cc \u06a9\u0631\u062f\u0646 \u0635\u0641 \u0647\u0627 \u062c\u0647\u062a \u0634\u0631\u0648\u0639 \u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u0627\u0632 \u0634\u0645\u0627\u0631\u0647 \u0635\u0641\u0631"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__nuMhp
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__jpKJ
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__cNvrl
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u062e\u0627\u0644\u06cc \u06a9\u0631\u062f\u0646 \u0635\u0641 \u0647\u0627 \u0628\u0647 \u0635\u0648\u0631\u062a \u062e\u0648\u062f\u06a9\u0627\u0631 \u062f\u0631 \u0633\u0627\u0639\u062a \u062e\u0627\u0635"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__b0LM
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___1IL5
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___8NvIc
+                            )}
+                          >
+                            {
+                              "\u0627\u0645\u06a9\u0627\u0646 \u0627\u0631\u062c\u0627\u0639 \u0646\u0648\u0628\u062a \u0627\u0632 \u06cc\u06a9 \u0635\u0641 \u0628\u0647 \u0635\u0641 \u062f\u06cc\u06af\u0631"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__ucLmN)}
+                    dir={"rtl"}
+                  >
+                    <h3
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h3,
+                        projectcss.__wab_text,
+                        sty.h3__kdnDs
+                      )}
+                    >
+                      {
+                        "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0627\u0632 \u06a9\u06cc\u0648\u0633\u06a9 \u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u0648 \u0627\u0637\u0644\u0627\u0639 \u0631\u0633\u0627\u0646\u06cc \u0628\u062f\u0648\u0646 \u0645\u062d\u062f\u0648\u062f\u06cc\u062a \u062a\u0639\u062f\u0627\u062f"
+                      }
+                    </h3>
+                    <ul
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.ul,
+                        sty.ul__vPeAe
+                      )}
+                      dir={"rtl"}
+                    >
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__oaRiT
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__po6U
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__nQgXo
+                            )}
+                          >
+                            {
+                              "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0627\u0632 \u06a9\u06cc\u0648\u0633\u06a9 \u0639\u0645\u0648\u062f\u06cc \u06cc\u0627 \u0627\u0641\u0642\u06cc"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__xQqwQ
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__zHcuZ
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__h421
+                            )}
+                          >
+                            {
+                              "\u0642\u0627\u0628\u0644\u06cc\u062a \u0627\u0631\u0627\u0626\u0647 \u0627\u0648\u0644\u06cc\u0646 \u0646\u0648\u0628\u062a \u062e\u0627\u0644\u06cc \u06cc\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u0646\u0648\u0628\u062a \u062f\u0631 \u062a\u0627\u0631\u06cc\u062e \u062e\u0627\u0635 \u0648 \u06cc\u0627 \u0647\u0631\u062f\u0648"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__pASo
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__ydRyT
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__nLeba
+                            )}
+                          >
+                            {
+                              "\u0627\u0631\u062c\u0627\u0639 \u062e\u0648\u062f\u06a9\u0627\u0631 \u0628\u0647 \u0635\u0641 \u0647\u0627\u06cc \u067e\u06cc\u0634\u0646\u06cc\u0627\u0632 \u0628\u0627 \u062a\u0648\u062c\u0647 \u0628\u0647 \u067e\u0632\u0634\u06a9"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__ay2It
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__jvLE
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__fbmJl
+                            )}
+                          >
+                            {
+                              "\u062a\u0639\u06cc\u06cc\u0646 \u0631\u0648\u0634 \u0645\u0631\u062a\u0628 \u0633\u0627\u0632\u06cc \u0622\u06cc\u062a\u0645 \u0647\u0627\u06cc \u06a9\u06cc\u0648\u0633\u06a9 (\u067e\u0632\u0634\u06a9 \u0648 \u062e\u062f\u0645\u0627\u062a)"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__cpKq2
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___33Rbt
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__a14LF
+                            )}
+                          >
+                            {
+                              "\u062b\u0628\u062a \u0646\u0648\u0628\u062a \u062f\u0627\u062e\u0644 \u0686\u0646\u062f \u0635\u0641 \u0641\u0631\u0627\u062e\u0648\u0627\u0646 \u0648 \u0686\u0627\u067e \u0647\u0645\u0632\u0645\u0627\u0646 \u0686\u0646\u062f \u0646\u0648\u0628\u062a \u062f\u0627\u062e\u0644 \u06cc\u06a9 \u0642\u0628\u0636 (\u0628\u0627 \u0642\u0627\u0628\u0644\u06cc\u062a \u062a\u0639\u06cc\u06cc\u0646 \u067e\u06cc\u0634\u0646\u06cc\u0627\u0632)"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li___47Hc2
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__eYqH
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___23E0
+                            )}
+                          >
+                            {
+                              "\u06a9\u06cc\u0648\u0633\u06a9 \u0633\u0631\u06cc\u0639 \u0628\u0631\u0627\u06cc \u06a9\u0627\u0631 \u0627\u067e\u0631\u0627\u062a\u0648\u0631\u0647\u0627"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___5V1Ih)}
+                    dir={"rtl"}
+                  >
+                    <h3
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h3,
+                        projectcss.__wab_text,
+                        sty.h3__f0Xcj
+                      )}
+                    >
+                      {
+                        "\u0633\u0627\u06cc\u0631 \u0642\u0627\u0628\u0644\u06cc\u062a \u0647\u0627"
+                      }
+                    </h3>
+                    <ul
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.ul,
+                        sty.ul__tzlOk
+                      )}
+                      dir={"rtl"}
+                    >
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__zdE1I
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__bxo45
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__nei5T
+                            )}
+                          >
+                            {
+                              "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0627\u0632 \u062a\u0627\u0628\u0644\u0648 \u0647\u0627\u06cc \u0627\u0639\u0644\u0627\u0645 \u0648\u0636\u0639\u06cc\u062a \u0635\u0641 \u0628\u062f\u0648\u0646 \u0645\u062d\u062f\u0648\u062f\u06cc\u062a \u062a\u0639\u062f\u0627\u062f"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__rMtZi
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__difbc
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__fN82Y
+                            )}
+                          >
+                            {
+                              "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0627\u0632 \u0633\u0631\u0648\u06cc\u0633 \u067e\u06cc\u062c\u06cc\u0646\u06af \u0648 \u0627\u0639\u0644\u0627\u0645 \u0635\u0648\u062a\u06cc \u0628\u062f\u0648\u0646 \u0645\u062d\u062f\u0648\u062f\u06cc\u062a \u062a\u0639\u062f\u0627\u062f"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__cs5Dz
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___6Tl3
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__wGxrm
+                            )}
+                          >
+                            {
+                              "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0627\u0632 \u0628\u0627\u062c\u0647 \u0647\u0627\u06cc \u0641\u0631\u0627\u062e\u0648\u0627\u0646\u06cc \u0646\u0631\u0645 \u0627\u0641\u0632\u0627\u0631\u06cc \u0627\u0639\u0644\u0627\u0645 \u0646\u0648\u0628\u062a \u0628\u062f\u0648\u0646 \u0645\u062d\u062f\u0648\u062f\u06cc\u062a \u062a\u0639\u062f\u0627\u062f"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__tjH7S
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__qqtiI
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__adMHd
+                            )}
+                          >
+                            {
+                              "\u0646\u0638\u0631 \u0633\u0646\u062c\u06cc \u0627\u0632 \u0637\u0631\u06cc\u0642 \u062a\u0644\u0641\u0646 \u06af\u0648\u06cc\u0627 \u0628\u0627 \u067e\u0627\u0633\u062e \u0647\u0627\u06cc \u06af\u0632\u06cc\u0646\u0647 \u0627\u06cc\u06cc \u06cc\u0627 \u06af\u0631\u0641\u062a\u0646 \u0627\u0645\u062a\u06cc\u0627\u0632"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li___1Jz1B
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__kw3Op
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__w3IV9
+                            )}
+                          >
+                            {
+                              "\u0646\u0638\u0631 \u0633\u0646\u062c\u06cc \u0627\u0632 \u0637\u0631\u06cc\u0642 \u062a\u0644\u0641\u0646 \u06af\u0648\u06cc\u0627 \u0648 \u0636\u0628\u0637 \u067e\u0627\u0633\u062e \u0628\u06cc\u0645\u0627\u0631"
+                            }
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.li,
+                          sty.li__xezfo
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__qQbUt
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__aXed8
+                            )}
+                          >
+                            {
+                              "\u0646\u0638\u0631 \u0633\u0646\u062c\u06cc \u0627\u0632 \u0637\u0631\u06cc\u0642 \u067e\u06cc\u0627\u0645\u06a9 "
+                            }
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              ) : null}
+              {(() => {
+                try {
+                  return $state.clApiState;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__iJLoc)}
+                  dir={"rtl"}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__j76U8)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__wo3Ty)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__dfdr9
+                        )}
+                      >
+                        <h2
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h2,
+                            projectcss.__wab_text,
+                            sty.h2___5H5K0
+                          )}
+                        >
+                          {
+                            "\u0645\u0627\u0698\u0648\u0644 \u0627\u0631\u062a\u0628\u0627\u0637 \u0628\u0627 \u0633\u0627\u06cc\u0631 \u0646\u0631\u0645 \u0627\u0641\u0632\u0627\u0631\u0647\u0627"
+                          }
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__sWutV)}
+                  />
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__jD8Ek)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__duOqw
+                      )}
+                    >
+                      {
+                        "\u0627\u0645\u06a9\u0627\u0646 \u062b\u0628\u062a\u060c \u062d\u0630\u0641 \u0648 \u06cc\u0627 \u062c\u0627\u0628\u0647 \u062c\u0627\u06cc\u06cc \u0646\u0648\u0628\u062a \u0646\u0648\u0628\u062a \u0627\u0632 \u0637\u0632\u06cc\u0642  API"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__jcxc)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__fGiI1
+                      )}
+                    >
+                      {
+                        "\u0627\u0645\u06a9\u0627\u0646 \u062a\u0628\u0627\u062f\u0644 \u062f\u0627\u062f\u0647 \u0628\u0627 \u0633\u0627\u06cc\u0631 \u0646\u0631\u0645 \u0627\u0641\u0632\u0627\u0631\u0647\u0627 (\u0627\u0632 \u062c\u0645\u0644\u0647 his) \u0627\u0632 \u0637\u0631\u06cc\u0642 API"
+                      }
+                    </div>
+                  </div>
+                </div>
+              ) : null}
+              {(() => {
+                try {
+                  return $state.clSpecialsiteState;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__hjUeU)}
+                  dir={"rtl"}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__xH3S3)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox___4FDk)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__kyNtE
+                        )}
+                      >
+                        <h2
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h2,
+                            projectcss.__wab_text,
+                            sty.h2___5VJcG
+                          )}
+                        >
+                          {
+                            "\u0633\u0627\u06cc\u062a \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u0645\u0631\u06a9\u0632"
+                          }
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___0HgIj)}
+                  />
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__iax3)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__wQtv
+                      )}
+                    >
+                      {
+                        "\u0627\u0645\u06a9\u0627\u0646 \u062a\u0639\u0631\u06cc\u0641 SubDomain \u0628\u0647 \u0627\u0632\u0627\u06cc \u0647\u0631 \u0645\u0631\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc \u062c\u0647\u062a \u0646\u0648\u0628\u062a \u062f\u0647\u06cc"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__zu1N)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__xqYr
+                      )}
+                    >
+                      {
+                        "\u0627\u0645\u06a9\u0627\u0646 \u0641\u0639\u0627\u0644 \u0633\u0627\u0632\u06cc \u062f\u0627\u0645\u0646\u0647 \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u0645\u0634\u062a\u0631\u06cc \u062c\u0647\u062a \u0646\u0648\u0628\u062a \u062f\u0647\u06cc"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___3CzUr)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__waksN
+                      )}
+                    >
+                      {
+                        "\u0627\u0645\u06a9\u0627\u0646 \u0631\u06cc\u0628\u0631\u0646\u062f \u06a9\u0631\u062f\u0646 \u0633\u0627\u06cc\u062a \u0628\u0647 \u0634\u06a9\u0644 \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u0628\u0631\u0627\u06cc \u0645\u0631\u06a9\u0632"
+                      }
+                    </div>
+                  </div>
+                </div>
+              ) : null}
+              {(() => {
+                try {
+                  return $state.clDashboardState;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__xpDsk)}
+                  dir={"rtl"}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__f8HIo)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__kv9Xx)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__pRCj
+                        )}
+                      >
+                        <h2
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h2,
+                            projectcss.__wab_text,
+                            sty.h2__yiwXj
+                          )}
+                        >
+                          {
+                            "\u062f\u0627\u0634\u0628\u0648\u0631\u062f \u06af\u0632\u0627\u0631\u0634\u0627\u062a \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc"
+                          }
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___7RMpS)}
+                  />
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__pcj6I)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___5Hhg4
+                      )}
+                    >
+                      {
+                        "\u0645\u06cc\u0632 \u06a9\u0627\u0631 \u062f\u0633\u062a\u0631\u0633\u06cc \u0633\u0631\u06cc\u0639 \u0628\u0647 \u06af\u0632\u0627\u0631\u0634\u0627\u062a \u0645\u0647\u0645"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__lMnfc)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__ulpz8
+                      )}
+                    >
+                      {
+                        "\u06af\u0632\u0627\u0631\u0634 \u0641\u0631\u0627\u0648\u0627\u0646\u06cc \u062a\u0639\u062f\u0627\u062f \u0628\u06cc\u0645\u0627\u0631\u0627\u0646"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__urKdU)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__zeoBf
+                      )}
+                    >
+                      {
+                        "\u06af\u0632\u0627\u0631\u0634 \u062a\u0631\u0627\u0641\u06cc\u06a9 \u0645\u0631\u06a9\u0632"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__hf7Nh)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__aqJJx
+                      )}
+                    >
+                      {
+                        "\u06af\u0632\u0627\u0631\u0634 \u0632\u0645\u0627\u0646 \u0627\u0646\u062a\u0638\u0627\u0631 \u0628\u06cc\u0645\u0627\u0631\u0627\u0646"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__jk0Md)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__seB
+                      )}
+                    >
+                      {
+                        "\u06af\u0632\u0627\u0631\u0634 \u0622\u0645\u0627\u0631\u06cc \u0648 \u0646\u0645\u0648\u062f\u0627\u0631\u06cc \u0646\u0648\u0628\u062a \u062f\u0647\u06cc"
+                      }
+                    </div>
+                  </div>
+                </div>
+              ) : null}
+              {(() => {
+                try {
+                  return $state.clEhrState;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__qhiMb)}
+                  dir={"rtl"}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__ivi1Q)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__uUf0H)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__kXuxV
+                        )}
+                      >
+                        <h2
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h2,
+                            projectcss.__wab_text,
+                            sty.h2__wfNq
+                          )}
+                        >
+                          {
+                            "\u0645\u0627\u0698\u0648\u0644 \u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631"
+                          }
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___8EhIg)}
+                  />
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___6WOXp)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__q1DX1
+                      )}
+                    >
+                      {
+                        " \u0641\u0631\u0645 \u0633\u0627\u0632 \u062c\u0647\u062a \u062a\u0639\u06cc\u06cc\u0646 \u0641\u06cc\u0644\u062f\u0647\u0627\u06cc \u062f\u0644\u062e\u0648\u0627\u0647 \u0628\u0631\u0627\u06cc \u0641\u0631\u0645 \u0645\u0648\u0631\u062f \u0646\u0638\u0631"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__jzM1)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__hGfE
+                      )}
+                    >
+                      {
+                        " \u062a\u0639\u0631\u06cc\u0641 \u0641\u06cc\u0644\u062f\u0647\u0627\u06cc \u062a\u0635\u0648\u06cc\u0631\u06cc\u060c \u0645\u062a\u0646\u06cc\u060c \u0639\u062f\u062f\u06cc\u060c \u062a\u0627\u0631\u06cc\u062e\u060c \u0632\u0645\u0627\u0646\u060c \u0628\u0631\u0686\u0633\u0628\u060c \u0642\u0644\u0645 \u0646\u0648\u0631\u06cc\u060c \u0633\u0627\u0628 \u0641\u0631\u0645\u060c \u0686\u06a9 \u0628\u0627\u06a9\u0633 \u0648 \u0644\u06cc\u0633\u062a"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___5Wh8)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__pgqYi
+                      )}
+                    >
+                      {
+                        " \u062a\u0639\u0631\u06cc\u0641 \u0641\u06cc\u0644\u062f\u0647\u0627\u06cc \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u0647\u0631 \u0628\u06cc\u0645\u0627\u0631 \u0628\u0627 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u0641\u0631\u0645 \u0633\u0627\u0632"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__wFjQy)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__xEcas
+                      )}
+                    >
+                      {
+                        " \u062a\u0639\u0631\u06cc\u0641 \u0641\u0631\u0645 \u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631 \u0628\u0647 \u0627\u0632\u0627\u06cc \u0647\u0631 \u062e\u062f\u0645\u062a \u0645\u0631\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc \u0628\u0627 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u0641\u0631\u0645 \u0633\u0627\u0632"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__xZoLv)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__cpJup
+                      )}
+                    >
+                      {
+                        " \u062b\u0628\u062a \u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0641\u0631\u0645 \u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631 \u062f\u0627\u062e\u0644 \u0646\u0648\u0628\u062a \u0628\u0627 \u062a\u0648\u062c\u0647 \u0628\u0647 \u062e\u062f\u0645\u062a \u0647\u0627\u06cc \u0627\u062e\u062a\u0635\u0627\u0635 \u062f\u0627\u062f\u0647 \u0634\u062f\u0647"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__mKpVm)}
+                    dir={"rtl"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__ybnYm
                       )}
                     >
                       {
