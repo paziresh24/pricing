@@ -717,6 +717,11 @@
           "id": "pmluLmEGECI6",
           "name": "Icon13Icon",
           "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__Icon13.tsx"
+        },
+        {
+          "id": "KibdjfOFOCp3",
+          "name": "Icon14Icon",
+          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__Icon14.tsx"
         }
       ],
       "images": [],
@@ -737,37 +742,37 @@
           "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
         },
         {
-          "id": "ojOuk34QNk7S",
+          "id": "rq1pFzAXsE9z",
           "name": "DatePicker",
           "displayName": "DatePicker",
           "componentImportPath": "@/fragment/components/date-picker"
         },
         {
-          "id": "Cb3u4Q42nP4Y",
+          "id": "w_Nty63X2o-t",
           "name": "TimePicker",
           "displayName": "TimePicker",
           "componentImportPath": "@/fragment/components/time-picker"
         },
         {
-          "id": "BmJVd3B1hOH_",
+          "id": "7LNGFaQ1WVv-",
           "name": "Popover",
           "displayName": "Popover",
           "componentImportPath": "@/fragment/components/popover"
         },
         {
-          "id": "9b-3VTYeTu1S",
+          "id": "Un2ikOagWEY9",
           "name": "Fragment",
           "displayName": "Fragment",
           "componentImportPath": "@/fragment/fragment"
         },
         {
-          "id": "ZyplnB1OrYb6",
+          "id": "-aZML1EcKLz0",
           "name": "GrowthBook",
           "displayName": "GrowthBook",
           "componentImportPath": "@/fragment/growthbook"
         },
         {
-          "id": "Jz28b8ekaZbU",
+          "id": "A4mXljoSlg6E",
           "name": "Splunk",
           "displayName": "Splunk",
           "componentImportPath": "@/fragment/splunk"
