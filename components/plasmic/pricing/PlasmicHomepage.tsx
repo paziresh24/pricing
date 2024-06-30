@@ -59,9 +59,9 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
-import { SideEffect } from "@plasmicpkgs/plasmic-basic-components";
 import TextInput from "../../TextInput"; // plasmic-import: ZdzGQGZE4mJ7/component
 import Checkbox from "../../Checkbox"; // plasmic-import: dk4vJhcf_j2D/component
+import { SideEffect } from "@plasmicpkgs/plasmic-basic-components";
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -97,7 +97,6 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
-  sideEffect?: Flex__<typeof SideEffect>;
   h1?: Flex__<"h1">;
   btnReservation?: Flex__<"div">;
   btnAnnouncement?: Flex__<"div">;
@@ -164,8 +163,6 @@ function PlasmicHomepage__RenderFunc(props: {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-
-  const $globalActions = useGlobalActions?.();
 
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
@@ -504,116 +501,6 @@ function PlasmicHomepage__RenderFunc(props: {
             )}
             dir={"rtl"}
           >
-            <SideEffect
-              data-plasmic-name={"sideEffect"}
-              data-plasmic-override={overrides.sideEffect}
-              className={classNames("__wab_instance", sty.sideEffect)}
-              onMount={async () => {
-                const $steps = {};
-
-                $steps["getCurrentUser"] = true
-                  ? (() => {
-                      const actionArgs = {
-                        args: [
-                          undefined,
-                          "https://apigw.paziresh24.com/v1/auth/me"
-                        ]
-                      };
-                      return $globalActions["Fragment.apiRequest"]?.apply(
-                        null,
-                        [...actionArgs.args]
-                      );
-                    })()
-                  : undefined;
-                if (
-                  $steps["getCurrentUser"] != null &&
-                  typeof $steps["getCurrentUser"] === "object" &&
-                  typeof $steps["getCurrentUser"].then === "function"
-                ) {
-                  $steps["getCurrentUser"] = await $steps["getCurrentUser"];
-                }
-
-                $steps["updateUser"] =
-                  $steps.getCurrentUser.status == 200
-                    ? (() => {
-                        const actionArgs = {
-                          variable: {
-                            objRoot: $state,
-                            variablePath: ["user"]
-                          },
-                          operation: 0,
-                          value: $steps.getCurrentUser.data.users[0]
-                        };
-                        return (({
-                          variable,
-                          value,
-                          startIndex,
-                          deleteCount
-                        }) => {
-                          if (!variable) {
-                            return;
-                          }
-                          const { objRoot, variablePath } = variable;
-
-                          $stateSet(objRoot, variablePath, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                if (
-                  $steps["updateUser"] != null &&
-                  typeof $steps["updateUser"] === "object" &&
-                  typeof $steps["updateUser"].then === "function"
-                ) {
-                  $steps["updateUser"] = await $steps["updateUser"];
-                }
-
-                $steps[
-                  "goToHttpswwwpaziresh24ComloginredirectUrlhttpspricingpaziresh24Com"
-                ] =
-                  $steps.getCurrentUser.status != 200
-                    ? (() => {
-                        const actionArgs = {
-                          destination:
-                            "https://www.paziresh24.com/login/?redirect_url=https://pricing.paziresh24.com/"
-                        };
-                        return (({ destination }) => {
-                          if (
-                            typeof destination === "string" &&
-                            destination.startsWith("#")
-                          ) {
-                            document
-                              .getElementById(destination.substr(1))
-                              .scrollIntoView({ behavior: "smooth" });
-                          } else {
-                            __nextRouter?.push(destination);
-                          }
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                if (
-                  $steps[
-                    "goToHttpswwwpaziresh24ComloginredirectUrlhttpspricingpaziresh24Com"
-                  ] != null &&
-                  typeof $steps[
-                    "goToHttpswwwpaziresh24ComloginredirectUrlhttpspricingpaziresh24Com"
-                  ] === "object" &&
-                  typeof $steps[
-                    "goToHttpswwwpaziresh24ComloginredirectUrlhttpspricingpaziresh24Com"
-                  ].then === "function"
-                ) {
-                  $steps[
-                    "goToHttpswwwpaziresh24ComloginredirectUrlhttpspricingpaziresh24Com"
-                  ] = await $steps[
-                    "goToHttpswwwpaziresh24ComloginredirectUrlhttpspricingpaziresh24Com"
-                  ];
-                }
-              }}
-              onUnmount={async () => {
-                const $steps = {};
-              }}
-            />
-
             <section className={classNames(projectcss.all, sty.section__dkFyp)}>
               <Stack__
                 as={"div"}
@@ -5622,7 +5509,6 @@ function PlasmicHomepage__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
-    "sideEffect",
     "h1",
     "btnReservation",
     "btnAnnouncement",
@@ -5658,7 +5544,6 @@ const PlasmicDescendants = {
     "txtSumInvoice",
     "sideEffectCalculator"
   ],
-  sideEffect: ["sideEffect"],
   h1: ["h1"],
   btnReservation: ["btnReservation"],
   btnAnnouncement: ["btnAnnouncement"],
@@ -5724,7 +5609,6 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  sideEffect: typeof SideEffect;
   h1: "h1";
   btnReservation: "div";
   btnAnnouncement: "div";
@@ -5821,7 +5705,6 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    sideEffect: makeNodeComponent("sideEffect"),
     h1: makeNodeComponent("h1"),
     btnReservation: makeNodeComponent("btnReservation"),
     btnAnnouncement: makeNodeComponent("btnAnnouncement"),
