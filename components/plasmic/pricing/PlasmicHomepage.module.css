@@ -2492,11 +2492,84 @@
   height: auto;
   max-width: 100%;
   justify-content: center;
-  align-items: flex-end;
+  align-items: stretch;
   margin-bottom: 0px;
+  flex-wrap: wrap;
   min-width: 0;
   padding: 0px 8px;
   border-width: 1px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__l1HBn {
+    flex-wrap: wrap;
+    align-items: stretch;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+.freeBox___7AvPu {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0px 8px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox___7AvPu {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+.freeBox__bVOuU {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  padding: 0px 8px;
+}
+.text___7T6Q {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  text-align: center;
+  padding-left: 0px;
+  align-self: center;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .text___7T6Q {
+    white-space: pre;
+    text-align: right;
+    font-size: 14px;
+  }
+}
+.freeBox__fqPfv {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-column-end: span 2;
+  min-width: 0;
+  padding: 8px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__fqPfv {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 }
 .freeBox__rgO4F {
   display: flex;
@@ -2508,40 +2581,30 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
+  padding: 0px 8px;
 }
-.text___7T6Q {
-  position: relative;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  text-align: center;
-  padding-left: 0px;
-  align-self: center;
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__rgO4F {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 }
 .txtSumInvoice {
   height: auto;
   max-width: 100%;
-  text-align: center;
+  text-align: right;
   width: auto;
   margin: 0px 5px 0px 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .txtSumInvoice {
-    width: 100%;
     height: auto;
     max-width: 100%;
     text-align: left;
     margin-right: 10px;
-    min-width: 0;
+    white-space: pre;
+    font-size: 14px;
   }
-}
-.text__iFjo {
-  position: relative;
-  height: auto;
-  max-width: 100%;
-  width: auto;
-  margin-right: 5px;
 }
 .sideEffectCalculator:global(.__wab_instance) {
   max-width: 100%;

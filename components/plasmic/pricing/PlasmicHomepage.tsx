@@ -3095,54 +3095,71 @@ function PlasmicHomepage__RenderFunc(props: {
                           <div
                             className={classNames(
                               projectcss.all,
-                              sty.freeBox__rgO4F
+                              sty.freeBox___7AvPu
                             )}
                           >
                             <div
                               className={classNames(
                                 projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text___7T6Q
+                                sty.freeBox__bVOuU
                               )}
                             >
-                              {"\u062c\u0645\u0639 \u06a9\u0644:"}
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text___7T6Q
+                                )}
+                              >
+                                {"\u062c\u0645\u0639 \u06a9\u0644:"}
+                              </div>
                             </div>
                             <div
-                              data-plasmic-name={"txtSumInvoice"}
-                              data-plasmic-override={overrides.txtSumInvoice}
                               className={classNames(
                                 projectcss.all,
-                                projectcss.__wab_text,
-                                sty.txtSumInvoice
+                                sty.freeBox__fqPfv
                               )}
                             >
-                              <React.Fragment>
-                                {(() => {
-                                  try {
-                                    return $state.suminvoiceResult
-                                      .toString()
-                                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return "";
-                                    }
-                                    throw e;
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__rgO4F
+                                )}
+                              >
+                                <div
+                                  data-plasmic-name={"txtSumInvoice"}
+                                  data-plasmic-override={
+                                    overrides.txtSumInvoice
                                   }
-                                })()}
-                              </React.Fragment>
-                            </div>
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__iFjo
-                              )}
-                            >
-                              {"\u062a\u0648\u0645\u0627\u0646"}
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.txtSumInvoice
+                                  )}
+                                >
+                                  <React.Fragment>
+                                    {(() => {
+                                      try {
+                                        return $state.suminvoiceResult
+                                          .toString()
+                                          .replace(
+                                            /\B(?=(\d{3})+(?!\d))/g,
+                                            ","
+                                          );
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return "";
+                                        }
+                                        throw e;
+                                      }
+                                    })()}
+                                  </React.Fragment>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -3255,7 +3272,8 @@ function PlasmicHomepage__RenderFunc(props: {
                                         $state.reservationKioskResult +
                                         $state.reservsationPhoneResult +
                                         $state.reservationInternetResult +
-                                        $state.referralResult);
+                                        $state.referralResult +
+                                        "تومان");
                                     })();
                                   }
                                 };
