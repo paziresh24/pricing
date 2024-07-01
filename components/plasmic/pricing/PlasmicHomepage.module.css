@@ -146,6 +146,7 @@
   max-width: 100%;
   height: 45px;
   margin-left: 10px;
+  cursor: pointer;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .svg___0HXtL {
