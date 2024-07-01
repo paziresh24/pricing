@@ -81,6 +81,53 @@
   > img {
   margin-left: var(--token-vMUQwr5Jto1d);
 }
+.freeBox__v9Efc {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
+.freeBox__cnJt3 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+.freeBox__jcWd6 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-column-end: span 2;
+  min-width: 0;
+  padding: 8px;
+}
+.freeBox__v6Ysz {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
 .svg___0HXtL {
   object-fit: cover;
   max-width: 100%;
@@ -95,13 +142,25 @@
   width: auto;
   max-width: 100%;
   text-align: right;
-  font-size: 35px;
+  font-size: 30px;
   color: #3f4079;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .h1 {
     font-size: 20px;
   }
+}
+.freeBox__vcShm {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  min-width: 0;
+  padding: 8px;
 }
 .btnDashboard3 {
   display: flex;
@@ -539,7 +598,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  font-size: 30px;
+  font-size: 25px;
   color: #3f4079;
   min-width: 0;
 }
@@ -919,6 +978,7 @@
   height: auto;
   max-width: 100%;
   margin-bottom: 0px;
+  grid-column-end: span 1;
   min-width: 0;
   padding: 0px 8px;
   border-width: 1px;
@@ -2198,7 +2258,7 @@
     padding-left: 0px;
   }
 }
-.dashboardCheck2:global(.__wab_instance) {
+.dashboardCheck:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
 }
@@ -2418,7 +2478,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  font-size: 30px;
+  font-size: 25px;
   color: #3f4079;
   min-width: 0;
 }
@@ -2555,6 +2615,7 @@
   height: auto;
   max-width: 100%;
   text-align: center;
+  padding-right: 0px;
   min-width: 0;
 }
 .freeBox__ex009 {
@@ -2948,7 +3009,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  font-size: 30px;
+  font-size: 25px;
   color: #3f4079;
   min-width: 0;
 }
@@ -3557,7 +3618,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  font-size: 30px;
+  font-size: 25px;
   color: #3f4079;
   min-width: 0;
 }
@@ -3850,7 +3911,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  font-size: 30px;
+  font-size: 25px;
   color: #3f4079;
   min-width: 0;
 }
@@ -3982,7 +4043,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  font-size: 30px;
+  font-size: 25px;
   color: #3f4079;
   min-width: 0;
 }
@@ -4849,7 +4910,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  font-size: 30px;
+  font-size: 25px;
   color: #3f4079;
   margin-bottom: 0px;
   padding-top: 0px;
@@ -4964,7 +5025,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  font-size: 30px;
+  font-size: 25px;
   color: #3f4079;
   margin-bottom: 0px;
   padding-top: 0px;
@@ -5100,7 +5161,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  font-size: 30px;
+  font-size: 25px;
   color: #3f4079;
   margin-bottom: 0px;
   padding-top: 0px;
@@ -5278,7 +5339,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  font-size: 30px;
+  font-size: 25px;
   color: #3f4079;
   margin-bottom: 0px;
   min-width: 0;
@@ -5497,7 +5558,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  font-size: 30px;
+  font-size: 25px;
   color: #3f4079;
   min-width: 0;
 }
@@ -5790,7 +5851,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  font-size: 30px;
+  font-size: 25px;
   color: #3f4079;
   min-width: 0;
 }
@@ -5922,7 +5983,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  font-size: 30px;
+  font-size: 25px;
   color: #3f4079;
   min-width: 0;
 }
@@ -6789,7 +6850,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  font-size: 30px;
+  font-size: 25px;
   color: #3f4079;
   margin-bottom: 0px;
   padding-top: 0px;
@@ -6904,7 +6965,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  font-size: 30px;
+  font-size: 25px;
   color: #3f4079;
   margin-bottom: 0px;
   padding-top: 0px;
@@ -7040,7 +7101,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  font-size: 30px;
+  font-size: 25px;
   color: #3f4079;
   margin-bottom: 0px;
   padding-top: 0px;
@@ -7218,7 +7279,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  font-size: 30px;
+  font-size: 25px;
   color: #3f4079;
   margin-bottom: 0px;
   min-width: 0;
