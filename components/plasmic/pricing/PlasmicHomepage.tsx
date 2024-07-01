@@ -75,9 +75,9 @@ import projectcss from "./plasmic.module.css"; // plasmic-import: seYsnBL1P3AiXa
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: g64VYoCfAKTS/css
 
 import Icon11Icon from "./icons/PlasmicIcon__Icon11"; // plasmic-import: YXzAIe4mJWDL/icon
+import Icon6Icon from "./icons/PlasmicIcon__Icon6"; // plasmic-import: WvR12xDIGLgz/icon
 import Icon3Icon from "./icons/PlasmicIcon__Icon3"; // plasmic-import: jRHPVqrBy9SV/icon
 import Icon5Icon from "./icons/PlasmicIcon__Icon5"; // plasmic-import: HAnMzYJg5d76/icon
-import Icon6Icon from "./icons/PlasmicIcon__Icon6"; // plasmic-import: WvR12xDIGLgz/icon
 import Icon7Icon from "./icons/PlasmicIcon__Icon7"; // plasmic-import: 1eqoHYLc_fOB/icon
 import Icon8Icon from "./icons/PlasmicIcon__Icon8"; // plasmic-import: fEKKJ-2F5BD1/icon
 import Icon9Icon from "./icons/PlasmicIcon__Icon9"; // plasmic-import: JK4sPT7lqUH1/icon
@@ -100,6 +100,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
   h1?: Flex__<"h1">;
+  btnDashboard3?: Flex__<"div">;
   btnReservation?: Flex__<"div">;
   btnAnnouncement?: Flex__<"div">;
   btnCalculation?: Flex__<"div">;
@@ -108,7 +109,6 @@ export type PlasmicHomepage__OverridesType = {
   btnEhr?: Flex__<"div">;
   btnSpecialsite?: Flex__<"div">;
   btnDashboard?: Flex__<"div">;
-  btnDashboard2?: Flex__<"div">;
   gridCalculator?: Flex__<"div">;
   txtResevationCount?: Flex__<typeof TextInput>;
   reservationCheck?: Flex__<typeof Checkbox>;
@@ -133,6 +133,7 @@ export type PlasmicHomepage__OverridesType = {
   txtDashboardResult?: Flex__<"div">;
   txtSumInvoice?: Flex__<"div">;
   sideEffectCalculator?: Flex__<typeof SideEffect>;
+  link?: Flex__<"a"> & Partial<LinkProps>;
 };
 
 export interface DefaultHomepageProps {}
@@ -525,64 +526,44 @@ function PlasmicHomepage__RenderFunc(props: {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox__vst7D)}
               >
-                <PlasmicLink__
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    sty.link__ha6H
-                  )}
-                  component={Link}
-                  platform={"nextjs"}
-                >
-                  <PlasmicLink__
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      sty.link__billu
-                    )}
-                    component={Link}
-                    platform={"nextjs"}
-                  >
-                    <Icon11Icon
-                      className={classNames(projectcss.all, sty.svg___0HXtL)}
-                      onClick={async event => {
-                        const $steps = {};
+                <Icon11Icon
+                  className={classNames(projectcss.all, sty.svg___0HXtL)}
+                  onClick={async event => {
+                    const $steps = {};
 
-                        $steps["goToHttpspaziresh24Com"] = true
-                          ? (() => {
-                              const actionArgs = {
-                                destination: "https://paziresh24.com"
-                              };
-                              return (({ destination }) => {
-                                if (
-                                  typeof destination === "string" &&
-                                  destination.startsWith("#")
-                                ) {
-                                  document
-                                    .getElementById(destination.substr(1))
-                                    .scrollIntoView({ behavior: "smooth" });
-                                } else {
-                                  __nextRouter?.push(destination);
-                                }
-                              })?.apply(null, [actionArgs]);
-                            })()
-                          : undefined;
-                        if (
-                          $steps["goToHttpspaziresh24Com"] != null &&
-                          typeof $steps["goToHttpspaziresh24Com"] ===
-                            "object" &&
-                          typeof $steps["goToHttpspaziresh24Com"].then ===
-                            "function"
-                        ) {
-                          $steps["goToHttpspaziresh24Com"] = await $steps[
-                            "goToHttpspaziresh24Com"
-                          ];
-                        }
-                      }}
-                      role={"img"}
-                    />
-                  </PlasmicLink__>
-                </PlasmicLink__>
+                    $steps["goToHttpspaziresh24Com"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            destination: "https://paziresh24.com"
+                          };
+                          return (({ destination }) => {
+                            if (
+                              typeof destination === "string" &&
+                              destination.startsWith("#")
+                            ) {
+                              document
+                                .getElementById(destination.substr(1))
+                                .scrollIntoView({ behavior: "smooth" });
+                            } else {
+                              __nextRouter?.push(destination);
+                            }
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["goToHttpspaziresh24Com"] != null &&
+                      typeof $steps["goToHttpspaziresh24Com"] === "object" &&
+                      typeof $steps["goToHttpspaziresh24Com"].then ===
+                        "function"
+                    ) {
+                      $steps["goToHttpspaziresh24Com"] = await $steps[
+                        "goToHttpspaziresh24Com"
+                      ];
+                    }
+                  }}
+                  role={"img"}
+                />
+
                 <h1
                   data-plasmic-name={"h1"}
                   data-plasmic-override={overrides.h1}
@@ -597,6 +578,60 @@ function PlasmicHomepage__RenderFunc(props: {
                     "\u062a\u0639\u0631\u0641\u0647 \u0645\u062d\u0635\u0648\u0644\u0627\u062a \u067e\u0630\u06cc\u0631\u0634\u06f2\u06f4"
                   }
                 </h1>
+                <div
+                  data-plasmic-name={"btnDashboard3"}
+                  data-plasmic-override={overrides.btnDashboard3}
+                  className={classNames(projectcss.all, sty.btnDashboard3)}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                $state.clReservationState = false;
+                                $state.clAnnouncementState = false;
+                                $state.clCalculationState = false;
+                                $state.clOnlinepaymentState = false;
+                                $state.clApiState = false;
+                                $state.clEhrState = false;
+                                $state.clSpecialsiteState = false;
+                                $state.clDashboardState = false;
+                                $state.clMainState = false;
+                                return ($state.clCalculatorStatus = true);
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
+                    ) {
+                      $steps["runCode"] = await $steps["runCode"];
+                    }
+                  }}
+                >
+                  <Icon6Icon
+                    className={classNames(projectcss.all, sty.svg__wlhgA)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___4BMg6
+                    )}
+                  >
+                    {"\u0645\u0627\u0634\u06cc\u0646 \u062d\u0633\u0627\u0628"}
+                  </div>
+                </div>
               </Stack__>
               <section
                 className={classNames(projectcss.all, sty.section__wtTOr)}
@@ -1044,62 +1079,6 @@ function PlasmicHomepage__RenderFunc(props: {
                       }
                     </div>
                   </div>
-                  <div
-                    data-plasmic-name={"btnDashboard2"}
-                    data-plasmic-override={overrides.btnDashboard2}
-                    className={classNames(projectcss.all, sty.btnDashboard2)}
-                    onClick={async event => {
-                      const $steps = {};
-
-                      $steps["runCode"] = true
-                        ? (() => {
-                            const actionArgs = {
-                              customFunction: async () => {
-                                return (() => {
-                                  $state.clReservationState = false;
-                                  $state.clAnnouncementState = false;
-                                  $state.clCalculationState = false;
-                                  $state.clOnlinepaymentState = false;
-                                  $state.clApiState = false;
-                                  $state.clEhrState = false;
-                                  $state.clSpecialsiteState = false;
-                                  $state.clDashboardState = false;
-                                  $state.clMainState = false;
-                                  return ($state.clCalculatorStatus = true);
-                                })();
-                              }
-                            };
-                            return (({ customFunction }) => {
-                              return customFunction();
-                            })?.apply(null, [actionArgs]);
-                          })()
-                        : undefined;
-                      if (
-                        $steps["runCode"] != null &&
-                        typeof $steps["runCode"] === "object" &&
-                        typeof $steps["runCode"].then === "function"
-                      ) {
-                        $steps["runCode"] = await $steps["runCode"];
-                      }
-                    }}
-                  >
-                    <Icon6Icon
-                      className={classNames(projectcss.all, sty.svg__y7Z5I)}
-                      role={"img"}
-                    />
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___1TqRo
-                      )}
-                    >
-                      {
-                        "\u0645\u0627\u0634\u06cc\u0646 \u062d\u0633\u0627\u0628"
-                      }
-                    </div>
-                  </div>
                 </div>
               </section>
             </section>
@@ -1227,13 +1206,6 @@ function PlasmicHomepage__RenderFunc(props: {
                             />
                           </div>
                         </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__czMkd
-                          )}
-                          dir={"rtl"}
-                        />
                       </div>
                       <div
                         className={classNames(
@@ -1271,7 +1243,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             )}
                           >
                             {
-                              "\u062a\u0639\u0631\u0641\u0647 (\u062a\u0648\u0645\u0627\u0646)"
+                              "\u062a\u0639\u0631\u0641\u0647 \u0647\u0631 \u0646\u0648\u0628\u062a (\u062a\u0648\u0645\u0627\u0646)"
                             }
                           </div>
                         </div>
@@ -2661,17 +2633,8 @@ function PlasmicHomepage__RenderFunc(props: {
                             projectcss.all,
                             sty.freeBox___0BfO
                           )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___7T6Q
-                            )}
-                          >
-                            {"\u062c\u0645\u0639 \u06a9\u0644:"}
-                          </div>
-                        </div>
+                        />
+
                         <div
                           className={classNames(
                             projectcss.all,
@@ -2685,6 +2648,15 @@ function PlasmicHomepage__RenderFunc(props: {
                               sty.freeBox__rgO4F
                             )}
                           >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text___7T6Q
+                              )}
+                            >
+                              {"\u062c\u0645\u0639 \u06a9\u0644:"}
+                            </div>
                             <div
                               data-plasmic-name={"txtSumInvoice"}
                               data-plasmic-override={overrides.txtSumInvoice}
@@ -3229,11 +3201,13 @@ function PlasmicHomepage__RenderFunc(props: {
                           )}
                         >
                           <PlasmicLink__
+                            data-plasmic-name={"link"}
+                            data-plasmic-override={overrides.link}
                             className={classNames(
                               projectcss.all,
                               projectcss.a,
                               projectcss.__wab_text,
-                              sty.link__dc5Eu
+                              sty.link
                             )}
                             component={Link}
                             href={"https://www.paziresh24.com/home/contact-us/"}
@@ -8531,6 +8505,7 @@ const PlasmicDescendants = {
   root: [
     "root",
     "h1",
+    "btnDashboard3",
     "btnReservation",
     "btnAnnouncement",
     "btnCalculation",
@@ -8539,7 +8514,6 @@ const PlasmicDescendants = {
     "btnEhr",
     "btnSpecialsite",
     "btnDashboard",
-    "btnDashboard2",
     "gridCalculator",
     "txtResevationCount",
     "reservationCheck",
@@ -8563,9 +8537,11 @@ const PlasmicDescendants = {
     "dashboardCheck",
     "txtDashboardResult",
     "txtSumInvoice",
-    "sideEffectCalculator"
+    "sideEffectCalculator",
+    "link"
   ],
   h1: ["h1"],
+  btnDashboard3: ["btnDashboard3"],
   btnReservation: ["btnReservation"],
   btnAnnouncement: ["btnAnnouncement"],
   btnCalculation: ["btnCalculation"],
@@ -8574,7 +8550,6 @@ const PlasmicDescendants = {
   btnEhr: ["btnEhr"],
   btnSpecialsite: ["btnSpecialsite"],
   btnDashboard: ["btnDashboard"],
-  btnDashboard2: ["btnDashboard2"],
   gridCalculator: [
     "gridCalculator",
     "txtResevationCount",
@@ -8599,7 +8574,8 @@ const PlasmicDescendants = {
     "dashboardCheck",
     "txtDashboardResult",
     "txtSumInvoice",
-    "sideEffectCalculator"
+    "sideEffectCalculator",
+    "link"
   ],
   txtResevationCount: ["txtResevationCount"],
   reservationCheck: ["reservationCheck"],
@@ -8623,7 +8599,8 @@ const PlasmicDescendants = {
   dashboardCheck: ["dashboardCheck"],
   txtDashboardResult: ["txtDashboardResult"],
   txtSumInvoice: ["txtSumInvoice"],
-  sideEffectCalculator: ["sideEffectCalculator"]
+  sideEffectCalculator: ["sideEffectCalculator"],
+  link: ["link"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -8631,6 +8608,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   h1: "h1";
+  btnDashboard3: "div";
   btnReservation: "div";
   btnAnnouncement: "div";
   btnCalculation: "div";
@@ -8639,7 +8617,6 @@ type NodeDefaultElementType = {
   btnEhr: "div";
   btnSpecialsite: "div";
   btnDashboard: "div";
-  btnDashboard2: "div";
   gridCalculator: "div";
   txtResevationCount: typeof TextInput;
   reservationCheck: typeof Checkbox;
@@ -8664,6 +8641,7 @@ type NodeDefaultElementType = {
   txtDashboardResult: "div";
   txtSumInvoice: "div";
   sideEffectCalculator: typeof SideEffect;
+  link: "a";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -8727,6 +8705,7 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     h1: makeNodeComponent("h1"),
+    btnDashboard3: makeNodeComponent("btnDashboard3"),
     btnReservation: makeNodeComponent("btnReservation"),
     btnAnnouncement: makeNodeComponent("btnAnnouncement"),
     btnCalculation: makeNodeComponent("btnCalculation"),
@@ -8735,7 +8714,6 @@ export const PlasmicHomepage = Object.assign(
     btnEhr: makeNodeComponent("btnEhr"),
     btnSpecialsite: makeNodeComponent("btnSpecialsite"),
     btnDashboard: makeNodeComponent("btnDashboard"),
-    btnDashboard2: makeNodeComponent("btnDashboard2"),
     gridCalculator: makeNodeComponent("gridCalculator"),
     txtResevationCount: makeNodeComponent("txtResevationCount"),
     reservationCheck: makeNodeComponent("reservationCheck"),
@@ -8762,6 +8740,7 @@ export const PlasmicHomepage = Object.assign(
     txtDashboardResult: makeNodeComponent("txtDashboardResult"),
     txtSumInvoice: makeNodeComponent("txtSumInvoice"),
     sideEffectCalculator: makeNodeComponent("sideEffectCalculator"),
+    link: makeNodeComponent("link"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

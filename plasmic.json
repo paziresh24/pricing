@@ -724,7 +724,13 @@
           "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__Icon14.tsx"
         }
       ],
-      "images": [],
+      "images": [
+        {
+          "id": "2mpvjEcDOPA5",
+          "name": "image",
+          "filePath": "../public/plasmic/pricing/images/image.svg"
+        }
+      ],
       "indirect": false,
       "globalContextsFilePath": "plasmic/pricing/PlasmicGlobalContextsProvider.tsx",
       "splitsProviderFilePath": "",
@@ -776,6 +782,36 @@
           "name": "Splunk",
           "displayName": "Splunk",
           "componentImportPath": "@/fragment/splunk"
+        },
+        {
+          "id": "M1-4Te7Kf9_v",
+          "name": "Select",
+          "displayName": "Select",
+          "componentImportPath": "@/fragment/components/select"
+        },
+        {
+          "id": "yi2DFxegVSb9",
+          "name": "Input",
+          "displayName": "Input",
+          "componentImportPath": "@/fragment/components/input"
+        },
+        {
+          "id": "Dp5S3zaeC1yD",
+          "name": "Switch",
+          "displayName": "Switch",
+          "componentImportPath": "@/fragment/components/switch"
+        },
+        {
+          "id": "IwfvOcf1tP7X",
+          "name": "Slider",
+          "displayName": "Slider",
+          "componentImportPath": "@/fragment/components/slider"
+        },
+        {
+          "id": "du8dIdosOH2V",
+          "name": "ApiRequest",
+          "displayName": "ApiRequest",
+          "componentImportPath": "@/fragment/components/api-request"
         }
       ],
       "customFunctions": []
