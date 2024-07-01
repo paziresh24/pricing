@@ -78,6 +78,7 @@ import sty from "./PlasmicHomepage.module.css"; // plasmic-import: g64VYoCfAKTS/
 import Icon11Icon from "./icons/PlasmicIcon__Icon11"; // plasmic-import: YXzAIe4mJWDL/icon
 import Icon6Icon from "./icons/PlasmicIcon__Icon6"; // plasmic-import: WvR12xDIGLgz/icon
 import Icon3Icon from "./icons/PlasmicIcon__Icon3"; // plasmic-import: jRHPVqrBy9SV/icon
+import Icon4Icon from "./icons/PlasmicIcon__Icon4"; // plasmic-import: gsRGA0OcKSmi/icon
 import Icon15Icon from "./icons/PlasmicIcon__Icon15"; // plasmic-import: jAui2HVvT8Qw/icon
 import Icon5Icon from "./icons/PlasmicIcon__Icon5"; // plasmic-import: HAnMzYJg5d76/icon
 import Icon7Icon from "./icons/PlasmicIcon__Icon7"; // plasmic-import: 1eqoHYLc_fOB/icon
@@ -104,6 +105,7 @@ export type PlasmicHomepage__OverridesType = {
   h1?: Flex__<"h1">;
   btnDashboard3?: Flex__<"div">;
   btnReservation?: Flex__<"div">;
+  btnReservation3?: Flex__<"div">;
   btnReservation2?: Flex__<"div">;
   btnAnnouncement?: Flex__<"div">;
   btnCalculation?: Flex__<"div">;
@@ -444,7 +446,7 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "clPhoneReservationStatus",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false
+        initFunc: ({ $props, $state, $queries, $ctx }) => true
       },
       {
         path: "clKioskStatuc",
@@ -729,7 +731,9 @@ function PlasmicHomepage__RenderFunc(props: {
                                   $state.clDashboardState = false;
                                   $state.clMainState = false;
                                   $state.clCalculatorStatus = false;
-                                  return ($state.clKioskStatus = false);
+                                  $state.clKioskStatus = false;
+                                  return ($state.clPhoneReservationStatus =
+                                    false);
                                 })();
                               }
                             };
@@ -759,7 +763,68 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.text__gDcpR
                       )}
                     >
-                      {"\u0646\u0648\u0628\u062a \u062f\u0647\u06cc"}
+                      {
+                        "\u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u067e\u0627\u06cc\u0647"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    data-plasmic-name={"btnReservation3"}
+                    data-plasmic-override={overrides.btnReservation3}
+                    className={classNames(projectcss.all, sty.btnReservation3)}
+                    onClick={async event => {
+                      const $steps = {};
+
+                      $steps["runCode"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              customFunction: async () => {
+                                return (() => {
+                                  $state.clReservationState = false;
+                                  $state.clAnnouncementState = false;
+                                  $state.clCalculationState = false;
+                                  $state.clOnlinepaymentState = false;
+                                  $state.clApiState = false;
+                                  $state.clEhrState = false;
+                                  $state.clSpecialsiteState = false;
+                                  $state.clDashboardState = false;
+                                  $state.clMainState = false;
+                                  $state.clCalculatorStatus = false;
+                                  $state.clKioskStatus = false;
+                                  return ($state.clPhoneReservationStatus =
+                                    true);
+                                })();
+                              }
+                            };
+                            return (({ customFunction }) => {
+                              return customFunction();
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["runCode"] != null &&
+                        typeof $steps["runCode"] === "object" &&
+                        typeof $steps["runCode"].then === "function"
+                      ) {
+                        $steps["runCode"] = await $steps["runCode"];
+                      }
+                    }}
+                  >
+                    <Icon4Icon
+                      className={classNames(projectcss.all, sty.svg__hhs13)}
+                      role={"img"}
+                    />
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___5VXzU
+                      )}
+                    >
+                      {
+                        "\u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u062a\u0644\u0641\u0646\u06cc"
+                      }
                     </div>
                   </div>
                   <div
@@ -784,7 +849,9 @@ function PlasmicHomepage__RenderFunc(props: {
                                   $state.clDashboardState = false;
                                   $state.clMainState = false;
                                   $state.clCalculatorStatus = false;
-                                  return ($state.clKioskStatus = true);
+                                  $state.clKioskStatus = true;
+                                  return ($state.clPhoneReservationStatus =
+                                    false);
                                 })();
                               }
                             };
@@ -841,7 +908,9 @@ function PlasmicHomepage__RenderFunc(props: {
                                   $state.clDashboardState = false;
                                   $state.clMainState = false;
                                   $state.clCalculationState = false;
-                                  return ($state.clKioskStatus = false);
+                                  $state.clKioskStatus = false;
+                                  return ($state.clPhoneReservationStatus =
+                                    false);
                                 })();
                               }
                             };
@@ -896,7 +965,9 @@ function PlasmicHomepage__RenderFunc(props: {
                                   $state.clDashboardState = false;
                                   $state.clMainState = false;
                                   $state.clCalculatorStatus = false;
-                                  return ($state.clKioskStatus = false);
+                                  $state.clKioskStatus = false;
+                                  return ($state.clPhoneReservationStatus =
+                                    false);
                                 })();
                               }
                             };
@@ -951,7 +1022,9 @@ function PlasmicHomepage__RenderFunc(props: {
                                   $state.clDashboardState = false;
                                   $state.clMainState = false;
                                   $state.clCalculatorStatus = false;
-                                  return ($state.clKioskStatus = false);
+                                  $state.clKioskStatus = false;
+                                  return ($state.clPhoneReservationStatus =
+                                    false);
                                 })();
                               }
                             };
@@ -1008,7 +1081,9 @@ function PlasmicHomepage__RenderFunc(props: {
                                   $state.clDashboardState = false;
                                   $state.clMainState = false;
                                   $state.clCalculatorStatus = false;
-                                  return ($state.clKioskStatus = false);
+                                  $state.clKioskStatus = false;
+                                  return ($state.clPhoneReservationStatus =
+                                    false);
                                 })();
                               }
                             };
@@ -1065,7 +1140,9 @@ function PlasmicHomepage__RenderFunc(props: {
                                   $state.clDashboardState = false;
                                   $state.clMainState = false;
                                   $state.clCalculatorStatus = false;
-                                  return ($state.clKioskStatus = false);
+                                  $state.clKioskStatus = false;
+                                  return ($state.clPhoneReservationStatus =
+                                    false);
                                 })();
                               }
                             };
@@ -1122,7 +1199,9 @@ function PlasmicHomepage__RenderFunc(props: {
                                   $state.clDashboardState = false;
                                   $state.clMainState = false;
                                   $state.clCalculatorStatus = false;
-                                  return ($state.clKioskStatus = false);
+                                  $state.clKioskStatus = false;
+                                  return ($state.clPhoneReservationStatus =
+                                    false);
                                 })();
                               }
                             };
@@ -1179,7 +1258,9 @@ function PlasmicHomepage__RenderFunc(props: {
                                   $state.clDashboardState = true;
                                   $state.clMainState = false;
                                   $state.clCalculatorStatus = false;
-                                  return ($state.clKioskStatus = false);
+                                  $state.clKioskStatus = false;
+                                  return ($state.clPhoneReservationStatus =
+                                    false);
                                 })();
                               }
                             };
@@ -7957,6 +8038,7 @@ const PlasmicDescendants = {
     "h1",
     "btnDashboard3",
     "btnReservation",
+    "btnReservation3",
     "btnReservation2",
     "btnAnnouncement",
     "btnCalculation",
@@ -7997,6 +8079,7 @@ const PlasmicDescendants = {
   h1: ["h1"],
   btnDashboard3: ["btnDashboard3"],
   btnReservation: ["btnReservation"],
+  btnReservation3: ["btnReservation3"],
   btnReservation2: ["btnReservation2"],
   btnAnnouncement: ["btnAnnouncement"],
   btnCalculation: ["btnCalculation"],
@@ -8071,6 +8154,7 @@ type NodeDefaultElementType = {
   h1: "h1";
   btnDashboard3: "div";
   btnReservation: "div";
+  btnReservation3: "div";
   btnReservation2: "div";
   btnAnnouncement: "div";
   btnCalculation: "div";
@@ -8172,6 +8256,7 @@ export const PlasmicHomepage = Object.assign(
     h1: makeNodeComponent("h1"),
     btnDashboard3: makeNodeComponent("btnDashboard3"),
     btnReservation: makeNodeComponent("btnReservation"),
+    btnReservation3: makeNodeComponent("btnReservation3"),
     btnReservation2: makeNodeComponent("btnReservation2"),
     btnAnnouncement: makeNodeComponent("btnAnnouncement"),
     btnCalculation: makeNodeComponent("btnCalculation"),

@@ -262,7 +262,7 @@
 }
 .freeBox__kQeHz {
   display: grid;
-  grid-template-columns: repeat(9, minmax(0, 1fr));
+  grid-template-columns: repeat(10, minmax(0, 1fr));
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -304,6 +304,40 @@
   flex-shrink: 0;
 }
 .text__gDcpR {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 10px;
+  text-align: center;
+  user-select: none;
+  min-width: 0;
+}
+.btnReservation3 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  background: #ffffff;
+  box-shadow: none;
+  cursor: pointer;
+  min-width: 0;
+  border-radius: 10px;
+  padding: 8px;
+}
+.svg__hhs13 {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  color: #3f4079;
+  height: 40px;
+  flex-shrink: 0;
+}
+.text___5VXzU {
   position: relative;
   width: 100%;
   height: auto;
@@ -4243,8 +4277,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
 }
 .freeBox__hgQAz {
   display: flex;
@@ -4263,8 +4297,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
 }
 .freeBox__lFulh {
   display: flex;
@@ -4282,8 +4316,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
   position: relative;
 }
 .freeBox__jIt7W {
@@ -4303,8 +4337,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
 }
 .freeBox__jtKzx {
   display: flex;
@@ -4323,8 +4357,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
 }
 .freeBox__mm7Wf {
   display: flex;
@@ -4343,8 +4377,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
 }
 .freeBox__ouBfw {
   display: flex;
@@ -4363,8 +4397,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
 }
 .freeBox__pWlcs {
   display: flex;
@@ -4383,8 +4417,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
 }
 .freeBox__eOtbm {
   display: grid;
@@ -4474,8 +4508,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
 }
 .freeBox__yFu94 {
   display: flex;
@@ -4494,8 +4528,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
   padding-right: 0px;
 }
 .freeBox__eKuYw {
@@ -4514,8 +4548,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
   position: relative;
 }
 .freeBox__pw34N {
@@ -4575,7 +4609,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  font-size: 30px;
+  font-size: 25px;
   color: #3f4079;
   min-width: 0;
 }
@@ -5343,8 +5377,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
   padding-right: 0px;
 }
 .freeBox__esqF7 {
@@ -5364,8 +5398,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
   padding-right: 0px;
 }
 .freeBox__jmZfa {
@@ -5458,8 +5492,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
   padding-right: 0px;
 }
 .freeBox__x4B71 {
@@ -5479,8 +5513,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
   padding-right: 0px;
 }
 .freeBox__b6UUy {
@@ -5500,8 +5534,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
   padding-right: 0px;
 }
 .freeBox__ls3Qb {
@@ -5594,8 +5628,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
   padding-right: 0px;
 }
 .freeBox__ddw7 {
@@ -5615,8 +5649,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
   padding-right: 0px;
 }
 .freeBox___6QnXa {
@@ -5636,8 +5670,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
   padding-right: 0px;
 }
 .freeBox__qsMs5 {
@@ -5657,8 +5691,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
   padding-right: 0px;
 }
 .freeBox__r7EH {
@@ -5678,8 +5712,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
   padding-right: 0px;
 }
 .freeBox__qwkZh {
@@ -5771,8 +5805,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
   padding-right: 0px;
 }
 .freeBox__leTua {
@@ -5792,8 +5826,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
   padding-right: 0px;
 }
 .freeBox__fp4X {
@@ -5813,8 +5847,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
   padding-right: 0px;
 }
 .freeBox__fpQmb {
@@ -5834,8 +5868,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
   padding-right: 0px;
 }
 .freeBox__d93BC {
@@ -5855,8 +5889,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
   padding-right: 0px;
 }
 .freeBox__c9AHf {
@@ -5876,8 +5910,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
   padding-right: 0px;
 }
 .section__gJv2C {
@@ -5989,8 +6023,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
 }
 .freeBox__sQ39 {
   display: flex;
@@ -6009,8 +6043,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
   padding-right: 0px;
 }
 .freeBox__ifE1N {
@@ -6029,8 +6063,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  color: #3f4079;
-  font-size: 20px;
+  color: #000000;
+  font-size: 16px;
   position: relative;
 }
 .freeBox__m7Ekd {
