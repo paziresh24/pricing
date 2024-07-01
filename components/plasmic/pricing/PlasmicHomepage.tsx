@@ -133,7 +133,6 @@ export type PlasmicHomepage__OverridesType = {
   txtDashboardResult?: Flex__<"div">;
   txtSumInvoice?: Flex__<"div">;
   sideEffectCalculator?: Flex__<typeof SideEffect>;
-  link?: Flex__<"a"> & Partial<LinkProps>;
 };
 
 export interface DefaultHomepageProps {}
@@ -179,7 +178,7 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "clReservationState",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => true
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       },
       {
         path: "clAnnouncementState",
@@ -526,11 +525,64 @@ function PlasmicHomepage__RenderFunc(props: {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox__vst7D)}
               >
-                <Icon11Icon
-                  className={classNames(projectcss.all, sty.svg___0HXtL)}
-                  role={"img"}
-                />
+                <PlasmicLink__
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__ha6H
+                  )}
+                  component={Link}
+                  platform={"nextjs"}
+                >
+                  <PlasmicLink__
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      sty.link__billu
+                    )}
+                    component={Link}
+                    platform={"nextjs"}
+                  >
+                    <Icon11Icon
+                      className={classNames(projectcss.all, sty.svg___0HXtL)}
+                      onClick={async event => {
+                        const $steps = {};
 
+                        $steps["goToHttpspaziresh24Com"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                destination: "https://paziresh24.com"
+                              };
+                              return (({ destination }) => {
+                                if (
+                                  typeof destination === "string" &&
+                                  destination.startsWith("#")
+                                ) {
+                                  document
+                                    .getElementById(destination.substr(1))
+                                    .scrollIntoView({ behavior: "smooth" });
+                                } else {
+                                  __nextRouter?.push(destination);
+                                }
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["goToHttpspaziresh24Com"] != null &&
+                          typeof $steps["goToHttpspaziresh24Com"] ===
+                            "object" &&
+                          typeof $steps["goToHttpspaziresh24Com"].then ===
+                            "function"
+                        ) {
+                          $steps["goToHttpspaziresh24Com"] = await $steps[
+                            "goToHttpspaziresh24Com"
+                          ];
+                        }
+                      }}
+                      role={"img"}
+                    />
+                  </PlasmicLink__>
+                </PlasmicLink__>
                 <h1
                   data-plasmic-name={"h1"}
                   data-plasmic-override={overrides.h1}
@@ -1104,17 +1156,17 @@ function PlasmicHomepage__RenderFunc(props: {
                             "\u0645\u0627\u0634\u06cc\u0646 \u062d\u0633\u0627\u0628 \u0645\u062d\u0635\u0648\u0644\u0627\u062a"
                           }
                         </h2>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__pAtCy
-                          )}
-                        >
-                          {
-                            "\u0627\u0628\u062a\u062f\u0627 \u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u0647\u0627\u06cc \u0645\u062f \u0646\u0638\u0631 \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0631\u062f\u0647 \u0648 \u0633\u067e\u0633 \u0645\u0627\u0698\u0648\u0644 \u0647\u0627\u06cc \u0645\u062f\u0646\u0638\u0631 \u062e\u0648\u062f \u0631\u0627 \u0641\u0639\u0627\u0644 \u0646\u0645\u0627\u06cc\u06cc\u062f. \u062f\u0631 \u0646\u0638\u0631 \u062f\u0627\u0634\u062a\u0647 \u0628\u0627\u0634\u06cc\u062f \u062d\u062f\u0627\u0642\u0644 \u0646\u0648\u0628\u062a \u0647\u0627 1.000 \u0639\u062f\u062f \u0648 \u0645\u06cc\u0632\u0627\u0646 \u0628\u06cc\u0634 \u0627\u0632 10.000 \u0639\u062f\u062f \u0631\u0627\u06cc\u06af\u0627\u0646 \u0645\u062d\u0627\u0633\u0628\u0647 \u062e\u0648\u0627\u0647\u062f \u0634\u062f."
-                          }
-                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__yUf3P
+                        )}
+                      >
+                        {
+                          "\u0634\u06cc\u0648\u0647 \u0642\u06cc\u0645\u062a \u06af\u0630\u0627\u0631\u06cc \u0645\u062d\u0635\u0648\u0644\u0627\u062a \u0628\u0647 \u0627\u0632\u0627\u06cc \u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u0647\u0627 \u062f\u0631 \u0645\u0627\u0647 \u0645\u06cc \u0628\u0627\u0634\u062f. \u062f\u0631 \u0646\u0638\u0631 \u062f\u0627\u0634\u062a\u0647 \u0628\u0627\u0634\u06cc\u062f \u062d\u062f\u0627\u0642\u0644 \u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u0647\u0627 1.000 \u0639\u062f\u062f \u0648 \u0628\u06cc\u0634 \u0627\u0632 10.000\u0639\u062f\u062f \u0634\u0627\u0645\u0644 \u062a\u062e\u0641\u06cc\u0641 \u062e\u0648\u0627\u0647\u062f \u0628\u0648\u062f."
+                        }
                       </div>
                       <div
                         className={classNames(
@@ -1218,7 +1270,9 @@ function PlasmicHomepage__RenderFunc(props: {
                               sty.text__mNsbb
                             )}
                           >
-                            {"\u062a\u0639\u0631\u0641\u0647"}
+                            {
+                              "\u062a\u0639\u0631\u0641\u0647 (\u062a\u0648\u0645\u0627\u0646)"
+                            }
                           </div>
                         </div>
                         <div
@@ -2827,6 +2881,17 @@ function PlasmicHomepage__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___5DgVg
+                        )}
+                      >
+                        {
+                          "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0628\u0635\u0648\u0631\u062a \u062a\u06cc\u06a9\u062a \u0631\u0627\u06cc\u06af\u0627\u0646 \u0648 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062a\u0644\u0641\u0646\u06cc\u060c \u062d\u0636\u0648\u0631\u06cc\u060c \u0622\u0645\u0648\u0632\u0634 \u0645\u062c\u062f\u062f \u0648 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0633\u0631\u0648\u0631 \u0637\u0628\u0642 \u062c\u062f\u0648\u0644 \u0632\u06cc\u0631 \u0645\u062d\u0627\u0633\u0628\u0647 \u062e\u0648\u0627\u0647\u062f \u0634\u062f."
+                        }
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
                           sty.freeBox__ixn6J
                         )}
                       >
@@ -2881,9 +2946,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                 sty.text__yiqsd
                               )}
                             >
-                              {
-                                "\u0647\u0632\u06cc\u0646\u0647 \u0627\u0634\u062a\u0631\u0627\u06a9"
-                              }
+                              {"\u0647\u0632\u06cc\u0646\u0647"}
                             </div>
                           </div>
                         </div>
@@ -3166,13 +3229,11 @@ function PlasmicHomepage__RenderFunc(props: {
                           )}
                         >
                           <PlasmicLink__
-                            data-plasmic-name={"link"}
-                            data-plasmic-override={overrides.link}
                             className={classNames(
                               projectcss.all,
                               projectcss.a,
                               projectcss.__wab_text,
-                              sty.link
+                              sty.link__dc5Eu
                             )}
                             component={Link}
                             href={"https://www.paziresh24.com/home/contact-us/"}
@@ -8459,7 +8520,6 @@ function PlasmicHomepage__RenderFunc(props: {
                 </div>
               ) : null}
             </section>
-            <div className={classNames(projectcss.all, sty.freeBox__xby)} />
           </div>
         ) : null}
       </div>
@@ -8503,8 +8563,7 @@ const PlasmicDescendants = {
     "dashboardCheck",
     "txtDashboardResult",
     "txtSumInvoice",
-    "sideEffectCalculator",
-    "link"
+    "sideEffectCalculator"
   ],
   h1: ["h1"],
   btnReservation: ["btnReservation"],
@@ -8540,8 +8599,7 @@ const PlasmicDescendants = {
     "dashboardCheck",
     "txtDashboardResult",
     "txtSumInvoice",
-    "sideEffectCalculator",
-    "link"
+    "sideEffectCalculator"
   ],
   txtResevationCount: ["txtResevationCount"],
   reservationCheck: ["reservationCheck"],
@@ -8565,8 +8623,7 @@ const PlasmicDescendants = {
   dashboardCheck: ["dashboardCheck"],
   txtDashboardResult: ["txtDashboardResult"],
   txtSumInvoice: ["txtSumInvoice"],
-  sideEffectCalculator: ["sideEffectCalculator"],
-  link: ["link"]
+  sideEffectCalculator: ["sideEffectCalculator"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -8607,7 +8664,6 @@ type NodeDefaultElementType = {
   txtDashboardResult: "div";
   txtSumInvoice: "div";
   sideEffectCalculator: typeof SideEffect;
-  link: "a";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -8706,7 +8762,6 @@ export const PlasmicHomepage = Object.assign(
     txtDashboardResult: makeNodeComponent("txtDashboardResult"),
     txtSumInvoice: makeNodeComponent("txtSumInvoice"),
     sideEffectCalculator: makeNodeComponent("sideEffectCalculator"),
-    link: makeNodeComponent("link"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
