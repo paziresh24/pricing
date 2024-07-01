@@ -142,9 +142,7 @@ export default function GlobalContextsProvider(
             : undefined
         }
         rtl={
-          fragmentProps && "rtl" in fragmentProps
-            ? fragmentProps.rtl!
-            : undefined
+          fragmentProps && "rtl" in fragmentProps ? fragmentProps.rtl! : true
         }
       >
         <GrowthBook

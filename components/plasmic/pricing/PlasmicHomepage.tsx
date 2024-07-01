@@ -59,6 +59,7 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { Slider } from "@/fragment/components/slider"; // plasmic-import: IwfvOcf1tP7X/codeComponent
 import TextInput from "../../TextInput"; // plasmic-import: ZdzGQGZE4mJ7/component
 import Checkbox from "../../Checkbox"; // plasmic-import: dk4vJhcf_j2D/component
 import { SideEffect } from "@plasmicpkgs/plasmic-basic-components";
@@ -110,6 +111,7 @@ export type PlasmicHomepage__OverridesType = {
   btnSpecialsite?: Flex__<"div">;
   btnDashboard?: Flex__<"div">;
   gridCalculator?: Flex__<"div">;
+  fragmentSlider?: Flex__<typeof Slider>;
   txtResevationCount?: Flex__<typeof TextInput>;
   reservationCheck?: Flex__<typeof Checkbox>;
   txtReservationInternetResult?: Flex__<"div">;
@@ -129,7 +131,9 @@ export type PlasmicHomepage__OverridesType = {
   txtReservationKioskResult6?: Flex__<"div">;
   specialSiteCheck?: Flex__<typeof Checkbox>;
   txtSpecialSiteResult?: Flex__<"div">;
-  dashboardCheck?: Flex__<typeof Checkbox>;
+  referralCheck?: Flex__<typeof Checkbox>;
+  txtRefferalResult?: Flex__<"div">;
+  dashboardCheck2?: Flex__<typeof Checkbox>;
   txtDashboardResult?: Flex__<"div">;
   txtSumInvoice?: Flex__<"div">;
   sideEffectCalculator?: Flex__<typeof SideEffect>;
@@ -233,19 +237,19 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "reservationInternetPrice",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 100
+        initFunc: ({ $props, $state, $queries, $ctx }) => 700
       },
       {
         path: "reservationPhonePrice",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 250
+        initFunc: ({ $props, $state, $queries, $ctx }) => 400
       },
       {
         path: "reservationKioskPrice",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 300
+        initFunc: ({ $props, $state, $queries, $ctx }) => 400
       },
       {
         path: "reservationInternetResult",
@@ -269,7 +273,20 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "txtResevationCount.value",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "0"
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return $state.fragmentSlider.value;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return undefined;
+              }
+              throw e;
+            }
+          })()
       },
       {
         path: "reservationCheck.isChecked",
@@ -326,7 +343,7 @@ function PlasmicHomepage__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "dashboardCheck.isChecked",
+        path: "referralCheck.isChecked",
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
@@ -389,19 +406,19 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "onlinePayemntPrice",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 100
+        initFunc: ({ $props, $state, $queries, $ctx }) => 500
       },
       {
         path: "apiPrice",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 100
+        initFunc: ({ $props, $state, $queries, $ctx }) => 200
       },
       {
         path: "dashboardPrice",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 1000000
+        initFunc: ({ $props, $state, $queries, $ctx }) => 100
       },
       {
         path: "announcementPrice",
@@ -413,13 +430,13 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "ehrPrice",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 300
+        initFunc: ({ $props, $state, $queries, $ctx }) => 1000
       },
       {
         path: "specialSitePrice",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 1500000
+        initFunc: ({ $props, $state, $queries, $ctx }) => 100
       },
       {
         path: "clPhoneReservationStatus",
@@ -447,6 +464,30 @@ function PlasmicHomepage__RenderFunc(props: {
       },
       {
         path: "maxCount",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 10000
+      },
+      {
+        path: "dashboardCheck2.isChecked",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "referralPrice",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 100
+      },
+      {
+        path: "referralResult",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
+      },
+      {
+        path: "fragmentSlider.value",
         type: "private",
         variableType: "number",
         initFunc: ({ $props, $state, $queries, $ctx }) => 10000
@@ -1160,7 +1201,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           )}
                           dir={"rtl"}
                         >
-                          <div
+                          <Stack__
+                            as={"div"}
+                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.freeBox__gnoMt
@@ -1177,34 +1220,134 @@ function PlasmicHomepage__RenderFunc(props: {
                                 "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a:"
                               }
                             </div>
-                            <TextInput
-                              data-plasmic-name={"txtResevationCount"}
-                              data-plasmic-override={
-                                overrides.txtResevationCount
-                              }
+                            <Stack__
+                              as={"div"}
+                              hasGap={true}
                               className={classNames(
-                                "__wab_instance",
-                                sty.txtResevationCount
+                                projectcss.all,
+                                sty.freeBox__pn3Fo
                               )}
-                              onChange={(...eventArgs) => {
-                                generateStateOnChangeProp($state, [
-                                  "txtResevationCount",
+                            >
+                              <Slider
+                                data-plasmic-name={"fragmentSlider"}
+                                data-plasmic-override={overrides.fragmentSlider}
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.fragmentSlider
+                                )}
+                                disabled={false}
+                                max={100000}
+                                min={1000}
+                                onChange={generateStateOnChangeProp($state, [
+                                  "fragmentSlider",
                                   "value"
-                                ])(
-                                  (e => e.target?.value).apply(null, eventArgs)
-                                );
-                              }}
-                              placeholder={
-                                "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a"
-                              }
-                              value={
-                                generateStateValueProp($state, [
-                                  "txtResevationCount",
+                                ])}
+                                step={5}
+                                value={generateStateValueProp($state, [
+                                  "fragmentSlider",
                                   "value"
-                                ]) ?? ""
-                              }
-                            />
-                          </div>
+                                ])}
+                              />
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__qgpOl
+                                )}
+                              >
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text___0PYUf
+                                  )}
+                                >
+                                  {
+                                    "\u062d\u062f\u0627\u0642\u0644 \u06f1,\u06f0\u06f0\u06f0"
+                                  }
+                                </div>
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__zz6UJ
+                                  )}
+                                >
+                                  {"+ \u06f1\u06f0\u06f0,\u06f0\u06f0\u06f0"}
+                                </div>
+                              </div>
+                            </Stack__>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__zbDJc
+                              )}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__oE9VP
+                                )}
+                              >
+                                <React.Fragment>
+                                  {(() => {
+                                    try {
+                                      return (
+                                        $state.fragmentSlider.value
+                                          .toString()
+                                          .replace(
+                                            /\B(?=(\d{3})+(?!\d))/g,
+                                            ","
+                                          ) + " نوبت"
+                                      );
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return "";
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                </React.Fragment>
+                              </div>
+                              <TextInput
+                                data-plasmic-name={"txtResevationCount"}
+                                data-plasmic-override={
+                                  overrides.txtResevationCount
+                                }
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.txtResevationCount
+                                )}
+                                isDisabled={true}
+                                onChange={(...eventArgs) => {
+                                  generateStateOnChangeProp($state, [
+                                    "txtResevationCount",
+                                    "value"
+                                  ])(
+                                    (e => e.target?.value).apply(
+                                      null,
+                                      eventArgs
+                                    )
+                                  );
+                                }}
+                                placeholder={
+                                  "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a"
+                                }
+                                type={"hidden"}
+                                value={
+                                  generateStateValueProp($state, [
+                                    "txtResevationCount",
+                                    "value"
+                                  ]) ?? ""
+                                }
+                              />
+                            </div>
+                          </Stack__>
                         </div>
                       </div>
                       <div
@@ -2496,21 +2639,21 @@ function PlasmicHomepage__RenderFunc(props: {
                             )}
                           >
                             <Checkbox
-                              data-plasmic-name={"dashboardCheck"}
-                              data-plasmic-override={overrides.dashboardCheck}
+                              data-plasmic-name={"referralCheck"}
+                              data-plasmic-override={overrides.referralCheck}
                               className={classNames(
                                 "__wab_instance",
-                                sty.dashboardCheck
+                                sty.referralCheck
                               )}
                               isChecked={
                                 generateStateValueProp($state, [
-                                  "dashboardCheck",
+                                  "referralCheck",
                                   "isChecked"
                                 ]) ?? false
                               }
                               onChange={(...eventArgs) => {
                                 generateStateOnChangeProp($state, [
-                                  "dashboardCheck",
+                                  "referralCheck",
                                   "isChecked"
                                 ])(eventArgs[0]);
                               }}
@@ -2523,7 +2666,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                 )}
                               >
                                 {
-                                  "\u062f\u0627\u0634\u0628\u0648\u0631\u062f \u06af\u0632\u0627\u0631\u0634\u0627\u062a \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc"
+                                  "\u0627\u0631\u062a\u0628\u0627\u0637 \u0628\u0627 \u0646\u0638\u0627\u0645 \u0627\u0631\u062c\u0627\u0639"
                                 }
                               </div>
                               <div
@@ -2554,7 +2697,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             <React.Fragment>
                               {(() => {
                                 try {
-                                  return $state.dashboardPrice
+                                  return $state.referralPrice
                                     .toString()
                                     .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                                 } catch (e) {
@@ -2575,6 +2718,138 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             sty.freeBox__yfTLj
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            data-plasmic-name={"txtRefferalResult"}
+                            data-plasmic-override={overrides.txtRefferalResult}
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.txtRefferalResult
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $state.dashboardResult
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox___18Nxv
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__h3D5V
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__cxLIj
+                            )}
+                          >
+                            <Checkbox
+                              data-plasmic-name={"dashboardCheck2"}
+                              data-plasmic-override={overrides.dashboardCheck2}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.dashboardCheck2
+                              )}
+                              isChecked={
+                                generateStateValueProp($state, [
+                                  "dashboardCheck2",
+                                  "isChecked"
+                                ]) ?? false
+                              }
+                              onChange={(...eventArgs) => {
+                                generateStateOnChangeProp($state, [
+                                  "dashboardCheck2",
+                                  "isChecked"
+                                ])(eventArgs[0]);
+                              }}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__emp2F
+                                )}
+                              >
+                                {
+                                  "\u062f\u0627\u0634\u0628\u0648\u0631\u062f \u06af\u0632\u0627\u0631\u0634\u0627\u062a \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc"
+                                }
+                              </div>
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__iSbJ
+                                )}
+                              >
+                                {""}
+                              </div>
+                            </Checkbox>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__leV5E
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__zmKrI
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $state.dashboardPrice
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "\u062a\u0639\u0631\u0641\u0647";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__sbcFb
                           )}
                           dir={"rtl"}
                         >
@@ -2708,7 +2983,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           try {
                             return [
                               $state.reservationCheck.isChecked,
-                              $state.dashboardCheck.isChecked,
+                              $state.referralCheck.isChecked,
                               $state.specialSiteCheck.isChecked,
                               $state.ehrCheck.isChecked,
                               $state.calculationCheck.isChecked,
@@ -2717,6 +2992,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               $state.kioskResevationCheck.isChecked,
                               $state.reservationPhoneCheck.isChecked,
                               $state.apiCheck.isChecked,
+                              $state.referralCheck.isChecked,
                               $state.txtResevationCount.value
                             ];
                           } catch (e) {
@@ -2781,10 +3057,10 @@ function PlasmicHomepage__RenderFunc(props: {
                                         ? ($state.specialSiteResult =
                                             $state.specialSitePrice)
                                         : ($state.specialSiteResult = 0);
-                                      $state.dashboardCheck.isChecked
-                                        ? ($state.dashboardResult =
-                                            $state.dashboardPrice)
-                                        : ($state.dashboardResult = 0);
+                                      $state.referralCheck.isChecked
+                                        ? ($state.referralResult =
+                                            $state.referralPrice)
+                                        : ($state.referralResult = 0);
                                       return ($state.suminvoiceResult =
                                         $state.dashboardResult +
                                         $state.specialSiteResult +
@@ -2795,7 +3071,8 @@ function PlasmicHomepage__RenderFunc(props: {
                                         $state.announcementResult +
                                         $state.reservationKioskResult +
                                         $state.reservsationPhoneResult +
-                                        $state.reservationInternetResult);
+                                        $state.reservationInternetResult +
+                                        $state.referralResult);
                                     })();
                                   }
                                 };
@@ -8515,6 +8792,7 @@ const PlasmicDescendants = {
     "btnSpecialsite",
     "btnDashboard",
     "gridCalculator",
+    "fragmentSlider",
     "txtResevationCount",
     "reservationCheck",
     "txtReservationInternetResult",
@@ -8534,7 +8812,9 @@ const PlasmicDescendants = {
     "txtReservationKioskResult6",
     "specialSiteCheck",
     "txtSpecialSiteResult",
-    "dashboardCheck",
+    "referralCheck",
+    "txtRefferalResult",
+    "dashboardCheck2",
     "txtDashboardResult",
     "txtSumInvoice",
     "sideEffectCalculator",
@@ -8552,6 +8832,7 @@ const PlasmicDescendants = {
   btnDashboard: ["btnDashboard"],
   gridCalculator: [
     "gridCalculator",
+    "fragmentSlider",
     "txtResevationCount",
     "reservationCheck",
     "txtReservationInternetResult",
@@ -8571,12 +8852,15 @@ const PlasmicDescendants = {
     "txtReservationKioskResult6",
     "specialSiteCheck",
     "txtSpecialSiteResult",
-    "dashboardCheck",
+    "referralCheck",
+    "txtRefferalResult",
+    "dashboardCheck2",
     "txtDashboardResult",
     "txtSumInvoice",
     "sideEffectCalculator",
     "link"
   ],
+  fragmentSlider: ["fragmentSlider"],
   txtResevationCount: ["txtResevationCount"],
   reservationCheck: ["reservationCheck"],
   txtReservationInternetResult: ["txtReservationInternetResult"],
@@ -8596,7 +8880,9 @@ const PlasmicDescendants = {
   txtReservationKioskResult6: ["txtReservationKioskResult6"],
   specialSiteCheck: ["specialSiteCheck"],
   txtSpecialSiteResult: ["txtSpecialSiteResult"],
-  dashboardCheck: ["dashboardCheck"],
+  referralCheck: ["referralCheck"],
+  txtRefferalResult: ["txtRefferalResult"],
+  dashboardCheck2: ["dashboardCheck2"],
   txtDashboardResult: ["txtDashboardResult"],
   txtSumInvoice: ["txtSumInvoice"],
   sideEffectCalculator: ["sideEffectCalculator"],
@@ -8618,6 +8904,7 @@ type NodeDefaultElementType = {
   btnSpecialsite: "div";
   btnDashboard: "div";
   gridCalculator: "div";
+  fragmentSlider: typeof Slider;
   txtResevationCount: typeof TextInput;
   reservationCheck: typeof Checkbox;
   txtReservationInternetResult: "div";
@@ -8637,7 +8924,9 @@ type NodeDefaultElementType = {
   txtReservationKioskResult6: "div";
   specialSiteCheck: typeof Checkbox;
   txtSpecialSiteResult: "div";
-  dashboardCheck: typeof Checkbox;
+  referralCheck: typeof Checkbox;
+  txtRefferalResult: "div";
+  dashboardCheck2: typeof Checkbox;
   txtDashboardResult: "div";
   txtSumInvoice: "div";
   sideEffectCalculator: typeof SideEffect;
@@ -8715,6 +9004,7 @@ export const PlasmicHomepage = Object.assign(
     btnSpecialsite: makeNodeComponent("btnSpecialsite"),
     btnDashboard: makeNodeComponent("btnDashboard"),
     gridCalculator: makeNodeComponent("gridCalculator"),
+    fragmentSlider: makeNodeComponent("fragmentSlider"),
     txtResevationCount: makeNodeComponent("txtResevationCount"),
     reservationCheck: makeNodeComponent("reservationCheck"),
     txtReservationInternetResult: makeNodeComponent(
@@ -8736,7 +9026,9 @@ export const PlasmicHomepage = Object.assign(
     txtReservationKioskResult6: makeNodeComponent("txtReservationKioskResult6"),
     specialSiteCheck: makeNodeComponent("specialSiteCheck"),
     txtSpecialSiteResult: makeNodeComponent("txtSpecialSiteResult"),
-    dashboardCheck: makeNodeComponent("dashboardCheck"),
+    referralCheck: makeNodeComponent("referralCheck"),
+    txtRefferalResult: makeNodeComponent("txtRefferalResult"),
+    dashboardCheck2: makeNodeComponent("dashboardCheck2"),
     txtDashboardResult: makeNodeComponent("txtDashboardResult"),
     txtSumInvoice: makeNodeComponent("txtSumInvoice"),
     sideEffectCalculator: makeNodeComponent("sideEffectCalculator"),
