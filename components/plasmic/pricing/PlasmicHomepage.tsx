@@ -490,7 +490,7 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "fragmentSlider.value",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 10000
+        initFunc: ({ $props, $state, $queries, $ctx }) => 1000
       }
     ],
     [$props, $ctx, $refs]
@@ -1257,13 +1257,13 @@ function PlasmicHomepage__RenderFunc(props: {
                                   sty.fragmentSlider
                                 )}
                                 disabled={false}
-                                max={100000}
+                                max={10000}
                                 min={1000}
                                 onChange={generateStateOnChangeProp($state, [
                                   "fragmentSlider",
                                   "value"
                                 ])}
-                                step={5}
+                                step={50}
                                 value={generateStateValueProp($state, [
                                   "fragmentSlider",
                                   "value"
