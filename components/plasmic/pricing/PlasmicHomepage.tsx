@@ -589,211 +589,80 @@ function PlasmicHomepage__RenderFunc(props: {
             )}
             dir={"rtl"}
           >
-            <section className={classNames(projectcss.all, sty.section__dkFyp)}>
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__vst7D)}
-              >
-                <div className={classNames(projectcss.all, sty.freeBox__v9Efc)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__cnJt3)}
-                  />
+            <Stack__
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__vst7D)}
+            >
+              <div className={classNames(projectcss.all, sty.freeBox__v9Efc)}>
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__cnJt3)}
+                />
 
+                <div className={classNames(projectcss.all, sty.freeBox__jcWd6)}>
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__jcWd6)}
+                    className={classNames(projectcss.all, sty.freeBox__v6Ysz)}
                   >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__v6Ysz)}
-                    >
-                      <Icon11Icon
-                        className={classNames(projectcss.all, sty.svg___0HXtL)}
-                        onClick={async event => {
-                          const $steps = {};
-
-                          $steps["goToHttpspaziresh24Com"] = true
-                            ? (() => {
-                                const actionArgs = {
-                                  destination: "https://paziresh24.com"
-                                };
-                                return (({ destination }) => {
-                                  if (
-                                    typeof destination === "string" &&
-                                    destination.startsWith("#")
-                                  ) {
-                                    document
-                                      .getElementById(destination.substr(1))
-                                      .scrollIntoView({ behavior: "smooth" });
-                                  } else {
-                                    __nextRouter?.push(destination);
-                                  }
-                                })?.apply(null, [actionArgs]);
-                              })()
-                            : undefined;
-                          if (
-                            $steps["goToHttpspaziresh24Com"] != null &&
-                            typeof $steps["goToHttpspaziresh24Com"] ===
-                              "object" &&
-                            typeof $steps["goToHttpspaziresh24Com"].then ===
-                              "function"
-                          ) {
-                            $steps["goToHttpspaziresh24Com"] = await $steps[
-                              "goToHttpspaziresh24Com"
-                            ];
-                          }
-                        }}
-                        role={"img"}
-                      />
-
-                      <h1
-                        data-plasmic-name={"h1"}
-                        data-plasmic-override={overrides.h1}
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.__wab_text,
-                          sty.h1
-                        )}
-                      >
-                        {
-                          "\u062a\u0639\u0631\u0641\u0647 \u0645\u062d\u0635\u0648\u0644\u0627\u062a \u067e\u0630\u06cc\u0631\u0634\u06f2\u06f4"
-                        }
-                      </h1>
-                    </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__vcShm)}
-                  >
-                    <div
-                      data-plasmic-name={"btnDashboard3"}
-                      data-plasmic-override={overrides.btnDashboard3}
-                      className={classNames(projectcss.all, sty.btnDashboard3)}
+                    <Icon11Icon
+                      className={classNames(projectcss.all, sty.svg___0HXtL)}
                       onClick={async event => {
                         const $steps = {};
 
-                        $steps["runCode"] = true
+                        $steps["goToHttpspaziresh24Com"] = true
                           ? (() => {
                               const actionArgs = {
-                                customFunction: async () => {
-                                  return (() => {
-                                    $state.clReservationState = false;
-                                    $state.clAnnouncementState = false;
-                                    $state.clCalculationState = false;
-                                    $state.clOnlinepaymentState = false;
-                                    $state.clApiState = false;
-                                    $state.clEhrState = false;
-                                    $state.clSpecialsiteState = false;
-                                    $state.clDashboardState = false;
-                                    $state.clMainState = false;
-                                    return ($state.clCalculatorStatus = true);
-                                  })();
-                                }
+                                destination: "https://paziresh24.com"
                               };
-                              return (({ customFunction }) => {
-                                return customFunction();
+                              return (({ destination }) => {
+                                if (
+                                  typeof destination === "string" &&
+                                  destination.startsWith("#")
+                                ) {
+                                  document
+                                    .getElementById(destination.substr(1))
+                                    .scrollIntoView({ behavior: "smooth" });
+                                } else {
+                                  __nextRouter?.push(destination);
+                                }
                               })?.apply(null, [actionArgs]);
                             })()
                           : undefined;
                         if (
-                          $steps["runCode"] != null &&
-                          typeof $steps["runCode"] === "object" &&
-                          typeof $steps["runCode"].then === "function"
+                          $steps["goToHttpspaziresh24Com"] != null &&
+                          typeof $steps["goToHttpspaziresh24Com"] ===
+                            "object" &&
+                          typeof $steps["goToHttpspaziresh24Com"].then ===
+                            "function"
                         ) {
-                          $steps["runCode"] = await $steps["runCode"];
+                          $steps["goToHttpspaziresh24Com"] = await $steps[
+                            "goToHttpspaziresh24Com"
+                          ];
                         }
                       }}
-                    >
-                      <Icon6Icon
-                        className={classNames(projectcss.all, sty.svg__wlhgA)}
-                        role={"img"}
-                      />
+                      role={"img"}
+                    />
 
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___4BMg6
-                        )}
-                      >
-                        {
-                          "\u0645\u0627\u0634\u06cc\u0646 \u062d\u0633\u0627\u0628"
-                        }
-                      </div>
-                    </div>
+                    <h1
+                      data-plasmic-name={"h1"}
+                      data-plasmic-override={overrides.h1}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h1,
+                        projectcss.__wab_text,
+                        sty.h1
+                      )}
+                    >
+                      {
+                        "\u062a\u0639\u0631\u0641\u0647 \u0645\u062d\u0635\u0648\u0644\u0627\u062a \u067e\u0630\u06cc\u0631\u0634\u06f2\u06f4"
+                      }
+                    </h1>
                   </div>
                 </div>
-              </Stack__>
-              <section
-                className={classNames(
-                  projectcss.all,
-                  sty.section__wtTOr,
-                  "menu_top"
-                )}
-              >
-                <div className={classNames(projectcss.all, sty.freeBox__kQeHz)}>
+                <div className={classNames(projectcss.all, sty.freeBox__vcShm)}>
                   <div
-                    data-plasmic-name={"btnReservation"}
-                    data-plasmic-override={overrides.btnReservation}
-                    className={classNames(projectcss.all, sty.btnReservation)}
-                    onClick={async event => {
-                      const $steps = {};
-
-                      $steps["runCode"] = true
-                        ? (() => {
-                            const actionArgs = {
-                              customFunction: async () => {
-                                return (() => {
-                                  $state.clReservationState = true;
-                                  $state.clAnnouncementState = false;
-                                  $state.clCalculationState = false;
-                                  $state.clOnlinepaymentState = false;
-                                  $state.clApiState = false;
-                                  $state.clEhrState = false;
-                                  $state.clSpecialsiteState = false;
-                                  $state.clDashboardState = false;
-                                  $state.clMainState = false;
-                                  $state.clCalculatorStatus = false;
-                                  $state.clKioskStatus = false;
-                                  $state.clPhoneReservationStatus = false;
-                                  return ($state.clReferralState = false);
-                                })();
-                              }
-                            };
-                            return (({ customFunction }) => {
-                              return customFunction();
-                            })?.apply(null, [actionArgs]);
-                          })()
-                        : undefined;
-                      if (
-                        $steps["runCode"] != null &&
-                        typeof $steps["runCode"] === "object" &&
-                        typeof $steps["runCode"].then === "function"
-                      ) {
-                        $steps["runCode"] = await $steps["runCode"];
-                      }
-                    }}
-                  >
-                    <Icon3Icon
-                      className={classNames(projectcss.all, sty.svg__oe24N)}
-                      role={"img"}
-                    />
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__gDcpR
-                      )}
-                    >
-                      {
-                        "\u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u067e\u0627\u06cc\u0647"
-                      }
-                    </div>
-                  </div>
-                  <div
-                    data-plasmic-name={"btnReservation3"}
-                    data-plasmic-override={overrides.btnReservation3}
-                    className={classNames(projectcss.all, sty.btnReservation3)}
+                    data-plasmic-name={"btnDashboard3"}
+                    data-plasmic-override={overrides.btnDashboard3}
+                    className={classNames(projectcss.all, sty.btnDashboard3)}
                     onClick={async event => {
                       const $steps = {};
 
@@ -811,185 +680,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                   $state.clSpecialsiteState = false;
                                   $state.clDashboardState = false;
                                   $state.clMainState = false;
-                                  $state.clCalculatorStatus = false;
-                                  $state.clKioskStatus = false;
-                                  $state.clPhoneReservationStatus = true;
-                                  return ($state.clReferralState = false);
-                                })();
-                              }
-                            };
-                            return (({ customFunction }) => {
-                              return customFunction();
-                            })?.apply(null, [actionArgs]);
-                          })()
-                        : undefined;
-                      if (
-                        $steps["runCode"] != null &&
-                        typeof $steps["runCode"] === "object" &&
-                        typeof $steps["runCode"].then === "function"
-                      ) {
-                        $steps["runCode"] = await $steps["runCode"];
-                      }
-                    }}
-                  >
-                    <Icon4Icon
-                      className={classNames(projectcss.all, sty.svg__hhs13)}
-                      role={"img"}
-                    />
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___5VXzU
-                      )}
-                    >
-                      {
-                        "\u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u062a\u0644\u0641\u0646\u06cc"
-                      }
-                    </div>
-                  </div>
-                  <div
-                    data-plasmic-name={"btnReservation2"}
-                    data-plasmic-override={overrides.btnReservation2}
-                    className={classNames(projectcss.all, sty.btnReservation2)}
-                    onClick={async event => {
-                      const $steps = {};
-
-                      $steps["runCode"] = true
-                        ? (() => {
-                            const actionArgs = {
-                              customFunction: async () => {
-                                return (() => {
-                                  $state.clReservationState = false;
-                                  $state.clAnnouncementState = false;
-                                  $state.clCalculationState = false;
-                                  $state.clOnlinepaymentState = false;
-                                  $state.clApiState = false;
-                                  $state.clEhrState = false;
-                                  $state.clSpecialsiteState = false;
-                                  $state.clDashboardState = false;
-                                  $state.clMainState = false;
-                                  $state.clCalculatorStatus = false;
-                                  $state.clKioskStatus = true;
-                                  $state.clPhoneReservationStatus = false;
-                                  return ($state.clReferralState = false);
-                                })();
-                              }
-                            };
-                            return (({ customFunction }) => {
-                              return customFunction();
-                            })?.apply(null, [actionArgs]);
-                          })()
-                        : undefined;
-                      if (
-                        $steps["runCode"] != null &&
-                        typeof $steps["runCode"] === "object" &&
-                        typeof $steps["runCode"].then === "function"
-                      ) {
-                        $steps["runCode"] = await $steps["runCode"];
-                      }
-                    }}
-                  >
-                    <Icon15Icon
-                      className={classNames(projectcss.all, sty.svg___0V4Cq)}
-                      role={"img"}
-                    />
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__qCfl
-                      )}
-                    >
-                      {
-                        "\u0635\u0641 \u0648 \u0641\u0631\u0627\u062e\u0648\u0627\u0646 \u0628\u06cc\u0645\u0627\u0631"
-                      }
-                    </div>
-                  </div>
-                  <div
-                    data-plasmic-name={"btnAnnouncement"}
-                    data-plasmic-override={overrides.btnAnnouncement}
-                    className={classNames(projectcss.all, sty.btnAnnouncement)}
-                    onClick={async event => {
-                      const $steps = {};
-
-                      $steps["runCode"] = true
-                        ? (() => {
-                            const actionArgs = {
-                              customFunction: async () => {
-                                return (() => {
-                                  $state.clReservationState = false;
-                                  $state.clAnnouncementState = true;
-                                  $state.clCalculationState = false;
-                                  $state.clOnlinepaymentState = false;
-                                  $state.clApiState = false;
-                                  $state.clEhrState = false;
-                                  $state.clSpecialsiteState = false;
-                                  $state.clDashboardState = false;
-                                  $state.clMainState = false;
-                                  $state.clCalculatorStatus = false;
-                                  $state.clKioskStatus = false;
-                                  $state.clPhoneReservationStatus = false;
-                                  return ($state.clReferralState = false);
-                                })();
-                              }
-                            };
-                            return (({ customFunction }) => {
-                              return customFunction();
-                            })?.apply(null, [actionArgs]);
-                          })()
-                        : undefined;
-                      if (
-                        $steps["runCode"] != null &&
-                        typeof $steps["runCode"] === "object" &&
-                        typeof $steps["runCode"].then === "function"
-                      ) {
-                        $steps["runCode"] = await $steps["runCode"];
-                      }
-                    }}
-                  >
-                    <Icon5Icon
-                      className={classNames(projectcss.all, sty.svg__klDLi)}
-                      role={"img"}
-                    />
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___3UtJs
-                      )}
-                    >
-                      {"\u0627\u0639\u0644\u0627\u0646\u0627\u062a"}
-                    </div>
-                  </div>
-                  <div
-                    data-plasmic-name={"btnCalculation"}
-                    data-plasmic-override={overrides.btnCalculation}
-                    className={classNames(projectcss.all, sty.btnCalculation)}
-                    onClick={async event => {
-                      const $steps = {};
-
-                      $steps["runCode"] = true
-                        ? (() => {
-                            const actionArgs = {
-                              customFunction: async () => {
-                                return (() => {
-                                  $state.clReservationState = false;
-                                  $state.clAnnouncementState = false;
-                                  $state.clCalculationState = true;
-                                  $state.clOnlinepaymentState = false;
-                                  $state.clApiState = false;
-                                  $state.clEhrState = false;
-                                  $state.clSpecialsiteState = false;
-                                  $state.clDashboardState = false;
-                                  $state.clMainState = false;
-                                  $state.clCalculatorStatus = false;
-                                  $state.clKioskStatus = false;
-                                  $state.clPhoneReservationStatus = false;
-                                  return ($state.clReferralState = false);
+                                  return ($state.clCalculatorStatus = true);
                                 })();
                               }
                             };
@@ -1008,7 +699,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     }}
                   >
                     <Icon6Icon
-                      className={classNames(projectcss.all, sty.svg__erDi)}
+                      className={classNames(projectcss.all, sty.svg__wlhgA)}
                       role={"img"}
                     />
 
@@ -1016,368 +707,669 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__lXhUl
-                      )}
-                    >
-                      {"\u0645\u062d\u0627\u0633\u0628\u0627\u062a"}
-                    </div>
-                  </div>
-                  <div
-                    data-plasmic-name={"btnOnlinepayment"}
-                    data-plasmic-override={overrides.btnOnlinepayment}
-                    className={classNames(projectcss.all, sty.btnOnlinepayment)}
-                    onClick={async event => {
-                      const $steps = {};
-
-                      $steps["runCode"] = true
-                        ? (() => {
-                            const actionArgs = {
-                              customFunction: async () => {
-                                return (() => {
-                                  $state.clReservationState = false;
-                                  $state.clAnnouncementState = false;
-                                  $state.clCalculationState = false;
-                                  $state.clOnlinepaymentState = true;
-                                  $state.clApiState = false;
-                                  $state.clEhrState = false;
-                                  $state.clSpecialsiteState = false;
-                                  $state.clDashboardState = false;
-                                  $state.clMainState = false;
-                                  $state.clCalculatorStatus = false;
-                                  $state.clKioskStatus = false;
-                                  $state.clPhoneReservationStatus = false;
-                                  return ($state.clReferralState = false);
-                                })();
-                              }
-                            };
-                            return (({ customFunction }) => {
-                              return customFunction();
-                            })?.apply(null, [actionArgs]);
-                          })()
-                        : undefined;
-                      if (
-                        $steps["runCode"] != null &&
-                        typeof $steps["runCode"] === "object" &&
-                        typeof $steps["runCode"].then === "function"
-                      ) {
-                        $steps["runCode"] = await $steps["runCode"];
-                      }
-                    }}
-                  >
-                    <Icon7Icon
-                      className={classNames(projectcss.all, sty.svg___575U)}
-                      role={"img"}
-                    />
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__zMPa
+                        sty.text___4BMg6
                       )}
                     >
                       {
-                        "\u067e\u0631\u062f\u0627\u062e\u062a \u0622\u0646\u0644\u0627\u06cc\u0646"
-                      }
-                    </div>
-                  </div>
-                  <div
-                    data-plasmic-name={"btnApi"}
-                    data-plasmic-override={overrides.btnApi}
-                    className={classNames(projectcss.all, sty.btnApi)}
-                    onClick={async event => {
-                      const $steps = {};
-
-                      $steps["runCode"] = true
-                        ? (() => {
-                            const actionArgs = {
-                              customFunction: async () => {
-                                return (() => {
-                                  $state.clReservationState = false;
-                                  $state.clAnnouncementState = false;
-                                  $state.clCalculationState = false;
-                                  $state.clOnlinepaymentState = false;
-                                  $state.clApiState = true;
-                                  $state.clEhrState = false;
-                                  $state.clSpecialsiteState = false;
-                                  $state.clDashboardState = false;
-                                  $state.clMainState = false;
-                                  $state.clCalculatorStatus = false;
-                                  $state.clKioskStatus = false;
-                                  $state.clPhoneReservationStatus = false;
-                                  return ($state.clReferralState = false);
-                                })();
-                              }
-                            };
-                            return (({ customFunction }) => {
-                              return customFunction();
-                            })?.apply(null, [actionArgs]);
-                          })()
-                        : undefined;
-                      if (
-                        $steps["runCode"] != null &&
-                        typeof $steps["runCode"] === "object" &&
-                        typeof $steps["runCode"].then === "function"
-                      ) {
-                        $steps["runCode"] = await $steps["runCode"];
-                      }
-                    }}
-                  >
-                    <Icon8Icon
-                      className={classNames(projectcss.all, sty.svg___1PipE)}
-                      role={"img"}
-                    />
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__iAgvm
-                      )}
-                    >
-                      {
-                        "\u0627\u0631\u062a\u0628\u0627\u0637 \u0628\u0627 \u0633\u0627\u06cc\u0631 \u0646\u0631\u0645 \u0627\u0641\u0632\u0627\u0631 \u0647\u0627"
-                      }
-                    </div>
-                  </div>
-                  <div
-                    data-plasmic-name={"btnEhr"}
-                    data-plasmic-override={overrides.btnEhr}
-                    className={classNames(projectcss.all, sty.btnEhr)}
-                    onClick={async event => {
-                      const $steps = {};
-
-                      $steps["runCode"] = true
-                        ? (() => {
-                            const actionArgs = {
-                              customFunction: async () => {
-                                return (() => {
-                                  $state.clReservationState = false;
-                                  $state.clAnnouncementState = false;
-                                  $state.clCalculationState = false;
-                                  $state.clOnlinepaymentState = false;
-                                  $state.clApiState = false;
-                                  $state.clEhrState = true;
-                                  $state.clSpecialsiteState = false;
-                                  $state.clDashboardState = false;
-                                  $state.clMainState = false;
-                                  $state.clCalculatorStatus = false;
-                                  $state.clKioskStatus = false;
-                                  $state.clPhoneReservationStatus = false;
-                                  return ($state.clReferralState = false);
-                                })();
-                              }
-                            };
-                            return (({ customFunction }) => {
-                              return customFunction();
-                            })?.apply(null, [actionArgs]);
-                          })()
-                        : undefined;
-                      if (
-                        $steps["runCode"] != null &&
-                        typeof $steps["runCode"] === "object" &&
-                        typeof $steps["runCode"].then === "function"
-                      ) {
-                        $steps["runCode"] = await $steps["runCode"];
-                      }
-                    }}
-                  >
-                    <Icon9Icon
-                      className={classNames(projectcss.all, sty.svg__j4W6K)}
-                      role={"img"}
-                    />
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__nU9TK
-                      )}
-                    >
-                      {
-                        "\u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631"
-                      }
-                    </div>
-                  </div>
-                  <div
-                    data-plasmic-name={"btnSpecialsite"}
-                    data-plasmic-override={overrides.btnSpecialsite}
-                    className={classNames(projectcss.all, sty.btnSpecialsite)}
-                    onClick={async event => {
-                      const $steps = {};
-
-                      $steps["runCode"] = true
-                        ? (() => {
-                            const actionArgs = {
-                              customFunction: async () => {
-                                return (() => {
-                                  $state.clReservationState = false;
-                                  $state.clAnnouncementState = false;
-                                  $state.clCalculationState = false;
-                                  $state.clOnlinepaymentState = false;
-                                  $state.clApiState = false;
-                                  $state.clEhrState = false;
-                                  $state.clSpecialsiteState = true;
-                                  $state.clDashboardState = false;
-                                  $state.clMainState = false;
-                                  $state.clCalculatorStatus = false;
-                                  $state.clKioskStatus = false;
-                                  $state.clPhoneReservationStatus = false;
-                                  return ($state.clReferralState = false);
-                                })();
-                              }
-                            };
-                            return (({ customFunction }) => {
-                              return customFunction();
-                            })?.apply(null, [actionArgs]);
-                          })()
-                        : undefined;
-                      if (
-                        $steps["runCode"] != null &&
-                        typeof $steps["runCode"] === "object" &&
-                        typeof $steps["runCode"].then === "function"
-                      ) {
-                        $steps["runCode"] = await $steps["runCode"];
-                      }
-                    }}
-                  >
-                    <Icon12Icon
-                      className={classNames(projectcss.all, sty.svg__wtosz)}
-                      role={"img"}
-                    />
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___9P8M
-                      )}
-                    >
-                      {
-                        "\u0633\u0627\u06cc\u062a \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u0645\u0631\u06a9\u0632"
-                      }
-                    </div>
-                  </div>
-                  <div
-                    data-plasmic-name={"btnSpecialsite2"}
-                    data-plasmic-override={overrides.btnSpecialsite2}
-                    className={classNames(projectcss.all, sty.btnSpecialsite2)}
-                    onClick={async event => {
-                      const $steps = {};
-
-                      $steps["runCode"] = true
-                        ? (() => {
-                            const actionArgs = {
-                              customFunction: async () => {
-                                return (() => {
-                                  $state.clReservationState = false;
-                                  $state.clAnnouncementState = false;
-                                  $state.clCalculationState = false;
-                                  $state.clOnlinepaymentState = false;
-                                  $state.clApiState = false;
-                                  $state.clEhrState = false;
-                                  $state.clSpecialsiteState = false;
-                                  $state.clDashboardState = false;
-                                  $state.clMainState = false;
-                                  $state.clCalculatorStatus = false;
-                                  $state.clKioskStatus = false;
-                                  $state.clPhoneReservationStatus = false;
-                                  return ($state.clReferralState = true);
-                                })();
-                              }
-                            };
-                            return (({ customFunction }) => {
-                              return customFunction();
-                            })?.apply(null, [actionArgs]);
-                          })()
-                        : undefined;
-                      if (
-                        $steps["runCode"] != null &&
-                        typeof $steps["runCode"] === "object" &&
-                        typeof $steps["runCode"].then === "function"
-                      ) {
-                        $steps["runCode"] = await $steps["runCode"];
-                      }
-                    }}
-                  >
-                    <Icon16Icon
-                      className={classNames(projectcss.all, sty.svg__eKrUb)}
-                      role={"img"}
-                    />
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__ximKh
-                      )}
-                    >
-                      {
-                        "\u0646\u0638\u0627\u0645 \u0627\u0631\u062c\u0627\u0639"
-                      }
-                    </div>
-                  </div>
-                  <div
-                    data-plasmic-name={"btnDashboard"}
-                    data-plasmic-override={overrides.btnDashboard}
-                    className={classNames(projectcss.all, sty.btnDashboard)}
-                    onClick={async event => {
-                      const $steps = {};
-
-                      $steps["runCode"] = true
-                        ? (() => {
-                            const actionArgs = {
-                              customFunction: async () => {
-                                return (() => {
-                                  $state.clReservationState = false;
-                                  $state.clAnnouncementState = false;
-                                  $state.clCalculationState = false;
-                                  $state.clOnlinepaymentState = false;
-                                  $state.clApiState = false;
-                                  $state.clEhrState = false;
-                                  $state.clSpecialsiteState = false;
-                                  $state.clDashboardState = true;
-                                  $state.clMainState = false;
-                                  $state.clCalculatorStatus = false;
-                                  $state.clKioskStatus = false;
-                                  $state.clPhoneReservationStatus = false;
-                                  return ($state.clReferralState = false);
-                                })();
-                              }
-                            };
-                            return (({ customFunction }) => {
-                              return customFunction();
-                            })?.apply(null, [actionArgs]);
-                          })()
-                        : undefined;
-                      if (
-                        $steps["runCode"] != null &&
-                        typeof $steps["runCode"] === "object" &&
-                        typeof $steps["runCode"].then === "function"
-                      ) {
-                        $steps["runCode"] = await $steps["runCode"];
-                      }
-                    }}
-                  >
-                    <Icon10Icon
-                      className={classNames(projectcss.all, sty.svg__rNnIv)}
-                      role={"img"}
-                    />
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__baG59
-                      )}
-                    >
-                      {
-                        "\u062f\u0627\u0634\u0628\u0648\u0631\u062f \u06af\u0632\u0627\u0631\u0634\u0627\u062a \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc"
+                        "\u0645\u0627\u0634\u06cc\u0646 \u062d\u0633\u0627\u0628"
                       }
                     </div>
                   </div>
                 </div>
-              </section>
+              </div>
+            </Stack__>
+            <section
+              className={classNames(
+                projectcss.all,
+                sty.section__wtTOr,
+                "menu_top"
+              )}
+            >
+              <div className={classNames(projectcss.all, sty.freeBox__kQeHz)}>
+                <div
+                  data-plasmic-name={"btnReservation"}
+                  data-plasmic-override={overrides.btnReservation}
+                  className={classNames(projectcss.all, sty.btnReservation)}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                $state.clReservationState = true;
+                                $state.clAnnouncementState = false;
+                                $state.clCalculationState = false;
+                                $state.clOnlinepaymentState = false;
+                                $state.clApiState = false;
+                                $state.clEhrState = false;
+                                $state.clSpecialsiteState = false;
+                                $state.clDashboardState = false;
+                                $state.clMainState = false;
+                                $state.clCalculatorStatus = false;
+                                $state.clKioskStatus = false;
+                                $state.clPhoneReservationStatus = false;
+                                return ($state.clReferralState = false);
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
+                    ) {
+                      $steps["runCode"] = await $steps["runCode"];
+                    }
+                  }}
+                >
+                  <Icon3Icon
+                    className={classNames(projectcss.all, sty.svg__oe24N)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__gDcpR
+                    )}
+                  >
+                    {
+                      "\u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u067e\u0627\u06cc\u0647"
+                    }
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"btnReservation3"}
+                  data-plasmic-override={overrides.btnReservation3}
+                  className={classNames(projectcss.all, sty.btnReservation3)}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                $state.clReservationState = false;
+                                $state.clAnnouncementState = false;
+                                $state.clCalculationState = false;
+                                $state.clOnlinepaymentState = false;
+                                $state.clApiState = false;
+                                $state.clEhrState = false;
+                                $state.clSpecialsiteState = false;
+                                $state.clDashboardState = false;
+                                $state.clMainState = false;
+                                $state.clCalculatorStatus = false;
+                                $state.clKioskStatus = false;
+                                $state.clPhoneReservationStatus = true;
+                                return ($state.clReferralState = false);
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
+                    ) {
+                      $steps["runCode"] = await $steps["runCode"];
+                    }
+                  }}
+                >
+                  <Icon4Icon
+                    className={classNames(projectcss.all, sty.svg__hhs13)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___5VXzU
+                    )}
+                  >
+                    {
+                      "\u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u062a\u0644\u0641\u0646\u06cc"
+                    }
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"btnReservation2"}
+                  data-plasmic-override={overrides.btnReservation2}
+                  className={classNames(projectcss.all, sty.btnReservation2)}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                $state.clReservationState = false;
+                                $state.clAnnouncementState = false;
+                                $state.clCalculationState = false;
+                                $state.clOnlinepaymentState = false;
+                                $state.clApiState = false;
+                                $state.clEhrState = false;
+                                $state.clSpecialsiteState = false;
+                                $state.clDashboardState = false;
+                                $state.clMainState = false;
+                                $state.clCalculatorStatus = false;
+                                $state.clKioskStatus = true;
+                                $state.clPhoneReservationStatus = false;
+                                return ($state.clReferralState = false);
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
+                    ) {
+                      $steps["runCode"] = await $steps["runCode"];
+                    }
+                  }}
+                >
+                  <Icon15Icon
+                    className={classNames(projectcss.all, sty.svg___0V4Cq)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__qCfl
+                    )}
+                  >
+                    {
+                      "\u0635\u0641 \u0648 \u0641\u0631\u0627\u062e\u0648\u0627\u0646 "
+                    }
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"btnAnnouncement"}
+                  data-plasmic-override={overrides.btnAnnouncement}
+                  className={classNames(projectcss.all, sty.btnAnnouncement)}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                $state.clReservationState = false;
+                                $state.clAnnouncementState = true;
+                                $state.clCalculationState = false;
+                                $state.clOnlinepaymentState = false;
+                                $state.clApiState = false;
+                                $state.clEhrState = false;
+                                $state.clSpecialsiteState = false;
+                                $state.clDashboardState = false;
+                                $state.clMainState = false;
+                                $state.clCalculatorStatus = false;
+                                $state.clKioskStatus = false;
+                                $state.clPhoneReservationStatus = false;
+                                return ($state.clReferralState = false);
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
+                    ) {
+                      $steps["runCode"] = await $steps["runCode"];
+                    }
+                  }}
+                >
+                  <Icon5Icon
+                    className={classNames(projectcss.all, sty.svg__klDLi)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___3UtJs
+                    )}
+                  >
+                    {"\u0627\u0639\u0644\u0627\u0646\u0627\u062a"}
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"btnCalculation"}
+                  data-plasmic-override={overrides.btnCalculation}
+                  className={classNames(projectcss.all, sty.btnCalculation)}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                $state.clReservationState = false;
+                                $state.clAnnouncementState = false;
+                                $state.clCalculationState = true;
+                                $state.clOnlinepaymentState = false;
+                                $state.clApiState = false;
+                                $state.clEhrState = false;
+                                $state.clSpecialsiteState = false;
+                                $state.clDashboardState = false;
+                                $state.clMainState = false;
+                                $state.clCalculatorStatus = false;
+                                $state.clKioskStatus = false;
+                                $state.clPhoneReservationStatus = false;
+                                return ($state.clReferralState = false);
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
+                    ) {
+                      $steps["runCode"] = await $steps["runCode"];
+                    }
+                  }}
+                >
+                  <Icon6Icon
+                    className={classNames(projectcss.all, sty.svg__erDi)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__lXhUl
+                    )}
+                  >
+                    {"\u0645\u062d\u0627\u0633\u0628\u0627\u062a"}
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"btnOnlinepayment"}
+                  data-plasmic-override={overrides.btnOnlinepayment}
+                  className={classNames(projectcss.all, sty.btnOnlinepayment)}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                $state.clReservationState = false;
+                                $state.clAnnouncementState = false;
+                                $state.clCalculationState = false;
+                                $state.clOnlinepaymentState = true;
+                                $state.clApiState = false;
+                                $state.clEhrState = false;
+                                $state.clSpecialsiteState = false;
+                                $state.clDashboardState = false;
+                                $state.clMainState = false;
+                                $state.clCalculatorStatus = false;
+                                $state.clKioskStatus = false;
+                                $state.clPhoneReservationStatus = false;
+                                return ($state.clReferralState = false);
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
+                    ) {
+                      $steps["runCode"] = await $steps["runCode"];
+                    }
+                  }}
+                >
+                  <Icon7Icon
+                    className={classNames(projectcss.all, sty.svg___575U)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__zMPa
+                    )}
+                  >
+                    {
+                      "\u067e\u0631\u062f\u0627\u062e\u062a \u0622\u0646\u0644\u0627\u06cc\u0646"
+                    }
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"btnApi"}
+                  data-plasmic-override={overrides.btnApi}
+                  className={classNames(projectcss.all, sty.btnApi)}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                $state.clReservationState = false;
+                                $state.clAnnouncementState = false;
+                                $state.clCalculationState = false;
+                                $state.clOnlinepaymentState = false;
+                                $state.clApiState = true;
+                                $state.clEhrState = false;
+                                $state.clSpecialsiteState = false;
+                                $state.clDashboardState = false;
+                                $state.clMainState = false;
+                                $state.clCalculatorStatus = false;
+                                $state.clKioskStatus = false;
+                                $state.clPhoneReservationStatus = false;
+                                return ($state.clReferralState = false);
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
+                    ) {
+                      $steps["runCode"] = await $steps["runCode"];
+                    }
+                  }}
+                >
+                  <Icon8Icon
+                    className={classNames(projectcss.all, sty.svg___1PipE)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__iAgvm
+                    )}
+                  >
+                    {
+                      "\u0627\u0631\u062a\u0628\u0627\u0637 \u0628\u0627 \u0633\u0627\u06cc\u0631 \u0646\u0631\u0645 \u0627\u0641\u0632\u0627\u0631 \u0647\u0627"
+                    }
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"btnEhr"}
+                  data-plasmic-override={overrides.btnEhr}
+                  className={classNames(projectcss.all, sty.btnEhr)}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                $state.clReservationState = false;
+                                $state.clAnnouncementState = false;
+                                $state.clCalculationState = false;
+                                $state.clOnlinepaymentState = false;
+                                $state.clApiState = false;
+                                $state.clEhrState = true;
+                                $state.clSpecialsiteState = false;
+                                $state.clDashboardState = false;
+                                $state.clMainState = false;
+                                $state.clCalculatorStatus = false;
+                                $state.clKioskStatus = false;
+                                $state.clPhoneReservationStatus = false;
+                                return ($state.clReferralState = false);
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
+                    ) {
+                      $steps["runCode"] = await $steps["runCode"];
+                    }
+                  }}
+                >
+                  <Icon9Icon
+                    className={classNames(projectcss.all, sty.svg__j4W6K)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__nU9TK
+                    )}
+                  >
+                    {
+                      "\u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631"
+                    }
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"btnSpecialsite"}
+                  data-plasmic-override={overrides.btnSpecialsite}
+                  className={classNames(projectcss.all, sty.btnSpecialsite)}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                $state.clReservationState = false;
+                                $state.clAnnouncementState = false;
+                                $state.clCalculationState = false;
+                                $state.clOnlinepaymentState = false;
+                                $state.clApiState = false;
+                                $state.clEhrState = false;
+                                $state.clSpecialsiteState = true;
+                                $state.clDashboardState = false;
+                                $state.clMainState = false;
+                                $state.clCalculatorStatus = false;
+                                $state.clKioskStatus = false;
+                                $state.clPhoneReservationStatus = false;
+                                return ($state.clReferralState = false);
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
+                    ) {
+                      $steps["runCode"] = await $steps["runCode"];
+                    }
+                  }}
+                >
+                  <Icon12Icon
+                    className={classNames(projectcss.all, sty.svg__wtosz)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___9P8M
+                    )}
+                  >
+                    {
+                      "\u0633\u0627\u06cc\u062a \u0627\u062e\u062a\u0635\u0627\u0635\u06cc"
+                    }
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"btnSpecialsite2"}
+                  data-plasmic-override={overrides.btnSpecialsite2}
+                  className={classNames(projectcss.all, sty.btnSpecialsite2)}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                $state.clReservationState = false;
+                                $state.clAnnouncementState = false;
+                                $state.clCalculationState = false;
+                                $state.clOnlinepaymentState = false;
+                                $state.clApiState = false;
+                                $state.clEhrState = false;
+                                $state.clSpecialsiteState = false;
+                                $state.clDashboardState = false;
+                                $state.clMainState = false;
+                                $state.clCalculatorStatus = false;
+                                $state.clKioskStatus = false;
+                                $state.clPhoneReservationStatus = false;
+                                return ($state.clReferralState = true);
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
+                    ) {
+                      $steps["runCode"] = await $steps["runCode"];
+                    }
+                  }}
+                >
+                  <Icon16Icon
+                    className={classNames(projectcss.all, sty.svg__eKrUb)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__ximKh
+                    )}
+                  >
+                    {"\u0646\u0638\u0627\u0645 \u0627\u0631\u062c\u0627\u0639"}
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"btnDashboard"}
+                  data-plasmic-override={overrides.btnDashboard}
+                  className={classNames(projectcss.all, sty.btnDashboard)}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                $state.clReservationState = false;
+                                $state.clAnnouncementState = false;
+                                $state.clCalculationState = false;
+                                $state.clOnlinepaymentState = false;
+                                $state.clApiState = false;
+                                $state.clEhrState = false;
+                                $state.clSpecialsiteState = false;
+                                $state.clDashboardState = true;
+                                $state.clMainState = false;
+                                $state.clCalculatorStatus = false;
+                                $state.clKioskStatus = false;
+                                $state.clPhoneReservationStatus = false;
+                                return ($state.clReferralState = false);
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
+                    ) {
+                      $steps["runCode"] = await $steps["runCode"];
+                    }
+                  }}
+                >
+                  <Icon10Icon
+                    className={classNames(projectcss.all, sty.svg__rNnIv)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__baG59
+                    )}
+                  >
+                    {hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? "\u062f\u0627\u0634\u0628\u0648\u0631\u062f \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc"
+                      : "\u062f\u0627\u0634\u0628\u0648\u0631\u062f \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc"}
+                  </div>
+                </div>
+              </div>
             </section>
             <section className={classNames(projectcss.all, sty.section__sTanX)}>
               {(() => {
