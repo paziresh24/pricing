@@ -269,7 +269,7 @@
   height: auto;
   max-width: 100%;
   background: #ffffff;
-  box-shadow: 0px 4px 16px 0px #040404;
+  box-shadow: 1px 1px 1px 1px #3f4079d9;
   cursor: pointer;
   min-width: 0;
   border-radius: 10px;
@@ -285,7 +285,7 @@
   object-fit: cover;
   max-width: 100%;
   color: #3f4079;
-  height: 40px;
+  height: 35px;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -319,7 +319,7 @@
   height: auto;
   max-width: 100%;
   background: #ffffff;
-  box-shadow: none;
+  box-shadow: 1px 1px 1px 1px #3f4079d9;
   cursor: pointer;
   min-width: 0;
   border-radius: 10px;
@@ -346,7 +346,7 @@
   object-fit: cover;
   max-width: 100%;
   color: #3f4079;
-  height: 40px;
+  height: 35px;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -388,7 +388,7 @@
   height: auto;
   max-width: 100%;
   background: #ffffff;
-  box-shadow: none;
+  box-shadow: 1px 1px 1px 1px #3f4079d9;
   cursor: pointer;
   min-width: 0;
   border-radius: 10px;
@@ -415,7 +415,7 @@
   object-fit: cover;
   max-width: 100%;
   color: #3f4079;
-  height: 40px;
+  height: 35px;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -457,7 +457,7 @@
   height: auto;
   max-width: 100%;
   background: #ffffff;
-  box-shadow: none;
+  box-shadow: 1px 1px 1px 1px #3f4079d9;
   cursor: pointer;
   min-width: 0;
   border-radius: 10px;
@@ -484,7 +484,7 @@
   object-fit: cover;
   max-width: 100%;
   color: #3f4079;
-  height: 40px;
+  height: 35px;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -528,6 +528,7 @@
   max-width: 100%;
   background: #ffffff;
   cursor: pointer;
+  box-shadow: 1px 1px 1px 1px #3f4079d9;
   min-width: 0;
   border-radius: 10px;
   padding: 8px;
@@ -553,7 +554,7 @@
   object-fit: cover;
   max-width: 100%;
   color: #3f4079;
-  height: 40px;
+  height: 35px;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -597,6 +598,7 @@
   max-width: 100%;
   background: #ffffff;
   cursor: pointer;
+  box-shadow: 1px 1px 1px 1px #3f4079d9;
   min-width: 0;
   border-radius: 10px;
   padding: 8px;
@@ -622,7 +624,7 @@
   object-fit: cover;
   max-width: 100%;
   color: #3f4079;
-  height: 40px;
+  height: 35px;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -666,6 +668,7 @@
   max-width: 100%;
   background: #ffffff;
   cursor: pointer;
+  box-shadow: 1px 1px 1px 1px #3f4079d9;
   min-width: 0;
   border-radius: 10px;
   padding: 8px;
@@ -691,7 +694,7 @@
   object-fit: cover;
   max-width: 100%;
   color: #3f4079;
-  height: 40px;
+  height: 35px;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -707,7 +710,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  font-size: 10px;
+  font-size: 8px;
   text-align: center;
   color: #3f4079;
   user-select: none;
@@ -735,6 +738,7 @@
   align-items: center;
   background: #ffffff;
   cursor: pointer;
+  box-shadow: 1px 1px 1px 1px #3f4079d9;
   min-width: 0;
   border-radius: 10px;
   padding: 8px;
@@ -760,7 +764,7 @@
   object-fit: cover;
   max-width: 100%;
   color: #3f4079;
-  height: 40px;
+  height: 35px;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -800,15 +804,14 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  padding-left: 8px;
-  padding-bottom: 8px;
-  padding-top: 8px;
   justify-content: flex-start;
   align-items: center;
   background: #ffffff;
   cursor: pointer;
+  box-shadow: 1px 1px 1px 1px #3f4079d9;
   min-width: 0;
   border-radius: 10px;
+  padding: 8px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .btnSpecialsite {
@@ -831,7 +834,7 @@
   object-fit: cover;
   max-width: 100%;
   color: #3f4079;
-  height: 40px;
+  height: 35px;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -871,15 +874,14 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  padding-left: 8px;
-  padding-bottom: 8px;
-  padding-top: 8px;
   justify-content: flex-start;
   align-items: center;
   background: #ffffff;
   cursor: pointer;
+  box-shadow: 1px 1px 1px 1px #3f4079d9;
   min-width: 0;
   border-radius: 10px;
+  padding: 8px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .btnSpecialsite2 {
@@ -902,7 +904,7 @@
   object-fit: cover;
   max-width: 100%;
   color: #3f4079;
-  height: 40px;
+  height: 35px;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -946,6 +948,7 @@
   max-width: 100%;
   background: #ffffff;
   cursor: pointer;
+  box-shadow: 1px 1px 1px 1px #3f4079d9;
   min-width: 0;
   border-radius: 10px;
   padding: 8px;
@@ -971,7 +974,7 @@
   object-fit: cover;
   max-width: 100%;
   color: #3f4079;
-  height: 40px;
+  height: 35px;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
