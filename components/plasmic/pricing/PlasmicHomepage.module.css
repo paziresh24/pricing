@@ -263,8 +263,6 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -275,9 +273,46 @@
   border-radius: 10px;
   padding: 8px;
 }
+.btnReservation > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+}
 @media (min-width: 0px) and (max-width: 768px) {
   .btnReservation {
-    padding: 3px;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    background: #ffffff;
+    box-shadow: 1px 1px 1px 1px #3f4079d9;
+    cursor: pointer;
+    flex-direction: column;
+    min-width: 0;
+    border-radius: 10px;
+    padding: 5px 2px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .btnReservation > :global(.__wab_flex-container) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 0;
+    margin-left: calc(0px - 0px);
+    width: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .btnReservation > :global(.__wab_flex-container) > *,
+  .btnReservation > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .btnReservation > :global(.__wab_flex-container) > picture > img,
+  .btnReservation
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 0px;
   }
 }
 .svg__oe24N {
@@ -313,8 +348,6 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -325,20 +358,46 @@
   border-radius: 10px;
   padding: 8px;
 }
+.btnReservation3 > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+}
 @media (min-width: 0px) and (max-width: 768px) {
   .btnReservation3 {
     width: 100%;
     height: auto;
     max-width: 100%;
     background: #ffffff;
-    box-shadow: none;
+    box-shadow: 1px 1px 1px 1px #3f4079d9;
     cursor: pointer;
+    flex-direction: column;
+    min-width: 0;
+    border-radius: 10px;
+    padding: 5px 2px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .btnReservation3 > :global(.__wab_flex-container) {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     min-width: 0;
-    border-radius: 10px;
-    padding: 3px;
+    margin-left: calc(0px - 0px);
+    width: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .btnReservation3 > :global(.__wab_flex-container) > *,
+  .btnReservation3 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .btnReservation3 > :global(.__wab_flex-container) > picture > img,
+  .btnReservation3
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 0px;
   }
 }
 .svg__hhs13 {
@@ -382,8 +441,6 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -394,20 +451,46 @@
   border-radius: 10px;
   padding: 8px;
 }
+.btnReservation2 > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+}
 @media (min-width: 0px) and (max-width: 768px) {
   .btnReservation2 {
     width: 100%;
     height: auto;
     max-width: 100%;
     background: #ffffff;
-    box-shadow: none;
+    box-shadow: 1px 1px 1px 1px #3f4079d9;
     cursor: pointer;
+    flex-direction: column;
+    min-width: 0;
+    border-radius: 10px;
+    padding: 5px 2px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .btnReservation2 > :global(.__wab_flex-container) {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     min-width: 0;
-    border-radius: 10px;
-    padding: 3px;
+    margin-left: calc(0px - 0px);
+    width: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .btnReservation2 > :global(.__wab_flex-container) > *,
+  .btnReservation2 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .btnReservation2 > :global(.__wab_flex-container) > picture > img,
+  .btnReservation2
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 0px;
   }
 }
 .svg___0V4Cq {
@@ -451,8 +534,6 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -463,20 +544,46 @@
   border-radius: 10px;
   padding: 8px;
 }
+.btnAnnouncement > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+}
 @media (min-width: 0px) and (max-width: 768px) {
   .btnAnnouncement {
     width: 100%;
     height: auto;
     max-width: 100%;
     background: #ffffff;
-    box-shadow: none;
+    box-shadow: 1px 1px 1px 1px #3f4079d9;
     cursor: pointer;
+    flex-direction: column;
+    min-width: 0;
+    border-radius: 10px;
+    padding: 5px 2px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .btnAnnouncement > :global(.__wab_flex-container) {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     min-width: 0;
-    border-radius: 10px;
-    padding: 3px;
+    margin-left: calc(0px - 0px);
+    width: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .btnAnnouncement > :global(.__wab_flex-container) > *,
+  .btnAnnouncement > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .btnAnnouncement > :global(.__wab_flex-container) > picture > img,
+  .btnAnnouncement
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 0px;
   }
 }
 .svg__klDLi {
@@ -521,8 +628,6 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -533,20 +638,46 @@
   border-radius: 10px;
   padding: 8px;
 }
+.btnCalculation > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+}
 @media (min-width: 0px) and (max-width: 768px) {
   .btnCalculation {
     width: 100%;
     height: auto;
     max-width: 100%;
     background: #ffffff;
-    box-shadow: none;
+    box-shadow: 1px 1px 1px 1px #3f4079d9;
     cursor: pointer;
+    flex-direction: column;
+    min-width: 0;
+    border-radius: 10px;
+    padding: 5px 2px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .btnCalculation > :global(.__wab_flex-container) {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     min-width: 0;
-    border-radius: 10px;
-    padding: 3px;
+    margin-left: calc(0px - 0px);
+    width: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .btnCalculation > :global(.__wab_flex-container) > *,
+  .btnCalculation > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .btnCalculation > :global(.__wab_flex-container) > picture > img,
+  .btnCalculation
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 0px;
   }
 }
 .svg__erDi {
@@ -609,14 +740,14 @@
     height: auto;
     max-width: 100%;
     background: #ffffff;
-    box-shadow: none;
+    box-shadow: 1px 1px 1px 1px #3f4079d9;
     cursor: pointer;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     min-width: 0;
     border-radius: 10px;
-    padding: 3px;
+    padding: 5px 2px;
   }
 }
 .svg___575U {
@@ -661,8 +792,6 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -673,20 +802,46 @@
   border-radius: 10px;
   padding: 8px;
 }
+.btnApi > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+}
 @media (min-width: 0px) and (max-width: 768px) {
   .btnApi {
     width: 100%;
     height: auto;
     max-width: 100%;
     background: #ffffff;
-    box-shadow: none;
+    box-shadow: 1px 1px 1px 1px #3f4079d9;
     cursor: pointer;
+    flex-direction: column;
+    min-width: 0;
+    border-radius: 10px;
+    padding: 5px 2px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .btnApi > :global(.__wab_flex-container) {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     min-width: 0;
-    border-radius: 10px;
-    padding: 3px;
+    margin-left: calc(0px - 0px);
+    width: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .btnApi > :global(.__wab_flex-container) > *,
+  .btnApi > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .btnApi > :global(.__wab_flex-container) > picture > img,
+  .btnApi
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 0px;
   }
 }
 .svg___1PipE {
@@ -734,8 +889,6 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  justify-content: flex-start;
-  align-items: center;
   background: #ffffff;
   cursor: pointer;
   box-shadow: 1px 1px 1px 1px #3f4079d9;
@@ -743,20 +896,46 @@
   border-radius: 10px;
   padding: 8px;
 }
+.btnEhr > :global(.__wab_flex-container) {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+}
 @media (min-width: 0px) and (max-width: 768px) {
   .btnEhr {
     width: 100%;
     height: auto;
     max-width: 100%;
     background: #ffffff;
-    box-shadow: none;
+    box-shadow: 1px 1px 1px 1px #3f4079d9;
     cursor: pointer;
+    flex-direction: column;
+    min-width: 0;
+    border-radius: 10px;
+    padding: 5px 2px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .btnEhr > :global(.__wab_flex-container) {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     min-width: 0;
-    border-radius: 10px;
-    padding: 3px;
+    margin-left: calc(0px - 0px);
+    width: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .btnEhr > :global(.__wab_flex-container) > *,
+  .btnEhr > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .btnEhr > :global(.__wab_flex-container) > picture > img,
+  .btnEhr
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 0px;
   }
 }
 .svg__j4W6K {
@@ -804,8 +983,6 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  justify-content: flex-start;
-  align-items: center;
   background: #ffffff;
   cursor: pointer;
   box-shadow: 1px 1px 1px 1px #3f4079d9;
@@ -813,20 +990,46 @@
   border-radius: 10px;
   padding: 8px;
 }
+.btnSpecialsite > :global(.__wab_flex-container) {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+}
 @media (min-width: 0px) and (max-width: 768px) {
   .btnSpecialsite {
     width: 100%;
     height: auto;
     max-width: 100%;
     background: #ffffff;
-    box-shadow: none;
+    box-shadow: 1px 1px 1px 1px #3f4079d9;
     cursor: pointer;
+    flex-direction: column;
+    min-width: 0;
+    border-radius: 10px;
+    padding: 5px 2px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .btnSpecialsite > :global(.__wab_flex-container) {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     min-width: 0;
-    border-radius: 10px;
-    padding: 3px;
+    margin-left: calc(0px - 0px);
+    width: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .btnSpecialsite > :global(.__wab_flex-container) > *,
+  .btnSpecialsite > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .btnSpecialsite > :global(.__wab_flex-container) > picture > img,
+  .btnSpecialsite
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 0px;
   }
 }
 .svg__wtosz {
@@ -874,8 +1077,6 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  justify-content: flex-start;
-  align-items: center;
   background: #ffffff;
   cursor: pointer;
   box-shadow: 1px 1px 1px 1px #3f4079d9;
@@ -883,20 +1084,46 @@
   border-radius: 10px;
   padding: 8px;
 }
+.btnSpecialsite2 > :global(.__wab_flex-container) {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+}
 @media (min-width: 0px) and (max-width: 768px) {
   .btnSpecialsite2 {
     width: 100%;
     height: auto;
     max-width: 100%;
     background: #ffffff;
-    box-shadow: none;
+    box-shadow: 1px 1px 1px 1px #3f4079d9;
     cursor: pointer;
+    flex-direction: column;
+    min-width: 0;
+    border-radius: 10px;
+    padding: 5px 2px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .btnSpecialsite2 > :global(.__wab_flex-container) {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     min-width: 0;
-    border-radius: 10px;
-    padding: 3px;
+    margin-left: calc(0px - 0px);
+    width: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .btnSpecialsite2 > :global(.__wab_flex-container) > *,
+  .btnSpecialsite2 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .btnSpecialsite2 > :global(.__wab_flex-container) > picture > img,
+  .btnSpecialsite2
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 0px;
   }
 }
 .svg__eKrUb {
@@ -941,8 +1168,6 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -953,20 +1178,46 @@
   border-radius: 10px;
   padding: 8px;
 }
+.btnDashboard > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+}
 @media (min-width: 0px) and (max-width: 768px) {
   .btnDashboard {
     width: 100%;
     height: auto;
     max-width: 100%;
     background: #ffffff;
-    box-shadow: none;
+    box-shadow: 1px 1px 1px 1px #3f4079d9;
     cursor: pointer;
+    flex-direction: column;
+    min-width: 0;
+    border-radius: 10px;
+    padding: 5px 2px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .btnDashboard > :global(.__wab_flex-container) {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     min-width: 0;
-    border-radius: 10px;
-    padding: 3px;
+    margin-left: calc(0px - 0px);
+    width: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .btnDashboard > :global(.__wab_flex-container) > *,
+  .btnDashboard > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .btnDashboard > :global(.__wab_flex-container) > picture > img,
+  .btnDashboard
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 0px;
   }
 }
 .svg__rNnIv {

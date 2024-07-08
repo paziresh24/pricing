@@ -719,9 +719,11 @@ function PlasmicHomepage__RenderFunc(props: {
               )}
             >
               <div className={classNames(projectcss.all, sty.freeBox__kQeHz)}>
-                <div
+                <Stack__
+                  as={"div"}
                   data-plasmic-name={"btnReservation"}
                   data-plasmic-override={overrides.btnReservation}
+                  hasGap={true}
                   className={classNames(
                     projectcss.all,
                     sty.btnReservation,
@@ -771,10 +773,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       "\u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u067e\u0627\u06cc\u0647"
                     }
                   </div>
-                </div>
-                <div
+                </Stack__>
+                <Stack__
+                  as={"div"}
                   data-plasmic-name={"btnReservation3"}
                   data-plasmic-override={overrides.btnReservation3}
+                  hasGap={true}
                   className={classNames(projectcss.all, sty.btnReservation3)}
                   onClick={async event => {
                     const $steps = {};
@@ -820,10 +824,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       "\u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u062a\u0644\u0641\u0646\u06cc"
                     }
                   </div>
-                </div>
-                <div
+                </Stack__>
+                <Stack__
+                  as={"div"}
                   data-plasmic-name={"btnReservation2"}
                   data-plasmic-override={overrides.btnReservation2}
+                  hasGap={true}
                   className={classNames(projectcss.all, sty.btnReservation2)}
                   onClick={async event => {
                     const $steps = {};
@@ -869,10 +875,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       "\u0635\u0641 \u0648 \u0641\u0631\u0627\u062e\u0648\u0627\u0646 "
                     }
                   </div>
-                </div>
-                <div
+                </Stack__>
+                <Stack__
+                  as={"div"}
                   data-plasmic-name={"btnAnnouncement"}
                   data-plasmic-override={overrides.btnAnnouncement}
+                  hasGap={true}
                   className={classNames(projectcss.all, sty.btnAnnouncement)}
                   onClick={async event => {
                     const $steps = {};
@@ -916,10 +924,12 @@ function PlasmicHomepage__RenderFunc(props: {
                   >
                     {"\u0627\u0639\u0644\u0627\u0646\u0627\u062a"}
                   </div>
-                </div>
-                <div
+                </Stack__>
+                <Stack__
+                  as={"div"}
                   data-plasmic-name={"btnCalculation"}
                   data-plasmic-override={overrides.btnCalculation}
+                  hasGap={true}
                   className={classNames(projectcss.all, sty.btnCalculation)}
                   onClick={async event => {
                     const $steps = {};
@@ -963,7 +973,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   >
                     {"\u0645\u062d\u0627\u0633\u0628\u0627\u062a"}
                   </div>
-                </div>
+                </Stack__>
                 <div
                   data-plasmic-name={"btnOnlinepayment"}
                   data-plasmic-override={overrides.btnOnlinepayment}
@@ -1013,9 +1023,11 @@ function PlasmicHomepage__RenderFunc(props: {
                     }
                   </div>
                 </div>
-                <div
+                <Stack__
+                  as={"div"}
                   data-plasmic-name={"btnApi"}
                   data-plasmic-override={overrides.btnApi}
+                  hasGap={true}
                   className={classNames(projectcss.all, sty.btnApi)}
                   onClick={async event => {
                     const $steps = {};
@@ -1061,10 +1073,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       "\u0627\u0631\u062a\u0628\u0627\u0637 \u0628\u0627 \u0633\u0627\u06cc\u0631 \u0646\u0631\u0645 \u0627\u0641\u0632\u0627\u0631 \u0647\u0627"
                     }
                   </div>
-                </div>
-                <div
+                </Stack__>
+                <Stack__
+                  as={"div"}
                   data-plasmic-name={"btnEhr"}
                   data-plasmic-override={overrides.btnEhr}
+                  hasGap={true}
                   className={classNames(projectcss.all, sty.btnEhr)}
                   onClick={async event => {
                     const $steps = {};
@@ -1110,10 +1124,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       "\u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u06cc\u0645\u0627\u0631"
                     }
                   </div>
-                </div>
-                <div
+                </Stack__>
+                <Stack__
+                  as={"div"}
                   data-plasmic-name={"btnSpecialsite"}
                   data-plasmic-override={overrides.btnSpecialsite}
+                  hasGap={true}
                   className={classNames(projectcss.all, sty.btnSpecialsite)}
                   onClick={async event => {
                     const $steps = {};
@@ -1159,10 +1175,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       "\u0633\u0627\u06cc\u062a \u0627\u062e\u062a\u0635\u0627\u0635\u06cc"
                     }
                   </div>
-                </div>
-                <div
+                </Stack__>
+                <Stack__
+                  as={"div"}
                   data-plasmic-name={"btnSpecialsite2"}
                   data-plasmic-override={overrides.btnSpecialsite2}
+                  hasGap={true}
                   className={classNames(projectcss.all, sty.btnSpecialsite2)}
                   onClick={async event => {
                     const $steps = {};
@@ -1206,10 +1224,12 @@ function PlasmicHomepage__RenderFunc(props: {
                   >
                     {"\u0646\u0638\u0627\u0645 \u0627\u0631\u062c\u0627\u0639"}
                   </div>
-                </div>
-                <div
+                </Stack__>
+                <Stack__
+                  as={"div"}
                   data-plasmic-name={"btnDashboard"}
                   data-plasmic-override={overrides.btnDashboard}
+                  hasGap={true}
                   className={classNames(projectcss.all, sty.btnDashboard)}
                   onClick={async event => {
                     const $steps = {};
@@ -1255,7 +1275,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       ? "\u062f\u0627\u0634\u0628\u0648\u0631\u062f \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc"
                       : "\u062f\u0627\u0634\u0628\u0648\u0631\u062f \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc"}
                   </div>
-                </div>
+                </Stack__>
               </div>
             </section>
             <section className={classNames(projectcss.all, sty.section__sTanX)}>
