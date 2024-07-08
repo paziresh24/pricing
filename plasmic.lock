@@ -316,7 +316,8 @@
         "vqeFwpZFQ6buChy6T9PGwQ": "0.9.0",
         "ohDidvG9XsCeFumugENU3J": "6.24.0",
         "jkU633o1Cz7HrJdwdxhVHk": "16.10.0",
-        "gLnoj82AzKVVT7qXiqAbHD": "2.11.0"
+        "gLnoj82AzKVVT7qXiqAbHD": "2.11.0",
+        "8PtdGodUbexNYgkuyBUcWu": "3.24.0"
       },
       "lang": "ts",
       "fileLocks": [
@@ -327,18 +328,18 @@
         },
         {
           "assetId": "seYsnBL1P3AiXaFGNEMUUM",
-          "checksum": "41a2ef9636d9c792c085cd09874fc00f",
+          "checksum": "b3a16865b91b33abd34350c0bb38ac4d",
           "type": "globalContexts"
         },
         {
           "type": "renderModule",
           "assetId": "g64VYoCfAKTS",
-          "checksum": "0e0e9d19bbc05726c3239b73259caff9"
+          "checksum": "80e80d769efafd55964b51109e1a5016"
         },
         {
           "type": "cssRules",
           "assetId": "g64VYoCfAKTS",
-          "checksum": "0e0e9d19bbc05726c3239b73259caff9"
+          "checksum": "80e80d769efafd55964b51109e1a5016"
         },
         {
           "type": "renderModule",
@@ -538,7 +539,12 @@
         {
           "assetId": "seYsnBL1P3AiXaFGNEMUUM",
           "type": "projectCss",
-          "checksum": "58daca354b54084a096e7bf8a530014e"
+          "checksum": "a8f6bb39e6d0b9092e26c88c15010e0f"
+        },
+        {
+          "type": "icon",
+          "assetId": "wgGgWP4KVX41",
+          "checksum": "9a8131d589e2454a68b2d19d25229fb9"
         }
       ],
       "codegenVersion": "0.0.1"
@@ -620,6 +626,25 @@
           "type": "icon",
           "assetId": "8K40faRNhuCj",
           "checksum": "4fedd32cd8730884585d804464a39318"
+        }
+      ],
+      "codegenVersion": "0.0.1"
+    },
+    {
+      "projectId": "8PtdGodUbexNYgkuyBUcWu",
+      "version": "3.24.0",
+      "dependencies": {},
+      "lang": "ts",
+      "fileLocks": [
+        {
+          "assetId": "8PtdGodUbexNYgkuyBUcWu",
+          "type": "projectCss",
+          "checksum": "938244692ddaafd351b253f33afb418e"
+        },
+        {
+          "assetId": "8PtdGodUbexNYgkuyBUcWu",
+          "checksum": "34a063f27f0b27a7d1d344bc6b5252c5",
+          "type": "globalContexts"
         }
       ],
       "codegenVersion": "0.0.1"

@@ -137,6 +137,10 @@
 .plasmic_mixins {
   --mixin-5g5ivQG1YmJM_white-space: pre-wrap;
   --plasmic-mixin-w-60-pec_white-space: var(--mixin-5g5ivQG1YmJM_white-space);
+  --mixin-E1nUqaf64oNc_white-space: pre-wrap;
+  --plasmic-mixin-unnamed-style-preset_white-space: var(
+    --mixin-E1nUqaf64oNc_white-space
+  );
 }
 
 :where(.all) {
