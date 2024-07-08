@@ -671,16 +671,9 @@ function PlasmicHomepage__RenderFunc(props: {
                             const actionArgs = {
                               customFunction: async () => {
                                 return (() => {
-                                  $state.clReservationState = false;
-                                  $state.clAnnouncementState = false;
-                                  $state.clCalculationState = false;
-                                  $state.clOnlinepaymentState = false;
-                                  $state.clApiState = false;
-                                  $state.clEhrState = false;
-                                  $state.clSpecialsiteState = false;
-                                  $state.clDashboardState = false;
-                                  $state.clMainState = false;
-                                  return ($state.clCalculatorStatus = true);
+                                  return document
+                                    .querySelector(".grid_calculator")
+                                    .scrollIntoView({ behavior: "smooth" });
                                 })();
                               }
                             };
@@ -729,7 +722,11 @@ function PlasmicHomepage__RenderFunc(props: {
                 <div
                   data-plasmic-name={"btnReservation"}
                   data-plasmic-override={overrides.btnReservation}
-                  className={classNames(projectcss.all, sty.btnReservation)}
+                  className={classNames(
+                    projectcss.all,
+                    sty.btnReservation,
+                    "grid_reservation"
+                  )}
                   onClick={async event => {
                     const $steps = {};
 
@@ -738,19 +735,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             customFunction: async () => {
                               return (() => {
-                                $state.clReservationState = true;
-                                $state.clAnnouncementState = false;
-                                $state.clCalculationState = false;
-                                $state.clOnlinepaymentState = false;
-                                $state.clApiState = false;
-                                $state.clEhrState = false;
-                                $state.clSpecialsiteState = false;
-                                $state.clDashboardState = false;
-                                $state.clMainState = false;
-                                $state.clCalculatorStatus = false;
-                                $state.clKioskStatus = false;
-                                $state.clPhoneReservationStatus = false;
-                                return ($state.clReferralState = false);
+                                return document
+                                  .querySelector(".grid_reservation0")
+                                  .scrollIntoView({ behavior: "smooth" });
                               })();
                             }
                           };
@@ -797,19 +784,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             customFunction: async () => {
                               return (() => {
-                                $state.clReservationState = false;
-                                $state.clAnnouncementState = false;
-                                $state.clCalculationState = false;
-                                $state.clOnlinepaymentState = false;
-                                $state.clApiState = false;
-                                $state.clEhrState = false;
-                                $state.clSpecialsiteState = false;
-                                $state.clDashboardState = false;
-                                $state.clMainState = false;
-                                $state.clCalculatorStatus = false;
-                                $state.clKioskStatus = false;
-                                $state.clPhoneReservationStatus = true;
-                                return ($state.clReferralState = false);
+                                return document
+                                  .querySelector(".grid_phonereservation")
+                                  .scrollIntoView({ behavior: "smooth" });
                               })();
                             }
                           };
@@ -856,19 +833,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             customFunction: async () => {
                               return (() => {
-                                $state.clReservationState = false;
-                                $state.clAnnouncementState = false;
-                                $state.clCalculationState = false;
-                                $state.clOnlinepaymentState = false;
-                                $state.clApiState = false;
-                                $state.clEhrState = false;
-                                $state.clSpecialsiteState = false;
-                                $state.clDashboardState = false;
-                                $state.clMainState = false;
-                                $state.clCalculatorStatus = false;
-                                $state.clKioskStatus = true;
-                                $state.clPhoneReservationStatus = false;
-                                return ($state.clReferralState = false);
+                                return document
+                                  .querySelector(".grid_kiosk")
+                                  .scrollIntoView({ behavior: "smooth" });
                               })();
                             }
                           };
@@ -915,19 +882,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             customFunction: async () => {
                               return (() => {
-                                $state.clReservationState = false;
-                                $state.clAnnouncementState = true;
-                                $state.clCalculationState = false;
-                                $state.clOnlinepaymentState = false;
-                                $state.clApiState = false;
-                                $state.clEhrState = false;
-                                $state.clSpecialsiteState = false;
-                                $state.clDashboardState = false;
-                                $state.clMainState = false;
-                                $state.clCalculatorStatus = false;
-                                $state.clKioskStatus = false;
-                                $state.clPhoneReservationStatus = false;
-                                return ($state.clReferralState = false);
+                                return document
+                                  .querySelector(".grid_announcement")
+                                  .scrollIntoView({ behavior: "smooth" });
                               })();
                             }
                           };
@@ -972,19 +929,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             customFunction: async () => {
                               return (() => {
-                                $state.clReservationState = false;
-                                $state.clAnnouncementState = false;
-                                $state.clCalculationState = true;
-                                $state.clOnlinepaymentState = false;
-                                $state.clApiState = false;
-                                $state.clEhrState = false;
-                                $state.clSpecialsiteState = false;
-                                $state.clDashboardState = false;
-                                $state.clMainState = false;
-                                $state.clCalculatorStatus = false;
-                                $state.clKioskStatus = false;
-                                $state.clPhoneReservationStatus = false;
-                                return ($state.clReferralState = false);
+                                return document
+                                  .querySelector(".grid_calculation")
+                                  .scrollIntoView({ behavior: "smooth" });
                               })();
                             }
                           };
@@ -1029,19 +976,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             customFunction: async () => {
                               return (() => {
-                                $state.clReservationState = false;
-                                $state.clAnnouncementState = false;
-                                $state.clCalculationState = false;
-                                $state.clOnlinepaymentState = true;
-                                $state.clApiState = false;
-                                $state.clEhrState = false;
-                                $state.clSpecialsiteState = false;
-                                $state.clDashboardState = false;
-                                $state.clMainState = false;
-                                $state.clCalculatorStatus = false;
-                                $state.clKioskStatus = false;
-                                $state.clPhoneReservationStatus = false;
-                                return ($state.clReferralState = false);
+                                return document
+                                  .querySelector(".grid_onlinepayment")
+                                  .scrollIntoView({ behavior: "smooth" });
                               })();
                             }
                           };
@@ -1088,19 +1025,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             customFunction: async () => {
                               return (() => {
-                                $state.clReservationState = false;
-                                $state.clAnnouncementState = false;
-                                $state.clCalculationState = false;
-                                $state.clOnlinepaymentState = false;
-                                $state.clApiState = true;
-                                $state.clEhrState = false;
-                                $state.clSpecialsiteState = false;
-                                $state.clDashboardState = false;
-                                $state.clMainState = false;
-                                $state.clCalculatorStatus = false;
-                                $state.clKioskStatus = false;
-                                $state.clPhoneReservationStatus = false;
-                                return ($state.clReferralState = false);
+                                return document
+                                  .querySelector(".grid_api")
+                                  .scrollIntoView({ behavior: "smooth" });
                               })();
                             }
                           };
@@ -1147,19 +1074,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             customFunction: async () => {
                               return (() => {
-                                $state.clReservationState = false;
-                                $state.clAnnouncementState = false;
-                                $state.clCalculationState = false;
-                                $state.clOnlinepaymentState = false;
-                                $state.clApiState = false;
-                                $state.clEhrState = true;
-                                $state.clSpecialsiteState = false;
-                                $state.clDashboardState = false;
-                                $state.clMainState = false;
-                                $state.clCalculatorStatus = false;
-                                $state.clKioskStatus = false;
-                                $state.clPhoneReservationStatus = false;
-                                return ($state.clReferralState = false);
+                                return document
+                                  .querySelector(".grid_ehr")
+                                  .scrollIntoView({ behavior: "smooth" });
                               })();
                             }
                           };
@@ -1206,19 +1123,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             customFunction: async () => {
                               return (() => {
-                                $state.clReservationState = false;
-                                $state.clAnnouncementState = false;
-                                $state.clCalculationState = false;
-                                $state.clOnlinepaymentState = false;
-                                $state.clApiState = false;
-                                $state.clEhrState = false;
-                                $state.clSpecialsiteState = true;
-                                $state.clDashboardState = false;
-                                $state.clMainState = false;
-                                $state.clCalculatorStatus = false;
-                                $state.clKioskStatus = false;
-                                $state.clPhoneReservationStatus = false;
-                                return ($state.clReferralState = false);
+                                return document
+                                  .querySelector(".grid_specialsite")
+                                  .scrollIntoView({ behavior: "smooth" });
                               })();
                             }
                           };
@@ -1265,19 +1172,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             customFunction: async () => {
                               return (() => {
-                                $state.clReservationState = false;
-                                $state.clAnnouncementState = false;
-                                $state.clCalculationState = false;
-                                $state.clOnlinepaymentState = false;
-                                $state.clApiState = false;
-                                $state.clEhrState = false;
-                                $state.clSpecialsiteState = false;
-                                $state.clDashboardState = false;
-                                $state.clMainState = false;
-                                $state.clCalculatorStatus = false;
-                                $state.clKioskStatus = false;
-                                $state.clPhoneReservationStatus = false;
-                                return ($state.clReferralState = true);
+                                return document
+                                  .querySelector(".grid_referral")
+                                  .scrollIntoView({ behavior: "smooth" });
                               })();
                             }
                           };
@@ -1322,19 +1219,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             customFunction: async () => {
                               return (() => {
-                                $state.clReservationState = false;
-                                $state.clAnnouncementState = false;
-                                $state.clCalculationState = false;
-                                $state.clOnlinepaymentState = false;
-                                $state.clApiState = false;
-                                $state.clEhrState = false;
-                                $state.clSpecialsiteState = false;
-                                $state.clDashboardState = true;
-                                $state.clMainState = false;
-                                $state.clCalculatorStatus = false;
-                                $state.clKioskStatus = false;
-                                $state.clPhoneReservationStatus = false;
-                                return ($state.clReferralState = false);
+                                return document
+                                  .querySelector(".grid_dashboard")
+                                  .scrollIntoView({ behavior: "smooth" });
                               })();
                             }
                           };
@@ -1404,7 +1291,11 @@ function PlasmicHomepage__RenderFunc(props: {
                     }
                   })() ? (
                     <div
-                      className={classNames(projectcss.all, sty.freeBox___6LVp)}
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox___6LVp,
+                        "grid_calculator"
+                      )}
                     >
                       <div
                         className={classNames(
@@ -3791,7 +3682,11 @@ function PlasmicHomepage__RenderFunc(props: {
                 <div
                   data-plasmic-name={"gridReservation"}
                   data-plasmic-override={overrides.gridReservation}
-                  className={classNames(projectcss.all, sty.gridReservation)}
+                  className={classNames(
+                    projectcss.all,
+                    sty.gridReservation,
+                    "grid_reservation0"
+                  )}
                   dir={"rtl"}
                 >
                   <div
@@ -4868,7 +4763,11 @@ function PlasmicHomepage__RenderFunc(props: {
                 <div
                   data-plasmic-name={"gridPhoneReserve"}
                   data-plasmic-override={overrides.gridPhoneReserve}
-                  className={classNames(projectcss.all, sty.gridPhoneReserve)}
+                  className={classNames(
+                    projectcss.all,
+                    sty.gridPhoneReserve,
+                    "grid_phonereservation"
+                  )}
                   dir={"rtl"}
                 >
                   <div
@@ -5428,7 +5327,11 @@ function PlasmicHomepage__RenderFunc(props: {
                 <div
                   data-plasmic-name={"gridKiosk"}
                   data-plasmic-override={overrides.gridKiosk}
-                  className={classNames(projectcss.all, sty.gridKiosk)}
+                  className={classNames(
+                    projectcss.all,
+                    sty.gridKiosk,
+                    "grid_kiosk"
+                  )}
                   dir={"rtl"}
                 >
                   <div
@@ -6618,7 +6521,11 @@ function PlasmicHomepage__RenderFunc(props: {
                 <div
                   data-plasmic-name={"gridCalculation"}
                   data-plasmic-override={overrides.gridCalculation}
-                  className={classNames(projectcss.all, sty.gridCalculation)}
+                  className={classNames(
+                    projectcss.all,
+                    sty.gridCalculation,
+                    "grid_calculation"
+                  )}
                   dir={"rtl"}
                 >
                   <div
@@ -6799,7 +6706,11 @@ function PlasmicHomepage__RenderFunc(props: {
                 <div
                   data-plasmic-name={"gridOnlinePayment"}
                   data-plasmic-override={overrides.gridOnlinePayment}
-                  className={classNames(projectcss.all, sty.gridOnlinePayment)}
+                  className={classNames(
+                    projectcss.all,
+                    sty.gridOnlinePayment,
+                    "grid_onlinepayment"
+                  )}
                   dir={"rtl"}
                 >
                   <div
@@ -6980,7 +6891,11 @@ function PlasmicHomepage__RenderFunc(props: {
                 <div
                   data-plasmic-name={"gridApi"}
                   data-plasmic-override={overrides.gridApi}
-                  className={classNames(projectcss.all, sty.gridApi)}
+                  className={classNames(
+                    projectcss.all,
+                    sty.gridApi,
+                    "grid_api"
+                  )}
                   dir={"rtl"}
                 >
                   <div
@@ -7143,7 +7058,11 @@ function PlasmicHomepage__RenderFunc(props: {
                 <div
                   data-plasmic-name={"gridEhr"}
                   data-plasmic-override={overrides.gridEhr}
-                  className={classNames(projectcss.all, sty.gridEhr)}
+                  className={classNames(
+                    projectcss.all,
+                    sty.gridEhr,
+                    "grid_ehr"
+                  )}
                   dir={"rtl"}
                 >
                   <div
@@ -7370,7 +7289,11 @@ function PlasmicHomepage__RenderFunc(props: {
                 <div
                   data-plasmic-name={"gridSpecialSite"}
                   data-plasmic-override={overrides.gridSpecialSite}
-                  className={classNames(projectcss.all, sty.gridSpecialSite)}
+                  className={classNames(
+                    projectcss.all,
+                    sty.gridSpecialSite,
+                    "grid_specialsite"
+                  )}
                   dir={"rtl"}
                 >
                   <div
@@ -7551,7 +7474,11 @@ function PlasmicHomepage__RenderFunc(props: {
                 <div
                   data-plasmic-name={"gridReferral"}
                   data-plasmic-override={overrides.gridReferral}
-                  className={classNames(projectcss.all, sty.gridReferral)}
+                  className={classNames(
+                    projectcss.all,
+                    sty.gridReferral,
+                    "grid_referral"
+                  )}
                   dir={"rtl"}
                 >
                   <div
@@ -7701,7 +7628,11 @@ function PlasmicHomepage__RenderFunc(props: {
                 <div
                   data-plasmic-name={"gridDashboard"}
                   data-plasmic-override={overrides.gridDashboard}
-                  className={classNames(projectcss.all, sty.gridDashboard)}
+                  className={classNames(
+                    projectcss.all,
+                    sty.gridDashboard,
+                    "grid_dashboard"
+                  )}
                   dir={"rtl"}
                 >
                   <div
