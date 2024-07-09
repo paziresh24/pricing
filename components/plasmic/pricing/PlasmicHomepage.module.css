@@ -271,7 +271,7 @@
   cursor: pointer;
   min-width: 0;
   border-radius: 10px;
-  padding: 8px;
+  padding: 3px;
 }
 .btnReservation > :global(.__wab_flex-container) {
   flex-direction: column;
@@ -320,7 +320,7 @@
   object-fit: cover;
   max-width: 100%;
   color: #3f4079;
-  height: 35px;
+  height: 30px;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -356,7 +356,7 @@
   cursor: pointer;
   min-width: 0;
   border-radius: 10px;
-  padding: 8px;
+  padding: 3px;
 }
 .btnReservation3 > :global(.__wab_flex-container) {
   flex-direction: column;
@@ -405,7 +405,7 @@
   object-fit: cover;
   max-width: 100%;
   color: #3f4079;
-  height: 35px;
+  height: 30px;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -449,7 +449,7 @@
   cursor: pointer;
   min-width: 0;
   border-radius: 10px;
-  padding: 8px;
+  padding: 3px;
 }
 .btnReservation2 > :global(.__wab_flex-container) {
   flex-direction: column;
@@ -498,7 +498,7 @@
   object-fit: cover;
   max-width: 100%;
   color: #3f4079;
-  height: 35px;
+  height: 30px;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -542,7 +542,7 @@
   cursor: pointer;
   min-width: 0;
   border-radius: 10px;
-  padding: 8px;
+  padding: 3px;
 }
 .btnAnnouncement > :global(.__wab_flex-container) {
   flex-direction: column;
@@ -591,7 +591,7 @@
   object-fit: cover;
   max-width: 100%;
   color: #3f4079;
-  height: 35px;
+  height: 30px;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -636,7 +636,7 @@
   box-shadow: 1px 1px 1px 1px #3f4079d9;
   min-width: 0;
   border-radius: 10px;
-  padding: 8px;
+  padding: 3px;
 }
 .btnCalculation > :global(.__wab_flex-container) {
   flex-direction: column;
@@ -685,7 +685,7 @@
   object-fit: cover;
   max-width: 100%;
   color: #3f4079;
-  height: 35px;
+  height: 30px;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -732,7 +732,7 @@
   box-shadow: 1px 1px 1px 1px #3f4079d9;
   min-width: 0;
   border-radius: 10px;
-  padding: 8px;
+  padding: 3px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .btnOnlinepayment {
@@ -755,7 +755,7 @@
   object-fit: cover;
   max-width: 100%;
   color: #3f4079;
-  height: 35px;
+  height: 30px;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -800,7 +800,7 @@
   box-shadow: 1px 1px 1px 1px #3f4079d9;
   min-width: 0;
   border-radius: 10px;
-  padding: 8px;
+  padding: 3px;
 }
 .btnApi > :global(.__wab_flex-container) {
   flex-direction: column;
@@ -849,7 +849,7 @@
   object-fit: cover;
   max-width: 100%;
   color: #3f4079;
-  height: 35px;
+  height: 30px;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -894,7 +894,7 @@
   box-shadow: 1px 1px 1px 1px #3f4079d9;
   min-width: 0;
   border-radius: 10px;
-  padding: 8px;
+  padding: 3px;
 }
 .btnEhr > :global(.__wab_flex-container) {
   flex-direction: column;
@@ -943,7 +943,7 @@
   object-fit: cover;
   max-width: 100%;
   color: #3f4079;
-  height: 35px;
+  height: 30px;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -988,7 +988,7 @@
   box-shadow: 1px 1px 1px 1px #3f4079d9;
   min-width: 0;
   border-radius: 10px;
-  padding: 8px;
+  padding: 3px;
 }
 .btnSpecialsite > :global(.__wab_flex-container) {
   flex-direction: column;
@@ -1037,7 +1037,7 @@
   object-fit: cover;
   max-width: 100%;
   color: #3f4079;
-  height: 35px;
+  height: 30px;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -1082,7 +1082,7 @@
   box-shadow: 1px 1px 1px 1px #3f4079d9;
   min-width: 0;
   border-radius: 10px;
-  padding: 8px;
+  padding: 3px;
 }
 .btnSpecialsite2 > :global(.__wab_flex-container) {
   flex-direction: column;
@@ -1131,7 +1131,7 @@
   object-fit: cover;
   max-width: 100%;
   color: #3f4079;
-  height: 35px;
+  height: 30px;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -1176,7 +1176,7 @@
   box-shadow: 1px 1px 1px 1px #3f4079d9;
   min-width: 0;
   border-radius: 10px;
-  padding: 8px;
+  padding: 3px;
 }
 .btnDashboard > :global(.__wab_flex-container) {
   flex-direction: column;
@@ -1225,7 +1225,7 @@
   object-fit: cover;
   max-width: 100%;
   color: #3f4079;
-  height: 35px;
+  height: 30px;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
