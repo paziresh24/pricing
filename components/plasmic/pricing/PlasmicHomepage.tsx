@@ -520,6 +520,12 @@ function PlasmicHomepage__RenderFunc(props: {
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => true
+      },
+      {
+        path: "btnFixedCalculatorStatus",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       }
     ],
     [$props, $ctx, $refs]
@@ -7850,73 +7856,90 @@ function PlasmicHomepage__RenderFunc(props: {
             </section>
             <div className={classNames(projectcss.all, sty.freeBox__xLvZl)}>
               <div className={classNames(projectcss.all, sty.freeBox__iY0Jl)}>
-                {(() => {
-                  try {
-                    return true;
-                  } catch (e) {
+                <div
+                  data-plasmic-name={"btnFixedCalculator"}
+                  data-plasmic-override={overrides.btnFixedCalculator}
+                  className={classNames(projectcss.all, sty.btnFixedCalculator)}
+                  id={"btn_fixedCalculator"}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return document
+                                .querySelector(".grid_calculator")
+                                .scrollIntoView({ behavior: "smooth" });
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
                     if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
                     ) {
-                      return true;
+                      $steps["runCode"] = await $steps["runCode"];
                     }
-                    throw e;
-                  }
-                })() ? (
+
+                    $steps["updateBtnFixedCalculatorStatus"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["btnFixedCalculatorStatus"]
+                            },
+                            operation: 0,
+                            value: false
+                          };
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
+                            }
+                            const { objRoot, variablePath } = variable;
+
+                            $stateSet(objRoot, variablePath, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateBtnFixedCalculatorStatus"] != null &&
+                      typeof $steps["updateBtnFixedCalculatorStatus"] ===
+                        "object" &&
+                      typeof $steps["updateBtnFixedCalculatorStatus"].then ===
+                        "function"
+                    ) {
+                      $steps["updateBtnFixedCalculatorStatus"] = await $steps[
+                        "updateBtnFixedCalculatorStatus"
+                      ];
+                    }
+                  }}
+                >
+                  <Icon6Icon
+                    className={classNames(projectcss.all, sty.svg__wEuf2)}
+                    role={"img"}
+                  />
+
                   <div
-                    data-plasmic-name={"btnFixedCalculator"}
-                    data-plasmic-override={overrides.btnFixedCalculator}
                     className={classNames(
                       projectcss.all,
-                      sty.btnFixedCalculator
+                      projectcss.__wab_text,
+                      sty.text__xeo1P
                     )}
-                    id={"btn_fixedCalculator"}
-                    onClick={async event => {
-                      const $steps = {};
-
-                      $steps["runCode"] = true
-                        ? (() => {
-                            const actionArgs = {
-                              customFunction: async () => {
-                                return (() => {
-                                  return document
-                                    .querySelector(".grid_calculator")
-                                    .scrollIntoView({ behavior: "smooth" });
-                                })();
-                              }
-                            };
-                            return (({ customFunction }) => {
-                              return customFunction();
-                            })?.apply(null, [actionArgs]);
-                          })()
-                        : undefined;
-                      if (
-                        $steps["runCode"] != null &&
-                        typeof $steps["runCode"] === "object" &&
-                        typeof $steps["runCode"].then === "function"
-                      ) {
-                        $steps["runCode"] = await $steps["runCode"];
-                      }
-                    }}
                   >
-                    <Icon6Icon
-                      className={classNames(projectcss.all, sty.svg__wEuf2)}
-                      role={"img"}
-                    />
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__xeo1P
-                      )}
-                    >
-                      {
-                        "\u0645\u0627\u0634\u06cc\u0646 \u062d\u0633\u0627\u0628"
-                      }
-                    </div>
+                    {"\u0645\u0627\u0634\u06cc\u0646 \u062d\u0633\u0627\u0628"}
                   </div>
-                ) : null}
+                </div>
               </div>
             </div>
           </div>

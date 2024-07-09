@@ -7216,8 +7216,9 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .btnFixedCalculator {
-    padding-right: 0px;
-    padding-left: 0px;
+    padding-right: 3px;
+    padding-left: 3px;
+    box-shadow: 1px 1px 0px 0px #3f4079d9;
   }
 }
 .svg__wEuf2 {
@@ -7230,7 +7231,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .svg__wEuf2 {
-    height: 30px;
+    height: 20px;
     flex-shrink: 0;
   }
 }
