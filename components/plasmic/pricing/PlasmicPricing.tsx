@@ -312,7 +312,7 @@ function PlasmicPricing__RenderFunc(props: {
                         const actionArgs = {
                           args: [
                             undefined,
-                            "https://apigw.paziresh24.com/v1/auth/me"
+                            "https://api.paziresh24.com/V1/auth/me"
                           ]
                         };
                         return $globalActions["Fragment.apiRequest"]?.apply(

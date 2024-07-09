@@ -17,15 +17,12 @@ export interface GlobalContextsProviderProps {
   antdConfigProviderProps?: Partial<
     Omit<React.ComponentProps<typeof AntdConfigProvider>, "children">
   >;
-
   fragmentProps?: Partial<
     Omit<React.ComponentProps<typeof Fragment>, "children">
   >;
-
   growthBookProps?: Partial<
     Omit<React.ComponentProps<typeof GrowthBook>, "children">
   >;
-
   splunkProps?: Partial<Omit<React.ComponentProps<typeof Splunk>, "children">>;
   embedCssProps?: Partial<
     Omit<React.ComponentProps<typeof EmbedCss>, "children">
@@ -142,7 +139,7 @@ export default function GlobalContextsProvider(
         apiConfig={
           fragmentProps && "apiConfig" in fragmentProps
             ? fragmentProps.apiConfig!
-            : undefined
+            : { withCredentials: true }
         }
         previewApiConfig={
           fragmentProps && "previewApiConfig" in fragmentProps
