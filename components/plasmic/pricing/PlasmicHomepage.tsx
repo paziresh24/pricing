@@ -3246,7 +3246,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                         ? ($state.dashboardResult =
                                             $state.dashboardPrice *
                                             $state.txtResevationCount.value)
-                                        : ($state.referralResult = 0);
+                                        : ($state.dashboardResult = 0);
                                       $state.referralCheck.isChecked
                                         ? ($state.referralResult =
                                             $state.referralPrice *
