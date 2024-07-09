@@ -61,6 +61,7 @@ import {
 
 import MenuFeature from "../../MenuFeature"; // plasmic-import: 0FMc41XIUA0C/component
 import Button from "../../Button"; // plasmic-import: oVzoHzMf1TLl/component
+import { SideEffect } from "@plasmicpkgs/plasmic-basic-components";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -94,6 +95,7 @@ export type PlasmicPricing__OverridesType = {
   h2?: Flex__<"h2">;
   text?: Flex__<"div">;
   button?: Flex__<typeof Button>;
+  sideEffectCheckUser?: Flex__<typeof SideEffect>;
 };
 
 export interface DefaultPricingProps {}
@@ -126,6 +128,26 @@ function PlasmicPricing__RenderFunc(props: {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+
+  const $globalActions = useGlobalActions?.();
+
+  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
+    () => [
+      {
+        path: "user",
+        type: "private",
+        variableType: "object",
+        initFunc: ({ $props, $state, $queries, $ctx }) => ({})
+      }
+    ],
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $refs
+  });
 
   return (
     <React.Fragment>
@@ -275,6 +297,97 @@ function PlasmicPricing__RenderFunc(props: {
                   }}
                 />
               </section>
+              <SideEffect
+                data-plasmic-name={"sideEffectCheckUser"}
+                data-plasmic-override={overrides.sideEffectCheckUser}
+                className={classNames(
+                  "__wab_instance",
+                  sty.sideEffectCheckUser
+                )}
+                onMount={async () => {
+                  const $steps = {};
+
+                  $steps["getUser"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          args: [
+                            undefined,
+                            "https://apigw.paziresh24.com/v1/auth/me"
+                          ]
+                        };
+                        return $globalActions["Fragment.apiRequest"]?.apply(
+                          null,
+                          [...actionArgs.args]
+                        );
+                      })()
+                    : undefined;
+                  if (
+                    $steps["getUser"] != null &&
+                    typeof $steps["getUser"] === "object" &&
+                    typeof $steps["getUser"].then === "function"
+                  ) {
+                    $steps["getUser"] = await $steps["getUser"];
+                  }
+
+                  $steps["updateUser"] =
+                    $steps.getUser.status == 200
+                      ? (() => {
+                          const actionArgs = {
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["user"]
+                            },
+                            operation: 0,
+                            value: $steps.getUser.data.users[0]
+                          };
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
+                            }
+                            const { objRoot, variablePath } = variable;
+
+                            $stateSet(objRoot, variablePath, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                  if (
+                    $steps["updateUser"] != null &&
+                    typeof $steps["updateUser"] === "object" &&
+                    typeof $steps["updateUser"].then === "function"
+                  ) {
+                    $steps["updateUser"] = await $steps["updateUser"];
+                  }
+
+                  $steps["updateUser2"] =
+                    $steps.getUser.status == 200
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return (() => {
+                                return alert($steps.getUser.data.users[0]);
+                              })();
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                  if (
+                    $steps["updateUser2"] != null &&
+                    typeof $steps["updateUser2"] === "object" &&
+                    typeof $steps["updateUser2"].then === "function"
+                  ) {
+                    $steps["updateUser2"] = await $steps["updateUser2"];
+                  }
+                }}
+              />
             </section>
           </section>
         </div>
@@ -284,14 +397,25 @@ function PlasmicPricing__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox", "svg", "h1", "menuFeature", "h2", "text", "button"],
+  root: [
+    "root",
+    "freeBox",
+    "svg",
+    "h1",
+    "menuFeature",
+    "h2",
+    "text",
+    "button",
+    "sideEffectCheckUser"
+  ],
   freeBox: ["freeBox", "svg", "h1"],
   svg: ["svg"],
   h1: ["h1"],
   menuFeature: ["menuFeature"],
   h2: ["h2"],
   text: ["text"],
-  button: ["button"]
+  button: ["button"],
+  sideEffectCheckUser: ["sideEffectCheckUser"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -305,6 +429,7 @@ type NodeDefaultElementType = {
   h2: "h2";
   text: "div";
   button: typeof Button;
+  sideEffectCheckUser: typeof SideEffect;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -374,6 +499,7 @@ export const PlasmicPricing = Object.assign(
     h2: makeNodeComponent("h2"),
     text: makeNodeComponent("text"),
     button: makeNodeComponent("button"),
+    sideEffectCheckUser: makeNodeComponent("sideEffectCheckUser"),
 
     // Metadata about props expected for PlasmicPricing
     internalVariantProps: PlasmicPricing__VariantProps,
