@@ -7219,6 +7219,7 @@
     padding-right: 3px;
     padding-left: 3px;
     box-shadow: 1px 1px 0px 0px #3f4079d9;
+    margin-left: 10px;
   }
 }
 .svg__wEuf2 {
@@ -7231,7 +7232,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .svg__wEuf2 {
-    height: 20px;
+    height: 25px;
     flex-shrink: 0;
   }
 }
@@ -7248,6 +7249,6 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .text__xeo1P {
-    font-size: 6px;
+    font-size: 10px;
   }
 }
