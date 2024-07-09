@@ -739,6 +739,11 @@
           "id": "2mpvjEcDOPA5",
           "name": "image",
           "filePath": "../public/plasmic/pricing/images/image.svg"
+        },
+        {
+          "id": "-ntPJdjA0KGE",
+          "name": "logo.5e03fe79.svg",
+          "filePath": "../public/plasmic/pricing/images/logo5E03Fe79Svg.svg"
         }
       ],
       "indirect": false,
