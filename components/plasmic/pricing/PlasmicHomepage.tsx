@@ -158,6 +158,7 @@ export type PlasmicHomepage__OverridesType = {
   gridSpecialSite?: Flex__<"div">;
   gridReferral?: Flex__<"div">;
   gridDashboard?: Flex__<"div">;
+  btnFixedCalculator?: Flex__<"div">;
 };
 
 export interface DefaultHomepageProps {}
@@ -7847,6 +7848,77 @@ function PlasmicHomepage__RenderFunc(props: {
                 </div>
               ) : null}
             </section>
+            <div className={classNames(projectcss.all, sty.freeBox__xLvZl)}>
+              <div className={classNames(projectcss.all, sty.freeBox__iY0Jl)}>
+                {(() => {
+                  try {
+                    return true;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return true;
+                    }
+                    throw e;
+                  }
+                })() ? (
+                  <div
+                    data-plasmic-name={"btnFixedCalculator"}
+                    data-plasmic-override={overrides.btnFixedCalculator}
+                    className={classNames(
+                      projectcss.all,
+                      sty.btnFixedCalculator
+                    )}
+                    id={"btn_fixedCalculator"}
+                    onClick={async event => {
+                      const $steps = {};
+
+                      $steps["runCode"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              customFunction: async () => {
+                                return (() => {
+                                  return document
+                                    .querySelector(".grid_calculator")
+                                    .scrollIntoView({ behavior: "smooth" });
+                                })();
+                              }
+                            };
+                            return (({ customFunction }) => {
+                              return customFunction();
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["runCode"] != null &&
+                        typeof $steps["runCode"] === "object" &&
+                        typeof $steps["runCode"].then === "function"
+                      ) {
+                        $steps["runCode"] = await $steps["runCode"];
+                      }
+                    }}
+                  >
+                    <Icon6Icon
+                      className={classNames(projectcss.all, sty.svg__wEuf2)}
+                      role={"img"}
+                    />
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__xeo1P
+                      )}
+                    >
+                      {
+                        "\u0645\u0627\u0634\u06cc\u0646 \u062d\u0633\u0627\u0628"
+                      }
+                    </div>
+                  </div>
+                ) : null}
+              </div>
+            </div>
           </div>
         ) : null}
       </div>
@@ -7908,7 +7980,8 @@ const PlasmicDescendants = {
     "gridEhr",
     "gridSpecialSite",
     "gridReferral",
-    "gridDashboard"
+    "gridDashboard",
+    "btnFixedCalculator"
   ],
   h1: ["h1"],
   btnDashboard3: ["btnDashboard3"],
@@ -7990,7 +8063,8 @@ const PlasmicDescendants = {
   gridEhr: ["gridEhr"],
   gridSpecialSite: ["gridSpecialSite"],
   gridReferral: ["gridReferral"],
-  gridDashboard: ["gridDashboard"]
+  gridDashboard: ["gridDashboard"],
+  btnFixedCalculator: ["btnFixedCalculator"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -8049,6 +8123,7 @@ type NodeDefaultElementType = {
   gridSpecialSite: "div";
   gridReferral: "div";
   gridDashboard: "div";
+  btnFixedCalculator: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -8165,6 +8240,7 @@ export const PlasmicHomepage = Object.assign(
     gridSpecialSite: makeNodeComponent("gridSpecialSite"),
     gridReferral: makeNodeComponent("gridReferral"),
     gridDashboard: makeNodeComponent("gridDashboard"),
+    btnFixedCalculator: makeNodeComponent("btnFixedCalculator"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
