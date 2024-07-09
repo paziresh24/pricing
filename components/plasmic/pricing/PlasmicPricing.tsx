@@ -329,6 +329,35 @@ function PlasmicPricing__RenderFunc(props: {
                     $steps["getUser"] = await $steps["getUser"];
                   }
 
+                  $steps["login"] =
+                    $steps.getUser.status !== 200
+                      ? (() => {
+                          const actionArgs = {
+                            destination:
+                              "https://www.paziresh24.com/login/?redirect_url=https://pricing.paziresh24.com/"
+                          };
+                          return (({ destination }) => {
+                            if (
+                              typeof destination === "string" &&
+                              destination.startsWith("#")
+                            ) {
+                              document
+                                .getElementById(destination.substr(1))
+                                .scrollIntoView({ behavior: "smooth" });
+                            } else {
+                              __nextRouter?.push(destination);
+                            }
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                  if (
+                    $steps["login"] != null &&
+                    typeof $steps["login"] === "object" &&
+                    typeof $steps["login"].then === "function"
+                  ) {
+                    $steps["login"] = await $steps["login"];
+                  }
+
                   $steps["updateUser"] =
                     $steps.getUser.status == 200
                       ? (() => {
@@ -369,9 +398,7 @@ function PlasmicPricing__RenderFunc(props: {
                       ? (() => {
                           const actionArgs = {
                             customFunction: async () => {
-                              return (() => {
-                                return alert($steps.getUser.data.users[0]);
-                              })();
+                              return alert($steps.getUser.data.users[0]);
                             }
                           };
                           return (({ customFunction }) => {
