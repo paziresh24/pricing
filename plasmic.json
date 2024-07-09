@@ -349,19 +349,6 @@
       "cssFilePath": "plasmic/fragment_design_system/plasmic.module.css",
       "components": [
         {
-          "id": "Rg8wZ0CpGCye",
-          "name": "RtlProvider",
-          "type": "managed",
-          "projectId": "h9Dbk9ygddw7UVEq1NNhKi",
-          "renderModuleFilePath": "plasmic/fragment_design_system/PlasmicRtlProvider.tsx",
-          "importSpec": {
-            "modulePath": "RtlProvider.tsx"
-          },
-          "cssFilePath": "plasmic/fragment_design_system/PlasmicRtlProvider.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
           "id": "3i84rYjQRrs4",
           "name": "Avatar",
           "type": "managed",
@@ -481,8 +468,7 @@
           "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "seYsnBL1P3AiXaFGNEMUUM",
