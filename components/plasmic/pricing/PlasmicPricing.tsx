@@ -334,7 +334,7 @@ function PlasmicPricing__RenderFunc(props: {
                       ? (() => {
                           const actionArgs = {
                             destination:
-                              "https://www.paziresh24.com/login/?redirect_url=https://pricing.paziresh24.com/"
+                              "https://www.paziresh24.com/login/?redirect_url=https://pricing.paziresh24.com/pricing"
                           };
                           return (({ destination }) => {
                             if (
