@@ -77,7 +77,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "oBJtsp5RgVpcN6KCrDTuQT",
@@ -217,7 +218,8 @@
           "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "sqPBLwEBBKHA2WDuGb17eV",
@@ -307,7 +309,8 @@
           "componentImportPath": "@plasmicpkgs/radix-ui"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "8PtdGodUbexNYgkuyBUcWu",
@@ -329,7 +332,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-embed-css"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "h9Dbk9ygddw7UVEq1NNhKi",
@@ -458,7 +462,8 @@
           "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "seYsnBL1P3AiXaFGNEMUUM",
@@ -708,6 +713,11 @@
           "id": "wgGgWP4KVX41",
           "name": "Icon16Icon",
           "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__Icon16.tsx"
+        },
+        {
+          "id": "j9YlsTC9FYO_",
+          "name": "Icon17Icon",
+          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__Icon17.tsx"
         }
       ],
       "images": [

@@ -537,7 +537,7 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "btnLoginShow",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => true
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       }
     ],
     [$props, $ctx, $refs]
@@ -8138,8 +8138,8 @@ function PlasmicHomepage__RenderFunc(props: {
                   $steps["updateUser2"] = await $steps["updateUser2"];
                 }
 
-                $steps["updateUser3"] =
-                  $steps.checkUser.status == 200
+                $steps["updateUser4"] =
+                  $steps.checkUser.status != 200
                     ? (() => {
                         const actionArgs = {
                           variable: {
@@ -8147,7 +8147,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             variablePath: ["btnLoginShow"]
                           },
                           operation: 0,
-                          value: false
+                          value: true
                         };
                         return (({
                           variable,
@@ -8166,11 +8166,11 @@ function PlasmicHomepage__RenderFunc(props: {
                       })()
                     : undefined;
                 if (
-                  $steps["updateUser3"] != null &&
-                  typeof $steps["updateUser3"] === "object" &&
-                  typeof $steps["updateUser3"].then === "function"
+                  $steps["updateUser4"] != null &&
+                  typeof $steps["updateUser4"] === "object" &&
+                  typeof $steps["updateUser4"].then === "function"
                 ) {
-                  $steps["updateUser3"] = await $steps["updateUser3"];
+                  $steps["updateUser4"] = await $steps["updateUser4"];
                 }
               }}
             />
