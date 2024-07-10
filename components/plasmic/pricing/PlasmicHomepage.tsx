@@ -108,6 +108,7 @@ export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
   h1?: Flex__<"h1">;
   btnDashboard3?: Flex__<"div">;
+  lblUser?: Flex__<"div">;
   btnReservation?: Flex__<"div">;
   btnReservation3?: Flex__<"div">;
   btnReservation2?: Flex__<"div">;
@@ -159,6 +160,7 @@ export type PlasmicHomepage__OverridesType = {
   gridReferral?: Flex__<"div">;
   gridDashboard?: Flex__<"div">;
   btnFixedCalculator?: Flex__<"div">;
+  sideEffectPageLoad?: Flex__<typeof SideEffect>;
 };
 
 export interface DefaultHomepageProps {}
@@ -526,6 +528,12 @@ function PlasmicHomepage__RenderFunc(props: {
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "txtUserName",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => ""
       }
     ],
     [$props, $ctx, $refs]
@@ -739,6 +747,33 @@ function PlasmicHomepage__RenderFunc(props: {
                         "\u0645\u0627\u0634\u06cc\u0646 \u062d\u0633\u0627\u0628"
                       }
                     </div>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__w4DUt)}>
+                  <div
+                    data-plasmic-name={"lblUser"}
+                    data-plasmic-override={overrides.lblUser}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.lblUser
+                    )}
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $state.txtUserName;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
                   </div>
                 </div>
               </div>
@@ -7968,6 +8003,106 @@ function PlasmicHomepage__RenderFunc(props: {
                 </div>
               </div>
             </div>
+            <SideEffect
+              data-plasmic-name={"sideEffectPageLoad"}
+              data-plasmic-override={overrides.sideEffectPageLoad}
+              className={classNames("__wab_instance", sty.sideEffectPageLoad)}
+              onMount={async () => {
+                const $steps = {};
+
+                $steps["checkUser"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        args: [
+                          undefined,
+                          "https://apigw.paziresh24.com/v1/auth/me"
+                        ]
+                      };
+                      return $globalActions["Fragment.apiRequest"]?.apply(
+                        null,
+                        [...actionArgs.args]
+                      );
+                    })()
+                  : undefined;
+                if (
+                  $steps["checkUser"] != null &&
+                  typeof $steps["checkUser"] === "object" &&
+                  typeof $steps["checkUser"].then === "function"
+                ) {
+                  $steps["checkUser"] = await $steps["checkUser"];
+                }
+
+                $steps["updateUser"] =
+                  $steps.checkUser.status == 200
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["user"]
+                          },
+                          operation: 0,
+                          value: $steps.checkUser.data.users[0]
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+
+                          $stateSet(objRoot, variablePath, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                if (
+                  $steps["updateUser"] != null &&
+                  typeof $steps["updateUser"] === "object" &&
+                  typeof $steps["updateUser"].then === "function"
+                ) {
+                  $steps["updateUser"] = await $steps["updateUser"];
+                }
+
+                $steps["updateUser2"] =
+                  $steps.checkUser.status == 200
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["txtUserName"]
+                          },
+                          operation: 0,
+                          value: $state.user.name + " " + $state.user.family
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+
+                          $stateSet(objRoot, variablePath, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                if (
+                  $steps["updateUser2"] != null &&
+                  typeof $steps["updateUser2"] === "object" &&
+                  typeof $steps["updateUser2"].then === "function"
+                ) {
+                  $steps["updateUser2"] = await $steps["updateUser2"];
+                }
+              }}
+            />
           </div>
         ) : null}
       </div>
@@ -7980,6 +8115,7 @@ const PlasmicDescendants = {
     "root",
     "h1",
     "btnDashboard3",
+    "lblUser",
     "btnReservation",
     "btnReservation3",
     "btnReservation2",
@@ -8030,10 +8166,12 @@ const PlasmicDescendants = {
     "gridSpecialSite",
     "gridReferral",
     "gridDashboard",
-    "btnFixedCalculator"
+    "btnFixedCalculator",
+    "sideEffectPageLoad"
   ],
   h1: ["h1"],
   btnDashboard3: ["btnDashboard3"],
+  lblUser: ["lblUser"],
   btnReservation: ["btnReservation"],
   btnReservation3: ["btnReservation3"],
   btnReservation2: ["btnReservation2"],
@@ -8113,7 +8251,8 @@ const PlasmicDescendants = {
   gridSpecialSite: ["gridSpecialSite"],
   gridReferral: ["gridReferral"],
   gridDashboard: ["gridDashboard"],
-  btnFixedCalculator: ["btnFixedCalculator"]
+  btnFixedCalculator: ["btnFixedCalculator"],
+  sideEffectPageLoad: ["sideEffectPageLoad"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -8122,6 +8261,7 @@ type NodeDefaultElementType = {
   root: "div";
   h1: "h1";
   btnDashboard3: "div";
+  lblUser: "div";
   btnReservation: "div";
   btnReservation3: "div";
   btnReservation2: "div";
@@ -8173,6 +8313,7 @@ type NodeDefaultElementType = {
   gridReferral: "div";
   gridDashboard: "div";
   btnFixedCalculator: "div";
+  sideEffectPageLoad: typeof SideEffect;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -8237,6 +8378,7 @@ export const PlasmicHomepage = Object.assign(
     // Helper components rendering sub-elements
     h1: makeNodeComponent("h1"),
     btnDashboard3: makeNodeComponent("btnDashboard3"),
+    lblUser: makeNodeComponent("lblUser"),
     btnReservation: makeNodeComponent("btnReservation"),
     btnReservation3: makeNodeComponent("btnReservation3"),
     btnReservation2: makeNodeComponent("btnReservation2"),
@@ -8290,6 +8432,7 @@ export const PlasmicHomepage = Object.assign(
     gridReferral: makeNodeComponent("gridReferral"),
     gridDashboard: makeNodeComponent("gridDashboard"),
     btnFixedCalculator: makeNodeComponent("btnFixedCalculator"),
+    sideEffectPageLoad: makeNodeComponent("sideEffectPageLoad"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
