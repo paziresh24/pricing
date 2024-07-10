@@ -315,7 +315,7 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "reservationCheck.isChecked",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => "isChecked"
       },
       {
         path: "reservationPhoneCheck.isChecked",
@@ -1630,6 +1630,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                   "isChecked"
                                 ]) ?? false
                               }
+                              isDisabled={true}
                               onChange={(...eventArgs) => {
                                 generateStateOnChangeProp($state, [
                                   "reservationCheck",
@@ -1645,7 +1646,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                 )}
                               >
                                 {
-                                  "\u0645\u0627\u0698\u0648\u0644 \u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u067e\u0627\u06cc\u0647"
+                                  "\u0645\u0627\u0698\u0648\u0644 \u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u067e\u0627\u06cc\u0647 (\u0627\u0644\u0632\u0627\u0645\u06cc)"
                                 }
                               </div>
                               <div
