@@ -146,6 +146,7 @@ export type PlasmicHomepage__OverridesType = {
   txtDashboardResult?: Flex__<"div">;
   txtSumInvoice?: Flex__<"div">;
   sideEffectCalculator?: Flex__<typeof SideEffect>;
+  link?: Flex__<"a"> & Partial<LinkProps>;
   gridReservation?: Flex__<"div">;
   gridPhoneReserve?: Flex__<"div">;
   gridKiosk?: Flex__<"div">;
@@ -777,42 +778,32 @@ function PlasmicHomepage__RenderFunc(props: {
                       })()}
                     </React.Fragment>
                   </div>
-                  <PlasmicLink__
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      sty.link__b4SzU
-                    )}
-                    component={Link}
-                    platform={"nextjs"}
-                  >
-                    {(() => {
-                      try {
-                        return $state.btnLoginShow;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return true;
-                        }
-                        throw e;
+                  {(() => {
+                    try {
+                      return $state.btnLoginShow;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
                       }
-                    })() ? (
-                      <Button
-                        data-plasmic-name={"btnLogin"}
-                        data-plasmic-override={overrides.btnLogin}
-                        children2={
-                          "\u0648\u0631\u0648\u062f \u0628\u0647 \u062d\u0633\u0627\u0628 \u06a9\u0627\u0631\u0628\u0631\u06cc"
-                        }
-                        className={classNames("__wab_instance", sty.btnLogin)}
-                        link={
-                          "https://www.paziresh24.com/login/?redirect_url=https://pricing.paziresh24.com/"
-                        }
-                        outline={true}
-                      />
-                    ) : null}
-                  </PlasmicLink__>
+                      throw e;
+                    }
+                  })() ? (
+                    <Button
+                      data-plasmic-name={"btnLogin"}
+                      data-plasmic-override={overrides.btnLogin}
+                      children2={
+                        "\u0648\u0631\u0648\u062f \u0628\u0647 \u062d\u0633\u0627\u0628 \u06a9\u0627\u0631\u0628\u0631\u06cc"
+                      }
+                      className={classNames("__wab_instance", sty.btnLogin)}
+                      link={
+                        "https://www.paziresh24.com/login/?redirect_url=https://pricing.paziresh24.com/"
+                      }
+                      outline={true}
+                    />
+                  ) : null}
                 </div>
               </div>
             </Stack__>
@@ -3769,11 +3760,13 @@ function PlasmicHomepage__RenderFunc(props: {
                           )}
                         >
                           <PlasmicLink__
+                            data-plasmic-name={"link"}
+                            data-plasmic-override={overrides.link}
                             className={classNames(
                               projectcss.all,
                               projectcss.a,
                               projectcss.__wab_text,
-                              sty.link__dc5Eu
+                              sty.link
                             )}
                             component={Link}
                             href={"https://www.paziresh24.com/home/contact-us/"}
@@ -8226,6 +8219,7 @@ const PlasmicDescendants = {
     "txtDashboardResult",
     "txtSumInvoice",
     "sideEffectCalculator",
+    "link",
     "gridReservation",
     "gridPhoneReserve",
     "gridKiosk",
@@ -8282,7 +8276,8 @@ const PlasmicDescendants = {
     "dashboardCheck",
     "txtDashboardResult",
     "txtSumInvoice",
-    "sideEffectCalculator"
+    "sideEffectCalculator",
+    "link"
   ],
   fragmentSlider: ["fragmentSlider"],
   txtResevationCount: ["txtResevationCount"],
@@ -8310,6 +8305,7 @@ const PlasmicDescendants = {
   txtDashboardResult: ["txtDashboardResult"],
   txtSumInvoice: ["txtSumInvoice"],
   sideEffectCalculator: ["sideEffectCalculator"],
+  link: ["link"],
   gridReservation: ["gridReservation"],
   gridPhoneReserve: ["gridPhoneReserve"],
   gridKiosk: ["gridKiosk"],
@@ -8371,6 +8367,7 @@ type NodeDefaultElementType = {
   txtDashboardResult: "div";
   txtSumInvoice: "div";
   sideEffectCalculator: typeof SideEffect;
+  link: "a";
   gridReservation: "div";
   gridPhoneReserve: "div";
   gridKiosk: "div";
@@ -8490,6 +8487,7 @@ export const PlasmicHomepage = Object.assign(
     txtDashboardResult: makeNodeComponent("txtDashboardResult"),
     txtSumInvoice: makeNodeComponent("txtSumInvoice"),
     sideEffectCalculator: makeNodeComponent("sideEffectCalculator"),
+    link: makeNodeComponent("link"),
     gridReservation: makeNodeComponent("gridReservation"),
     gridPhoneReserve: makeNodeComponent("gridPhoneReserve"),
     gridKiosk: makeNodeComponent("gridKiosk"),

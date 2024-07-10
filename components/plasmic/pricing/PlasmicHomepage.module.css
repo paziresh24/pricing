@@ -238,10 +238,6 @@
     text-align: center;
   }
 }
-.link__b4SzU {
-  position: relative;
-  display: flex;
-}
 .btnLogin:global(.__wab_instance) {
   max-width: 100%;
 }
@@ -3797,7 +3793,7 @@
   padding-bottom: 0px;
   min-width: 0;
 }
-.link__dc5Eu {
+.link {
   position: relative;
   text-align: center;
   width: 100%;
