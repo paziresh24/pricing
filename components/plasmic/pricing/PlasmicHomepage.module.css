@@ -7211,6 +7211,9 @@
   bottom: 0;
   margin-bottom: 10px;
   margin-left: 5px;
+  isolation: auto;
+  pointer-events: auto;
+  filter: drop-shadow(3px 6px 8px #345678);
   border-radius: 10px;
   padding: 3px;
 }
