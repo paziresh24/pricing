@@ -223,14 +223,21 @@
     padding-left: 0px;
   }
 }
-.lblUser {
+.btnLogout {
   position: relative;
-  width: 100%;
   height: auto;
   max-width: 100%;
   text-align: center;
   user-select: none;
-  min-width: 0;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.lblUser {
+  position: relative;
+  height: auto;
+  max-width: 100%;
+  text-align: center;
+  user-select: none;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .lblUser {

@@ -106,6 +106,7 @@ export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
   h1?: Flex__<"h1">;
   btnDashboard3?: Flex__<"div">;
+  btnLogout?: Flex__<"a"> & Partial<LinkProps>;
   lblUser?: Flex__<"div">;
   btnLogin?: Flex__<typeof Button>;
   btnReservation?: Flex__<"div">;
@@ -539,6 +540,12 @@ function PlasmicHomepage__RenderFunc(props: {
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "btnLogoutShow",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => true
       }
     ],
     [$props, $ctx, $refs]
@@ -753,6 +760,59 @@ function PlasmicHomepage__RenderFunc(props: {
                   </div>
                 </div>
                 <div className={classNames(projectcss.all, sty.freeBox__w4DUt)}>
+                  {(() => {
+                    try {
+                      return $state.btnLogoutShow;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })() ? (
+                    <PlasmicLink__
+                      data-plasmic-name={"btnLogout"}
+                      data-plasmic-override={overrides.btnLogout}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        projectcss.__wab_text,
+                        sty.btnLogout
+                      )}
+                      component={Link}
+                      href={
+                        "https://paziresh24.com/logout/?redirect_url=https://pricing.paziresh24.com"
+                      }
+                      onClick={async event => {
+                        const $steps = {};
+
+                        $steps["invokeGlobalAction"] = true
+                          ? (() => {
+                              const actionArgs = { args: [] };
+                              return $globalActions[
+                                "Fragment.apiRequest"
+                              ]?.apply(null, [...actionArgs.args]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["invokeGlobalAction"] != null &&
+                          typeof $steps["invokeGlobalAction"] === "object" &&
+                          typeof $steps["invokeGlobalAction"].then ===
+                            "function"
+                        ) {
+                          $steps["invokeGlobalAction"] = await $steps[
+                            "invokeGlobalAction"
+                          ];
+                        }
+                      }}
+                      platform={"nextjs"}
+                    >
+                      {"\u062e\u0631\u0648\u062c"}
+                    </PlasmicLink__>
+                  ) : null}
                   <div
                     data-plasmic-name={"lblUser"}
                     data-plasmic-override={overrides.lblUser}
@@ -8165,6 +8225,41 @@ function PlasmicHomepage__RenderFunc(props: {
                 ) {
                   $steps["updateUser4"] = await $steps["updateUser4"];
                 }
+
+                $steps["btnLogout"] =
+                  $steps.checkUser.status == 200
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["btnLogoutShow"]
+                          },
+                          operation: 0,
+                          value: true
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+
+                          $stateSet(objRoot, variablePath, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                if (
+                  $steps["btnLogout"] != null &&
+                  typeof $steps["btnLogout"] === "object" &&
+                  typeof $steps["btnLogout"].then === "function"
+                ) {
+                  $steps["btnLogout"] = await $steps["btnLogout"];
+                }
               }}
             />
           </div>
@@ -8179,6 +8274,7 @@ const PlasmicDescendants = {
     "root",
     "h1",
     "btnDashboard3",
+    "btnLogout",
     "lblUser",
     "btnLogin",
     "btnReservation",
@@ -8236,6 +8332,7 @@ const PlasmicDescendants = {
   ],
   h1: ["h1"],
   btnDashboard3: ["btnDashboard3"],
+  btnLogout: ["btnLogout"],
   lblUser: ["lblUser"],
   btnLogin: ["btnLogin"],
   btnReservation: ["btnReservation"],
@@ -8327,6 +8424,7 @@ type NodeDefaultElementType = {
   root: "div";
   h1: "h1";
   btnDashboard3: "div";
+  btnLogout: "a";
   lblUser: "div";
   btnLogin: typeof Button;
   btnReservation: "div";
@@ -8445,6 +8543,7 @@ export const PlasmicHomepage = Object.assign(
     // Helper components rendering sub-elements
     h1: makeNodeComponent("h1"),
     btnDashboard3: makeNodeComponent("btnDashboard3"),
+    btnLogout: makeNodeComponent("btnLogout"),
     lblUser: makeNodeComponent("lblUser"),
     btnLogin: makeNodeComponent("btnLogin"),
     btnReservation: makeNodeComponent("btnReservation"),
