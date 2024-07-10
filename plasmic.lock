@@ -198,7 +198,7 @@
     },
     {
       "projectId": "h9Dbk9ygddw7UVEq1NNhKi",
-      "version": "6.0.0",
+      "version": "6.0.1",
       "dependencies": {
         "sqPBLwEBBKHA2WDuGb17eV": "0.12.0",
         "oBJtsp5RgVpcN6KCrDTuQT": "1.3.0",
@@ -210,11 +210,6 @@
           "type": "globalVariant",
           "assetId": "QmLtHiTXdNxv",
           "checksum": "1e98dc47c933788088926d8b42faad7b"
-        },
-        {
-          "assetId": "h9Dbk9ygddw7UVEq1NNhKi",
-          "type": "projectCss",
-          "checksum": "35ff3966f4fc811af533fa8efb6a0cbe"
         },
         {
           "type": "renderModule",
@@ -295,6 +290,11 @@
           "type": "icon",
           "assetId": "_Qaeb-4Y8N07",
           "checksum": "986d20e143c950555b56927eace6c778"
+        },
+        {
+          "assetId": "h9Dbk9ygddw7UVEq1NNhKi",
+          "type": "projectCss",
+          "checksum": "1b4db477ac8d148c5a0346bec561df11"
         }
       ],
       "codegenVersion": "0.0.1"
@@ -303,10 +303,11 @@
       "projectId": "seYsnBL1P3AiXaFGNEMUUM",
       "version": "latest",
       "dependencies": {
-        "h9Dbk9ygddw7UVEq1NNhKi": "6.0.0",
+        "h9Dbk9ygddw7UVEq1NNhKi": "6.0.1",
         "oBJtsp5RgVpcN6KCrDTuQT": "1.3.0",
         "caTPwKxj5ZrD9LQ7DMdK4Z": "3.36.0",
-        "8PtdGodUbexNYgkuyBUcWu": "3.24.0"
+        "8PtdGodUbexNYgkuyBUcWu": "3.24.0",
+        "sqPBLwEBBKHA2WDuGb17eV": "0.12.0"
       },
       "lang": "ts",
       "fileLocks": [
@@ -323,12 +324,12 @@
         {
           "type": "renderModule",
           "assetId": "g64VYoCfAKTS",
-          "checksum": "9c2308be56c39c8bf9b52cc6e317f0a8"
+          "checksum": "43cafeefc966a4d7e1eeccc66ec18ad0"
         },
         {
           "type": "cssRules",
           "assetId": "g64VYoCfAKTS",
-          "checksum": "9c2308be56c39c8bf9b52cc6e317f0a8"
+          "checksum": "43cafeefc966a4d7e1eeccc66ec18ad0"
         },
         {
           "type": "renderModule",
@@ -403,12 +404,12 @@
         {
           "type": "renderModule",
           "assetId": "IXVCbPZ5-8gj",
-          "checksum": "0cc3c4382acf2cc33af4288a44c0a58b"
+          "checksum": "54d4307f0f12045d0fe6facd0d7985a4"
         },
         {
           "type": "cssRules",
           "assetId": "IXVCbPZ5-8gj",
-          "checksum": "0cc3c4382acf2cc33af4288a44c0a58b"
+          "checksum": "54d4307f0f12045d0fe6facd0d7985a4"
         },
         {
           "type": "icon",
