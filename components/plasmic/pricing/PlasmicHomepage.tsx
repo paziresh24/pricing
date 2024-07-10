@@ -106,8 +106,8 @@ export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
   h1?: Flex__<"h1">;
   btnDashboard3?: Flex__<"div">;
-  btnLogout?: Flex__<"a"> & Partial<LinkProps>;
   lblUser?: Flex__<"div">;
+  btnLogout?: Flex__<"a"> & Partial<LinkProps>;
   btnLogin?: Flex__<typeof Button>;
   btnReservation?: Flex__<"div">;
   btnReservation3?: Flex__<"div">;
@@ -760,6 +760,31 @@ function PlasmicHomepage__RenderFunc(props: {
                   </div>
                 </div>
                 <div className={classNames(projectcss.all, sty.freeBox__w4DUt)}>
+                  <div
+                    data-plasmic-name={"lblUser"}
+                    data-plasmic-override={overrides.lblUser}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.lblUser
+                    )}
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $state.txtUserName;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "\u062d\u062c\u062a \u062e\u0648\u0627\u062c\u0648\u06cc";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  </div>
                   {(() => {
                     try {
                       return $state.btnLogoutShow;
@@ -953,31 +978,6 @@ function PlasmicHomepage__RenderFunc(props: {
                       {"\u062e\u0631\u0648\u062c"}
                     </PlasmicLink__>
                   ) : null}
-                  <div
-                    data-plasmic-name={"lblUser"}
-                    data-plasmic-override={overrides.lblUser}
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.lblUser
-                    )}
-                  >
-                    <React.Fragment>
-                      {(() => {
-                        try {
-                          return $state.txtUserName;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "\u062d\u062c\u062a \u062e\u0648\u0627\u062c\u0648\u06cc";
-                          }
-                          throw e;
-                        }
-                      })()}
-                    </React.Fragment>
-                  </div>
                   {(() => {
                     try {
                       return $state.btnLoginShow;
@@ -8422,8 +8422,8 @@ const PlasmicDescendants = {
     "root",
     "h1",
     "btnDashboard3",
-    "btnLogout",
     "lblUser",
+    "btnLogout",
     "btnLogin",
     "btnReservation",
     "btnReservation3",
@@ -8480,8 +8480,8 @@ const PlasmicDescendants = {
   ],
   h1: ["h1"],
   btnDashboard3: ["btnDashboard3"],
-  btnLogout: ["btnLogout"],
   lblUser: ["lblUser"],
+  btnLogout: ["btnLogout"],
   btnLogin: ["btnLogin"],
   btnReservation: ["btnReservation"],
   btnReservation3: ["btnReservation3"],
@@ -8572,8 +8572,8 @@ type NodeDefaultElementType = {
   root: "div";
   h1: "h1";
   btnDashboard3: "div";
-  btnLogout: "a";
   lblUser: "div";
+  btnLogout: "a";
   btnLogin: typeof Button;
   btnReservation: "div";
   btnReservation3: "div";
@@ -8691,8 +8691,8 @@ export const PlasmicHomepage = Object.assign(
     // Helper components rendering sub-elements
     h1: makeNodeComponent("h1"),
     btnDashboard3: makeNodeComponent("btnDashboard3"),
-    btnLogout: makeNodeComponent("btnLogout"),
     lblUser: makeNodeComponent("lblUser"),
+    btnLogout: makeNodeComponent("btnLogout"),
     btnLogin: makeNodeComponent("btnLogin"),
     btnReservation: makeNodeComponent("btnReservation"),
     btnReservation3: makeNodeComponent("btnReservation3"),
