@@ -995,7 +995,15 @@ function PlasmicHomepage__RenderFunc(props: {
                       data-plasmic-name={"btnLogin"}
                       data-plasmic-override={overrides.btnLogin}
                       children2={
-                        "\u0648\u0631\u0648\u062f \u0628\u0647 \u062d\u0633\u0627\u0628 \u06a9\u0627\u0631\u0628\u0631\u06cc"
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__dbdr7
+                          )}
+                        >
+                          {"\u0648\u0631\u0648\u062f"}
+                        </div>
                       }
                       className={classNames("__wab_instance", sty.btnLogin)}
                       link={
