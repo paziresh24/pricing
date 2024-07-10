@@ -59,11 +59,11 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import Button from "../../Button"; // plasmic-import: oVzoHzMf1TLl/component
 import { Slider } from "@/fragment/components/slider"; // plasmic-import: IwfvOcf1tP7X/codeComponent
 import TextInput from "../../TextInput"; // plasmic-import: ZdzGQGZE4mJ7/component
 import Checkbox from "../../Checkbox"; // plasmic-import: dk4vJhcf_j2D/component
 import { SideEffect } from "@plasmicpkgs/plasmic-basic-components";
-import Button from "../../Button"; // plasmic-import: oVzoHzMf1TLl/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 
 import { useScreenVariants as useScreenVariantsebUcSKv8J57Q } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: ebUcSKv8j57Q/globalVariant
@@ -71,13 +71,13 @@ import { useScreenVariants as useScreenVariantsebUcSKv8J57Q } from "./PlasmicGlo
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_fragment_design_system_css from "../fragment_design_system/plasmic.module.css"; // plasmic-import: h9Dbk9ygddw7UVEq1NNhKi/projectcss
-import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
-import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: seYsnBL1P3AiXaFGNEMUUM/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: g64VYoCfAKTS/css
 
 import Icon11Icon from "./icons/PlasmicIcon__Icon11"; // plasmic-import: YXzAIe4mJWDL/icon
 import Icon6Icon from "./icons/PlasmicIcon__Icon6"; // plasmic-import: WvR12xDIGLgz/icon
+import ChevronRightIcon from "../fragment_icons/icons/PlasmicIcon__ChevronRight"; // plasmic-import: GHdF3hS-oP_3/icon
+import ChevronLeftIcon from "../fragment_icons/icons/PlasmicIcon__ChevronLeft"; // plasmic-import: r9Upp9NbiZkf/icon
 import Icon3Icon from "./icons/PlasmicIcon__Icon3"; // plasmic-import: jRHPVqrBy9SV/icon
 import Icon4Icon from "./icons/PlasmicIcon__Icon4"; // plasmic-import: gsRGA0OcKSmi/icon
 import Icon15Icon from "./icons/PlasmicIcon__Icon15"; // plasmic-import: jAui2HVvT8Qw/icon
@@ -90,8 +90,6 @@ import Icon16Icon from "./icons/PlasmicIcon__Icon16"; // plasmic-import: wgGgWP4
 import Icon10Icon from "./icons/PlasmicIcon__Icon10"; // plasmic-import: 5Kdxmn_uOBnI/icon
 import SearchsvgIcon from "./icons/PlasmicIcon__Searchsvg"; // plasmic-import: 2VY19-xmXXIp/icon
 import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: 22TzxIplc3cE/icon
-import ChevronRightIcon from "../fragment_icons/icons/PlasmicIcon__ChevronRight"; // plasmic-import: GHdF3hS-oP_3/icon
-import ChevronLeftIcon from "../fragment_icons/icons/PlasmicIcon__ChevronLeft"; // plasmic-import: r9Upp9NbiZkf/icon
 
 createPlasmicElementProxy;
 
@@ -147,7 +145,6 @@ export type PlasmicHomepage__OverridesType = {
   txtDashboardResult?: Flex__<"div">;
   txtSumInvoice?: Flex__<"div">;
   sideEffectCalculator?: Flex__<typeof SideEffect>;
-  link?: Flex__<"a"> & Partial<LinkProps>;
   gridReservation?: Flex__<"div">;
   gridPhoneReserve?: Flex__<"div">;
   gridKiosk?: Flex__<"div">;
@@ -623,8 +620,6 @@ function PlasmicHomepage__RenderFunc(props: {
               projectcss.plasmic_mixins,
               projectcss.plasmic_tokens,
               plasmic_fragment_design_system_css.plasmic_tokens,
-              plasmic_antd_5_hostless_css.plasmic_tokens,
-              plasmic_plasmic_rich_components_css.plasmic_tokens,
               sty.root
             )}
             dir={"rtl"}
@@ -775,6 +770,26 @@ function PlasmicHomepage__RenderFunc(props: {
                       })()}
                     </React.Fragment>
                   </div>
+                  <PlasmicLink__
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      sty.link__b4SzU
+                    )}
+                    component={Link}
+                    platform={"nextjs"}
+                  >
+                    <Button
+                      children2={
+                        "\u0648\u0631\u0648\u062f | \u062b\u0628\u062a \u0646\u0627\u0645"
+                      }
+                      className={classNames(
+                        "__wab_instance",
+                        sty.button__i2XdX
+                      )}
+                      outline={true}
+                    />
+                  </PlasmicLink__>
                 </div>
               </div>
             </Stack__>
@@ -3731,13 +3746,11 @@ function PlasmicHomepage__RenderFunc(props: {
                           )}
                         >
                           <PlasmicLink__
-                            data-plasmic-name={"link"}
-                            data-plasmic-override={overrides.link}
                             className={classNames(
                               projectcss.all,
                               projectcss.a,
                               projectcss.__wab_text,
-                              sty.link
+                              sty.link__dc5Eu
                             )}
                             component={Link}
                             href={"https://www.paziresh24.com/home/contact-us/"}
@@ -8154,7 +8167,6 @@ const PlasmicDescendants = {
     "txtDashboardResult",
     "txtSumInvoice",
     "sideEffectCalculator",
-    "link",
     "gridReservation",
     "gridPhoneReserve",
     "gridKiosk",
@@ -8210,8 +8222,7 @@ const PlasmicDescendants = {
     "dashboardCheck",
     "txtDashboardResult",
     "txtSumInvoice",
-    "sideEffectCalculator",
-    "link"
+    "sideEffectCalculator"
   ],
   fragmentSlider: ["fragmentSlider"],
   txtResevationCount: ["txtResevationCount"],
@@ -8239,7 +8250,6 @@ const PlasmicDescendants = {
   txtDashboardResult: ["txtDashboardResult"],
   txtSumInvoice: ["txtSumInvoice"],
   sideEffectCalculator: ["sideEffectCalculator"],
-  link: ["link"],
   gridReservation: ["gridReservation"],
   gridPhoneReserve: ["gridPhoneReserve"],
   gridKiosk: ["gridKiosk"],
@@ -8300,7 +8310,6 @@ type NodeDefaultElementType = {
   txtDashboardResult: "div";
   txtSumInvoice: "div";
   sideEffectCalculator: typeof SideEffect;
-  link: "a";
   gridReservation: "div";
   gridPhoneReserve: "div";
   gridKiosk: "div";
@@ -8419,7 +8428,6 @@ export const PlasmicHomepage = Object.assign(
     txtDashboardResult: makeNodeComponent("txtDashboardResult"),
     txtSumInvoice: makeNodeComponent("txtSumInvoice"),
     sideEffectCalculator: makeNodeComponent("sideEffectCalculator"),
-    link: makeNodeComponent("link"),
     gridReservation: makeNodeComponent("gridReservation"),
     gridPhoneReserve: makeNodeComponent("gridPhoneReserve"),
     gridKiosk: makeNodeComponent("gridKiosk"),

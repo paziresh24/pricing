@@ -6,7 +6,6 @@
 
 import * as React from "react";
 import { hasVariant, ensureGlobalVariants } from "@plasmicapp/react-web";
-import { AntdConfigProvider } from "@plasmicpkgs/antd5/skinny/registerConfigProvider";
 import { Fragment } from "@/fragment/fragment"; // plasmic-import: Un2ikOagWEY9/codeComponent
 import { GrowthBook } from "@/fragment/growthbook"; // plasmic-import: -aZML1EcKLz0/codeComponent
 import { Splunk } from "@/fragment/splunk"; // plasmic-import: A4mXljoSlg6E/codeComponent
@@ -14,18 +13,12 @@ import { EmbedCss } from "@plasmicpkgs/plasmic-embed-css";
 
 export interface GlobalContextsProviderProps {
   children?: React.ReactElement;
-  antdConfigProviderProps?: Partial<
-    Omit<React.ComponentProps<typeof AntdConfigProvider>, "children">
-  >;
-
   fragmentProps?: Partial<
     Omit<React.ComponentProps<typeof Fragment>, "children">
   >;
-
   growthBookProps?: Partial<
     Omit<React.ComponentProps<typeof GrowthBook>, "children">
   >;
-
   splunkProps?: Partial<Omit<React.ComponentProps<typeof Splunk>, "children">>;
   embedCssProps?: Partial<
     Omit<React.ComponentProps<typeof EmbedCss>, "children">
@@ -37,7 +30,6 @@ export default function GlobalContextsProvider(
 ) {
   const {
     children,
-    antdConfigProviderProps,
     fragmentProps,
     growthBookProps,
     splunkProps,
@@ -45,158 +37,63 @@ export default function GlobalContextsProvider(
   } = props;
 
   return (
-    <AntdConfigProvider
-      {...antdConfigProviderProps}
-      borderRadius={
-        antdConfigProviderProps && "borderRadius" in antdConfigProviderProps
-          ? antdConfigProviderProps.borderRadius!
-          : 6
+    <Fragment
+      {...fragmentProps}
+      apiConfig={
+        fragmentProps && "apiConfig" in fragmentProps
+          ? fragmentProps.apiConfig!
+          : { withCredentials: true }
       }
-      colorBgBase={
-        antdConfigProviderProps && "colorBgBase" in antdConfigProviderProps
-          ? antdConfigProviderProps.colorBgBase!
-          : "#ffffff"
-      }
-      colorError={
-        antdConfigProviderProps && "colorError" in antdConfigProviderProps
-          ? antdConfigProviderProps.colorError!
-          : "#ff4d4f"
-      }
-      colorInfo={
-        antdConfigProviderProps && "colorInfo" in antdConfigProviderProps
-          ? antdConfigProviderProps.colorInfo!
-          : "#1677ff"
-      }
-      colorPrimary={
-        antdConfigProviderProps && "colorPrimary" in antdConfigProviderProps
-          ? antdConfigProviderProps.colorPrimary!
-          : "#1677ff"
-      }
-      colorSuccess={
-        antdConfigProviderProps && "colorSuccess" in antdConfigProviderProps
-          ? antdConfigProviderProps.colorSuccess!
-          : "#52c41a"
-      }
-      colorWarning={
-        antdConfigProviderProps && "colorWarning" in antdConfigProviderProps
-          ? antdConfigProviderProps.colorWarning!
-          : "#faad14"
-      }
-      controlHeight={
-        antdConfigProviderProps && "controlHeight" in antdConfigProviderProps
-          ? antdConfigProviderProps.controlHeight!
-          : 32
-      }
-      defaultDark={
-        antdConfigProviderProps && "defaultDark" in antdConfigProviderProps
-          ? antdConfigProviderProps.defaultDark!
-          : false
-      }
-      lineWidth={
-        antdConfigProviderProps && "lineWidth" in antdConfigProviderProps
-          ? antdConfigProviderProps.lineWidth!
-          : 1
-      }
-      loadingText={
-        antdConfigProviderProps && "loadingText" in antdConfigProviderProps
-          ? antdConfigProviderProps.loadingText!
+      previewApiConfig={
+        fragmentProps && "previewApiConfig" in fragmentProps
+          ? fragmentProps.previewApiConfig!
           : undefined
       }
-      removeLoading={
-        antdConfigProviderProps && "removeLoading" in antdConfigProviderProps
-          ? antdConfigProviderProps.removeLoading!
-          : undefined
-      }
-      sizeStep={
-        antdConfigProviderProps && "sizeStep" in antdConfigProviderProps
-          ? antdConfigProviderProps.sizeStep!
-          : 4
-      }
-      sizeUnit={
-        antdConfigProviderProps && "sizeUnit" in antdConfigProviderProps
-          ? antdConfigProviderProps.sizeUnit!
-          : 4
-      }
-      themeStyles={
-        antdConfigProviderProps && "themeStyles" in antdConfigProviderProps
-          ? antdConfigProviderProps.themeStyles!
-          : true
-          ? {
-              fontFamily: "Vazirmatn",
-              fontSize: "16px",
-              fontWeight: "400",
-              lineHeight: "1.5",
-              color: "#535353",
-              letterSpacing: "normal"
-            }
-          : undefined
-      }
-      wireframe={
-        antdConfigProviderProps && "wireframe" in antdConfigProviderProps
-          ? antdConfigProviderProps.wireframe!
-          : false
-      }
+      rtl={fragmentProps && "rtl" in fragmentProps ? fragmentProps.rtl! : true}
     >
-      <Fragment
-        {...fragmentProps}
-        apiConfig={
-          fragmentProps && "apiConfig" in fragmentProps
-            ? fragmentProps.apiConfig!
-            : { withCredentials: true }
-        }
-        previewApiConfig={
-          fragmentProps && "previewApiConfig" in fragmentProps
-            ? fragmentProps.previewApiConfig!
+      <GrowthBook
+        {...growthBookProps}
+        apiHost={
+          growthBookProps && "apiHost" in growthBookProps
+            ? growthBookProps.apiHost!
             : undefined
         }
-        rtl={
-          fragmentProps && "rtl" in fragmentProps ? fragmentProps.rtl! : true
+        clientKey={
+          growthBookProps && "clientKey" in growthBookProps
+            ? growthBookProps.clientKey!
+            : undefined
+        }
+        previewAttributes={
+          growthBookProps && "previewAttributes" in growthBookProps
+            ? growthBookProps.previewAttributes!
+            : undefined
         }
       >
-        <GrowthBook
-          {...growthBookProps}
-          apiHost={
-            growthBookProps && "apiHost" in growthBookProps
-              ? growthBookProps.apiHost!
+        <Splunk
+          {...splunkProps}
+          defaultApiHost={
+            splunkProps && "defaultApiHost" in splunkProps
+              ? splunkProps.defaultApiHost!
               : undefined
           }
-          clientKey={
-            growthBookProps && "clientKey" in growthBookProps
-              ? growthBookProps.clientKey!
-              : undefined
-          }
-          previewAttributes={
-            growthBookProps && "previewAttributes" in growthBookProps
-              ? growthBookProps.previewAttributes!
+          defaultApiKey={
+            splunkProps && "defaultApiKey" in splunkProps
+              ? splunkProps.defaultApiKey!
               : undefined
           }
         >
-          <Splunk
-            {...splunkProps}
-            defaultApiHost={
-              splunkProps && "defaultApiHost" in splunkProps
-                ? splunkProps.defaultApiHost!
-                : undefined
-            }
-            defaultApiKey={
-              splunkProps && "defaultApiKey" in splunkProps
-                ? splunkProps.defaultApiKey!
+          <EmbedCss
+            {...embedCssProps}
+            css={
+              embedCssProps && "css" in embedCssProps
+                ? embedCssProps.css!
                 : undefined
             }
           >
-            <EmbedCss
-              {...embedCssProps}
-              css={
-                embedCssProps && "css" in embedCssProps
-                  ? embedCssProps.css!
-                  : undefined
-              }
-            >
-              {children}
-            </EmbedCss>
-          </Splunk>
-        </GrowthBook>
-      </Fragment>
-    </AntdConfigProvider>
+            {children}
+          </EmbedCss>
+        </Splunk>
+      </GrowthBook>
+    </Fragment>
   );
 }

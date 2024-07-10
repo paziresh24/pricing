@@ -238,6 +238,25 @@
     text-align: center;
   }
 }
+.link__b4SzU {
+  position: relative;
+  display: flex;
+}
+.button__i2XdX:global(.__wab_instance) {
+  max-width: 100%;
+}
+.svg__clFeo {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.svg__o3INz {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
 .section__wtTOr {
   display: grid;
   position: sticky;
@@ -3778,7 +3797,7 @@
   padding-bottom: 0px;
   min-width: 0;
 }
-.link {
+.link__dc5Eu {
   position: relative;
   text-align: center;
   width: 100%;
