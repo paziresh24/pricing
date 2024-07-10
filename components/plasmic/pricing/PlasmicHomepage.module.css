@@ -242,7 +242,7 @@
   position: relative;
   display: flex;
 }
-.button__i2XdX:global(.__wab_instance) {
+.btnLogin:global(.__wab_instance) {
   max-width: 100%;
 }
 .svg__clFeo {

@@ -107,6 +107,7 @@ export type PlasmicHomepage__OverridesType = {
   h1?: Flex__<"h1">;
   btnDashboard3?: Flex__<"div">;
   lblUser?: Flex__<"div">;
+  btnLogin?: Flex__<typeof Button>;
   btnReservation?: Flex__<"div">;
   btnReservation3?: Flex__<"div">;
   btnReservation2?: Flex__<"div">;
@@ -531,6 +532,12 @@ function PlasmicHomepage__RenderFunc(props: {
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => ""
+      },
+      {
+        path: "btnLoginShow",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => true
       }
     ],
     [$props, $ctx, $refs]
@@ -779,16 +786,32 @@ function PlasmicHomepage__RenderFunc(props: {
                     component={Link}
                     platform={"nextjs"}
                   >
-                    <Button
-                      children2={
-                        "\u0648\u0631\u0648\u062f | \u062b\u0628\u062a \u0646\u0627\u0645"
+                    {(() => {
+                      try {
+                        return $state.btnLoginShow;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
                       }
-                      className={classNames(
-                        "__wab_instance",
-                        sty.button__i2XdX
-                      )}
-                      outline={true}
-                    />
+                    })() ? (
+                      <Button
+                        data-plasmic-name={"btnLogin"}
+                        data-plasmic-override={overrides.btnLogin}
+                        children2={
+                          "\u0648\u0631\u0648\u062f | \u062b\u0628\u062a \u0646\u0627\u0645"
+                        }
+                        className={classNames("__wab_instance", sty.btnLogin)}
+                        link={
+                          "https://www.paziresh24.com/login/?redirect_url=https://pricing.paziresh24.com/"
+                        }
+                        outline={true}
+                      />
+                    ) : null}
                   </PlasmicLink__>
                 </div>
               </div>
@@ -8114,6 +8137,41 @@ function PlasmicHomepage__RenderFunc(props: {
                 ) {
                   $steps["updateUser2"] = await $steps["updateUser2"];
                 }
+
+                $steps["updateUser3"] =
+                  $steps.checkUser.status == 200
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["btnLoginShow"]
+                          },
+                          operation: 0,
+                          value: false
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+
+                          $stateSet(objRoot, variablePath, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                if (
+                  $steps["updateUser3"] != null &&
+                  typeof $steps["updateUser3"] === "object" &&
+                  typeof $steps["updateUser3"].then === "function"
+                ) {
+                  $steps["updateUser3"] = await $steps["updateUser3"];
+                }
               }}
             />
           </div>
@@ -8129,6 +8187,7 @@ const PlasmicDescendants = {
     "h1",
     "btnDashboard3",
     "lblUser",
+    "btnLogin",
     "btnReservation",
     "btnReservation3",
     "btnReservation2",
@@ -8184,6 +8243,7 @@ const PlasmicDescendants = {
   h1: ["h1"],
   btnDashboard3: ["btnDashboard3"],
   lblUser: ["lblUser"],
+  btnLogin: ["btnLogin"],
   btnReservation: ["btnReservation"],
   btnReservation3: ["btnReservation3"],
   btnReservation2: ["btnReservation2"],
@@ -8272,6 +8332,7 @@ type NodeDefaultElementType = {
   h1: "h1";
   btnDashboard3: "div";
   lblUser: "div";
+  btnLogin: typeof Button;
   btnReservation: "div";
   btnReservation3: "div";
   btnReservation2: "div";
@@ -8388,6 +8449,7 @@ export const PlasmicHomepage = Object.assign(
     h1: makeNodeComponent("h1"),
     btnDashboard3: makeNodeComponent("btnDashboard3"),
     lblUser: makeNodeComponent("lblUser"),
+    btnLogin: makeNodeComponent("btnLogin"),
     btnReservation: makeNodeComponent("btnReservation"),
     btnReservation3: makeNodeComponent("btnReservation3"),
     btnReservation2: makeNodeComponent("btnReservation2"),
