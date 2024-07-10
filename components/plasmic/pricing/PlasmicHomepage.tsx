@@ -768,7 +768,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             e instanceof TypeError ||
                             e?.plasmicType === "PlasmicUndefinedDataError"
                           ) {
-                            return "";
+                            return "\u062d\u062c\u062a \u062e\u0648\u0627\u062c\u0648\u06cc";
                           }
                           throw e;
                         }

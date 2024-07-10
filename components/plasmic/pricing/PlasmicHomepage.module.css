@@ -124,6 +124,7 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .svg___0HXtL {
     height: 35px;
+    margin-left: 5px;
   }
 }
 .h1 {
@@ -137,6 +138,7 @@
   .h1 {
     font-size: 16px;
     white-space: pre-wrap;
+    text-align: center;
   }
 }
 .freeBox__vcShm {
@@ -215,13 +217,26 @@
   min-width: 0;
   padding: 8px;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__w4DUt {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
 .lblUser {
   position: relative;
   width: 100%;
   height: auto;
   max-width: 100%;
-  text-align: center;
+  text-align: left;
+  user-select: none;
   min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .lblUser {
+    font-size: 12px;
+    text-align: center;
+  }
 }
 .section__wtTOr {
   display: grid;
