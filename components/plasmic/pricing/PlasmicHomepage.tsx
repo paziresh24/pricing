@@ -545,7 +545,7 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "btnLogoutShow",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => true
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       }
     ],
     [$props, $ctx, $refs]
@@ -791,7 +791,12 @@ function PlasmicHomepage__RenderFunc(props: {
 
                         $steps["invokeGlobalAction"] = true
                           ? (() => {
-                              const actionArgs = { args: [] };
+                              const actionArgs = {
+                                args: [
+                                  undefined,
+                                  "https://paziresh24.com/logout"
+                                ]
+                              };
                               return $globalActions[
                                 "Fragment.apiRequest"
                               ]?.apply(null, [...actionArgs.args]);
@@ -806,6 +811,141 @@ function PlasmicHomepage__RenderFunc(props: {
                           $steps["invokeGlobalAction"] = await $steps[
                             "invokeGlobalAction"
                           ];
+                        }
+
+                        $steps["updateUser"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                variable: {
+                                  objRoot: $state,
+                                  variablePath: ["user"]
+                                },
+                                operation: 0,
+                                value: {}
+                              };
+                              return (({
+                                variable,
+                                value,
+                                startIndex,
+                                deleteCount
+                              }) => {
+                                if (!variable) {
+                                  return;
+                                }
+                                const { objRoot, variablePath } = variable;
+
+                                $stateSet(objRoot, variablePath, value);
+                                return value;
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["updateUser"] != null &&
+                          typeof $steps["updateUser"] === "object" &&
+                          typeof $steps["updateUser"].then === "function"
+                        ) {
+                          $steps["updateUser"] = await $steps["updateUser"];
+                        }
+
+                        $steps["updateUser2"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                variable: {
+                                  objRoot: $state,
+                                  variablePath: ["txtUserName"]
+                                },
+                                operation: 1
+                              };
+                              return (({
+                                variable,
+                                value,
+                                startIndex,
+                                deleteCount
+                              }) => {
+                                if (!variable) {
+                                  return;
+                                }
+                                const { objRoot, variablePath } = variable;
+
+                                $stateSet(objRoot, variablePath, undefined);
+                                return undefined;
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["updateUser2"] != null &&
+                          typeof $steps["updateUser2"] === "object" &&
+                          typeof $steps["updateUser2"].then === "function"
+                        ) {
+                          $steps["updateUser2"] = await $steps["updateUser2"];
+                        }
+
+                        $steps["updateUser3"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                variable: {
+                                  objRoot: $state,
+                                  variablePath: ["btnLoginShow"]
+                                },
+                                operation: 0,
+                                value: true
+                              };
+                              return (({
+                                variable,
+                                value,
+                                startIndex,
+                                deleteCount
+                              }) => {
+                                if (!variable) {
+                                  return;
+                                }
+                                const { objRoot, variablePath } = variable;
+
+                                $stateSet(objRoot, variablePath, value);
+                                return value;
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["updateUser3"] != null &&
+                          typeof $steps["updateUser3"] === "object" &&
+                          typeof $steps["updateUser3"].then === "function"
+                        ) {
+                          $steps["updateUser3"] = await $steps["updateUser3"];
+                        }
+
+                        $steps["updateUser4"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                variable: {
+                                  objRoot: $state,
+                                  variablePath: ["btnLogoutShow"]
+                                },
+                                operation: 0,
+                                value: false
+                              };
+                              return (({
+                                variable,
+                                value,
+                                startIndex,
+                                deleteCount
+                              }) => {
+                                if (!variable) {
+                                  return;
+                                }
+                                const { objRoot, variablePath } = variable;
+
+                                $stateSet(objRoot, variablePath, value);
+                                return value;
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["updateUser4"] != null &&
+                          typeof $steps["updateUser4"] === "object" &&
+                          typeof $steps["updateUser4"].then === "function"
+                        ) {
+                          $steps["updateUser4"] = await $steps["updateUser4"];
                         }
                       }}
                       platform={"nextjs"}
