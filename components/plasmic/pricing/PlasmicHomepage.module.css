@@ -3569,6 +3569,11 @@
   padding-right: 10px;
   min-width: 0;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .text__vyuP {
+    font-size: 13px;
+  }
+}
 .link {
   position: relative;
   text-align: right;
@@ -3581,6 +3586,11 @@
   margin-top: 0px;
   padding-right: 10px;
   min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .link {
+    font-size: 13px;
+  }
 }
 .freeBox__l1HBn {
   display: flex;
