@@ -871,7 +871,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       href={
                         hasVariant(globalVariants, "screen", "mobileOnly")
                           ? ""
-                          : "https://paziresh24.com/logout/?redirect_url=https://pricing.paziresh24.com"
+                          : undefined
                       }
                       onClick={async event => {
                         const $steps = {};
