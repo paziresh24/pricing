@@ -145,9 +145,15 @@ export type PlasmicHomepage__OverridesType = {
   txtRefferalResult?: Flex__<"div">;
   dashboardCheck?: Flex__<typeof Checkbox>;
   txtDashboardResult?: Flex__<"div">;
+  supportTicketCheck?: Flex__<typeof Checkbox>;
+  txtTickerResult?: Flex__<"div">;
+  supportTelCheck?: Flex__<typeof Checkbox>;
+  txtTelResult?: Flex__<"div">;
+  supportServerCheck?: Flex__<typeof Checkbox>;
+  txtServerResult?: Flex__<"div">;
+  link?: Flex__<"a"> & Partial<LinkProps>;
   txtSumInvoice?: Flex__<"div">;
   sideEffectCalculator?: Flex__<typeof SideEffect>;
-  link?: Flex__<"a"> & Partial<LinkProps>;
   gridReservation?: Flex__<"div">;
   gridPhoneReserve?: Flex__<"div">;
   gridKiosk?: Flex__<"div">;
@@ -546,6 +552,60 @@ function PlasmicHomepage__RenderFunc(props: {
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "supportTicketCheck.isChecked",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "isChecked"
+      },
+      {
+        path: "supportTelCheck.isChecked",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "supportServerCheck.isChecked",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "supportTicket",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
+      },
+      {
+        path: "supportTel",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 2900000
+      },
+      {
+        path: "supportServer",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 2750000
+      },
+      {
+        path: "supportTicketResult",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
+      },
+      {
+        path: "supportTelResult",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
+      },
+      {
+        path: "supportServerResult",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
       }
     ],
     [$props, $ctx, $refs]
@@ -1042,11 +1102,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       ? (() => {
                           const actionArgs = {
                             customFunction: async () => {
-                              return (() => {
-                                return document
-                                  .querySelector(".grid_reservation0")
-                                  .scrollIntoView({ behavior: "smooth" });
-                              })();
+                              return document
+                                .querySelector(".grid_reservation0")
+                                .scrollIntoView({ behavior: "smooth" });
                             }
                           };
                           return (({ customFunction }) => {
@@ -1060,6 +1118,26 @@ function PlasmicHomepage__RenderFunc(props: {
                       typeof $steps["runCode"].then === "function"
                     ) {
                       $steps["runCode"] = await $steps["runCode"];
+                    }
+
+                    $steps["runCode2"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return undefined;
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode2"] != null &&
+                      typeof $steps["runCode2"] === "object" &&
+                      typeof $steps["runCode2"].then === "function"
+                    ) {
+                      $steps["runCode2"] = await $steps["runCode2"];
                     }
                   }}
                 >
@@ -3352,6 +3430,407 @@ function PlasmicHomepage__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
+                          sty.freeBox__tGLq1
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___1INSw
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__if1Sk
+                            )}
+                          >
+                            <Checkbox
+                              data-plasmic-name={"supportTicketCheck"}
+                              data-plasmic-override={
+                                overrides.supportTicketCheck
+                              }
+                              className={classNames(
+                                "__wab_instance",
+                                sty.supportTicketCheck
+                              )}
+                              isChecked={
+                                generateStateValueProp($state, [
+                                  "supportTicketCheck",
+                                  "isChecked"
+                                ]) ?? false
+                              }
+                              isDisabled={true}
+                              onChange={(...eventArgs) => {
+                                generateStateOnChangeProp($state, [
+                                  "supportTicketCheck",
+                                  "isChecked"
+                                ])(eventArgs[0]);
+                              }}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__g5Hr
+                                )}
+                              >
+                                {
+                                  "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062a\u06cc\u06a9\u062a (\u0627\u0644\u0632\u0627\u0645\u06cc)"
+                                }
+                              </div>
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__aQm2C
+                                )}
+                              >
+                                {""}
+                              </div>
+                            </Checkbox>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__xxHAi
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___6JdRn
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $state.supportTicket
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "\u062a\u0639\u0631\u0641\u0647";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__gtEo6
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            data-plasmic-name={"txtTickerResult"}
+                            data-plasmic-override={overrides.txtTickerResult}
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.txtTickerResult
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $state.supportTicketResult
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__unIUn
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___4XyK3
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__vSd0M
+                            )}
+                          >
+                            <Checkbox
+                              data-plasmic-name={"supportTelCheck"}
+                              data-plasmic-override={overrides.supportTelCheck}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.supportTelCheck
+                              )}
+                              isChecked={
+                                generateStateValueProp($state, [
+                                  "supportTelCheck",
+                                  "isChecked"
+                                ]) ?? false
+                              }
+                              onChange={(...eventArgs) => {
+                                generateStateOnChangeProp($state, [
+                                  "supportTelCheck",
+                                  "isChecked"
+                                ])(eventArgs[0]);
+                              }}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__jOj31
+                                )}
+                              >
+                                {
+                                  "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062a\u0644\u0641\u0646\u06cc"
+                                }
+                              </div>
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__ez7Df
+                                )}
+                              >
+                                {""}
+                              </div>
+                            </Checkbox>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__lJpY0
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__puDuq
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $state.supportTel
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "\u062a\u0639\u0631\u0641\u0647";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__j3VPk
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            data-plasmic-name={"txtTelResult"}
+                            data-plasmic-override={overrides.txtTelResult}
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.txtTelResult
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $state.supportTelResult
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__jdU5R
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__o6QIh
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__cdR7A
+                            )}
+                          >
+                            <Checkbox
+                              data-plasmic-name={"supportServerCheck"}
+                              data-plasmic-override={
+                                overrides.supportServerCheck
+                              }
+                              className={classNames(
+                                "__wab_instance",
+                                sty.supportServerCheck
+                              )}
+                              isChecked={
+                                generateStateValueProp($state, [
+                                  "supportServerCheck",
+                                  "isChecked"
+                                ]) ?? false
+                              }
+                              onChange={(...eventArgs) => {
+                                generateStateOnChangeProp($state, [
+                                  "supportServerCheck",
+                                  "isChecked"
+                                ])(eventArgs[0]);
+                              }}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__fRW8
+                                )}
+                              >
+                                {
+                                  "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0633\u0631\u0648\u0631"
+                                }
+                              </div>
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__daRcg
+                                )}
+                              >
+                                {""}
+                              </div>
+                            </Checkbox>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__ed4Co
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__mSyIl
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $state.supportServer
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "\u062a\u0639\u0631\u0641\u0647";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__tTeMc
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            data-plasmic-name={"txtServerResult"}
+                            data-plasmic-override={overrides.txtServerResult}
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.txtServerResult
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $state.supportServerResult
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
                           sty.freeBox___7VpRn
                         )}
                       >
@@ -3365,17 +3844,33 @@ function PlasmicHomepage__RenderFunc(props: {
                           <div
                             className={classNames(
                               projectcss.all,
-                              sty.freeBox__kpiXf
+                              projectcss.__wab_text,
+                              sty.text__vyuP
                             )}
-                          />
+                          >
+                            {
+                              "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062a\u06cc\u06a9\u062a \u0628\u0635\u0648\u0631\u062a \u0631\u0627\u06cc\u06af\u0627\u0646 \u0648 \u067e\u0627\u0633\u062e \u06af\u0648\u06cc\u06cc \u06a9\u0645\u062a\u0631 \u0627\u0632 \u06cc\u06a9 \u0631\u0648\u0632 \u06a9\u0627\u0631\u06cc \u0645\u06cc \u0628\u0627\u0634\u062f.\n\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062a\u0644\u0641\u0646\u06cc \u0628\u0635\u0648\u0631\u062a \u062d\u0642 \u0627\u0634\u062a\u0631\u0627\u06a9 \u0645\u0627\u0647\u06cc\u0627\u0646\u0647 \u0627\u0632 7 \u0635\u0628\u062d \u062a\u0627 18 \u0639\u0635\u0631 \u0631\u0648\u0632 \u0647\u0627\u06cc \u06a9\u0627\u0631\u06cc \u0645\u06cc \u0628\u0627\u0634\u062f.\n\u0646\u06af\u0647\u062f\u0627\u0631\u06cc \u0648 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0633\u0631\u0648\u0631 \u0646\u06cc\u0632 \u0628\u0635\u0648\u0631\u062a \u0645\u0627\u0647\u06cc\u0627\u0646\u0647 \u0645\u06cc \u0628\u0627\u0634\u062f."
+                            }
+                          </div>
+                          <PlasmicLink__
+                            data-plasmic-name={"link"}
+                            data-plasmic-override={overrides.link}
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.a,
+                              projectcss.__wab_text,
+                              sty.link
+                            )}
+                            component={Link}
+                            href={"https://www.paziresh24.com/home/contact-us/"}
+                            platform={"nextjs"}
+                            target={"_blank"}
+                          >
+                            {
+                              "\u062f\u0631 \u0635\u0648\u0631\u062a\u06cc \u06a9\u0647 \u0646\u06cc\u0627\u0632 \u0628\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062d\u0636\u0648\u0631\u06cc\u060c \u0622\u0645\u0648\u0632\u0634 \u0645\u062c\u062f\u062f \u06cc\u0627 \u0646\u06cc\u0627\u0632 \u0628\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0628\u0627 \u0634\u0631\u0627\u06cc\u0637 \u062e\u0627\u0635\u06cc \u062f\u0627\u0631\u06cc\u062f \u0644\u0637\u0641\u0627 \u0628\u0627 \u0645\u0627 \u062a\u0645\u0627\u0633 \u0628\u06af\u06cc\u0631\u06cc\u062f.\t\t\t"
+                            }
+                          </PlasmicLink__>
                         </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox___0BfO
-                          )}
-                        />
-
                         <div
                           className={classNames(
                             projectcss.all,
@@ -3477,6 +3972,11 @@ function PlasmicHomepage__RenderFunc(props: {
                               $state.apiCheck.isChecked,
                               $state.referralCheck.isChecked,
                               $state.dashboardCheck.isChecked,
+
+                              $state.supportTicketCheck.isChecked,
+                              $state.supportTelCheck.isChecked,
+                              $state.supportServerCheck.isChecked,
+
                               $state.txtResevationCount.value
                             ];
                           } catch (e) {
@@ -3552,7 +4052,22 @@ function PlasmicHomepage__RenderFunc(props: {
                                             $state.referralPrice *
                                             $state.txtResevationCount.value)
                                         : ($state.referralResult = 0);
+                                      $state.supportTicketCheck.isChecked
+                                        ? ($state.supportTicketResult =
+                                            $state.supportTicket)
+                                        : ($state.supportTicketResult = 0);
+                                      $state.supportTelCheck.isChecked
+                                        ? ($state.supportTelResult =
+                                            $state.supportTel)
+                                        : ($state.supportTelResult = 0);
+                                      $state.supportServerCheck.isChecked
+                                        ? ($state.supportServerResult =
+                                            $state.supportServer)
+                                        : ($state.supportServerResult = 0);
                                       return ($state.suminvoiceResult =
+                                        $state.supportTicket +
+                                        $state.supportTelResult +
+                                        $state.supportServerResult +
                                         $state.dashboardResult +
                                         $state.specialSiteResult +
                                         $state.ehrResult +
@@ -3584,413 +4099,374 @@ function PlasmicHomepage__RenderFunc(props: {
                       />
                     </div>
                   ) : null}
-                  {(() => {
-                    try {
-                      return $state.clCalculatorStatus;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__ebkVj)}
+                  >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__ebkVj)}
+                      className={classNames(projectcss.all, sty.freeBox__lJuo9)}
+                    >
+                      <h2
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h2,
+                          projectcss.__wab_text,
+                          sty.h2__c6NHj
+                        )}
+                      >
+                        {
+                          "\u062a\u0639\u0631\u0641\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc"
+                        }
+                      </h2>
+                    </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___5DgVg
+                      )}
+                    >
+                      {
+                        "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0628\u0635\u0648\u0631\u062a \u062a\u06cc\u06a9\u062a \u0631\u0627\u06cc\u06af\u0627\u0646 \u0648 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062a\u0644\u0641\u0646\u06cc\u060c \u062d\u0636\u0648\u0631\u06cc\u060c \u0622\u0645\u0648\u0632\u0634 \u0645\u062c\u062f\u062f \u0648 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0633\u0631\u0648\u0631 \u0637\u0628\u0642 \u062c\u062f\u0648\u0644 \u0632\u06cc\u0631 \u0645\u062d\u0627\u0633\u0628\u0647 \u062e\u0648\u0627\u0647\u062f \u0634\u062f."
+                      }
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__ixn6J)}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__lJuo9
-                        )}
-                      >
-                        <h2
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.h2,
-                            projectcss.__wab_text,
-                            sty.h2__c6NHj
-                          )}
-                        >
-                          {
-                            "\u062a\u0639\u0631\u0641\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc"
-                          }
-                        </h2>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___5DgVg
-                        )}
-                      >
-                        {
-                          "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0628\u0635\u0648\u0631\u062a \u062a\u06cc\u06a9\u062a \u0631\u0627\u06cc\u06af\u0627\u0646 \u0648 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062a\u0644\u0641\u0646\u06cc\u060c \u062d\u0636\u0648\u0631\u06cc\u060c \u0622\u0645\u0648\u0632\u0634 \u0645\u062c\u062f\u062f \u0648 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0633\u0631\u0648\u0631 \u0637\u0628\u0642 \u062c\u062f\u0648\u0644 \u0632\u06cc\u0631 \u0645\u062d\u0627\u0633\u0628\u0647 \u062e\u0648\u0627\u0647\u062f \u0634\u062f."
-                        }
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__ixn6J
+                          sty.freeBox__hPiA4
                         )}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__hPiA4
+                            sty.freeBox___9J
                           )}
                         >
                           <div
                             className={classNames(
                               projectcss.all,
-                              sty.freeBox___9J
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__tCexL
-                              )}
-                            >
-                              {"\u0639\u0646\u0648\u0627\u0646"}
-                            </div>
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__qZoTp
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__xrIvV
-                              )}
-                            >
-                              {"\u062a\u0639\u0631\u0641\u0647"}
-                            </div>
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__sgy2
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__yiqsd
-                              )}
-                            >
-                              {"\u0647\u0632\u06cc\u0646\u0647"}
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__ex009
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox___0Giwe
-                            )}
-                            dir={"rtl"}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__xQnDd
-                              )}
-                            >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__kU6Nw
-                                )}
-                              >
-                                {
-                                  "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062a\u06cc\u06a9\u062a"
-                                }
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__zr7Q
-                            )}
-                            dir={"rtl"}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__cuoe2
-                              )}
-                            >
-                              {
-                                "\u067e\u0627\u0633\u062e \u06af\u0648\u06cc\u06cc \u0628\u0647 \u062a\u06cc\u06a9\u062a \u0647\u0627 \u06a9\u0645\u062a\u0631 \u0627\u0632 1 \u0631\u0648\u0632 \u06a9\u0627\u0631\u06cc"
-                              }
-                            </div>
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox___6MXxw
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__utuaz
-                              )}
-                            >
-                              {"0"}
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__yd7Cq
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__c1Z88
-                            )}
-                            dir={"rtl"}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__eUwnn
-                              )}
-                            >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__qHQft
-                                )}
-                              >
-                                {
-                                  "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062a\u0644\u0641\u0646\u06cc"
-                                }
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__yUuO
-                            )}
-                            dir={"rtl"}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__z02Ep
-                              )}
-                            >
-                              {
-                                "\u062d\u0642 \u0627\u0634\u062a\u0631\u0627\u06a9 \u0645\u0627\u0647\u06cc\u0627\u0646\u0647 \u067e\u0627\u0633\u062e \u06af\u0648\u06cc\u06cc \u0628\u0635\u0648\u0631\u062a \u062a\u0644\u0641\u0646\u06cc (7 \u0635\u0628\u062d \u062a\u0627 18 \u0639\u0635\u0631 \u0631\u0648\u0632\u0647\u0627\u06cc \u06a9\u0627\u0631\u06cc)"
-                              }
-                            </div>
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox___7Xgo
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text___1KutF
-                              )}
-                            >
-                              {"2,900,000"}
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__agdK
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__v8B1C
-                            )}
-                            dir={"rtl"}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__hQyn1
-                              )}
-                            >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__hGbCk
-                                )}
-                              >
-                                {
-                                  "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062d\u0636\u0648\u0631\u06cc \u06cc\u0627 \u0622\u0645\u0648\u0632\u0634 \u0645\u062c\u062f\u062f"
-                                }
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__sbd7F
-                            )}
-                            dir={"rtl"}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__fKbif
-                              )}
-                            >
-                              {
-                                "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0628\u0635\u0648\u0631\u062a \u0627\u0639\u0632\u0627\u0645 \u0646\u06cc\u0631\u0648 \u062f\u0631 \u0645\u062d\u0644 \u06cc\u0627 \u062c\u0644\u0633\u0647 \u0622\u0646\u0644\u0627\u06cc\u0646 \u0628\u0647 \u0627\u0632\u0627\u06cc \u0647\u0631 \u0631\u0648\u0632"
-                              }
-                            </div>
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__b1IGf
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__l16TJ
-                              )}
-                            >
-                              {"950,000"}
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__n7Qvq
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__q8SIt
-                            )}
-                            dir={"rtl"}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__qeYe1
-                              )}
-                            >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__qWKf
-                                )}
-                              >
-                                {
-                                  "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0633\u0631\u0648\u0631"
-                                }
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__r5QBw
-                            )}
-                            dir={"rtl"}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__zrFim
-                              )}
-                            >
-                              {
-                                "\u067e\u06cc\u06a9\u0631\u0628\u0646\u062f\u06cc \u0648 \u0646\u06af\u0647\u062f\u0627\u0631\u06cc \u0633\u0631\u0648\u0631 \u0628\u0635\u0648\u0631\u062a \u0645\u0627\u0647\u06cc\u0627\u0646\u0647"
-                              }
-                            </div>
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__rF5S
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__wkPmX
-                              )}
-                            >
-                              {"2,750,000"}
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__r5B1D
-                          )}
-                        >
-                          <PlasmicLink__
-                            data-plasmic-name={"link"}
-                            data-plasmic-override={overrides.link}
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.a,
                               projectcss.__wab_text,
-                              sty.link
+                              sty.text__tCexL
                             )}
-                            component={Link}
-                            href={"https://www.paziresh24.com/home/contact-us/"}
-                            platform={"nextjs"}
-                            target={"_blank"}
+                          >
+                            {"\u0639\u0646\u0648\u0627\u0646"}
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__qZoTp
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__xrIvV
+                            )}
+                          >
+                            {"\u062a\u0639\u0631\u0641\u0647"}
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__sgy2
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__yiqsd
+                            )}
+                          >
+                            {"\u0647\u0632\u06cc\u0646\u0647"}
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__ex009
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___0Giwe
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__xQnDd
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__kU6Nw
+                              )}
+                            >
+                              {
+                                "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062a\u06cc\u06a9\u062a"
+                              }
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__zr7Q
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__cuoe2
+                            )}
                           >
                             {
-                              "\u062f\u0631 \u0635\u0648\u0631\u062a\u06cc \u06a9\u0647 \u0634\u0631\u0627\u06cc\u0637 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0641\u0648\u0642 \u0628\u0631\u0627\u06cc \u0634\u0645\u0627 \u0645\u0646\u0627\u0633\u0628 \u0646\u06cc\u0633\u062a \u0648 \u0646\u06cc\u0627\u0632 \u0628\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0628\u0627 \u0634\u0631\u0627\u06cc\u0637 \u062e\u0627\u0635\u06cc \u062f\u0627\u0631\u06cc\u062f \u0644\u0637\u0641\u0627 \u0628\u0627 \u0645\u0627 \u062a\u0645\u0627\u0633 \u0628\u06af\u06cc\u0631\u06cc\u062f.\t\t\t"
+                              "\u067e\u0627\u0633\u062e \u06af\u0648\u06cc\u06cc \u0628\u0647 \u062a\u06cc\u06a9\u062a \u0647\u0627 \u06a9\u0645\u062a\u0631 \u0627\u0632 1 \u0631\u0648\u0632 \u06a9\u0627\u0631\u06cc"
                             }
-                          </PlasmicLink__>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___6MXxw
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__utuaz
+                            )}
+                          >
+                            {"0"}
+                          </div>
                         </div>
                       </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__yd7Cq
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__c1Z88
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__eUwnn
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__qHQft
+                              )}
+                            >
+                              {
+                                "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062a\u0644\u0641\u0646\u06cc"
+                              }
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__yUuO
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__z02Ep
+                            )}
+                          >
+                            {
+                              "\u062d\u0642 \u0627\u0634\u062a\u0631\u0627\u06a9 \u0645\u0627\u0647\u06cc\u0627\u0646\u0647 \u067e\u0627\u0633\u062e \u06af\u0648\u06cc\u06cc \u0628\u0635\u0648\u0631\u062a \u062a\u0644\u0641\u0646\u06cc (7 \u0635\u0628\u062d \u062a\u0627 18 \u0639\u0635\u0631 \u0631\u0648\u0632\u0647\u0627\u06cc \u06a9\u0627\u0631\u06cc)"
+                            }
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___7Xgo
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___1KutF
+                            )}
+                          >
+                            {"2,900,000"}
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__agdK
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__v8B1C
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__hQyn1
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__hGbCk
+                              )}
+                            >
+                              {
+                                "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062d\u0636\u0648\u0631\u06cc \u06cc\u0627 \u0622\u0645\u0648\u0632\u0634 \u0645\u062c\u062f\u062f"
+                              }
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__sbd7F
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__fKbif
+                            )}
+                          >
+                            {
+                              "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0628\u0635\u0648\u0631\u062a \u0627\u0639\u0632\u0627\u0645 \u0646\u06cc\u0631\u0648 \u062f\u0631 \u0645\u062d\u0644 \u06cc\u0627 \u062c\u0644\u0633\u0647 \u0622\u0646\u0644\u0627\u06cc\u0646 \u0628\u0647 \u0627\u0632\u0627\u06cc \u0647\u0631 \u0631\u0648\u0632"
+                            }
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__b1IGf
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__l16TJ
+                            )}
+                          >
+                            {"950,000"}
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__n7Qvq
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__q8SIt
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__qeYe1
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__qWKf
+                              )}
+                            >
+                              {
+                                "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0633\u0631\u0648\u0631"
+                              }
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__r5QBw
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__zrFim
+                            )}
+                          >
+                            {
+                              "\u067e\u06cc\u06a9\u0631\u0628\u0646\u062f\u06cc \u0648 \u0646\u06af\u0647\u062f\u0627\u0631\u06cc \u0633\u0631\u0648\u0631 \u0628\u0635\u0648\u0631\u062a \u0645\u0627\u0647\u06cc\u0627\u0646\u0647"
+                            }
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__rF5S
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__wkPmX
+                            )}
+                          >
+                            {"2,750,000"}
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__r5B1D
+                        )}
+                      />
                     </div>
-                  ) : null}
+                  </div>
                 </div>
               ) : null}
               {(() => {
@@ -8463,9 +8939,15 @@ const PlasmicDescendants = {
     "txtRefferalResult",
     "dashboardCheck",
     "txtDashboardResult",
+    "supportTicketCheck",
+    "txtTickerResult",
+    "supportTelCheck",
+    "txtTelResult",
+    "supportServerCheck",
+    "txtServerResult",
+    "link",
     "txtSumInvoice",
     "sideEffectCalculator",
-    "link",
     "gridReservation",
     "gridPhoneReserve",
     "gridKiosk",
@@ -8522,9 +9004,15 @@ const PlasmicDescendants = {
     "txtRefferalResult",
     "dashboardCheck",
     "txtDashboardResult",
+    "supportTicketCheck",
+    "txtTickerResult",
+    "supportTelCheck",
+    "txtTelResult",
+    "supportServerCheck",
+    "txtServerResult",
+    "link",
     "txtSumInvoice",
-    "sideEffectCalculator",
-    "link"
+    "sideEffectCalculator"
   ],
   fragmentSlider: ["fragmentSlider"],
   txtResevationCount: ["txtResevationCount"],
@@ -8550,9 +9038,15 @@ const PlasmicDescendants = {
   txtRefferalResult: ["txtRefferalResult"],
   dashboardCheck: ["dashboardCheck"],
   txtDashboardResult: ["txtDashboardResult"],
+  supportTicketCheck: ["supportTicketCheck"],
+  txtTickerResult: ["txtTickerResult"],
+  supportTelCheck: ["supportTelCheck"],
+  txtTelResult: ["txtTelResult"],
+  supportServerCheck: ["supportServerCheck"],
+  txtServerResult: ["txtServerResult"],
+  link: ["link"],
   txtSumInvoice: ["txtSumInvoice"],
   sideEffectCalculator: ["sideEffectCalculator"],
-  link: ["link"],
   gridReservation: ["gridReservation"],
   gridPhoneReserve: ["gridPhoneReserve"],
   gridKiosk: ["gridKiosk"],
@@ -8613,9 +9107,15 @@ type NodeDefaultElementType = {
   txtRefferalResult: "div";
   dashboardCheck: typeof Checkbox;
   txtDashboardResult: "div";
+  supportTicketCheck: typeof Checkbox;
+  txtTickerResult: "div";
+  supportTelCheck: typeof Checkbox;
+  txtTelResult: "div";
+  supportServerCheck: typeof Checkbox;
+  txtServerResult: "div";
+  link: "a";
   txtSumInvoice: "div";
   sideEffectCalculator: typeof SideEffect;
-  link: "a";
   gridReservation: "div";
   gridPhoneReserve: "div";
   gridKiosk: "div";
@@ -8734,9 +9234,15 @@ export const PlasmicHomepage = Object.assign(
     txtRefferalResult: makeNodeComponent("txtRefferalResult"),
     dashboardCheck: makeNodeComponent("dashboardCheck"),
     txtDashboardResult: makeNodeComponent("txtDashboardResult"),
+    supportTicketCheck: makeNodeComponent("supportTicketCheck"),
+    txtTickerResult: makeNodeComponent("txtTickerResult"),
+    supportTelCheck: makeNodeComponent("supportTelCheck"),
+    txtTelResult: makeNodeComponent("txtTelResult"),
+    supportServerCheck: makeNodeComponent("supportServerCheck"),
+    txtServerResult: makeNodeComponent("txtServerResult"),
+    link: makeNodeComponent("link"),
     txtSumInvoice: makeNodeComponent("txtSumInvoice"),
     sideEffectCalculator: makeNodeComponent("sideEffectCalculator"),
-    link: makeNodeComponent("link"),
     gridReservation: makeNodeComponent("gridReservation"),
     gridPhoneReserve: makeNodeComponent("gridPhoneReserve"),
     gridKiosk: makeNodeComponent("gridKiosk"),
