@@ -1083,6 +1083,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 sty.section__wtTOr,
                 "menu_top"
               )}
+              id={"menu_top"}
             >
               <div className={classNames(projectcss.all, sty.freeBox__kQeHz)}>
                 <Stack__
@@ -1102,9 +1103,22 @@ function PlasmicHomepage__RenderFunc(props: {
                       ? (() => {
                           const actionArgs = {
                             customFunction: async () => {
-                              return document
-                                .querySelector(".grid_reservation0")
-                                .scrollIntoView({ behavior: "smooth" });
+                              return (() => {
+                                var node =
+                                  document.querySelector(".grid_reservation0");
+                                var yourHeight =
+                                  document.getElementById(
+                                    "menu_top"
+                                  ).offsetHeight;
+                                node.scrollIntoView(true);
+                                var scrolledY = window.scrollY;
+                                if (scrolledY) {
+                                  return window.scrollTo({
+                                    top: scrolledY - yourHeight,
+                                    behavior: "smooth"
+                                  });
+                                }
+                              })();
                             }
                           };
                           return (({ customFunction }) => {
@@ -1118,26 +1132,6 @@ function PlasmicHomepage__RenderFunc(props: {
                       typeof $steps["runCode"].then === "function"
                     ) {
                       $steps["runCode"] = await $steps["runCode"];
-                    }
-
-                    $steps["runCode2"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            customFunction: async () => {
-                              return undefined;
-                            }
-                          };
-                          return (({ customFunction }) => {
-                            return customFunction();
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["runCode2"] != null &&
-                      typeof $steps["runCode2"] === "object" &&
-                      typeof $steps["runCode2"].then === "function"
-                    ) {
-                      $steps["runCode2"] = await $steps["runCode2"];
                     }
                   }}
                 >
@@ -1172,9 +1166,21 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             customFunction: async () => {
                               return (() => {
-                                return document
-                                  .querySelector(".grid_phonereservation")
-                                  .scrollIntoView({ behavior: "smooth" });
+                                var node = document.querySelector(
+                                  ".grid_phonereservation"
+                                );
+                                var yourHeight =
+                                  document.getElementById(
+                                    "menu_top"
+                                  ).offsetHeight;
+                                node.scrollIntoView(true);
+                                var scrolledY = window.scrollY;
+                                if (scrolledY) {
+                                  return window.scrollTo({
+                                    top: scrolledY - yourHeight,
+                                    behavior: "smooth"
+                                  });
+                                }
                               })();
                             }
                           };
@@ -1223,9 +1229,20 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             customFunction: async () => {
                               return (() => {
-                                return document
-                                  .querySelector(".grid_kiosk")
-                                  .scrollIntoView({ behavior: "smooth" });
+                                var node =
+                                  document.querySelector(".grid_kiosk");
+                                var yourHeight =
+                                  document.getElementById(
+                                    "menu_top"
+                                  ).offsetHeight;
+                                node.scrollIntoView(true);
+                                var scrolledY = window.scrollY;
+                                if (scrolledY) {
+                                  return window.scrollTo({
+                                    top: scrolledY - yourHeight,
+                                    behavior: "smooth"
+                                  });
+                                }
                               })();
                             }
                           };
@@ -1274,9 +1291,20 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             customFunction: async () => {
                               return (() => {
-                                return document
-                                  .querySelector(".grid_announcement")
-                                  .scrollIntoView({ behavior: "smooth" });
+                                var node =
+                                  document.querySelector(".grid_announcement");
+                                var yourHeight =
+                                  document.getElementById(
+                                    "menu_top"
+                                  ).offsetHeight;
+                                node.scrollIntoView(true);
+                                var scrolledY = window.scrollY;
+                                if (scrolledY) {
+                                  return window.scrollTo({
+                                    top: scrolledY - yourHeight,
+                                    behavior: "smooth"
+                                  });
+                                }
                               })();
                             }
                           };
@@ -1323,9 +1351,20 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             customFunction: async () => {
                               return (() => {
-                                return document
-                                  .querySelector(".grid_calculation")
-                                  .scrollIntoView({ behavior: "smooth" });
+                                var node =
+                                  document.querySelector(".grid_calculation");
+                                var yourHeight =
+                                  document.getElementById(
+                                    "menu_top"
+                                  ).offsetHeight;
+                                node.scrollIntoView(true);
+                                var scrolledY = window.scrollY;
+                                if (scrolledY) {
+                                  return window.scrollTo({
+                                    top: scrolledY - yourHeight,
+                                    behavior: "smooth"
+                                  });
+                                }
                               })();
                             }
                           };
@@ -1370,9 +1409,21 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             customFunction: async () => {
                               return (() => {
-                                return document
-                                  .querySelector(".grid_onlinepayment")
-                                  .scrollIntoView({ behavior: "smooth" });
+                                var node = document.querySelector(
+                                  ".grid_onlinepayment"
+                                );
+                                var yourHeight =
+                                  document.getElementById(
+                                    "menu_top"
+                                  ).offsetHeight;
+                                node.scrollIntoView(true);
+                                var scrolledY = window.scrollY;
+                                if (scrolledY) {
+                                  return window.scrollTo({
+                                    top: scrolledY - yourHeight,
+                                    behavior: "smooth"
+                                  });
+                                }
                               })();
                             }
                           };
@@ -1421,9 +1472,19 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             customFunction: async () => {
                               return (() => {
-                                return document
-                                  .querySelector(".grid_api")
-                                  .scrollIntoView({ behavior: "smooth" });
+                                var node = document.querySelector(".grid_api");
+                                var yourHeight =
+                                  document.getElementById(
+                                    "menu_top"
+                                  ).offsetHeight;
+                                node.scrollIntoView(true);
+                                var scrolledY = window.scrollY;
+                                if (scrolledY) {
+                                  return window.scrollTo({
+                                    top: scrolledY - yourHeight,
+                                    behavior: "smooth"
+                                  });
+                                }
                               })();
                             }
                           };
@@ -1472,9 +1533,19 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             customFunction: async () => {
                               return (() => {
-                                return document
-                                  .querySelector(".grid_ehr")
-                                  .scrollIntoView({ behavior: "smooth" });
+                                var node = document.querySelector(".grid_ehr");
+                                var yourHeight =
+                                  document.getElementById(
+                                    "menu_top"
+                                  ).offsetHeight;
+                                node.scrollIntoView(true);
+                                var scrolledY = window.scrollY;
+                                if (scrolledY) {
+                                  return window.scrollTo({
+                                    top: scrolledY - yourHeight,
+                                    behavior: "smooth"
+                                  });
+                                }
                               })();
                             }
                           };
@@ -1523,9 +1594,20 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             customFunction: async () => {
                               return (() => {
-                                return document
-                                  .querySelector(".grid_specialsite")
-                                  .scrollIntoView({ behavior: "smooth" });
+                                var node =
+                                  document.querySelector(".grid_specialsite");
+                                var yourHeight =
+                                  document.getElementById(
+                                    "menu_top"
+                                  ).offsetHeight;
+                                node.scrollIntoView(true);
+                                var scrolledY = window.scrollY;
+                                if (scrolledY) {
+                                  return window.scrollTo({
+                                    top: scrolledY - yourHeight,
+                                    behavior: "smooth"
+                                  });
+                                }
                               })();
                             }
                           };
@@ -1574,9 +1656,20 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             customFunction: async () => {
                               return (() => {
-                                return document
-                                  .querySelector(".grid_referral")
-                                  .scrollIntoView({ behavior: "smooth" });
+                                var node =
+                                  document.querySelector(".grid_referral");
+                                var yourHeight =
+                                  document.getElementById(
+                                    "menu_top"
+                                  ).offsetHeight;
+                                node.scrollIntoView(true);
+                                var scrolledY = window.scrollY;
+                                if (scrolledY) {
+                                  return window.scrollTo({
+                                    top: scrolledY - yourHeight,
+                                    behavior: "smooth"
+                                  });
+                                }
                               })();
                             }
                           };
@@ -1623,9 +1716,20 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             customFunction: async () => {
                               return (() => {
-                                return document
-                                  .querySelector(".grid_dashboard")
-                                  .scrollIntoView({ behavior: "smooth" });
+                                var node =
+                                  document.querySelector(".grid_dashboard");
+                                var yourHeight =
+                                  document.getElementById(
+                                    "menu_top"
+                                  ).offsetHeight;
+                                node.scrollIntoView(true);
+                                var scrolledY = window.scrollY;
+                                if (scrolledY) {
+                                  return window.scrollTo({
+                                    top: scrolledY - yourHeight,
+                                    behavior: "smooth"
+                                  });
+                                }
                               })();
                             }
                           };
@@ -1700,6 +1804,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.freeBox___6LVp,
                         "grid_calculator"
                       )}
+                      id={"grid_calculator"}
                     >
                       <div
                         className={classNames(
@@ -4491,6 +4596,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     "grid_reservation0"
                   )}
                   dir={"rtl"}
+                  id={"grid_reservation0"}
                 >
                   <div
                     className={classNames(projectcss.all, sty.freeBox___4HLow)}
@@ -5572,6 +5678,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     "grid_phonereservation"
                   )}
                   dir={"rtl"}
+                  id={"grid_phonereservation"}
                 >
                   <div
                     className={classNames(projectcss.all, sty.freeBox__erOk9)}
@@ -6136,6 +6243,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     "grid_kiosk"
                   )}
                   dir={"rtl"}
+                  id={"grid_kiosk"}
                 >
                   <div
                     className={classNames(projectcss.all, sty.freeBox___2Duny)}
@@ -6961,6 +7069,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     "grid_announcement"
                   )}
                   dir={"rtl"}
+                  id={"grid_announcement"}
                 >
                   <div
                     className={classNames(projectcss.all, sty.freeBox__e7XEy)}
@@ -7330,6 +7439,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     "grid_calculation"
                   )}
                   dir={"rtl"}
+                  id={"grid_calculation"}
                 >
                   <div
                     className={classNames(projectcss.all, sty.freeBox__wqXd1)}
@@ -7515,6 +7625,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     "grid_onlinepayment"
                   )}
                   dir={"rtl"}
+                  id={"grid_onlinepayment"}
                 >
                   <div
                     className={classNames(projectcss.all, sty.freeBox__zHroT)}
@@ -7700,6 +7811,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     "grid_api"
                   )}
                   dir={"rtl"}
+                  id={"grid_api"}
                 >
                   <div
                     className={classNames(projectcss.all, sty.freeBox__i9YOv)}
@@ -7867,6 +7979,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     "grid_ehr"
                   )}
                   dir={"rtl"}
+                  id={"grid_ehr"}
                 >
                   <div
                     className={classNames(projectcss.all, sty.freeBox__ohZla)}
@@ -8098,6 +8211,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     "grid_specialsite"
                   )}
                   dir={"rtl"}
+                  id={"grid_specialsite"}
                 >
                   <div
                     className={classNames(projectcss.all, sty.freeBox__q66SQ)}
@@ -8283,6 +8397,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     "grid_referral"
                   )}
                   dir={"rtl"}
+                  id={"grid_referral"}
                 >
                   <div
                     className={classNames(projectcss.all, sty.freeBox___7NhX)}
@@ -8437,6 +8552,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     "grid_dashboard"
                   )}
                   dir={"rtl"}
+                  id={"grid_dashboard"}
                 >
                   <div
                     className={classNames(projectcss.all, sty.freeBox__pqMef)}
@@ -8644,9 +8760,22 @@ function PlasmicHomepage__RenderFunc(props: {
                       ? (() => {
                           const actionArgs = {
                             customFunction: async () => {
-                              return document
-                                .querySelector(".grid_calculator")
-                                .scrollIntoView({ behavior: "smooth" });
+                              return (() => {
+                                var node =
+                                  document.querySelector(".grid_calculator");
+                                var yourHeight =
+                                  document.getElementById(
+                                    "menu_top"
+                                  ).offsetHeight;
+                                node.scrollIntoView(true);
+                                var scrolledY = window.scrollY;
+                                if (scrolledY) {
+                                  return window.scrollTo({
+                                    top: scrolledY - yourHeight,
+                                    behavior: "smooth"
+                                  });
+                                }
+                              })();
                             }
                           };
                           return (({ customFunction }) => {
