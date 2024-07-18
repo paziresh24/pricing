@@ -3574,24 +3574,21 @@
     font-size: 13px;
   }
 }
-.link {
-  position: relative;
+.text__pXtl8 {
+  text-align: right;
   width: 100%;
+  height: auto;
   max-width: 100%;
-  margin-bottom: 0px;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
   margin-top: 0px;
+  margin-bottom: 0px;
   padding-right: 10px;
-  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
   min-width: 0;
 }
-.text__nv4Ou {
-  text-align: right;
-}
 @media (min-width: 0px) and (max-width: 768px) {
-  .text__nv4Ou {
+  .text__pXtl8 {
     font-size: 13px;
   }
 }

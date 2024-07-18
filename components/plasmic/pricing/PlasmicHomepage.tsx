@@ -151,7 +151,6 @@ export type PlasmicHomepage__OverridesType = {
   txtTelResult?: Flex__<"div">;
   supportServerCheck?: Flex__<typeof Checkbox>;
   txtServerResult?: Flex__<"div">;
-  link?: Flex__<"a"> & Partial<LinkProps>;
   txtSumInvoice?: Flex__<"div">;
   sideEffectCalculator?: Flex__<typeof SideEffect>;
   gridReservation?: Flex__<"div">;
@@ -4248,30 +4247,17 @@ function PlasmicHomepage__RenderFunc(props: {
                               "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062a\u06cc\u06a9\u062a \u0628\u0635\u0648\u0631\u062a \u0631\u0627\u06cc\u06af\u0627\u0646 \u0628\u0648\u062f\u0647 \u0648 \u062d\u062f\u0627\u06a9\u062b\u0631 \u0632\u0645\u0627\u0646 \u067e\u0627\u0633\u062e \u06af\u0648\u06cc\u06cc \u0628\u0647 \u062a\u06cc\u06af\u062a \u0647\u0627 \u06a9\u0645\u062a\u0631 \u0627\u0632 \u06cc\u06a9 \u0631\u0648\u0632 \u06a9\u0627\u0631\u06cc \u0645\u06cc \u0628\u0627\u0634\u062f.\n\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062a\u0644\u0641\u0646\u06cc \u0628\u0635\u0648\u0631\u062a \u062d\u0642 \u0627\u0634\u062a\u0631\u0627\u06a9 \u0645\u0627\u0647\u06cc\u0627\u0646\u0647 \u0628\u0648\u062f\u0647 \u0648 \u0632\u0645\u0627\u0646 \u067e\u0627\u0633\u062e \u06af\u0648\u06cc\u06cc \u062a\u0644\u0641\u0646\u06cc \u0627\u0632 \u0633\u0627\u0639\u062a 7 \u0635\u0628\u062d \u062a\u0627 18 \u0639\u0635\u0631 \u0631\u0648\u0632 \u0647\u0627\u06cc \u06a9\u0627\u0631\u06cc \u0645\u06cc \u0628\u0627\u0634\u062f.\n\u067e\u06cc\u0627\u062f\u0647 \u0633\u0627\u0632\u06cc \u067e\u0630\u06cc\u0631\u063424 \u0631\u0648\u06cc \u0633\u0631\u0648\u0631 \u06a9\u0644\u0627\u062f \u0631\u0627\u06cc\u06af\u0627\u0646 \u0628\u0648\u062f\u0647 \u0648 \u062f\u0631 \u0635\u0648\u0631\u062a \u062f\u0631\u062e\u0648\u0627\u0633\u062a \u06a9\u0627\u0631\u0628\u0631 \u0645\u0628\u0646\u06cc \u0628\u0631 \u067e\u0628\u0627\u062f\u0647 \u0633\u0627\u0632\u06cc \u0633\u0631\u0648\u0631 \u062f\u0631 \u0645\u062d\u0644 \u0645\u0631\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc\u060c \u0646\u06af\u0647\u062f\u0627\u0631\u06cc \u0648 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0622\u0646 \u0628\u0635\u0648\u0631\u062a \u062d\u0642 \u0627\u0634\u062a\u0631\u0627\u06a9 \u0645\u0627\u0647\u06cc\u0627\u0646\u0647 \u0645\u06cc \u0628\u0627\u0634\u062f."
                             }
                           </div>
-                          <PlasmicLink__
-                            data-plasmic-name={"link"}
-                            data-plasmic-override={overrides.link}
+                          <div
                             className={classNames(
                               projectcss.all,
-                              projectcss.a,
-                              sty.link
+                              projectcss.__wab_text,
+                              sty.text__pXtl8
                             )}
-                            component={Link}
-                            platform={"nextjs"}
-                            target={"_blank"}
                           >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__nv4Ou
-                              )}
-                            >
-                              {
-                                "\u062f\u0631 \u0635\u0648\u0631\u062a\u06cc \u06a9\u0647 \u0646\u06cc\u0627\u0632 \u0628\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062d\u0636\u0648\u0631\u06cc\u060c \u0622\u0645\u0648\u0632\u0634 \u0645\u062c\u062f\u062f \u06cc\u0627 \u0646\u06cc\u0627\u0632 \u0628\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0628\u0627 \u0634\u0631\u0627\u06cc\u0637 \u062e\u0627\u0635\u06cc \u062f\u0627\u0631\u06cc\u062f \u0644\u0637\u0641\u0627 \u0628\u0627 \u0634\u0645\u0627\u0631\u0647 \u06f0\u06f2\u06f1\u06f2\u06f5\u06f0\u06f1\u06f5\u06f0\u06f1\u06f9 \u062a\u0645\u0627\u0633 \u0628\u06af\u06cc\u0631\u06cc\u062f.\t\t\t"
-                              }
-                            </div>
-                          </PlasmicLink__>
+                            {
+                              "\u062f\u0631 \u0635\u0648\u0631\u062a\u06cc \u06a9\u0647 \u0646\u06cc\u0627\u0632 \u0628\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062d\u0636\u0648\u0631\u06cc\u060c \u0622\u0645\u0648\u0632\u0634 \u0645\u062c\u062f\u062f \u06cc\u0627 \u0646\u06cc\u0627\u0632 \u0628\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0628\u0627 \u0634\u0631\u0627\u06cc\u0637 \u062e\u0627\u0635\u06cc \u062f\u0627\u0631\u06cc\u062f \u0644\u0637\u0641\u0627 \u0628\u0627 \u0634\u0645\u0627\u0631\u0647 \u06f0\u06f2\u06f1\u06f2\u06f5\u06f0\u06f1\u06f5\u06f0\u06f1\u06f9 \u062a\u0645\u0627\u0633 \u0628\u06af\u06cc\u0631\u06cc\u062f.\t\t\t"
+                            }
+                          </div>
                         </div>
                         <div
                           className={classNames(
@@ -9383,7 +9369,6 @@ const PlasmicDescendants = {
     "txtTelResult",
     "supportServerCheck",
     "txtServerResult",
-    "link",
     "txtSumInvoice",
     "sideEffectCalculator",
     "gridReservation",
@@ -9448,7 +9433,6 @@ const PlasmicDescendants = {
     "txtTelResult",
     "supportServerCheck",
     "txtServerResult",
-    "link",
     "txtSumInvoice",
     "sideEffectCalculator"
   ],
@@ -9482,7 +9466,6 @@ const PlasmicDescendants = {
   txtTelResult: ["txtTelResult"],
   supportServerCheck: ["supportServerCheck"],
   txtServerResult: ["txtServerResult"],
-  link: ["link"],
   txtSumInvoice: ["txtSumInvoice"],
   sideEffectCalculator: ["sideEffectCalculator"],
   gridReservation: ["gridReservation"],
@@ -9551,7 +9534,6 @@ type NodeDefaultElementType = {
   txtTelResult: "div";
   supportServerCheck: typeof Checkbox;
   txtServerResult: "div";
-  link: "a";
   txtSumInvoice: "div";
   sideEffectCalculator: typeof SideEffect;
   gridReservation: "div";
@@ -9678,7 +9660,6 @@ export const PlasmicHomepage = Object.assign(
     txtTelResult: makeNodeComponent("txtTelResult"),
     supportServerCheck: makeNodeComponent("supportServerCheck"),
     txtServerResult: makeNodeComponent("txtServerResult"),
-    link: makeNodeComponent("link"),
     txtSumInvoice: makeNodeComponent("txtSumInvoice"),
     sideEffectCalculator: makeNodeComponent("sideEffectCalculator"),
     gridReservation: makeNodeComponent("gridReservation"),
