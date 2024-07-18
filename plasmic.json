@@ -718,6 +718,11 @@
           "id": "j9YlsTC9FYO_",
           "name": "Icon17Icon",
           "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__Icon17.tsx"
+        },
+        {
+          "id": "sLZRs4d-Nkod",
+          "name": "Icon18Icon",
+          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__Icon18.tsx"
         }
       ],
       "images": [
