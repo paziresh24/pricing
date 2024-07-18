@@ -4278,6 +4278,7 @@
   max-width: 100%;
   justify-content: flex-start;
   align-items: center;
+  grid-column-end: span 2;
   min-width: 0;
   padding: 8px;
 }
@@ -5013,6 +5014,7 @@
   max-width: 100%;
   justify-content: flex-start;
   align-items: center;
+  grid-column-end: span 2;
   min-width: 0;
   padding: 8px;
 }
@@ -5936,6 +5938,7 @@
   max-width: 100%;
   justify-content: flex-start;
   align-items: center;
+  grid-column-end: span 2;
   min-width: 0;
   padding: 8px;
 }
@@ -6327,6 +6330,7 @@
   max-width: 100%;
   justify-content: flex-start;
   align-items: center;
+  grid-column-end: span 2;
   min-width: 0;
   padding: 8px;
 }
@@ -6516,6 +6520,7 @@
   max-width: 100%;
   justify-content: flex-start;
   align-items: center;
+  grid-column-end: span 2;
   min-width: 0;
   padding: 8px;
 }
