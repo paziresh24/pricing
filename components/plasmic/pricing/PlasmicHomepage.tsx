@@ -4926,11 +4926,18 @@ function PlasmicHomepage__RenderFunc(props: {
                         </h2>
                       </div>
                     </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__p4Vz
+                      )}
+                    >
+                      {
+                        "\u062a\u0639\u0631\u06cc\u0641 \u06a9\u0627\u0631\u0628\u0631\u0627\u0646 \u0648 \u067e\u0632\u0634\u06a9\u0627\u0646 \u0628\u0647\u0645\u0631\u0627\u0647 \u0633\u0627\u0639\u0627\u062a \u062d\u0636\u0648\u0631 \u0648 \u0627\u062e\u0630 \u0646\u0648\u0628\u062a \u0627\u06cc\u0646\u062a\u0631\u0646\u062a\u06cc"
+                      }
+                    </div>
                   </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__rYn2U)}
-                  />
-
                   <div
                     className={classNames(projectcss.all, sty.freeBox__dwxs6)}
                     dir={"rtl"}
@@ -6010,11 +6017,18 @@ function PlasmicHomepage__RenderFunc(props: {
                         </h2>
                       </div>
                     </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__yLWt
+                      )}
+                    >
+                      {
+                        "\u062b\u0628\u062a \u0648 \u0645\u062f\u06cc\u0631\u06cc\u062a \u0686\u0627\u0631\u062a \u0647\u0627\u06cc \u062a\u0644\u0641\u0646\u06cc \u0648 \u0627\u0645\u06a9\u0627\u0646 \u0627\u062e\u0630 \u0646\u0648\u0628\u062a \u0628\u0635\u0648\u0631\u062a \u062a\u0644\u0641\u0646\u06cc \u062a\u0648\u0633\u0637 \u0628\u06cc\u0645\u0627\u0631\u0627\u0646"
+                      }
+                    </div>
                   </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__asH6E)}
-                  />
-
                   <div
                     className={classNames(projectcss.all, sty.freeBox__jVdmW)}
                     dir={"rtl"}
@@ -6575,11 +6589,18 @@ function PlasmicHomepage__RenderFunc(props: {
                         </h2>
                       </div>
                     </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___0Zyl1
+                      )}
+                    >
+                      {
+                        "\u0627\u062d\u0631\u0627\u0632 \u0647\u0648\u06cc\u062a \u0628\u06cc\u0645\u0627\u0631\u0627\u0646 \u0648 \u0686\u0627\u067e \u0631\u0633\u06cc\u062f \u0646\u0648\u0628\u062a \u0648 \u062b\u0628\u062a \u062f\u0631 \u0635\u0641 \u0641\u0631\u0627\u062e\u0648\u0627\u0646 \u0628\u0647\u0645\u0631\u0627\u0647 \u0646\u0645\u0627\u06cc\u0634 \u0634\u0645\u0627\u0631\u0647 \u0646\u0648\u0628\u062a \u0631\u0648\u06cc \u062a\u0627\u0628\u0644\u0648"
+                      }
+                    </div>
                   </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__t3AUq)}
-                  />
-
                   <div
                     className={classNames(projectcss.all, sty.freeBox__bX9Hd)}
                     dir={"rtl"}
@@ -7401,11 +7422,18 @@ function PlasmicHomepage__RenderFunc(props: {
                         </h2>
                       </div>
                     </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___2Ef6Q
+                      )}
+                    >
+                      {
+                        "\u0627\u0631\u0633\u0627\u0644 \u067e\u06cc\u0627\u0645\u06a9 \u0627\u062e\u0630\u060c \u062c\u0627\u0628\u062c\u0627\u06cc\u06cc \u0648 \u06cc\u0627\u062f\u0622\u0648\u0631\u06cc \u0646\u0648\u0628\u062a \u0628\u0647 \u0628\u06cc\u0645\u0627\u0631\u0627\u0646"
+                      }
+                    </div>
                   </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox___0Vc9S)}
-                  />
-
                   <div
                     className={classNames(projectcss.all, sty.freeBox___3DBa7)}
                     dir={"rtl"}
@@ -7715,11 +7743,18 @@ function PlasmicHomepage__RenderFunc(props: {
                         </h2>
                       </div>
                     </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__aiehk
+                      )}
+                    >
+                      {
+                        "\u0645\u062f\u06cc\u0631\u06cc\u062a \u062a\u0639\u0631\u0641\u0647 \u062e\u062f\u0645\u0627\u062a \u0642\u0627\u0628\u0644 \u0627\u0631\u0627\u0626\u0647"
+                      }
+                    </div>
                   </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__mqdlW)}
-                  />
-
                   <div
                     className={classNames(projectcss.all, sty.freeBox__txTya)}
                     dir={"rtl"}
@@ -7901,11 +7936,18 @@ function PlasmicHomepage__RenderFunc(props: {
                         </h2>
                       </div>
                     </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___37Xq3
+                      )}
+                    >
+                      {
+                        "\u0627\u0645\u06a9\u0627\u0646 \u067e\u0631\u062f\u0627\u062e\u062a \u0622\u0646\u0644\u0627\u06cc\u0646 \u0628\u0631\u0627\u06cc \u0646\u0648\u0628\u062a \u0647\u0627 \u06cc\u0627 \u062f\u0631\u06cc\u0627\u0641\u062a \u0648\u062c\u0647 \u0628\u06cc\u0639\u0627\u0646\u0647 \u0627\u0632 \u0637\u0631\u06cc\u0642 \u062f\u0631\u06af\u0627\u0647 \u067e\u0631\u062f\u0627\u062e\u062a"
+                      }
+                    </div>
                   </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__xz0M)}
-                  />
-
                   <div
                     className={classNames(projectcss.all, sty.freeBox__f7MNk)}
                     dir={"rtl"}
@@ -8087,11 +8129,18 @@ function PlasmicHomepage__RenderFunc(props: {
                         </h2>
                       </div>
                     </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___7QAuU
+                      )}
+                    >
+                      {
+                        "\u0627\u0631\u062a\u0628\u0627\u0637 \u0628\u0627 \u0633\u0627\u06cc\u0631 \u0646\u0631\u0645 \u0627\u0641\u0632\u0627\u0631 \u0647\u0627 \u0645\u062b\u0644 HIS \u0648 \u0627\u0645\u06a9\u0627\u0646 \u062a\u0628\u0627\u062f\u0644 \u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0628\u0635\u0648\u0631\u062a API"
+                      }
+                    </div>
                   </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__rc06U)}
-                  />
-
                   <div
                     className={classNames(projectcss.all, sty.freeBox__rtdMe)}
                     dir={"rtl"}
@@ -8255,11 +8304,18 @@ function PlasmicHomepage__RenderFunc(props: {
                         </h2>
                       </div>
                     </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__x8QdV
+                      )}
+                    >
+                      {
+                        "\u0627\u06cc\u062c\u0627\u062f \u067e\u0631\u0648\u0646\u062f\u0647 \u0628\u0631\u0627\u06cc \u0647\u0631 \u0628\u06cc\u0645\u0627\u0631 \u0637\u0628\u0642 \u0633\u0627\u062e\u062a\u0627\u0631 \u0645\u0648\u0631\u062f \u0646\u06cc\u0627\u0632 \u0645\u0631\u06a9\u0632 \u0648 \u0645\u062a\u0635\u0644 \u0628\u0647 \u0633\u06cc\u0633\u062a\u0645 \u0646\u0648\u0628\u062a \u062f\u0647\u06cc"
+                      }
+                    </div>
                   </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__cCsX3)}
-                  />
-
                   <div
                     className={classNames(projectcss.all, sty.freeBox__lkzo)}
                     dir={"rtl"}
@@ -8487,11 +8543,18 @@ function PlasmicHomepage__RenderFunc(props: {
                         </h2>
                       </div>
                     </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___2Pxyh
+                      )}
+                    >
+                      {
+                        "\u0627\u0631\u0627\u0626\u0647 \u062e\u062f\u0645\u0627\u062a \u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u0628\u0627 \u062f\u0627\u0645\u0646\u0647 \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u0628\u0647 \u0639\u0646\u0648\u0627\u0646 \u0633\u0627\u06cc\u062a \u0645\u0631\u06a9\u0632"
+                      }
+                    </div>
                   </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__w5D3Y)}
-                  />
-
                   <div
                     className={classNames(projectcss.all, sty.freeBox___0Za0A)}
                     dir={"rtl"}
@@ -8676,11 +8739,18 @@ function PlasmicHomepage__RenderFunc(props: {
                         </h2>
                       </div>
                     </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__eukqh
+                      )}
+                    >
+                      {
+                        "\u0645\u062f\u06cc\u0631\u06cc\u062a \u0646\u0648\u0628\u062a \u0647\u0627\u06cc \u0646\u0638\u0627\u0645 \u0627\u0631\u062c\u0627\u0639 \u062f\u0631 \u0633\u0637\u0648\u062d \u0645\u062e\u062a\u0644\u0641 \u0648 \u0627\u0645\u06a9\u0627\u0646 \u067e\u0630\u06cc\u0631\u0634 \u0628\u0631 \u0627\u0633\u0627\u0633 \u0634\u0646\u0627\u0633\u0647 \u0627\u0631\u062c\u0627\u0639"
+                      }
+                    </div>
                   </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__bwaWa)}
-                  />
-
                   <div
                     className={classNames(projectcss.all, sty.freeBox__cdPsc)}
                     dir={"rtl"}
@@ -8828,11 +8898,18 @@ function PlasmicHomepage__RenderFunc(props: {
                         </h2>
                       </div>
                     </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__l4Kbl
+                      )}
+                    >
+                      {
+                        "\u062f\u0627\u0634\u0628\u0648\u0631\u062f \u0645\u062f\u06cc\u0631\u06cc\u062a\u06cc \u0627\u06cc\u0646 \u0627\u0645\u06a9\u0627\u0646 \u0631\u0627 \u0628\u0647 \u06a9\u0627\u0631\u0628\u0631\u0627\u0646 \u0645\u06cc \u062f\u0647\u062f \u0628\u0631 \u0627\u0633\u0627\u0633 \u0646\u06cc\u0627\u0632 \u062e\u0648\u062f\u060c \u0627\u0646\u0648\u0627\u0639 \u06af\u0632\u0627\u0631\u0634\u0627\u062a \u0644\u0627\u0632\u0645 \u0631\u0627 \u062f\u0631 \u0633\u0627\u0645\u0627\u0646\u0647 \u0628\u0647\u0631\u0647 \u0628\u0631\u062f\u0627\u0631\u06cc \u0646\u0645\u0627\u06cc\u0646\u062f."
+                      }
+                    </div>
                   </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__gL3OO)}
-                  />
-
                   <div
                     className={classNames(projectcss.all, sty.freeBox__tRsAr)}
                     dir={"rtl"}
