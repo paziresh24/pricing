@@ -709,6 +709,11 @@
           "id": "sLZRs4d-Nkod",
           "name": "Icon18Icon",
           "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__Icon18.tsx"
+        },
+        {
+          "id": "5bp8lGg8G7HU",
+          "name": "Icon19Icon",
+          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__Icon19.tsx"
         }
       ],
       "images": [

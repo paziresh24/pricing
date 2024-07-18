@@ -82,6 +82,7 @@ import Icon3Icon from "./icons/PlasmicIcon__Icon3"; // plasmic-import: jRHPVqrBy
 import Icon4Icon from "./icons/PlasmicIcon__Icon4"; // plasmic-import: gsRGA0OcKSmi/icon
 import Icon15Icon from "./icons/PlasmicIcon__Icon15"; // plasmic-import: jAui2HVvT8Qw/icon
 import Icon18Icon from "./icons/PlasmicIcon__Icon18"; // plasmic-import: sLZRs4d-Nkod/icon
+import Icon19Icon from "./icons/PlasmicIcon__Icon19"; // plasmic-import: 5bp8lGg8G7HU/icon
 import Icon7Icon from "./icons/PlasmicIcon__Icon7"; // plasmic-import: 1eqoHYLc_fOB/icon
 import Icon8Icon from "./icons/PlasmicIcon__Icon8"; // plasmic-import: fEKKJ-2F5BD1/icon
 import Icon9Icon from "./icons/PlasmicIcon__Icon9"; // plasmic-import: JK4sPT7lqUH1/icon
@@ -1383,7 +1384,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     }
                   }}
                 >
-                  <Icon6Icon
+                  <Icon19Icon
                     className={classNames(projectcss.all, sty.svg__erDi)}
                     role={"img"}
                   />
