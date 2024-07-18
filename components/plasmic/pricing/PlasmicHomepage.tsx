@@ -1837,7 +1837,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         )}
                       >
                         {
-                          "\u0634\u06cc\u0648\u0647 \u0642\u06cc\u0645\u062a \u06af\u0630\u0627\u0631\u06cc \u0645\u062d\u0635\u0648\u0644\u0627\u062a \u0628\u0647 \u0627\u0632\u0627\u06cc \u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u0647\u0627\u06cc \u0645\u0627\u0647\u0627\u0646\u0647 \u0645\u0631\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc \u0645\u06cc \u0628\u0627\u0634\u062f. \n\u062f\u0631 \u0646\u0638\u0631 \u062f\u0627\u0634\u062a\u0647 \u0628\u0627\u0634\u06cc\u062f \u0639\u062f\u062f \u067e\u0627\u06cc\u0647 \u0642\u06cc\u0645\u062a \u06af\u0630\u0627\u0631\u06cc \u0627\u0632 1000 \u0646\u0648\u0628\u062a \u0645\u0627\u0647\u0627\u0646\u0647 \u0628\u0648\u062f\u0647 \u0648 \u062a\u0639\u0631\u0641\u0647 \u067e\u0630\u06cc\u0631\u0634\u06f2\u06f4 \u0628\u0631\u0627\u06cc \u0645\u0631\u0627\u06a9\u0632\u06cc \u06a9\u0647 \u0628\u06cc\u0634 \u0627\u0632 10,000 \u0646\u0648\u0628\u062a \u0645\u0627\u0647\u0627\u0646\u0647 \u062f\u0627\u0631\u0646\u062f \u0645\u0639\u0627\u062f\u0644 \u0647\u0645\u06cc\u0646 \u062a\u0639\u062f\u0627\u062f \u062e\u0648\u0627\u0647\u062f \u0628\u0648\u062f."
+                          "\u0634\u06cc\u0648\u0647 \u0642\u06cc\u0645\u062a \u06af\u0630\u0627\u0631\u06cc \u0645\u062d\u0635\u0648\u0644\u0627\u062a \u0628\u0647 \u0627\u0632\u0627\u06cc \u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a \u0647\u0627\u06cc \u0645\u0627\u0647\u0627\u0646\u0647 \u0645\u0631\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc \u0645\u06cc \u0628\u0627\u0634\u062f. \n\u062f\u0631 \u0646\u0638\u0631 \u062f\u0627\u0634\u062a\u0647 \u0628\u0627\u0634\u06cc\u062f \u0639\u062f\u062f \u067e\u0627\u06cc\u0647 \u0642\u06cc\u0645\u062a \u06af\u0630\u0627\u0631\u06cc \u0627\u0632 \u06f1\u06f0\u06f0\u06f0 \u0646\u0648\u0628\u062a \u0645\u0627\u0647\u0627\u0646\u0647 \u0628\u0648\u062f\u0647 \u0648 \u062a\u0639\u0631\u0641\u0647 \u067e\u0630\u06cc\u0631\u0634\u06f2\u06f4 \u0628\u0631\u0627\u06cc \u0645\u0631\u0627\u06a9\u0632\u06cc \u06a9\u0647 \u0628\u06cc\u0634 \u0627\u0632 \u06f1\u06f0,\u06f0\u06f0\u06f0 \u0646\u0648\u0628\u062a \u0645\u0627\u0647\u0627\u0646\u0647 \u062f\u0627\u0631\u0646\u062f \u0645\u0639\u0627\u062f\u0644 \u0647\u0645\u06cc\u0646 \u062a\u0639\u062f\u0627\u062f \u062e\u0648\u0627\u0647\u062f \u0628\u0648\u062f."
                         }
                       </div>
                       <div
@@ -1948,10 +1948,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                       return (
                                         $state.fragmentSlider.value
                                           .toString()
-                                          .replace(
-                                            /\B(?=(\d{3})+(?!\d))/g,
-                                            ","
-                                          ) + " نوبت"
+                                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                          .replaceAll("1", "۱")
+                                          .replaceAll("2", "۲")
+                                          .replaceAll("3", "۳")
+                                          .replaceAll("4", "۴")
+                                          .replaceAll("5", "۵")
+                                          .replaceAll("6", "۶")
+                                          .replaceAll("7", "۷")
+                                          .replaceAll("8", "۸")
+                                          .replaceAll("9", "۹")
+                                          .replaceAll("0", "۰") + " نوبت"
                                       );
                                     } catch (e) {
                                       if (
@@ -2141,7 +2148,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.reservationInternetPrice
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -2178,7 +2195,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.reservationInternetResult
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -2276,7 +2303,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.reservationPhonePrice
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -2314,7 +2351,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.reservsationPhoneResult
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -2412,7 +2459,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.reservationKioskPrice
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -2450,7 +2507,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.reservationKioskResult
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -2548,7 +2615,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.announcementPrice
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -2586,7 +2663,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.announcementResult
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -2682,7 +2769,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.calculationPrice
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -2720,7 +2817,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.calculationResult
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -2818,7 +2925,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.onlinePayemntPrice
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -2856,7 +2973,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.onlinePayemntResult
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -2952,7 +3079,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.apiPrice
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -2988,7 +3125,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.apiResult
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -3084,7 +3231,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.ehrPrice
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -3122,7 +3279,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.ehrResult
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -3218,7 +3385,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.specialSitePrice
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -3256,7 +3433,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.specialSiteResult
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -3352,7 +3539,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.referralPrice
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -3388,7 +3585,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.referralResult
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -3484,7 +3691,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.dashboardPrice
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -3520,7 +3737,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.dashboardResult
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -3619,7 +3846,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.supportTicket
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -3655,7 +3892,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.supportTicketResult
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -3751,7 +3998,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.supportTel
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -3787,7 +4044,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.supportTelResult
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -3885,7 +4152,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.supportServer
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -3921,7 +4198,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                 try {
                                   return $state.supportServerResult
                                     .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
@@ -3981,7 +4268,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               )}
                             >
                               {
-                                "\u062f\u0631 \u0635\u0648\u0631\u062a\u06cc \u06a9\u0647 \u0646\u06cc\u0627\u0632 \u0628\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062d\u0636\u0648\u0631\u06cc\u060c \u0622\u0645\u0648\u0632\u0634 \u0645\u062c\u062f\u062f \u06cc\u0627 \u0646\u06cc\u0627\u0632 \u0628\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0628\u0627 \u0634\u0631\u0627\u06cc\u0637 \u062e\u0627\u0635\u06cc \u062f\u0627\u0631\u06cc\u062f \u0644\u0637\u0641\u0627 \u0628\u0627 \u0634\u0645\u0627\u0631\u0647 02125015019 \u062a\u0645\u0627\u0633 \u0628\u06af\u06cc\u0631\u06cc\u062f.\t\t\t"
+                                "\u062f\u0631 \u0635\u0648\u0631\u062a\u06cc \u06a9\u0647 \u0646\u06cc\u0627\u0632 \u0628\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062d\u0636\u0648\u0631\u06cc\u060c \u0622\u0645\u0648\u0632\u0634 \u0645\u062c\u062f\u062f \u06cc\u0627 \u0646\u06cc\u0627\u0632 \u0628\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0628\u0627 \u0634\u0631\u0627\u06cc\u0637 \u062e\u0627\u0635\u06cc \u062f\u0627\u0631\u06cc\u062f \u0644\u0637\u0641\u0627 \u0628\u0627 \u0634\u0645\u0627\u0631\u0647 \u06f0\u06f2\u06f1\u06f2\u06f5\u06f0\u06f1\u06f5\u06f0\u06f1\u06f9 \u062a\u0645\u0627\u0633 \u0628\u06af\u06cc\u0631\u06cc\u062f.\t\t\t"
                               }
                             </div>
                           </PlasmicLink__>
@@ -4180,21 +4467,33 @@ function PlasmicHomepage__RenderFunc(props: {
                                             $state.supportServer)
                                         : ($state.supportServerResult = 0);
                                       return ($state.suminvoiceResult =
-                                        $state.supportTicket +
-                                        $state.supportTelResult +
-                                        $state.supportServerResult +
-                                        $state.dashboardResult +
-                                        $state.specialSiteResult +
-                                        $state.ehrResult +
-                                        $state.apiResult +
-                                        $state.onlinePayemntResult +
-                                        $state.calculationResult +
-                                        $state.announcementResult +
-                                        $state.reservationKioskResult +
-                                        $state.reservsationPhoneResult +
-                                        $state.reservationInternetResult +
-                                        $state.referralResult +
-                                        "تومان");
+                                        (
+                                          $state.supportTicket +
+                                          $state.supportTelResult +
+                                          $state.supportServerResult +
+                                          $state.dashboardResult +
+                                          $state.specialSiteResult +
+                                          $state.ehrResult +
+                                          $state.apiResult +
+                                          $state.onlinePayemntResult +
+                                          $state.calculationResult +
+                                          $state.announcementResult +
+                                          $state.reservationKioskResult +
+                                          $state.reservsationPhoneResult +
+                                          $state.reservationInternetResult +
+                                          $state.referralResult
+                                        )
+                                          .toString()
+                                          .replaceAll("1", "۱")
+                                          .replaceAll("2", "۲")
+                                          .replaceAll("3", "۳")
+                                          .replaceAll("4", "۴")
+                                          .replaceAll("5", "۵")
+                                          .replaceAll("6", "۶")
+                                          .replaceAll("7", "۷")
+                                          .replaceAll("8", "۸")
+                                          .replaceAll("9", "۹")
+                                          .replaceAll("0", "۰") + "تومان");
                                     })();
                                   }
                                 };
