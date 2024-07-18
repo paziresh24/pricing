@@ -9089,7 +9089,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__xeo1P
                     )}
                   >
-                    {"\u0645\u0627\u0634\u06cc\u0646 \u062d\u0633\u0627\u0628"}
+                    {
+                      "\u0628\u0631\u0622\u0648\u0631\u062f \u0642\u06cc\u0645\u062a"
+                    }
                   </div>
                 </div>
               </div>
@@ -9634,7 +9636,7 @@ export const PlasmicHomepage = Object.assign(
 
     // Page metadata
     pageMetadata: {
-      title: "ماشین حساب پذیرش24",
+      title: "برآورد قیمت پنل پذیرش۲۴",
       description: "ماژول ها وشیوه قیمت گذاری محصولات پذیرش24",
       ogImageSrc:
         "https://site-assets.plasmic.app/49b5e4e62d4fd1407285906a0f5e6382.svg",
