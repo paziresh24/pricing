@@ -126,8 +126,12 @@ export type PlasmicHomepage__OverridesType = {
   txtResevationCount?: Flex__<typeof TextInput>;
   reservationCheck?: Flex__<typeof Checkbox>;
   txtReservationInternetResult?: Flex__<"div">;
+  siteAndAppCheck?: Flex__<typeof Checkbox>;
+  txtReservationInternetResult2?: Flex__<"div">;
   reservationPhoneCheck?: Flex__<typeof Checkbox>;
   txtReservationPhoneResult?: Flex__<"div">;
+  specialSiteCheck?: Flex__<typeof Checkbox>;
+  txtSpecialSiteResult?: Flex__<"div">;
   kioskResevationCheck?: Flex__<typeof Checkbox>;
   txtReservationKioskResult?: Flex__<"div">;
   announcementCheck?: Flex__<typeof Checkbox>;
@@ -140,8 +144,6 @@ export type PlasmicHomepage__OverridesType = {
   txtapiResult?: Flex__<"div">;
   ehrCheck?: Flex__<typeof Checkbox>;
   txtReservationKioskResult6?: Flex__<"div">;
-  specialSiteCheck?: Flex__<typeof Checkbox>;
-  txtSpecialSiteResult?: Flex__<"div">;
   referralCheck?: Flex__<typeof Checkbox>;
   txtRefferalResult?: Flex__<"div">;
   dashboardCheck?: Flex__<typeof Checkbox>;
@@ -268,19 +270,19 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "reservationInternetPrice",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 700
+        initFunc: ({ $props, $state, $queries, $ctx }) => 1000000
       },
       {
         path: "reservationPhonePrice",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 400
+        initFunc: ({ $props, $state, $queries, $ctx }) => 500
       },
       {
         path: "reservationKioskPrice",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 400
+        initFunc: ({ $props, $state, $queries, $ctx }) => 500
       },
       {
         path: "reservationInternetResult",
@@ -431,7 +433,7 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "calculationPrice",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 200
+        initFunc: ({ $props, $state, $queries, $ctx }) => 500
       },
       {
         path: "onlinePayemntPrice",
@@ -467,7 +469,7 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "specialSitePrice",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 100
+        initFunc: ({ $props, $state, $queries, $ctx }) => 500
       },
       {
         path: "clPhoneReservationStatus",
@@ -603,6 +605,24 @@ function PlasmicHomepage__RenderFunc(props: {
       },
       {
         path: "supportServerResult",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
+      },
+      {
+        path: "siteAndAppCheck.isChecked",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "isChecked"
+      },
+      {
+        path: "appAndInternetPrice",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
+      },
+      {
+        path: "appAndSiteResult",
         type: "private",
         variableType: "number",
         initFunc: ({ $props, $state, $queries, $ctx }) => 0
@@ -2045,7 +2065,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             )}
                           >
                             {
-                              "\u062a\u0639\u0631\u0641\u0647 \u0647\u0631 \u0646\u0648\u0628\u062a (\u062a\u0648\u0645\u0627\u0646)"
+                              "\u062a\u0639\u0631\u0641\u0647 (\u062a\u0648\u0645\u0627\u0646)"
                             }
                           </div>
                         </div>
@@ -2114,7 +2134,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                 )}
                               >
                                 {
-                                  "\u0645\u0627\u0698\u0648\u0644 \u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u067e\u0627\u06cc\u0647 (\u0627\u0644\u0632\u0627\u0645\u06cc)"
+                                  "\u067e\u0646\u0644 \u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u067e\u0627\u06cc\u0647 + \u0627\u06cc\u0646\u062a\u0631\u0646\u062a\u06cc (\u0627\u0644\u0632\u0627\u0645\u06cc)"
                                 }
                               </div>
                               <div
@@ -2224,6 +2244,161 @@ function PlasmicHomepage__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
+                          sty.freeBox__oEvW4
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__fsA3T
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__xULtT
+                            )}
+                          >
+                            <Checkbox
+                              data-plasmic-name={"siteAndAppCheck"}
+                              data-plasmic-override={overrides.siteAndAppCheck}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.siteAndAppCheck
+                              )}
+                              isChecked={
+                                generateStateValueProp($state, [
+                                  "siteAndAppCheck",
+                                  "isChecked"
+                                ]) ?? false
+                              }
+                              isDisabled={true}
+                              onChange={(...eventArgs) => {
+                                generateStateOnChangeProp($state, [
+                                  "siteAndAppCheck",
+                                  "isChecked"
+                                ])(eventArgs[0]);
+                              }}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text___1QmL
+                                )}
+                              >
+                                {
+                                  "\u0633\u0627\u06cc\u062a \u0648 \u0627\u067e\u0644\u06cc\u06a9\u06cc\u0634\u0646 \u067e\u0630\u06cc\u0631\u0634\u06f2\u06f4 (\u0627\u0644\u0632\u0627\u0645\u06cc)"
+                                }
+                              </div>
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__aRt52
+                                )}
+                              >
+                                {""}
+                              </div>
+                            </Checkbox>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__gjtnd
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__ttXC
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $state.appAndInternetPrice
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "0";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__dPyv8
+                          )}
+                        >
+                          <div
+                            data-plasmic-name={"txtReservationInternetResult2"}
+                            data-plasmic-override={
+                              overrides.txtReservationInternetResult2
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.txtReservationInternetResult2
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $state.appAndSiteResult
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "0";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
                           sty.freeBox__yfMB
                         )}
                       >
@@ -2270,7 +2445,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                 )}
                               >
                                 {
-                                  "\u0645\u0627\u0698\u0648\u0644 \u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u062a\u0644\u0641\u0646\u06cc"
+                                  "\u0646\u0648\u0628\u062a \u062f\u0647\u06cc \u062a\u0644\u0641\u0646\u06cc"
                                 }
                               </div>
                               <div
@@ -2350,6 +2525,160 @@ function PlasmicHomepage__RenderFunc(props: {
                               {(() => {
                                 try {
                                   return $state.reservsationPhoneResult
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__ufKuf
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__dnhQr
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__w6Zdw
+                            )}
+                          >
+                            <Checkbox
+                              data-plasmic-name={"specialSiteCheck"}
+                              data-plasmic-override={overrides.specialSiteCheck}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.specialSiteCheck
+                              )}
+                              isChecked={
+                                generateStateValueProp($state, [
+                                  "specialSiteCheck",
+                                  "isChecked"
+                                ]) ?? false
+                              }
+                              onChange={(...eventArgs) => {
+                                generateStateOnChangeProp($state, [
+                                  "specialSiteCheck",
+                                  "isChecked"
+                                ])(eventArgs[0]);
+                              }}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__dXYjf
+                                )}
+                              >
+                                {
+                                  "\u0633\u0627\u06cc\u062a \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u0645\u0631\u06a9\u0632"
+                                }
+                              </div>
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__dmeaD
+                                )}
+                              >
+                                {""}
+                              </div>
+                            </Checkbox>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__k5HGh
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___81R5A
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $state.specialSitePrice
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    .replaceAll("1", "۱")
+                                    .replaceAll("2", "۲")
+                                    .replaceAll("3", "۳")
+                                    .replaceAll("4", "۴")
+                                    .replaceAll("5", "۵")
+                                    .replaceAll("6", "۶")
+                                    .replaceAll("7", "۷")
+                                    .replaceAll("8", "۸")
+                                    .replaceAll("9", "۹")
+                                    .replaceAll("0", "۰");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "\u062a\u0639\u0631\u0641\u0647";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__fKKm5
+                          )}
+                          dir={"rtl"}
+                        >
+                          <div
+                            data-plasmic-name={"txtSpecialSiteResult"}
+                            data-plasmic-override={
+                              overrides.txtSpecialSiteResult
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.txtSpecialSiteResult
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $state.specialSiteResult
                                     .toString()
                                     .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                                     .replaceAll("1", "۱")
@@ -3308,160 +3637,6 @@ function PlasmicHomepage__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__ufKuf
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__dnhQr
-                          )}
-                          dir={"rtl"}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__w6Zdw
-                            )}
-                          >
-                            <Checkbox
-                              data-plasmic-name={"specialSiteCheck"}
-                              data-plasmic-override={overrides.specialSiteCheck}
-                              className={classNames(
-                                "__wab_instance",
-                                sty.specialSiteCheck
-                              )}
-                              isChecked={
-                                generateStateValueProp($state, [
-                                  "specialSiteCheck",
-                                  "isChecked"
-                                ]) ?? false
-                              }
-                              onChange={(...eventArgs) => {
-                                generateStateOnChangeProp($state, [
-                                  "specialSiteCheck",
-                                  "isChecked"
-                                ])(eventArgs[0]);
-                              }}
-                            >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__dXYjf
-                                )}
-                              >
-                                {
-                                  "\u0633\u0627\u06cc\u062a \u0627\u062e\u062a\u0635\u0627\u0635\u06cc \u0645\u0631\u06a9\u0632"
-                                }
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__dmeaD
-                                )}
-                              >
-                                {""}
-                              </div>
-                            </Checkbox>
-                          </div>
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__k5HGh
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___81R5A
-                            )}
-                          >
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return $state.specialSitePrice
-                                    .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-                                    .replaceAll("1", "۱")
-                                    .replaceAll("2", "۲")
-                                    .replaceAll("3", "۳")
-                                    .replaceAll("4", "۴")
-                                    .replaceAll("5", "۵")
-                                    .replaceAll("6", "۶")
-                                    .replaceAll("7", "۷")
-                                    .replaceAll("8", "۸")
-                                    .replaceAll("9", "۹")
-                                    .replaceAll("0", "۰");
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "\u062a\u0639\u0631\u0641\u0647";
-                                  }
-                                  throw e;
-                                }
-                              })()}
-                            </React.Fragment>
-                          </div>
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__fKKm5
-                          )}
-                          dir={"rtl"}
-                        >
-                          <div
-                            data-plasmic-name={"txtSpecialSiteResult"}
-                            data-plasmic-override={
-                              overrides.txtSpecialSiteResult
-                            }
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.txtSpecialSiteResult
-                            )}
-                          >
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return $state.specialSiteResult
-                                    .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-                                    .replaceAll("1", "۱")
-                                    .replaceAll("2", "۲")
-                                    .replaceAll("3", "۳")
-                                    .replaceAll("4", "۴")
-                                    .replaceAll("5", "۵")
-                                    .replaceAll("6", "۶")
-                                    .replaceAll("7", "۷")
-                                    .replaceAll("8", "۸")
-                                    .replaceAll("9", "۹")
-                                    .replaceAll("0", "۰");
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "";
-                                  }
-                                  throw e;
-                                }
-                              })()}
-                            </React.Fragment>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
                           sty.freeBox__swDcY
                         )}
                       >
@@ -4245,7 +4420,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             )}
                           >
                             {
-                              "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062a\u06cc\u06a9\u062a \u0628\u0635\u0648\u0631\u062a \u0631\u0627\u06cc\u06af\u0627\u0646 \u0628\u0648\u062f\u0647 \u0648 \u062d\u062f\u0627\u06a9\u062b\u0631 \u0632\u0645\u0627\u0646 \u067e\u0627\u0633\u062e \u06af\u0648\u06cc\u06cc \u0628\u0647 \u062a\u06cc\u06a9\u062a \u0647\u0627 \u06a9\u0645\u062a\u0631 \u0627\u0632 \u06cc\u06a9 \u0631\u0648\u0632 \u06a9\u0627\u0631\u06cc \u0645\u06cc \u0628\u0627\u0634\u062f.\n\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062a\u0644\u0641\u0646\u06cc \u0628\u0635\u0648\u0631\u062a \u062d\u0642 \u0627\u0634\u062a\u0631\u0627\u06a9 \u0645\u0627\u0647\u06cc\u0627\u0646\u0647 \u0628\u0648\u062f\u0647 \u0648 \u0632\u0645\u0627\u0646 \u067e\u0627\u0633\u062e \u06af\u0648\u06cc\u06cc \u062a\u0644\u0641\u0646\u06cc \u0627\u0632 \u0633\u0627\u0639\u062a \u06f7 \u0635\u0628\u062d \u062a\u0627 \u06f1\u06f8 \u0639\u0635\u0631 \u0631\u0648\u0632 \u0647\u0627\u06cc \u06a9\u0627\u0631\u06cc \u0645\u06cc \u0628\u0627\u0634\u062f.\n\u067e\u06cc\u0627\u062f\u0647 \u0633\u0627\u0632\u06cc \u067e\u0630\u06cc\u0631\u0634\u06f2\u06f4 \u0631\u0648\u06cc \u0633\u0631\u0648\u0631 \u06a9\u0644\u0627\u062f \u0631\u0627\u06cc\u06af\u0627\u0646 \u0628\u0648\u062f\u0647 \u0648 \u062f\u0631 \u0635\u0648\u0631\u062a \u062f\u0631\u062e\u0648\u0627\u0633\u062a \u06a9\u0627\u0631\u0628\u0631 \u0645\u0628\u0646\u06cc \u0628\u0631 \u067e\u0628\u0627\u062f\u0647 \u0633\u0627\u0632\u06cc \u0633\u0631\u0648\u0631 \u062f\u0631 \u0645\u062d\u0644 \u0645\u0631\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc\u060c \u0646\u06af\u0647\u062f\u0627\u0631\u06cc \u0648 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0622\u0646 \u0628\u0635\u0648\u0631\u062a \u062d\u0642 \u0627\u0634\u062a\u0631\u0627\u06a9 \u0645\u0627\u0647\u06cc\u0627\u0646\u0647 \u0645\u06cc \u0628\u0627\u0634\u062f."
+                              "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062a\u06cc\u06a9\u062a \u0628\u0635\u0648\u0631\u062a \u0631\u0627\u06cc\u06af\u0627\u0646 \u0628\u0648\u062f\u0647 \u0648 \u062d\u062f\u0627\u06a9\u062b\u0631 \u0632\u0645\u0627\u0646 \u067e\u0627\u0633\u062e \u06af\u0648\u06cc\u06cc \u0628\u0647 \u062a\u06cc\u06a9\u062a \u0647\u0627 \u06a9\u0645\u062a\u0631 \u0627\u0632 \u06cc\u06a9 \u0631\u0648\u0632 \u06a9\u0627\u0631\u06cc \u0645\u06cc \u0628\u0627\u0634\u062f.\n\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062a\u0644\u0641\u0646\u06cc \u0628\u0635\u0648\u0631\u062a \u062d\u0642 \u0627\u0634\u062a\u0631\u0627\u06a9 \u0645\u0627\u0647\u06cc\u0627\u0646\u0647 \u0628\u0648\u062f\u0647 \u0648 \u0632\u0645\u0627\u0646 \u067e\u0627\u0633\u062e \u06af\u0648\u06cc\u06cc \u062a\u0644\u0641\u0646\u06cc \u0627\u0632 \u0633\u0627\u0639\u062a \u06f7 \u0635\u0628\u062d \u062a\u0627 \u06f1\u06f7 \u0639\u0635\u0631 \u0631\u0648\u0632 \u0647\u0627\u06cc \u06a9\u0627\u0631\u06cc \u0645\u06cc \u0628\u0627\u0634\u062f.\n\u067e\u06cc\u0627\u062f\u0647 \u0633\u0627\u0632\u06cc \u067e\u0630\u06cc\u0631\u0634\u06f2\u06f4 \u0631\u0648\u06cc \u0633\u0631\u0648\u0631 \u06a9\u0644\u0627\u062f \u0631\u0627\u06cc\u06af\u0627\u0646 \u0628\u0648\u062f\u0647 \u0648 \u062f\u0631 \u0635\u0648\u0631\u062a \u062f\u0631\u062e\u0648\u0627\u0633\u062a \u06a9\u0627\u0631\u0628\u0631 \u0645\u0628\u0646\u06cc \u0628\u0631 \u067e\u0628\u0627\u062f\u0647 \u0633\u0627\u0632\u06cc \u0633\u0631\u0648\u0631 \u062f\u0631 \u0645\u062d\u0644 \u0645\u0631\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc\u060c \u0646\u06af\u0647\u062f\u0627\u0631\u06cc \u0648 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0622\u0646 \u0628\u0635\u0648\u0631\u062a \u062d\u0642 \u0627\u0634\u062a\u0631\u0627\u06a9 \u0645\u0627\u0647\u06cc\u0627\u0646\u0647 \u0645\u06cc \u0628\u0627\u0634\u062f."
                             }
                           </div>
                           <div
@@ -4256,7 +4431,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             )}
                           >
                             {
-                              "\u062f\u0631 \u0635\u0648\u0631\u062a\u06cc \u06a9\u0647 \u0646\u06cc\u0627\u0632 \u0628\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062d\u0636\u0648\u0631\u06cc\u060c \u0622\u0645\u0648\u0632\u0634 \u0645\u062c\u062f\u062f \u06cc\u0627 \u0646\u06cc\u0627\u0632 \u0628\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0628\u0627 \u0634\u0631\u0627\u06cc\u0637 \u062e\u0627\u0635\u06cc \u062f\u0627\u0631\u06cc\u062f \u0644\u0637\u0641\u0627 \u0628\u0627 \u0634\u0645\u0627\u0631\u0647 \u06f0\u06f2\u06f1\u06f2\u06f5\u06f0\u06f1\u06f5\u06f0\u06f1\u06f9 \u062a\u0645\u0627\u0633 \u0628\u06af\u06cc\u0631\u06cc\u062f.\t\t\t"
+                              "\u062f\u0631 \u0635\u0648\u0631\u062a\u06cc \u06a9\u0647 \u0646\u06cc\u0627\u0632 \u0628\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062d\u0636\u0648\u0631\u06cc\u060c \u0622\u0645\u0648\u0632\u0634 \u0645\u062c\u062f\u062f \u06cc\u0627 \u0646\u06cc\u0627\u0632 \u0628\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0628\u0627 \u0634\u0631\u0627\u06cc\u0637 \u062e\u0627\u0635\u06cc \u062f\u0627\u0631\u06cc\u062f \u0644\u0637\u0641\u0627 \u0628\u0627 \u0634\u0645\u0627\u0631\u0647 \u06f0\u06f2\u06f1\u06f9\u06f1\u06f0\u06f1\u06f2\u06f7\u06f8\u06f7 \u062a\u0645\u0627\u0633 \u0628\u06af\u06cc\u0631\u06cc\u062f.\t\t\t"
                             }
                           </div>
                         </div>
@@ -4395,8 +4570,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                     return (() => {
                                       $state.reservationCheck.isChecked
                                         ? ($state.reservationInternetResult =
-                                            $state.reservationInternetPrice *
-                                            $state.txtResevationCount.value)
+                                            $state.reservationInternetPrice * 1)
                                         : ($state.reservationInternetResult = 0);
                                       $state.reservationPhoneCheck.isChecked
                                         ? ($state.reservsationPhoneResult =
@@ -9375,8 +9549,12 @@ const PlasmicDescendants = {
     "txtResevationCount",
     "reservationCheck",
     "txtReservationInternetResult",
+    "siteAndAppCheck",
+    "txtReservationInternetResult2",
     "reservationPhoneCheck",
     "txtReservationPhoneResult",
+    "specialSiteCheck",
+    "txtSpecialSiteResult",
     "kioskResevationCheck",
     "txtReservationKioskResult",
     "announcementCheck",
@@ -9389,8 +9567,6 @@ const PlasmicDescendants = {
     "txtapiResult",
     "ehrCheck",
     "txtReservationKioskResult6",
-    "specialSiteCheck",
-    "txtSpecialSiteResult",
     "referralCheck",
     "txtRefferalResult",
     "dashboardCheck",
@@ -9439,8 +9615,12 @@ const PlasmicDescendants = {
     "txtResevationCount",
     "reservationCheck",
     "txtReservationInternetResult",
+    "siteAndAppCheck",
+    "txtReservationInternetResult2",
     "reservationPhoneCheck",
     "txtReservationPhoneResult",
+    "specialSiteCheck",
+    "txtSpecialSiteResult",
     "kioskResevationCheck",
     "txtReservationKioskResult",
     "announcementCheck",
@@ -9453,8 +9633,6 @@ const PlasmicDescendants = {
     "txtapiResult",
     "ehrCheck",
     "txtReservationKioskResult6",
-    "specialSiteCheck",
-    "txtSpecialSiteResult",
     "referralCheck",
     "txtRefferalResult",
     "dashboardCheck",
@@ -9472,8 +9650,12 @@ const PlasmicDescendants = {
   txtResevationCount: ["txtResevationCount"],
   reservationCheck: ["reservationCheck"],
   txtReservationInternetResult: ["txtReservationInternetResult"],
+  siteAndAppCheck: ["siteAndAppCheck"],
+  txtReservationInternetResult2: ["txtReservationInternetResult2"],
   reservationPhoneCheck: ["reservationPhoneCheck"],
   txtReservationPhoneResult: ["txtReservationPhoneResult"],
+  specialSiteCheck: ["specialSiteCheck"],
+  txtSpecialSiteResult: ["txtSpecialSiteResult"],
   kioskResevationCheck: ["kioskResevationCheck"],
   txtReservationKioskResult: ["txtReservationKioskResult"],
   announcementCheck: ["announcementCheck"],
@@ -9486,8 +9668,6 @@ const PlasmicDescendants = {
   txtapiResult: ["txtapiResult"],
   ehrCheck: ["ehrCheck"],
   txtReservationKioskResult6: ["txtReservationKioskResult6"],
-  specialSiteCheck: ["specialSiteCheck"],
-  txtSpecialSiteResult: ["txtSpecialSiteResult"],
   referralCheck: ["referralCheck"],
   txtRefferalResult: ["txtRefferalResult"],
   dashboardCheck: ["dashboardCheck"],
@@ -9540,8 +9720,12 @@ type NodeDefaultElementType = {
   txtResevationCount: typeof TextInput;
   reservationCheck: typeof Checkbox;
   txtReservationInternetResult: "div";
+  siteAndAppCheck: typeof Checkbox;
+  txtReservationInternetResult2: "div";
   reservationPhoneCheck: typeof Checkbox;
   txtReservationPhoneResult: "div";
+  specialSiteCheck: typeof Checkbox;
+  txtSpecialSiteResult: "div";
   kioskResevationCheck: typeof Checkbox;
   txtReservationKioskResult: "div";
   announcementCheck: typeof Checkbox;
@@ -9554,8 +9738,6 @@ type NodeDefaultElementType = {
   txtapiResult: "div";
   ehrCheck: typeof Checkbox;
   txtReservationKioskResult6: "div";
-  specialSiteCheck: typeof Checkbox;
-  txtSpecialSiteResult: "div";
   referralCheck: typeof Checkbox;
   txtRefferalResult: "div";
   dashboardCheck: typeof Checkbox;
@@ -9666,8 +9848,14 @@ export const PlasmicHomepage = Object.assign(
     txtReservationInternetResult: makeNodeComponent(
       "txtReservationInternetResult"
     ),
+    siteAndAppCheck: makeNodeComponent("siteAndAppCheck"),
+    txtReservationInternetResult2: makeNodeComponent(
+      "txtReservationInternetResult2"
+    ),
     reservationPhoneCheck: makeNodeComponent("reservationPhoneCheck"),
     txtReservationPhoneResult: makeNodeComponent("txtReservationPhoneResult"),
+    specialSiteCheck: makeNodeComponent("specialSiteCheck"),
+    txtSpecialSiteResult: makeNodeComponent("txtSpecialSiteResult"),
     kioskResevationCheck: makeNodeComponent("kioskResevationCheck"),
     txtReservationKioskResult: makeNodeComponent("txtReservationKioskResult"),
     announcementCheck: makeNodeComponent("announcementCheck"),
@@ -9680,8 +9868,6 @@ export const PlasmicHomepage = Object.assign(
     txtapiResult: makeNodeComponent("txtapiResult"),
     ehrCheck: makeNodeComponent("ehrCheck"),
     txtReservationKioskResult6: makeNodeComponent("txtReservationKioskResult6"),
-    specialSiteCheck: makeNodeComponent("specialSiteCheck"),
-    txtSpecialSiteResult: makeNodeComponent("txtSpecialSiteResult"),
     referralCheck: makeNodeComponent("referralCheck"),
     txtRefferalResult: makeNodeComponent("txtRefferalResult"),
     dashboardCheck: makeNodeComponent("dashboardCheck"),
