@@ -276,7 +276,7 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "reservationPhonePrice",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 500000
+        initFunc: ({ $props, $state, $queries, $ctx }) => 1000000
       },
       {
         path: "reservationKioskPrice",
