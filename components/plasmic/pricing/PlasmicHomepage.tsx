@@ -276,7 +276,7 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "reservationPhonePrice",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 500
+        initFunc: ({ $props, $state, $queries, $ctx }) => 500000
       },
       {
         path: "reservationKioskPrice",
@@ -469,7 +469,7 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "specialSitePrice",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 500
+        initFunc: ({ $props, $state, $queries, $ctx }) => 500000
       },
       {
         path: "clPhoneReservationStatus",
@@ -505,7 +505,7 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "referralPrice",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 100
+        initFunc: ({ $props, $state, $queries, $ctx }) => 500000
       },
       {
         path: "referralResult",
@@ -583,13 +583,13 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "supportTel",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 2900000
+        initFunc: ({ $props, $state, $queries, $ctx }) => 900000
       },
       {
         path: "supportServer",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 2750000
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
       },
       {
         path: "supportTicketResult",
@@ -4301,18 +4301,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             )}
                           >
                             {
-                              "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062a\u06cc\u06a9\u062a \u0628\u0635\u0648\u0631\u062a \u0631\u0627\u06cc\u06af\u0627\u0646 \u0628\u0648\u062f\u0647 \u0648 \u062d\u062f\u0627\u06a9\u062b\u0631 \u0632\u0645\u0627\u0646 \u067e\u0627\u0633\u062e \u06af\u0648\u06cc\u06cc \u0628\u0647 \u062a\u06cc\u06a9\u062a \u0647\u0627 \u06a9\u0645\u062a\u0631 \u0627\u0632 \u06cc\u06a9 \u0631\u0648\u0632 \u06a9\u0627\u0631\u06cc \u0645\u06cc \u0628\u0627\u0634\u062f.\n\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062a\u0644\u0641\u0646\u06cc \u0628\u0635\u0648\u0631\u062a \u062d\u0642 \u0627\u0634\u062a\u0631\u0627\u06a9 \u0645\u0627\u0647\u06cc\u0627\u0646\u0647 \u0628\u0648\u062f\u0647 \u0648 \u0632\u0645\u0627\u0646 \u067e\u0627\u0633\u062e \u06af\u0648\u06cc\u06cc \u062a\u0644\u0641\u0646\u06cc \u0627\u0632 \u0633\u0627\u0639\u062a \u06f7 \u0635\u0628\u062d \u062a\u0627 \u06f1\u06f7 \u0639\u0635\u0631 \u0631\u0648\u0632 \u0647\u0627\u06cc \u06a9\u0627\u0631\u06cc \u0645\u06cc \u0628\u0627\u0634\u062f.\n\u067e\u06cc\u0627\u062f\u0647 \u0633\u0627\u0632\u06cc \u067e\u0630\u06cc\u0631\u0634\u06f2\u06f4 \u0631\u0648\u06cc \u0633\u0631\u0648\u0631 \u06a9\u0644\u0627\u062f \u0631\u0627\u06cc\u06af\u0627\u0646 \u0628\u0648\u062f\u0647 \u0648 \u062f\u0631 \u0635\u0648\u0631\u062a \u062f\u0631\u062e\u0648\u0627\u0633\u062a \u06a9\u0627\u0631\u0628\u0631 \u0645\u0628\u0646\u06cc \u0628\u0631 \u067e\u0628\u0627\u062f\u0647 \u0633\u0627\u0632\u06cc \u0633\u0631\u0648\u0631 \u062f\u0631 \u0645\u062d\u0644 \u0645\u0631\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc\u060c \u0646\u06af\u0647\u062f\u0627\u0631\u06cc \u0648 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0622\u0646 \u0628\u0635\u0648\u0631\u062a \u062d\u0642 \u0627\u0634\u062a\u0631\u0627\u06a9 \u0645\u0627\u0647\u06cc\u0627\u0646\u0647 \u0645\u06cc \u0628\u0627\u0634\u062f."
-                            }
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__pXtl8
-                            )}
-                          >
-                            {
-                              "\u062f\u0631 \u0635\u0648\u0631\u062a\u06cc \u06a9\u0647 \u0646\u06cc\u0627\u0632 \u0628\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062d\u0636\u0648\u0631\u06cc\u060c \u0622\u0645\u0648\u0632\u0634 \u0645\u062c\u062f\u062f \u06cc\u0627 \u0646\u06cc\u0627\u0632 \u0628\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0628\u0627 \u0634\u0631\u0627\u06cc\u0637 \u062e\u0627\u0635\u06cc \u062f\u0627\u0631\u06cc\u062f \u0644\u0637\u0641\u0627 \u0628\u0627 \u0634\u0645\u0627\u0631\u0647 \u06f0\u06f2\u06f1\u06f9\u06f1\u06f0\u06f1\u06f2\u06f7\u06f8\u06f7 \u062a\u0645\u0627\u0633 \u0628\u06af\u06cc\u0631\u06cc\u062f.\t\t\t"
+                              "\u2714 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062a\u06cc\u06a9\u062a \u0628\u0635\u0648\u0631\u062a \u0631\u0627\u06cc\u06af\u0627\u0646 \u0628\u0648\u062f\u0647 \u0648 \u062d\u062f\u0627\u06a9\u062b\u0631 \u0632\u0645\u0627\u0646 \u067e\u0627\u0633\u062e \u06af\u0648\u06cc\u06cc \u0628\u0647 \u062a\u06cc\u06a9\u062a \u0647\u0627 \u06a9\u0645\u062a\u0631 \u0627\u0632 \u06cc\u06a9 \u0631\u0648\u0632 \u06a9\u0627\u0631\u06cc \u0645\u06cc \u0628\u0627\u0634\u062f.\n\u2714 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062a\u0644\u0641\u0646\u06cc \u0628\u0635\u0648\u0631\u062a \u062d\u0642 \u0627\u0634\u062a\u0631\u0627\u06a9 \u0645\u0627\u0647\u06cc\u0627\u0646\u0647 \u0628\u0648\u062f\u0647 \u0648 \u0632\u0645\u0627\u0646 \u067e\u0627\u0633\u062e \u06af\u0648\u06cc\u06cc \u062a\u0644\u0641\u0646\u06cc \u0627\u0632 \u0633\u0627\u0639\u062a \u06f7 \u0635\u0628\u062d \u062a\u0627 \u06f1\u06f7 \u0639\u0635\u0631 \u0631\u0648\u0632 \u0647\u0627\u06cc \u06a9\u0627\u0631\u06cc \u0645\u06cc \u0628\u0627\u0634\u062f.\n\u2714 \u067e\u06cc\u0627\u062f\u0647 \u0633\u0627\u0632\u06cc \u067e\u0630\u06cc\u0631\u0634\u06f2\u06f4 \u0631\u0648\u06cc \u0633\u0631\u0648\u0631 \u06a9\u0644\u0627\u062f \u0631\u0627\u06cc\u06af\u0627\u0646 \u0628\u0648\u062f\u0647 \u0648 \u062f\u0631 \u0635\u0648\u0631\u062a \u062f\u0631\u062e\u0648\u0627\u0633\u062a \u06a9\u0627\u0631\u0628\u0631 \u0645\u0628\u0646\u06cc \u0628\u0631 \u067e\u0628\u0627\u062f\u0647 \u0633\u0627\u0632\u06cc \u0633\u0631\u0648\u0631 \u062f\u0631 \u0645\u062d\u0644 \u0645\u0631\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc\u060c \u0646\u06af\u0647\u062f\u0627\u0631\u06cc \u0648 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0622\u0646 \u0628\u0635\u0648\u0631\u062a \u062d\u0642 \u0627\u0634\u062a\u0631\u0627\u06a9 \u0645\u0627\u0647\u06cc\u0627\u0646\u0647 \u0645\u06cc \u0628\u0627\u0634\u062f.\n\u2714 \u062f\u0631 \u0635\u0648\u0631\u062a\u06cc \u06a9\u0647 \u0646\u06cc\u0627\u0632 \u0628\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u062d\u0636\u0648\u0631\u06cc\u060c \u0622\u0645\u0648\u0632\u0634 \u0645\u062c\u062f\u062f \u06cc\u0627 \u0646\u06cc\u0627\u0632 \u0628\u0647 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0628\u0627 \u0634\u0631\u0627\u06cc\u0637 \u062e\u0627\u0635\u06cc \u062f\u0627\u0631\u06cc\u062f \u0644\u0637\u0641\u0627 \u0628\u0627 \u0634\u0645\u0627\u0631\u0647 \u06f0\u06f2\u06f1\u06f9\u06f1\u06f0\u06f1\u06f2\u06f7\u06f8\u06f7 \u062a\u0645\u0627\u0633 \u0628\u06af\u06cc\u0631\u06cc\u062f.\n\u2714 \u062f\u0631 \u0635\u0648\u0631\u062a\u06cc \u06a9\u0647 \u0646\u06cc\u0627\u0632 \u0628\u0647 \u067e\u06cc\u0627\u062f\u0647 \u0633\u0627\u0632\u06cc \u067e\u0630\u06cc\u0631\u063424 \u0628\u0631 \u0631\u0648\u06cc \u0633\u0631\u0648\u0631 \u0645\u062d\u0644\u06cc (\u0644\u0648\u06a9\u0627\u0644) \u062f\u0627\u0631\u06cc\u062f\u060c \u0645\u0627\u0647\u06cc\u0627\u0646\u0647 \u0645\u0628\u0644\u063a 2.700.000 \u062a\u0648\u0645\u0627\u0646 \u0628\u0647 \u0641\u0627\u06a9\u062a\u0648\u0631 \u0641\u0648\u0642 \u0628\u0647 \u0627\u0632\u0627\u06cc \u0647\u0631 \u0633\u0631\u0648\u0631 \u0627\u0636\u0627\u0641\u0647 \u062e\u0648\u0627\u0647\u062f \u0634\u062f."
                             }
                           </div>
                         </div>
@@ -4455,8 +4444,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                         : ($state.reservationInternetResult = 0);
                                       $state.reservationPhoneCheck.isChecked
                                         ? ($state.reservsationPhoneResult =
-                                            $state.reservationPhonePrice *
-                                            $state.txtResevationCount.value)
+                                            $state.reservationPhonePrice * 1)
                                         : ($state.reservsationPhoneResult = 0);
                                       $state.kioskResevationCheck.isChecked
                                         ? ($state.reservationKioskResult =
@@ -4490,8 +4478,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                         : ($state.ehrResult = 0);
                                       $state.specialSiteCheck.isChecked
                                         ? ($state.specialSiteResult =
-                                            $state.specialSitePrice *
-                                            $state.txtResevationCount.value)
+                                            $state.specialSitePrice * 1)
                                         : ($state.specialSiteResult = 0);
                                       $state.dashboardCheck.isChecked
                                         ? ($state.dashboardResult =
@@ -4500,8 +4487,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                         : ($state.dashboardResult = 0);
                                       $state.referralCheck.isChecked
                                         ? ($state.referralResult =
-                                            $state.referralPrice *
-                                            $state.txtResevationCount.value)
+                                            $state.referralPrice * 1)
                                         : ($state.referralResult = 0);
                                       $state.supportTicketCheck.isChecked
                                         ? ($state.supportTicketResult =

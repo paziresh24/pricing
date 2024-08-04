@@ -3525,13 +3525,13 @@
   }
 }
 .freeBox__jdU5R {
-  display: grid;
   position: relative;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   width: 100%;
   height: auto;
   max-width: 100%;
   min-width: 0;
+  display: none;
 }
 .freeBox__o6QIh {
   display: flex;
@@ -3693,24 +3693,6 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .text__vyuP {
-    font-size: 13px;
-  }
-}
-.text__pXtl8 {
-  text-align: right;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-right: 10px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  min-width: 0;
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .text__pXtl8 {
     font-size: 13px;
   }
 }
