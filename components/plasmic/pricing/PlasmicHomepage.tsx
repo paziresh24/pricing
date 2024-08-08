@@ -59,11 +59,11 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
-import Button from "../../Button"; // plasmic-import: oVzoHzMf1TLl/component
 import { Slider } from "@/fragment/components/slider"; // plasmic-import: IwfvOcf1tP7X/codeComponent
 import TextInput from "../../TextInput"; // plasmic-import: ZdzGQGZE4mJ7/component
 import Checkbox from "../../Checkbox"; // plasmic-import: dk4vJhcf_j2D/component
 import { SideEffect } from "@plasmicpkgs/plasmic-basic-components";
+import Button from "../../Button"; // plasmic-import: oVzoHzMf1TLl/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 
 import { useScreenVariants as useScreenVariantsebUcSKv8J57Q } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: ebUcSKv8j57Q/globalVariant
@@ -74,10 +74,7 @@ import plasmic_fragment_design_system_css from "../fragment_design_system/plasmi
 import projectcss from "./plasmic.module.css"; // plasmic-import: seYsnBL1P3AiXaFGNEMUUM/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: g64VYoCfAKTS/css
 
-import Icon11Icon from "./icons/PlasmicIcon__Icon11"; // plasmic-import: YXzAIe4mJWDL/icon
 import Icon6Icon from "./icons/PlasmicIcon__Icon6"; // plasmic-import: WvR12xDIGLgz/icon
-import ChevronRightIcon from "../fragment_icons/icons/PlasmicIcon__ChevronRight"; // plasmic-import: GHdF3hS-oP_3/icon
-import ChevronLeftIcon from "../fragment_icons/icons/PlasmicIcon__ChevronLeft"; // plasmic-import: r9Upp9NbiZkf/icon
 import Icon3Icon from "./icons/PlasmicIcon__Icon3"; // plasmic-import: jRHPVqrBy9SV/icon
 import Icon4Icon from "./icons/PlasmicIcon__Icon4"; // plasmic-import: gsRGA0OcKSmi/icon
 import Icon15Icon from "./icons/PlasmicIcon__Icon15"; // plasmic-import: jAui2HVvT8Qw/icon
@@ -91,6 +88,8 @@ import Icon16Icon from "./icons/PlasmicIcon__Icon16"; // plasmic-import: wgGgWP4
 import Icon10Icon from "./icons/PlasmicIcon__Icon10"; // plasmic-import: 5Kdxmn_uOBnI/icon
 import SearchsvgIcon from "./icons/PlasmicIcon__Searchsvg"; // plasmic-import: 2VY19-xmXXIp/icon
 import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: 22TzxIplc3cE/icon
+import ChevronRightIcon from "../fragment_icons/icons/PlasmicIcon__ChevronRight"; // plasmic-import: GHdF3hS-oP_3/icon
+import ChevronLeftIcon from "../fragment_icons/icons/PlasmicIcon__ChevronLeft"; // plasmic-import: r9Upp9NbiZkf/icon
 
 createPlasmicElementProxy;
 
@@ -105,11 +104,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
-  h1?: Flex__<"h1">;
   btnDashboard3?: Flex__<"div">;
-  lblUser?: Flex__<"div">;
-  btnLogout?: Flex__<"a"> & Partial<LinkProps>;
-  btnLogin?: Flex__<typeof Button>;
   btnReservation?: Flex__<"div">;
   btnReservation3?: Flex__<"div">;
   btnReservation2?: Flex__<"div">;
@@ -544,18 +539,6 @@ function PlasmicHomepage__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $ctx }) => ""
       },
       {
-        path: "btnLoginShow",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false
-      },
-      {
-        path: "btnLogoutShow",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false
-      },
-      {
         path: "supportTicketCheck.isChecked",
         type: "private",
         variableType: "boolean",
@@ -733,59 +716,18 @@ function PlasmicHomepage__RenderFunc(props: {
                   <div
                     className={classNames(projectcss.all, sty.freeBox__v6Ysz)}
                   >
-                    <Icon11Icon
-                      className={classNames(projectcss.all, sty.svg___0HXtL)}
-                      onClick={async event => {
-                        const $steps = {};
-
-                        $steps["goToHttpspaziresh24Com"] = true
-                          ? (() => {
-                              const actionArgs = {
-                                destination: "https://paziresh24.com"
-                              };
-                              return (({ destination }) => {
-                                if (
-                                  typeof destination === "string" &&
-                                  destination.startsWith("#")
-                                ) {
-                                  document
-                                    .getElementById(destination.substr(1))
-                                    .scrollIntoView({ behavior: "smooth" });
-                                } else {
-                                  __nextRouter?.push(destination);
-                                }
-                              })?.apply(null, [actionArgs]);
-                            })()
-                          : undefined;
-                        if (
-                          $steps["goToHttpspaziresh24Com"] != null &&
-                          typeof $steps["goToHttpspaziresh24Com"] ===
-                            "object" &&
-                          typeof $steps["goToHttpspaziresh24Com"].then ===
-                            "function"
-                        ) {
-                          $steps["goToHttpspaziresh24Com"] = await $steps[
-                            "goToHttpspaziresh24Com"
-                          ];
-                        }
-                      }}
-                      role={"img"}
-                    />
-
-                    <h1
-                      data-plasmic-name={"h1"}
-                      data-plasmic-override={overrides.h1}
+                    <h2
                       className={classNames(
                         projectcss.all,
-                        projectcss.h1,
+                        projectcss.h2,
                         projectcss.__wab_text,
-                        sty.h1
+                        sty.h2___4Mx6E
                       )}
                     >
                       {
                         "\u062a\u0639\u0631\u0641\u0647 \u0645\u062d\u0635\u0648\u0644\u0627\u062a \u067e\u0630\u06cc\u0631\u0634\u06f2\u06f4"
                       }
-                    </h1>
+                    </h2>
                   </div>
                 </div>
                 <div className={classNames(projectcss.all, sty.freeBox__vcShm)}>
@@ -839,143 +781,9 @@ function PlasmicHomepage__RenderFunc(props: {
                     </div>
                   </div>
                 </div>
-                <div className={classNames(projectcss.all, sty.freeBox__w4DUt)}>
-                  <div
-                    data-plasmic-name={"lblUser"}
-                    data-plasmic-override={overrides.lblUser}
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.lblUser
-                    )}
-                  >
-                    <React.Fragment>
-                      {(() => {
-                        try {
-                          return $state.txtUserName;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "\u062d\u062c\u062a \u062e\u0648\u0627\u062c\u0648\u06cc";
-                          }
-                          throw e;
-                        }
-                      })()}
-                    </React.Fragment>
-                  </div>
-                  {(() => {
-                    try {
-                      return $state.btnLogoutShow;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <PlasmicLink__
-                      data-plasmic-name={"btnLogout"}
-                      data-plasmic-override={overrides.btnLogout}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.a,
-                        projectcss.__wab_text,
-                        sty.btnLogout
-                      )}
-                      component={Link}
-                      href={
-                        hasVariant(globalVariants, "screen", "mobileOnly")
-                          ? ""
-                          : undefined
-                      }
-                      onClick={async event => {
-                        const $steps = {};
-
-                        $steps[
-                          "goToHttpspaziresh24Comlogouturlhttpspricingpaziresh24Com"
-                        ] = true
-                          ? (() => {
-                              const actionArgs = {
-                                destination:
-                                  "https://paziresh24.com/logout?url=https://pricing.paziresh24.com"
-                              };
-                              return (({ destination }) => {
-                                if (
-                                  typeof destination === "string" &&
-                                  destination.startsWith("#")
-                                ) {
-                                  document
-                                    .getElementById(destination.substr(1))
-                                    .scrollIntoView({ behavior: "smooth" });
-                                } else {
-                                  __nextRouter?.push(destination);
-                                }
-                              })?.apply(null, [actionArgs]);
-                            })()
-                          : undefined;
-                        if (
-                          $steps[
-                            "goToHttpspaziresh24Comlogouturlhttpspricingpaziresh24Com"
-                          ] != null &&
-                          typeof $steps[
-                            "goToHttpspaziresh24Comlogouturlhttpspricingpaziresh24Com"
-                          ] === "object" &&
-                          typeof $steps[
-                            "goToHttpspaziresh24Comlogouturlhttpspricingpaziresh24Com"
-                          ].then === "function"
-                        ) {
-                          $steps[
-                            "goToHttpspaziresh24Comlogouturlhttpspricingpaziresh24Com"
-                          ] = await $steps[
-                            "goToHttpspaziresh24Comlogouturlhttpspricingpaziresh24Com"
-                          ];
-                        }
-                      }}
-                      platform={"nextjs"}
-                    >
-                      {"\u062e\u0631\u0648\u062c"}
-                    </PlasmicLink__>
-                  ) : null}
-                  {(() => {
-                    try {
-                      return $state.btnLoginShow;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <Button
-                      data-plasmic-name={"btnLogin"}
-                      data-plasmic-override={overrides.btnLogin}
-                      children2={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__dbdr7
-                          )}
-                        >
-                          {"\u0648\u0631\u0648\u062f"}
-                        </div>
-                      }
-                      className={classNames("__wab_instance", sty.btnLogin)}
-                      link={
-                        "https://www.paziresh24.com/login/?redirect_url=https://pricing.paziresh24.com/"
-                      }
-                      outline={true}
-                    />
-                  ) : null}
-                </div>
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__w4DUt)}
+                />
               </div>
             </Stack__>
             <section
@@ -9221,168 +9029,6 @@ function PlasmicHomepage__RenderFunc(props: {
               className={classNames("__wab_instance", sty.sideEffectPageLoad)}
               onMount={async () => {
                 const $steps = {};
-
-                $steps["checkUser"] = true
-                  ? (() => {
-                      const actionArgs = {
-                        args: [
-                          undefined,
-                          "https://apigw.paziresh24.com/v1/auth/me"
-                        ]
-                      };
-                      return $globalActions["Fragment.apiRequest"]?.apply(
-                        null,
-                        [...actionArgs.args]
-                      );
-                    })()
-                  : undefined;
-                if (
-                  $steps["checkUser"] != null &&
-                  typeof $steps["checkUser"] === "object" &&
-                  typeof $steps["checkUser"].then === "function"
-                ) {
-                  $steps["checkUser"] = await $steps["checkUser"];
-                }
-
-                $steps["updateUser"] =
-                  $steps.checkUser.status == 200
-                    ? (() => {
-                        const actionArgs = {
-                          variable: {
-                            objRoot: $state,
-                            variablePath: ["user"]
-                          },
-                          operation: 0,
-                          value: $steps.checkUser.data.users[0]
-                        };
-                        return (({
-                          variable,
-                          value,
-                          startIndex,
-                          deleteCount
-                        }) => {
-                          if (!variable) {
-                            return;
-                          }
-                          const { objRoot, variablePath } = variable;
-
-                          $stateSet(objRoot, variablePath, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                if (
-                  $steps["updateUser"] != null &&
-                  typeof $steps["updateUser"] === "object" &&
-                  typeof $steps["updateUser"].then === "function"
-                ) {
-                  $steps["updateUser"] = await $steps["updateUser"];
-                }
-
-                $steps["updateUser2"] =
-                  $steps.checkUser.status == 200
-                    ? (() => {
-                        const actionArgs = {
-                          variable: {
-                            objRoot: $state,
-                            variablePath: ["txtUserName"]
-                          },
-                          operation: 0,
-                          value: $state.user.name + " " + $state.user.family
-                        };
-                        return (({
-                          variable,
-                          value,
-                          startIndex,
-                          deleteCount
-                        }) => {
-                          if (!variable) {
-                            return;
-                          }
-                          const { objRoot, variablePath } = variable;
-
-                          $stateSet(objRoot, variablePath, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                if (
-                  $steps["updateUser2"] != null &&
-                  typeof $steps["updateUser2"] === "object" &&
-                  typeof $steps["updateUser2"].then === "function"
-                ) {
-                  $steps["updateUser2"] = await $steps["updateUser2"];
-                }
-
-                $steps["updateUser4"] =
-                  $steps.checkUser.status != 200
-                    ? (() => {
-                        const actionArgs = {
-                          variable: {
-                            objRoot: $state,
-                            variablePath: ["btnLoginShow"]
-                          },
-                          operation: 0,
-                          value: true
-                        };
-                        return (({
-                          variable,
-                          value,
-                          startIndex,
-                          deleteCount
-                        }) => {
-                          if (!variable) {
-                            return;
-                          }
-                          const { objRoot, variablePath } = variable;
-
-                          $stateSet(objRoot, variablePath, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                if (
-                  $steps["updateUser4"] != null &&
-                  typeof $steps["updateUser4"] === "object" &&
-                  typeof $steps["updateUser4"].then === "function"
-                ) {
-                  $steps["updateUser4"] = await $steps["updateUser4"];
-                }
-
-                $steps["btnLogout"] =
-                  $steps.checkUser.status == 200
-                    ? (() => {
-                        const actionArgs = {
-                          variable: {
-                            objRoot: $state,
-                            variablePath: ["btnLogoutShow"]
-                          },
-                          operation: 0,
-                          value: true
-                        };
-                        return (({
-                          variable,
-                          value,
-                          startIndex,
-                          deleteCount
-                        }) => {
-                          if (!variable) {
-                            return;
-                          }
-                          const { objRoot, variablePath } = variable;
-
-                          $stateSet(objRoot, variablePath, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                if (
-                  $steps["btnLogout"] != null &&
-                  typeof $steps["btnLogout"] === "object" &&
-                  typeof $steps["btnLogout"].then === "function"
-                ) {
-                  $steps["btnLogout"] = await $steps["btnLogout"];
-                }
               }}
             />
           </div>
@@ -9395,11 +9041,7 @@ function PlasmicHomepage__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
-    "h1",
     "btnDashboard3",
-    "lblUser",
-    "btnLogout",
-    "btnLogin",
     "btnReservation",
     "btnReservation3",
     "btnReservation2",
@@ -9460,11 +9102,7 @@ const PlasmicDescendants = {
     "btnFixedCalculator",
     "sideEffectPageLoad"
   ],
-  h1: ["h1"],
   btnDashboard3: ["btnDashboard3"],
-  lblUser: ["lblUser"],
-  btnLogout: ["btnLogout"],
-  btnLogin: ["btnLogin"],
   btnReservation: ["btnReservation"],
   btnReservation3: ["btnReservation3"],
   btnReservation2: ["btnReservation2"],
@@ -9566,11 +9204,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  h1: "h1";
   btnDashboard3: "div";
-  lblUser: "div";
-  btnLogout: "a";
-  btnLogin: typeof Button;
   btnReservation: "div";
   btnReservation3: "div";
   btnReservation2: "div";
@@ -9692,11 +9326,7 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    h1: makeNodeComponent("h1"),
     btnDashboard3: makeNodeComponent("btnDashboard3"),
-    lblUser: makeNodeComponent("lblUser"),
-    btnLogout: makeNodeComponent("btnLogout"),
-    btnLogin: makeNodeComponent("btnLogin"),
     btnReservation: makeNodeComponent("btnReservation"),
     btnReservation3: makeNodeComponent("btnReservation3"),
     btnReservation2: makeNodeComponent("btnReservation2"),
