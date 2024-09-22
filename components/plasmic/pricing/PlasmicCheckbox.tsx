@@ -67,9 +67,9 @@ import plasmic_fragment_design_system_css from "../fragment_design_system/plasmi
 import projectcss from "./plasmic.module.css"; // plasmic-import: seYsnBL1P3AiXaFGNEMUUM/projectcss
 import sty from "./PlasmicCheckbox.module.css"; // plasmic-import: dk4vJhcf_j2D/css
 
-import SquaresvgIcon from "./icons/PlasmicIcon__Squaresvg"; // plasmic-import: MFDv12-mmwTj/icon
-import SquareCheckFilledsvgIcon from "./icons/PlasmicIcon__SquareCheckFilledsvg"; // plasmic-import: JhqU_pVwANVN/icon
-import SquareMinussvgIcon from "./icons/PlasmicIcon__SquareMinussvg"; // plasmic-import: gqt0H-uJ-Xg8/icon
+import SquareSvgIcon from "./icons/PlasmicIcon__SquareSvg"; // plasmic-import: MFDv12-mmwTj/icon
+import SquareCheckFilledSvgIcon from "./icons/PlasmicIcon__SquareCheckFilledSvg"; // plasmic-import: JhqU_pVwANVN/icon
+import SquareMinusSvgIcon from "./icons/PlasmicIcon__SquareMinusSvg"; // plasmic-import: gqt0H-uJ-Xg8/icon
 
 createPlasmicElementProxy;
 
@@ -141,7 +141,16 @@ function PlasmicCheckbox__RenderFunc(props: {
 }) {
   const { variants, overrides, forNode } = props;
 
-  const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+        Object.fromEntries(
+          Object.entries(props.args).filter(([_, v]) => v !== undefined)
+        )
+      ),
+    [props.args]
+  );
 
   const $props = {
     ...args,
@@ -253,10 +262,10 @@ function PlasmicCheckbox__RenderFunc(props: {
           data-plasmic-override={overrides.svg}
           PlasmicIconType={
             hasVariant($state, "isIndeterminate", "isIndeterminate")
-              ? SquareMinussvgIcon
+              ? SquareMinusSvgIcon
               : hasVariant($state, "isChecked", "isChecked")
-              ? SquareCheckFilledsvgIcon
-              : SquaresvgIcon
+              ? SquareCheckFilledSvgIcon
+              : SquareSvgIcon
           }
           className={classNames(projectcss.all, sty.svg, {
             [sty.svg___focusVisibleWithin]: triggers.focusVisibleWithin_root,

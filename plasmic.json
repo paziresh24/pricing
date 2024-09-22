@@ -77,8 +77,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "oBJtsp5RgVpcN6KCrDTuQT",
@@ -230,14 +229,14 @@
       "components": [
         {
           "id": "5nirPCGmCnRD",
-          "name": "Button",
+          "name": "RadixUiButton",
           "type": "managed",
           "projectId": "sqPBLwEBBKHA2WDuGb17eV",
-          "renderModuleFilePath": "plasmic/radix_ui/PlasmicButton.tsx",
+          "renderModuleFilePath": "plasmic/radix_ui/PlasmicRadixUiButton.tsx",
           "importSpec": {
-            "modulePath": "Button.tsx"
+            "modulePath": "RadixUiButton.tsx"
           },
-          "cssFilePath": "plasmic/radix_ui/PlasmicButton.module.css",
+          "cssFilePath": "plasmic/radix_ui/PlasmicRadixUiButton.module.css",
           "scheme": "blackbox",
           "componentType": "component",
           "plumeType": "button"
@@ -246,8 +245,8 @@
       "icons": [
         {
           "id": "Wyt3GMMsLefj",
-          "name": "ChecksvgIcon",
-          "moduleFilePath": "plasmic/radix_ui/icons/PlasmicIcon__Checksvg.tsx"
+          "name": "CheckSvgIcon",
+          "moduleFilePath": "plasmic/radix_ui/icons/PlasmicIcon__CheckSvg.tsx"
         },
         {
           "id": "MbDRsJU0e3bw",
@@ -309,8 +308,7 @@
           "componentImportPath": "@plasmicpkgs/radix-ui"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "8PtdGodUbexNYgkuyBUcWu",
@@ -332,8 +330,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-embed-css"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "h9Dbk9ygddw7UVEq1NNhKi",
@@ -587,23 +584,23 @@
       "icons": [
         {
           "id": "2VY19-xmXXIp",
-          "name": "SearchsvgIcon",
-          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__Searchsvg.tsx"
+          "name": "SearchSvgIcon",
+          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__SearchSvg.tsx"
         },
         {
           "id": "22TzxIplc3cE",
-          "name": "ChecksvgIcon",
-          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__Checksvg.tsx"
+          "name": "CheckSvgIcon",
+          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__CheckSvg.tsx"
         },
         {
           "id": "6BOnyrSHKU5V",
-          "name": "ChevronDownsvgIcon",
-          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__ChevronDownsvg.tsx"
+          "name": "ChevronDownSvgIcon",
+          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__ChevronDownSvg.tsx"
         },
         {
           "id": "82YD-Tor0jUQ",
-          "name": "ChevronUpsvgIcon",
-          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__ChevronUpsvg.tsx"
+          "name": "ChevronUpSvgIcon",
+          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__ChevronUpSvg.tsx"
         },
         {
           "id": "wsKdM0teCjsm",
@@ -662,18 +659,18 @@
         },
         {
           "id": "MFDv12-mmwTj",
-          "name": "SquaresvgIcon",
-          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__Squaresvg.tsx"
+          "name": "SquareSvgIcon",
+          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__SquareSvg.tsx"
         },
         {
           "id": "JhqU_pVwANVN",
-          "name": "SquareCheckFilledsvgIcon",
-          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__SquareCheckFilledsvg.tsx"
+          "name": "SquareCheckFilledSvgIcon",
+          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__SquareCheckFilledSvg.tsx"
         },
         {
           "id": "gqt0H-uJ-Xg8",
-          "name": "SquareMinussvgIcon",
-          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__SquareMinussvg.tsx"
+          "name": "SquareMinusSvgIcon",
+          "moduleFilePath": "plasmic/pricing/icons/PlasmicIcon__SquareMinusSvg.tsx"
         },
         {
           "id": "8GqB7Ju9fvrK",
