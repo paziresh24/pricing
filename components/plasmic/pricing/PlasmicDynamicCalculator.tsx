@@ -1775,8 +1775,7 @@ function PlasmicDynamicCalculator__RenderFunc(props: {
                                                         currentItem.moduleid
                                                           ? (item.isactive =
                                                               !item.isactive)
-                                                          : (item.isactive =
-                                                              item.isactive)
+                                                          : null
                                                     );
                                                   })();
                                                 }
@@ -6143,13 +6142,10 @@ function PlasmicDynamicCalculator__RenderFunc(props: {
                           customFunction: async () => {
                             return (() => {
                               $state.allModules = $steps.getmodules.data.data;
-                              $state.allModules.forEach(item =>
+                              return $state.allModules.forEach(item =>
                                 item.moduletype == "required"
                                   ? (item.isactive = true)
                                   : (item.isactive = false)
-                              );
-                              return $state.allModules.forEach(
-                                item => (item.itemprice = 0)
                               );
                             })();
                           }
