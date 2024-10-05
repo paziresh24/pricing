@@ -6122,11 +6122,6 @@ function PlasmicDynamicCalculator__RenderFunc(props: {
                           customFunction: async () => {
                             return (() => {
                               $state.allModules = $steps.getmodules.data.data;
-                              $state.allModules.forEach(item =>
-                                item.moduletype == "required"
-                                  ? (item.itemprice = parseInt(item.price))
-                                  : (item.itemprice = 0)
-                              );
                               return $state.allModules.forEach(item =>
                                 item.moduletype == "required"
                                   ? (item.isactive = true)
@@ -6146,6 +6141,32 @@ function PlasmicDynamicCalculator__RenderFunc(props: {
                   typeof $steps["runCode"].then === "function"
                 ) {
                   $steps["runCode"] = await $steps["runCode"];
+                }
+
+                $steps["runCode2"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        customFunction: async () => {
+                          return (() => {
+                            return $state.allModules.forEach(item =>
+                              item.moduletype == "required"
+                                ? (item.itemprice = parseInt(item.price))
+                                : (item.itemprice = 0)
+                            );
+                          })();
+                        }
+                      };
+                      return (({ customFunction }) => {
+                        return customFunction();
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["runCode2"] != null &&
+                  typeof $steps["runCode2"] === "object" &&
+                  typeof $steps["runCode2"].then === "function"
+                ) {
+                  $steps["runCode2"] = await $steps["runCode2"];
                 }
 
                 $steps["updateWaiting2"] = true
