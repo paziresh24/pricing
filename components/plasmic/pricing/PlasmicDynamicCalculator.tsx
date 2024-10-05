@@ -2151,26 +2151,17 @@ function PlasmicDynamicCalculator__RenderFunc(props: {
                             ? (() => {
                                 const actionArgs = {
                                   customFunction: async () => {
-                                    return (() => {
-                                      $state.allModules.forEach(item =>
-                                        item.isactive
-                                          ? item.pricetype == "variable"
-                                            ? (item.itemprice =
-                                                item.price *
-                                                parseInt(
-                                                  $state.txtResevationCount
-                                                    .value
-                                                ))
-                                            : (item.itemprice = item.price)
-                                          : (item.itemprice = 0)
-                                      );
-                                      $state.suminvoiceResult = 0;
-                                      return $state.allModules.forEach(
-                                        item =>
-                                          ($state.suminvoiceResult +=
-                                            item.itemprice)
-                                      );
-                                    })();
+                                    return $state.allModules.forEach(item =>
+                                      item.isactive
+                                        ? item.pricetype == "variable"
+                                          ? (item.itemprice =
+                                              item.price *
+                                              parseInt(
+                                                $state.txtResevationCount.value
+                                              ))
+                                          : (item.itemprice = item.price)
+                                        : (item.itemprice = 0)
+                                    );
                                   }
                                 };
                                 return (({ customFunction }) => {
@@ -2184,6 +2175,30 @@ function PlasmicDynamicCalculator__RenderFunc(props: {
                             typeof $steps["runCode"].then === "function"
                           ) {
                             $steps["runCode"] = await $steps["runCode"];
+                          }
+
+                          $steps["runCode2"] = true
+                            ? (() => {
+                                const actionArgs = {
+                                  customFunction: async () => {
+                                    return ($state.suminvoiceResult =
+                                      $state.allModules.reduce(
+                                        (acc, item) => acc + item.itemprice,
+                                        0
+                                      ));
+                                  }
+                                };
+                                return (({ customFunction }) => {
+                                  return customFunction();
+                                })?.apply(null, [actionArgs]);
+                              })()
+                            : undefined;
+                          if (
+                            $steps["runCode2"] != null &&
+                            typeof $steps["runCode2"] === "object" &&
+                            typeof $steps["runCode2"].then === "function"
+                          ) {
+                            $steps["runCode2"] = await $steps["runCode2"];
                           }
                         }}
                       />
@@ -6122,10 +6137,13 @@ function PlasmicDynamicCalculator__RenderFunc(props: {
                           customFunction: async () => {
                             return (() => {
                               $state.allModules = $steps.getmodules.data.data;
-                              return $state.allModules.forEach(item =>
+                              $state.allModules.forEach(item =>
                                 item.moduletype == "required"
                                   ? (item.isactive = true)
                                   : (item.isactive = false)
+                              );
+                              return $state.allModules.forEach(
+                                item => (item.itemprice = 0)
                               );
                             })();
                           }
@@ -6141,32 +6159,6 @@ function PlasmicDynamicCalculator__RenderFunc(props: {
                   typeof $steps["runCode"].then === "function"
                 ) {
                   $steps["runCode"] = await $steps["runCode"];
-                }
-
-                $steps["runCode2"] = true
-                  ? (() => {
-                      const actionArgs = {
-                        customFunction: async () => {
-                          return (() => {
-                            return $state.allModules.forEach(item =>
-                              item.moduletype == "required"
-                                ? (item.itemprice = parseInt(item.price))
-                                : (item.itemprice = 0)
-                            );
-                          })();
-                        }
-                      };
-                      return (({ customFunction }) => {
-                        return customFunction();
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  $steps["runCode2"] != null &&
-                  typeof $steps["runCode2"] === "object" &&
-                  typeof $steps["runCode2"].then === "function"
-                ) {
-                  $steps["runCode2"] = await $steps["runCode2"];
                 }
 
                 $steps["updateWaiting2"] = true
