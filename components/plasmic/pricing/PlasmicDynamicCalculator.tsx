@@ -2090,7 +2090,7 @@ function PlasmicDynamicCalculator__RenderFunc(props: {
                                   <React.Fragment>
                                     {(() => {
                                       try {
-                                        return $state.suminvoiceResult
+                                        return ($state.suminvoiceResult / 10)
                                           .toString()
                                           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                                           .replaceAll("1", "۱")
