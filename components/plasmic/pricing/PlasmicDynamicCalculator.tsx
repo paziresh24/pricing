@@ -520,6 +520,12 @@ function PlasmicDynamicCalculator__RenderFunc(props: {
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "finalPrice",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
       }
     ],
     [$props, $ctx, $refs]
@@ -2182,7 +2188,17 @@ function PlasmicDynamicCalculator__RenderFunc(props: {
                             ? (() => {
                                 const actionArgs = {
                                   customFunction: async () => {
-                                    return (() => {})();
+                                    return (() => {
+                                      $state.finalPrice = 0;
+                                      $state.allModules.forEach(
+                                        item =>
+                                          ($state.finalPrice += parseInt(
+                                            item.itemprice
+                                          ))
+                                      );
+                                      return ($state.suminvoiceResult =
+                                        $state.finalPrice);
+                                    })();
                                   }
                                 };
                                 return (({ customFunction }) => {
