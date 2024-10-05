@@ -77,7 +77,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "oBJtsp5RgVpcN6KCrDTuQT",
@@ -308,7 +309,8 @@
           "componentImportPath": "@plasmicpkgs/radix-ui"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "8PtdGodUbexNYgkuyBUcWu",
@@ -330,7 +332,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-embed-css"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "h9Dbk9ygddw7UVEq1NNhKi",
@@ -579,6 +582,20 @@
           "cssFilePath": "plasmic/pricing/PlasmicMenuFeature.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "T1F7-foJnoQp",
+          "name": "DynamicCalculator",
+          "type": "managed",
+          "projectId": "seYsnBL1P3AiXaFGNEMUUM",
+          "renderModuleFilePath": "plasmic/pricing/PlasmicDynamicCalculator.tsx",
+          "importSpec": {
+            "modulePath": "../src/pages/calculator.tsx"
+          },
+          "cssFilePath": "plasmic/pricing/PlasmicDynamicCalculator.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/calculator"
         }
       ],
       "icons": [
