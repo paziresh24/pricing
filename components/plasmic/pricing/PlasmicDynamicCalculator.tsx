@@ -2090,7 +2090,9 @@ function PlasmicDynamicCalculator__RenderFunc(props: {
                                   <React.Fragment>
                                     {(() => {
                                       try {
-                                        return ($state.suminvoiceResult / 10)
+                                        return (
+                                          parseInt($state.suminvoiceResult) / 10
+                                        )
                                           .toString()
                                           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                                           .replaceAll("1", "۱")
@@ -2181,11 +2183,15 @@ function PlasmicDynamicCalculator__RenderFunc(props: {
                             ? (() => {
                                 const actionArgs = {
                                   customFunction: async () => {
-                                    return ($state.suminvoiceResult =
-                                      $state.allModules.reduce(
-                                        (acc, item) => acc + item.itemprice,
-                                        0
-                                      ));
+                                    return (() => {
+                                      $state.suminvoiceResult = 0;
+                                      return ($state.suminvoiceResult =
+                                        $state.allModules.reduce(
+                                          (acc, item) =>
+                                            acc + parseInt(item.itemprice),
+                                          0
+                                        ));
+                                    })();
                                   }
                                 };
                                 return (({ customFunction }) => {
