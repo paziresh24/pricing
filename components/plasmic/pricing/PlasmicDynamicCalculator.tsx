@@ -2162,11 +2162,13 @@ function PlasmicDynamicCalculator__RenderFunc(props: {
                                       item.isactive
                                         ? item.pricetype == "variable"
                                           ? (item.itemprice =
-                                              item.price *
+                                              parseInt(item.price) *
                                               parseInt(
                                                 $state.txtResevationCount.value
                                               ))
-                                          : (item.itemprice = item.price)
+                                          : (item.itemprice = parseInt(
+                                              item.price
+                                            ))
                                         : (item.itemprice = 0)
                                     );
                                   }
