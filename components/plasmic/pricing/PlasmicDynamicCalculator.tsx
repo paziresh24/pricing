@@ -2183,34 +2183,6 @@ function PlasmicDynamicCalculator__RenderFunc(props: {
                           ) {
                             $steps["runCode"] = await $steps["runCode"];
                           }
-
-                          $steps["runCode2"] = true
-                            ? (() => {
-                                const actionArgs = {
-                                  customFunction: async () => {
-                                    return (() => {
-                                      $state.finalPrice = 0;
-                                      $state.allModules.forEach(
-                                        item =>
-                                          ($state.finalPrice += item.itemprice)
-                                      );
-                                      return ($state.suminvoiceResult =
-                                        $state.finalPrice);
-                                    })();
-                                  }
-                                };
-                                return (({ customFunction }) => {
-                                  return customFunction();
-                                })?.apply(null, [actionArgs]);
-                              })()
-                            : undefined;
-                          if (
-                            $steps["runCode2"] != null &&
-                            typeof $steps["runCode2"] === "object" &&
-                            typeof $steps["runCode2"].then === "function"
-                          ) {
-                            $steps["runCode2"] = await $steps["runCode2"];
-                          }
                         }}
                       />
                     </div>
