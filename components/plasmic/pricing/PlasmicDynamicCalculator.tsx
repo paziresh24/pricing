@@ -2162,13 +2162,11 @@ function PlasmicDynamicCalculator__RenderFunc(props: {
                                       item.isactive
                                         ? item.pricetype == "variable"
                                           ? (item.itemprice =
-                                              parseInt(item.price) *
+                                              item.price *
                                               parseInt(
                                                 $state.txtResevationCount.value
                                               ))
-                                          : (item.itemprice = parseInt(
-                                              item.price
-                                            ))
+                                          : (item.itemprice = item.price)
                                         : (item.itemprice = 0)
                                     );
                                   }
@@ -2194,9 +2192,7 @@ function PlasmicDynamicCalculator__RenderFunc(props: {
                                       $state.finalPrice = 0;
                                       $state.allModules.forEach(
                                         item =>
-                                          ($state.finalPrice += parseInt(
-                                            item.itemprice
-                                          ))
+                                          ($state.finalPrice += item.itemprice)
                                       );
                                       return ($state.suminvoiceResult =
                                         $state.finalPrice);
