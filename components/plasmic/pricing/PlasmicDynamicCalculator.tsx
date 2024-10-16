@@ -62,8 +62,8 @@ import {
 import { Slider } from "@/fragment/components/slider"; // plasmic-import: IwfvOcf1tP7X/codeComponent
 import TextInput from "../../TextInput"; // plasmic-import: ZdzGQGZE4mJ7/component
 import Checkbox from "../../Checkbox"; // plasmic-import: dk4vJhcf_j2D/component
-import Button from "../../Button"; // plasmic-import: oVzoHzMf1TLl/component
 import { SideEffect } from "@plasmicpkgs/plasmic-basic-components";
+import Button from "../../Button"; // plasmic-import: oVzoHzMf1TLl/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 
 import { useScreenVariants as useScreenVariantsebUcSKv8J57Q } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: ebUcSKv8j57Q/globalVariant
@@ -124,8 +124,10 @@ export type PlasmicDynamicCalculator__OverridesType = {
   moduleCheck?: Flex__<typeof Checkbox>;
   txtReservationInternetResult?: Flex__<"div">;
   txtSumInvoice?: Flex__<"div">;
+  link?: Flex__<"a"> & Partial<LinkProps>;
   sideEffectCalculator?: Flex__<typeof SideEffect>;
   gridReservation?: Flex__<"div">;
+  button?: Flex__<typeof Button>;
   gridPhoneReserve?: Flex__<"div">;
   gridKiosk?: Flex__<"div">;
   gridAnnouncement?: Flex__<"div">;
@@ -2140,27 +2142,22 @@ function PlasmicDynamicCalculator__RenderFunc(props: {
                                 sty.freeBox__ckbyA
                               )}
                             >
-                              <Button
-                                children2={
-                                  <div
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text__emp7Q
-                                    )}
-                                  >
-                                    {
-                                      "\u062b\u0628\u062a \u0646\u0627\u0645 \u0645\u0631\u0627\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc"
-                                    }
-                                  </div>
-                                }
+                              <PlasmicLink__
+                                data-plasmic-name={"link"}
+                                data-plasmic-override={overrides.link}
                                 className={classNames(
-                                  "__wab_instance",
-                                  sty.button__ywux4
+                                  projectcss.all,
+                                  projectcss.a,
+                                  projectcss.__wab_text,
+                                  sty.link
                                 )}
-                                link={"https://survey.porsline.ir/s/YCEGAgx"}
-                                target={true}
-                              />
+                                component={Link}
+                                platform={"nextjs"}
+                              >
+                                {
+                                  "\u062b\u0628\u062a \u0646\u0627\u0645 \u0645\u0631\u0627\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc"
+                                }
+                              </PlasmicLink__>
                             </div>
                           </div>
                         </div>
@@ -3605,13 +3602,12 @@ function PlasmicDynamicCalculator__RenderFunc(props: {
                     dir={"rtl"}
                   >
                     <Button
+                      data-plasmic-name={"button"}
+                      data-plasmic-override={overrides.button}
                       children2={
                         "\u0627\u0641\u0632\u0648\u062f\u0646 \u0628\u0647 \u0645\u0627\u0634\u06cc\u0646 \u062d\u0633\u0627\u0628"
                       }
-                      className={classNames(
-                        "__wab_instance",
-                        sty.button__kEwkl
-                      )}
+                      className={classNames("__wab_instance", sty.button)}
                       onClick={async event => {
                         const $steps = {};
 
@@ -6242,8 +6238,10 @@ const PlasmicDescendants = {
     "moduleCheck",
     "txtReservationInternetResult",
     "txtSumInvoice",
+    "link",
     "sideEffectCalculator",
     "gridReservation",
+    "button",
     "gridPhoneReserve",
     "gridKiosk",
     "gridAnnouncement",
@@ -6276,6 +6274,7 @@ const PlasmicDescendants = {
     "moduleCheck",
     "txtReservationInternetResult",
     "txtSumInvoice",
+    "link",
     "sideEffectCalculator"
   ],
   fragmentSlider: ["fragmentSlider"],
@@ -6283,8 +6282,10 @@ const PlasmicDescendants = {
   moduleCheck: ["moduleCheck"],
   txtReservationInternetResult: ["txtReservationInternetResult"],
   txtSumInvoice: ["txtSumInvoice"],
+  link: ["link"],
   sideEffectCalculator: ["sideEffectCalculator"],
-  gridReservation: ["gridReservation"],
+  gridReservation: ["gridReservation", "button"],
+  button: ["button"],
   gridPhoneReserve: ["gridPhoneReserve"],
   gridKiosk: ["gridKiosk"],
   gridAnnouncement: ["gridAnnouncement"],
@@ -6321,8 +6322,10 @@ type NodeDefaultElementType = {
   moduleCheck: typeof Checkbox;
   txtReservationInternetResult: "div";
   txtSumInvoice: "div";
+  link: "a";
   sideEffectCalculator: typeof SideEffect;
   gridReservation: "div";
+  button: typeof Button;
   gridPhoneReserve: "div";
   gridKiosk: "div";
   gridAnnouncement: "div";
@@ -6417,8 +6420,10 @@ export const PlasmicDynamicCalculator = Object.assign(
       "txtReservationInternetResult"
     ),
     txtSumInvoice: makeNodeComponent("txtSumInvoice"),
+    link: makeNodeComponent("link"),
     sideEffectCalculator: makeNodeComponent("sideEffectCalculator"),
     gridReservation: makeNodeComponent("gridReservation"),
+    button: makeNodeComponent("button"),
     gridPhoneReserve: makeNodeComponent("gridPhoneReserve"),
     gridKiosk: makeNodeComponent("gridKiosk"),
     gridAnnouncement: makeNodeComponent("gridAnnouncement"),

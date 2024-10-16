@@ -1972,25 +1972,18 @@
   min-width: 0;
   padding: 0px 8px;
 }
-.button__ywux4:global(.__wab_instance) {
-  max-width: 100%;
-}
-.svg__x6Fy {
+.link {
   position: relative;
-  object-fit: cover;
-  width: auto;
-  height: 1em;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  text-align: center;
+  min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .text__emp7Q {
-    font-size: 10px;
+  .link {
+    font-size: 12px;
   }
-}
-.svg__i2LQ8 {
-  position: relative;
-  object-fit: cover;
-  width: auto;
-  height: 1em;
 }
 .sideEffectCalculator:global(.__wab_instance) {
   max-width: 100%;
@@ -3213,7 +3206,7 @@
   min-width: 0;
   padding: 8px;
 }
-.button__kEwkl:global(.__wab_instance) {
+.button:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
   display: none;
