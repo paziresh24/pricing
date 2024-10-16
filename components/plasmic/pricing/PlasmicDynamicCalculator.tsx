@@ -2152,7 +2152,9 @@ function PlasmicDynamicCalculator__RenderFunc(props: {
                                   sty.link
                                 )}
                                 component={Link}
+                                href={"https://survey.porsline.ir/s/YCEGAgx"}
                                 platform={"nextjs"}
+                                target={"_blank"}
                               >
                                 {
                                   "\u062b\u0628\u062a \u0646\u0627\u0645 \u0645\u0631\u0627\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc"
