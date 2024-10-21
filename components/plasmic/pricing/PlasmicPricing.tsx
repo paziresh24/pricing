@@ -102,9 +102,9 @@ export type PlasmicPricing__OverridesType = {
   tabsContainer?: Flex__<typeof TabsContainer>;
   tabUnderline?: Flex__<typeof TabUnderline>;
   gridCalculator?: Flex__<"div">;
+  txtSumInvoice?: Flex__<"div">;
   fragmentSlider?: Flex__<typeof Slider>;
   txtResevationCount?: Flex__<typeof TextInput>;
-  txtSumInvoice?: Flex__<"div">;
   moduleCheck?: Flex__<typeof Checkbox>;
   txtReservationInternetResult?: Flex__<"div">;
   sideEffectCalculator?: Flex__<typeof SideEffect>;
@@ -812,21 +812,111 @@ function PlasmicPricing__RenderFunc(props: {
                                     <div
                                       className={classNames(
                                         projectcss.all,
-                                        sty.freeBox__zh19H
+                                        sty.freeBox__axjQ
                                       )}
                                     >
-                                      <h2
+                                      <div
                                         className={classNames(
                                           projectcss.all,
-                                          projectcss.h2,
-                                          projectcss.__wab_text,
-                                          sty.h2__w22Qj
+                                          sty.freeBox__zh19H
                                         )}
                                       >
-                                        {
-                                          "\u0628\u0631\u0622\u0648\u0631\u062f \u0642\u06cc\u0645\u062a \u067e\u0646\u0644 \u067e\u0630\u06cc\u0631\u0634\u06f2\u06f4"
-                                        }
-                                      </h2>
+                                        <h2
+                                          className={classNames(
+                                            projectcss.all,
+                                            projectcss.h2,
+                                            projectcss.__wab_text,
+                                            sty.h2__w22Qj
+                                          )}
+                                        >
+                                          {
+                                            "\u0628\u0631\u0622\u0648\u0631\u062f \u0642\u06cc\u0645\u062a \u067e\u0646\u0644 \u067e\u0630\u06cc\u0631\u0634\u06f2\u06f4"
+                                          }
+                                        </h2>
+                                      </div>
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.freeBox__dEsfQ
+                                        )}
+                                      >
+                                        <div
+                                          className={classNames(
+                                            projectcss.all,
+                                            sty.freeBox__yBmmu
+                                          )}
+                                        >
+                                          <div
+                                            className={classNames(
+                                              projectcss.all,
+                                              sty.freeBox__vdxby
+                                            )}
+                                          >
+                                            <div
+                                              className={classNames(
+                                                projectcss.all,
+                                                projectcss.__wab_text,
+                                                sty.text___1E5Ty
+                                              )}
+                                            >
+                                              {
+                                                "\u062c\u0645\u0639 \u06a9\u0644:"
+                                              }
+                                            </div>
+                                            <div
+                                              data-plasmic-name={
+                                                "txtSumInvoice"
+                                              }
+                                              data-plasmic-override={
+                                                overrides.txtSumInvoice
+                                              }
+                                              className={classNames(
+                                                projectcss.all,
+                                                projectcss.__wab_text,
+                                                sty.txtSumInvoice
+                                              )}
+                                            >
+                                              <React.Fragment>
+                                                {(() => {
+                                                  try {
+                                                    return (
+                                                      $state.allModules.reduce(
+                                                        (acc, curr) =>
+                                                          acc + curr.itemprice,
+                                                        0
+                                                      ) / 10
+                                                    )
+                                                      .toString()
+                                                      .replace(
+                                                        /\B(?=(\d{3})+(?!\d))/g,
+                                                        ","
+                                                      )
+                                                      .replaceAll("1", "۱")
+                                                      .replaceAll("2", "۲")
+                                                      .replaceAll("3", "۳")
+                                                      .replaceAll("4", "۴")
+                                                      .replaceAll("5", "۵")
+                                                      .replaceAll("6", "۶")
+                                                      .replaceAll("7", "۷")
+                                                      .replaceAll("8", "۸")
+                                                      .replaceAll("9", "۹")
+                                                      .replaceAll("0", "۰");
+                                                  } catch (e) {
+                                                    if (
+                                                      e instanceof TypeError ||
+                                                      e?.plasmicType ===
+                                                        "PlasmicUndefinedDataError"
+                                                    ) {
+                                                      return "";
+                                                    }
+                                                    throw e;
+                                                  }
+                                                })()}
+                                              </React.Fragment>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
                                     </div>
                                     <div
                                       className={classNames(
@@ -1057,106 +1147,6 @@ function PlasmicPricing__RenderFunc(props: {
                                           />
                                         </div>
                                       </Stack__>
-                                      <div
-                                        className={classNames(
-                                          projectcss.all,
-                                          sty.freeBox__f6Poo
-                                        )}
-                                        dir={"rtl"}
-                                      >
-                                        <div
-                                          className={classNames(
-                                            projectcss.all,
-                                            sty.freeBox__yBmmu
-                                          )}
-                                        >
-                                          <div
-                                            className={classNames(
-                                              projectcss.all,
-                                              sty.freeBox__vdxby
-                                            )}
-                                          >
-                                            <div
-                                              className={classNames(
-                                                projectcss.all,
-                                                projectcss.__wab_text,
-                                                sty.text___1E5Ty
-                                              )}
-                                            >
-                                              {
-                                                "\u062c\u0645\u0639 \u06a9\u0644:"
-                                              }
-                                            </div>
-                                          </div>
-                                          <div
-                                            className={classNames(
-                                              projectcss.all,
-                                              sty.freeBox___5OTfE
-                                            )}
-                                          >
-                                            <div
-                                              className={classNames(
-                                                projectcss.all,
-                                                sty.freeBox___8OyXq
-                                              )}
-                                            >
-                                              <div
-                                                data-plasmic-name={
-                                                  "txtSumInvoice"
-                                                }
-                                                data-plasmic-override={
-                                                  overrides.txtSumInvoice
-                                                }
-                                                className={classNames(
-                                                  projectcss.all,
-                                                  projectcss.__wab_text,
-                                                  sty.txtSumInvoice
-                                                )}
-                                              >
-                                                <React.Fragment>
-                                                  {(() => {
-                                                    try {
-                                                      return (
-                                                        $state.allModules.reduce(
-                                                          (acc, curr) =>
-                                                            acc +
-                                                            curr.itemprice,
-                                                          0
-                                                        ) / 10
-                                                      )
-                                                        .toString()
-                                                        .replace(
-                                                          /\B(?=(\d{3})+(?!\d))/g,
-                                                          ","
-                                                        )
-                                                        .replaceAll("1", "۱")
-                                                        .replaceAll("2", "۲")
-                                                        .replaceAll("3", "۳")
-                                                        .replaceAll("4", "۴")
-                                                        .replaceAll("5", "۵")
-                                                        .replaceAll("6", "۶")
-                                                        .replaceAll("7", "۷")
-                                                        .replaceAll("8", "۸")
-                                                        .replaceAll("9", "۹")
-                                                        .replaceAll("0", "۰");
-                                                    } catch (e) {
-                                                      if (
-                                                        e instanceof
-                                                          TypeError ||
-                                                        e?.plasmicType ===
-                                                          "PlasmicUndefinedDataError"
-                                                      ) {
-                                                        return "";
-                                                      }
-                                                      throw e;
-                                                    }
-                                                  })()}
-                                                </React.Fragment>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
                                     </div>
                                     <div
                                       className={classNames(
@@ -5709,9 +5699,9 @@ const PlasmicDescendants = {
     "tabsContainer",
     "tabUnderline",
     "gridCalculator",
+    "txtSumInvoice",
     "fragmentSlider",
     "txtResevationCount",
-    "txtSumInvoice",
     "moduleCheck",
     "txtReservationInternetResult",
     "sideEffectCalculator",
@@ -5733,9 +5723,9 @@ const PlasmicDescendants = {
     "tabsContainer",
     "tabUnderline",
     "gridCalculator",
+    "txtSumInvoice",
     "fragmentSlider",
     "txtResevationCount",
-    "txtSumInvoice",
     "moduleCheck",
     "txtReservationInternetResult",
     "sideEffectCalculator",
@@ -5754,16 +5744,16 @@ const PlasmicDescendants = {
   tabUnderline: ["tabUnderline"],
   gridCalculator: [
     "gridCalculator",
+    "txtSumInvoice",
     "fragmentSlider",
     "txtResevationCount",
-    "txtSumInvoice",
     "moduleCheck",
     "txtReservationInternetResult",
     "sideEffectCalculator"
   ],
+  txtSumInvoice: ["txtSumInvoice"],
   fragmentSlider: ["fragmentSlider"],
   txtResevationCount: ["txtResevationCount"],
-  txtSumInvoice: ["txtSumInvoice"],
   moduleCheck: ["moduleCheck"],
   txtReservationInternetResult: ["txtReservationInternetResult"],
   sideEffectCalculator: ["sideEffectCalculator"],
@@ -5789,9 +5779,9 @@ type NodeDefaultElementType = {
   tabsContainer: typeof TabsContainer;
   tabUnderline: typeof TabUnderline;
   gridCalculator: "div";
+  txtSumInvoice: "div";
   fragmentSlider: typeof Slider;
   txtResevationCount: typeof TextInput;
-  txtSumInvoice: "div";
   moduleCheck: typeof Checkbox;
   txtReservationInternetResult: "div";
   sideEffectCalculator: typeof SideEffect;
@@ -5873,9 +5863,9 @@ export const PlasmicPricing = Object.assign(
     tabsContainer: makeNodeComponent("tabsContainer"),
     tabUnderline: makeNodeComponent("tabUnderline"),
     gridCalculator: makeNodeComponent("gridCalculator"),
+    txtSumInvoice: makeNodeComponent("txtSumInvoice"),
     fragmentSlider: makeNodeComponent("fragmentSlider"),
     txtResevationCount: makeNodeComponent("txtResevationCount"),
-    txtSumInvoice: makeNodeComponent("txtSumInvoice"),
     moduleCheck: makeNodeComponent("moduleCheck"),
     txtReservationInternetResult: makeNodeComponent(
       "txtReservationInternetResult"

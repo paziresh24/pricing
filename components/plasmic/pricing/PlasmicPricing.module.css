@@ -385,6 +385,16 @@
   border-radius: 10px;
   padding: 8px;
 }
+.freeBox__axjQ {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
 .freeBox__zh19H {
   display: flex;
   position: relative;
@@ -394,8 +404,14 @@
   width: 100%;
   height: auto;
   max-width: 100%;
+  grid-column-end: span 2;
   min-width: 0;
   padding: 8px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__zh19H {
+    grid-column-end: span 3;
+  }
 }
 .h2__w22Qj {
   position: relative;
@@ -405,6 +421,87 @@
   font-size: 25px;
   color: #3f4079;
   min-width: 0;
+}
+.freeBox__dEsfQ {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__dEsfQ {
+    grid-column-end: span 3;
+  }
+}
+.freeBox__yBmmu {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0px 8px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__yBmmu {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+.freeBox__vdxby {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  padding: 0px 8px;
+}
+.text___1E5Ty {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  text-align: center;
+  padding-left: 0px;
+  align-self: center;
+  font-weight: 700;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .text___1E5Ty {
+    white-space: pre;
+    text-align: right;
+    font-size: 14px;
+  }
+}
+.txtSumInvoice {
+  height: auto;
+  max-width: 100%;
+  text-align: right;
+  width: auto;
+  font-weight: 700;
+  margin: 0px 5px 0px 0px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .txtSumInvoice {
+    height: auto;
+    max-width: 100%;
+    text-align: left;
+    margin-right: 10px;
+    white-space: pre;
+    font-size: 14px;
+  }
 }
 .text__jUhlH {
   position: relative;
@@ -503,6 +600,11 @@
   margin-top: calc(20px + var(--token-vMUQwr5Jto1d)) !important;
   min-width: 0;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .fragmentSlider:global(.__wab_instance) {
+    margin-top: calc(20px + var(--token-vMUQwr5Jto1d)) !important;
+  }
+}
 .freeBox__ww8Cg {
   display: flex;
   position: relative;
@@ -566,117 +668,6 @@
   object-fit: cover;
   width: auto;
   height: 1em;
-}
-.freeBox__f6Poo {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  justify-content: center;
-  align-items: flex-start;
-  min-width: 0;
-  padding: 8px;
-}
-.freeBox__yBmmu {
-  display: grid;
-  position: relative;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  min-width: 0;
-  padding: 0px 8px;
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .freeBox__yBmmu {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-}
-.freeBox__vdxby {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  justify-content: center;
-  align-items: center;
-  min-width: 0;
-  padding: 0px 8px;
-}
-.text___1E5Ty {
-  position: relative;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  text-align: center;
-  padding-left: 0px;
-  align-self: center;
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .text___1E5Ty {
-    white-space: pre;
-    text-align: right;
-    font-size: 14px;
-  }
-}
-.freeBox___5OTfE {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  justify-content: center;
-  align-items: center;
-  grid-column-end: span 2;
-  min-width: 0;
-  padding: 8px;
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .freeBox___5OTfE {
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-}
-.freeBox___8OyXq {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  min-width: 0;
-  padding: 0px 8px;
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .freeBox___8OyXq {
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-}
-.txtSumInvoice {
-  height: auto;
-  max-width: 100%;
-  text-align: right;
-  width: auto;
-  margin: 0px 5px 0px 0px;
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .txtSumInvoice {
-    height: auto;
-    max-width: 100%;
-    text-align: left;
-    margin-right: 10px;
-    white-space: pre;
-    font-size: 14px;
-  }
 }
 .freeBox__sGnf {
   display: grid;
