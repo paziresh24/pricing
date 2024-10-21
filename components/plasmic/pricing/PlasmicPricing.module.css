@@ -533,6 +533,7 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .link__jScGh {
     user-select: none;
+    font-size: 14px;
     padding: 3px;
   }
 }
