@@ -61,13 +61,13 @@ import {
 
 import { TabsContainer } from "@plasmicpkgs/plasmic-tabs";
 import { TabButton } from "@plasmicpkgs/plasmic-tabs";
-import Button from "../../Button"; // plasmic-import: oVzoHzMf1TLl/component
 import { TabUnderline } from "@plasmicpkgs/plasmic-tabs";
 import { TabContent } from "@plasmicpkgs/plasmic-tabs";
 import { Slider } from "@/fragment/components/slider"; // plasmic-import: IwfvOcf1tP7X/codeComponent
 import TextInput from "../../TextInput"; // plasmic-import: ZdzGQGZE4mJ7/component
 import Checkbox from "../../Checkbox"; // plasmic-import: dk4vJhcf_j2D/component
 import { SideEffect } from "@plasmicpkgs/plasmic-basic-components";
+import Button from "../../Button"; // plasmic-import: oVzoHzMf1TLl/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 
 import { useScreenVariants as useScreenVariantsebUcSKv8J57Q } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: ebUcSKv8j57Q/globalVariant
@@ -79,11 +79,11 @@ import projectcss from "./plasmic.module.css"; // plasmic-import: seYsnBL1P3AiXa
 import sty from "./PlasmicPricing.module.css"; // plasmic-import: cujkUpeM-yiE/css
 
 import Icon6Icon from "./icons/PlasmicIcon__Icon6"; // plasmic-import: WvR12xDIGLgz/icon
-import ChevronRightIcon from "../fragment_icons/icons/PlasmicIcon__ChevronRight"; // plasmic-import: GHdF3hS-oP_3/icon
-import ChevronLeftIcon from "../fragment_icons/icons/PlasmicIcon__ChevronLeft"; // plasmic-import: r9Upp9NbiZkf/icon
 import SearchSvgIcon from "./icons/PlasmicIcon__SearchSvg"; // plasmic-import: 2VY19-xmXXIp/icon
 import CheckSvgIcon from "./icons/PlasmicIcon__CheckSvg"; // plasmic-import: 22TzxIplc3cE/icon
 import Icon2Icon from "./icons/PlasmicIcon__Icon2"; // plasmic-import: mWyKgupBp1Cr/icon
+import ChevronRightIcon from "../fragment_icons/icons/PlasmicIcon__ChevronRight"; // plasmic-import: GHdF3hS-oP_3/icon
+import ChevronLeftIcon from "../fragment_icons/icons/PlasmicIcon__ChevronLeft"; // plasmic-import: r9Upp9NbiZkf/icon
 
 createPlasmicElementProxy;
 
@@ -109,6 +109,7 @@ export type PlasmicPricing__OverridesType = {
   txtReservationInternetResult?: Flex__<"div">;
   sideEffectCalculator?: Flex__<typeof SideEffect>;
   gridReservation?: Flex__<"div">;
+  button?: Flex__<typeof Button>;
   gridPhoneReserve?: Flex__<"div">;
   gridKiosk?: Flex__<"div">;
   gridAnnouncement?: Flex__<"div">;
@@ -709,16 +710,20 @@ function PlasmicPricing__RenderFunc(props: {
                           )}
                           tabKey={"tab1"}
                         >
-                          <Button
-                            children2={
+                          <PlasmicLink__
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.a,
+                              projectcss.__wab_text,
+                              sty.link__gtr8H
+                            )}
+                            component={Link}
+                            platform={"nextjs"}
+                          >
+                            {
                               "\u0628\u0631\u0622\u0648\u0631\u062f \u0642\u06cc\u0645\u062a"
                             }
-                            className={classNames(
-                              "__wab_instance",
-                              sty.button__eAnIg
-                            )}
-                            color={"text"}
-                          />
+                          </PlasmicLink__>
                         </TabButton>
                         <TabButton
                           className={classNames(
@@ -727,16 +732,20 @@ function PlasmicPricing__RenderFunc(props: {
                           )}
                           tabKey={"tab2"}
                         >
-                          <Button
-                            children2={
+                          <PlasmicLink__
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.a,
+                              projectcss.__wab_text,
+                              sty.link__nMt61
+                            )}
+                            component={Link}
+                            platform={"nextjs"}
+                          >
+                            {
                               "\u0645\u0639\u0631\u0641\u06cc \u062e\u062f\u0645\u0627\u062a"
                             }
-                            className={classNames(
-                              "__wab_instance",
-                              sty.button__jiEtV
-                            )}
-                            color={"text"}
-                          />
+                          </PlasmicLink__>
                         </TabButton>
                         <TabUnderline
                           data-plasmic-name={"tabUnderline"}
@@ -3105,12 +3114,14 @@ function PlasmicPricing__RenderFunc(props: {
                                   dir={"rtl"}
                                 >
                                   <Button
+                                    data-plasmic-name={"button"}
+                                    data-plasmic-override={overrides.button}
                                     children2={
                                       "\u0627\u0641\u0632\u0648\u062f\u0646 \u0628\u0647 \u0645\u0627\u0634\u06cc\u0646 \u062d\u0633\u0627\u0628"
                                     }
                                     className={classNames(
                                       "__wab_instance",
-                                      sty.button__kaHuj
+                                      sty.button
                                     )}
                                     onClick={async event => {
                                       const $steps = {};
@@ -5706,6 +5717,7 @@ const PlasmicDescendants = {
     "txtReservationInternetResult",
     "sideEffectCalculator",
     "gridReservation",
+    "button",
     "gridPhoneReserve",
     "gridKiosk",
     "gridAnnouncement",
@@ -5730,6 +5742,7 @@ const PlasmicDescendants = {
     "txtReservationInternetResult",
     "sideEffectCalculator",
     "gridReservation",
+    "button",
     "gridPhoneReserve",
     "gridKiosk",
     "gridAnnouncement",
@@ -5757,7 +5770,8 @@ const PlasmicDescendants = {
   moduleCheck: ["moduleCheck"],
   txtReservationInternetResult: ["txtReservationInternetResult"],
   sideEffectCalculator: ["sideEffectCalculator"],
-  gridReservation: ["gridReservation"],
+  gridReservation: ["gridReservation", "button"],
+  button: ["button"],
   gridPhoneReserve: ["gridPhoneReserve"],
   gridKiosk: ["gridKiosk"],
   gridAnnouncement: ["gridAnnouncement"],
@@ -5786,6 +5800,7 @@ type NodeDefaultElementType = {
   txtReservationInternetResult: "div";
   sideEffectCalculator: typeof SideEffect;
   gridReservation: "div";
+  button: typeof Button;
   gridPhoneReserve: "div";
   gridKiosk: "div";
   gridAnnouncement: "div";
@@ -5872,6 +5887,7 @@ export const PlasmicPricing = Object.assign(
     ),
     sideEffectCalculator: makeNodeComponent("sideEffectCalculator"),
     gridReservation: makeNodeComponent("gridReservation"),
+    button: makeNodeComponent("button"),
     gridPhoneReserve: makeNodeComponent("gridPhoneReserve"),
     gridKiosk: makeNodeComponent("gridKiosk"),
     gridAnnouncement: makeNodeComponent("gridAnnouncement"),
