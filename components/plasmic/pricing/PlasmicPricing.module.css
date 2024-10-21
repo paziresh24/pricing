@@ -445,7 +445,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .freeBox__yBmmu {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     padding-right: 0px;
     padding-left: 0px;
   }
@@ -509,12 +509,19 @@
   min-width: 0;
   padding: 8px;
 }
-.text__jScGh {
+.link__jScGh {
   position: relative;
   width: 100%;
   height: auto;
   max-width: 100%;
+  text-align: center;
+  font-weight: 400;
+  background: #3861fb;
+  color: #ffffff;
   min-width: 0;
+  border-radius: 5px;
+  padding: 5px;
+  border-width: 1px;
 }
 .text__jUhlH {
   position: relative;

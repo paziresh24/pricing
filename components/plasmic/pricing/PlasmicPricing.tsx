@@ -930,15 +930,24 @@ function PlasmicPricing__RenderFunc(props: {
                                               sty.freeBox___3Owrl
                                             )}
                                           >
-                                            <div
+                                            <PlasmicLink__
                                               className={classNames(
                                                 projectcss.all,
+                                                projectcss.a,
                                                 projectcss.__wab_text,
-                                                sty.text__jScGh
+                                                sty.link__jScGh
                                               )}
+                                              component={Link}
+                                              href={
+                                                "https://survey.porsline.ir/s/YCEGAgx"
+                                              }
+                                              platform={"nextjs"}
+                                              target={"_blank"}
                                             >
-                                              {"Enter some text"}
-                                            </div>
+                                              {
+                                                "\u062b\u0628\u062a\u200c\u0646\u0627\u0645 \u0645\u0631\u0627\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc"
+                                              }
+                                            </PlasmicLink__>
                                           </div>
                                         </div>
                                       </div>
