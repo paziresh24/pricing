@@ -349,11 +349,10 @@
   display: grid;
   position: relative;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  width: 100%;
+  width: auto;
   height: auto;
   max-width: 100%;
   grid-column-gap: 10px;
-  min-width: 0;
   border-radius: 10px;
   padding: 0px;
 }
@@ -1540,6 +1539,7 @@
   background: #ffffff;
   margin-top: 5px;
   margin-bottom: 5px;
+  width: auto;
   border-radius: 10px;
   padding: 0px;
 }
@@ -2252,6 +2252,7 @@
   background: #ffffff;
   margin-top: 5px;
   margin-bottom: 5px;
+  width: auto;
   border-radius: 10px;
   padding: 0px;
 }
@@ -2562,11 +2563,10 @@
   display: grid;
   position: relative;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  width: 100%;
   height: auto;
   max-width: 100%;
   background: #ffffff;
-  min-width: 0;
+  width: auto;
   border-radius: 10px;
   padding: 0px;
   margin: 5px 0px;
@@ -3076,13 +3076,12 @@
   display: grid;
   position: relative;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  width: 100%;
+  width: auto;
   height: auto;
   max-width: 100%;
   background: #ffffff;
   margin-top: 5px;
   margin-bottom: 5px;
-  min-width: 0;
   border-radius: 10px;
   padding: 0px;
 }
@@ -3426,13 +3425,12 @@
   display: grid;
   position: relative;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  width: 100%;
+  width: auto;
   height: auto;
   max-width: 100%;
   background: #ffffff;
   margin-top: 5px;
   margin-bottom: 5px;
-  min-width: 0;
   border-radius: 10px;
   padding: 0px;
 }
@@ -3569,13 +3567,12 @@
   display: grid;
   position: relative;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  width: 100%;
+  width: auto;
   height: auto;
   max-width: 100%;
   background: #ffffff;
   margin-top: 5px;
   margin-bottom: 5px;
-  min-width: 0;
   border-radius: 10px;
   padding: 0px;
 }
@@ -3712,13 +3709,12 @@
   display: grid;
   position: relative;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  width: 100%;
   height: auto;
   max-width: 100%;
   background: #ffffff;
   margin-top: 5px;
   margin-bottom: 5px;
-  min-width: 0;
+  width: auto;
   border-radius: 10px;
   padding: 0px;
 }
@@ -3828,13 +3824,12 @@
   display: grid;
   position: relative;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  width: 100%;
+  width: auto;
   height: auto;
   max-width: 100%;
   background: #ffffff;
   margin-top: 5px;
   margin-bottom: 5px;
-  min-width: 0;
   border-radius: 10px;
   padding: 0px;
 }
@@ -4047,13 +4042,12 @@
   display: grid;
   position: relative;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  width: 100%;
+  width: auto;
   height: auto;
   max-width: 100%;
   background: #ffffff;
   margin-top: 5px;
   margin-bottom: 5px;
-  min-width: 0;
   border-radius: 10px;
   padding: 0px;
 }
@@ -4189,13 +4183,12 @@
   display: grid;
   position: relative;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  width: 100%;
+  width: auto;
   height: auto;
   max-width: 100%;
   background: #ffffff;
   margin-top: 5px;
   margin-bottom: 5px;
-  min-width: 0;
   border-radius: 10px;
   padding: 0px;
 }
@@ -4274,13 +4267,12 @@
   display: grid;
   position: relative;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  width: 100%;
+  width: auto;
   height: auto;
   max-width: 100%;
   background: #ffffff;
   margin-top: 5px;
   margin-bottom: 5px;
-  min-width: 0;
   border-radius: 10px;
   padding: 0px;
 }
