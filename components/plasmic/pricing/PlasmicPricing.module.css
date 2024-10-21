@@ -2253,7 +2253,7 @@
   margin-top: 5px;
   margin-bottom: 5px;
   border-radius: 10px;
-  padding: 8px;
+  padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .gridPhoneReserve {
@@ -2568,7 +2568,7 @@
   background: #ffffff;
   min-width: 0;
   border-radius: 10px;
-  padding: 8px;
+  padding: 0px;
   margin: 5px 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -3084,7 +3084,7 @@
   margin-bottom: 5px;
   min-width: 0;
   border-radius: 10px;
-  padding: 8px;
+  padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .gridAnnouncement {
@@ -3434,7 +3434,7 @@
   margin-bottom: 5px;
   min-width: 0;
   border-radius: 10px;
-  padding: 8px;
+  padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .gridCalculation {
@@ -3577,7 +3577,7 @@
   margin-bottom: 5px;
   min-width: 0;
   border-radius: 10px;
-  padding: 8px;
+  padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .gridOnlinePayment {
@@ -3720,7 +3720,7 @@
   margin-bottom: 5px;
   min-width: 0;
   border-radius: 10px;
-  padding: 8px;
+  padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .gridApi {
@@ -3836,7 +3836,7 @@
   margin-bottom: 5px;
   min-width: 0;
   border-radius: 10px;
-  padding: 8px;
+  padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .gridEhr {
@@ -4055,7 +4055,7 @@
   margin-bottom: 5px;
   min-width: 0;
   border-radius: 10px;
-  padding: 8px;
+  padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .gridSpecialSite {
@@ -4197,7 +4197,7 @@
   margin-bottom: 5px;
   min-width: 0;
   border-radius: 10px;
-  padding: 8px;
+  padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .gridReferral {
@@ -4282,7 +4282,7 @@
   margin-bottom: 5px;
   min-width: 0;
   border-radius: 10px;
-  padding: 8px;
+  padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .gridDashboard {
