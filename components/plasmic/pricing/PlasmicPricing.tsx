@@ -939,10 +939,24 @@ function PlasmicPricing__RenderFunc(props: {
                                               )}
                                               component={Link}
                                               href={
-                                                "https://survey.porsline.ir/s/YCEGAgx"
+                                                hasVariant(
+                                                  globalVariants,
+                                                  "screen",
+                                                  "mobileOnly"
+                                                )
+                                                  ? "https://survey.porsline.ir/s/YCEGAgx"
+                                                  : undefined
                                               }
                                               platform={"nextjs"}
-                                              target={"_blank"}
+                                              target={
+                                                hasVariant(
+                                                  globalVariants,
+                                                  "screen",
+                                                  "mobileOnly"
+                                                )
+                                                  ? "_blank"
+                                                  : undefined
+                                              }
                                             >
                                               {
                                                 "\u062b\u0628\u062a\u200c\u0646\u0627\u0645 \u0645\u0631\u0627\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc"
