@@ -924,6 +924,22 @@ function PlasmicPricing__RenderFunc(props: {
                                               </React.Fragment>
                                             </div>
                                           </div>
+                                          <div
+                                            className={classNames(
+                                              projectcss.all,
+                                              sty.freeBox___3Owrl
+                                            )}
+                                          >
+                                            <div
+                                              className={classNames(
+                                                projectcss.all,
+                                                projectcss.__wab_text,
+                                                sty.text__jScGh
+                                              )}
+                                            >
+                                              {"Enter some text"}
+                                            </div>
+                                          </div>
                                         </div>
                                       </div>
                                     </div>

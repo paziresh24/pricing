@@ -453,7 +453,7 @@
 .freeBox__vdxby {
   display: flex;
   position: relative;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -496,6 +496,25 @@
     white-space: pre;
     font-size: 14px;
   }
+}
+.freeBox___3Owrl {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
+.text__jScGh {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
 }
 .text__jUhlH {
   position: relative;
