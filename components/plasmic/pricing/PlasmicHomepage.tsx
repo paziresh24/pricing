@@ -9038,6 +9038,39 @@ function PlasmicHomepage__RenderFunc(props: {
               className={classNames("__wab_instance", sty.sideEffectPageLoad)}
               onMount={async () => {
                 const $steps = {};
+
+                $steps["goToHttpsWwwPaziresh24ComPricingCalculator"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        destination:
+                          "https://www.paziresh24.com/_/pricing/calculator/"
+                      };
+                      return (({ destination }) => {
+                        if (
+                          typeof destination === "string" &&
+                          destination.startsWith("#")
+                        ) {
+                          document
+                            .getElementById(destination.substr(1))
+                            .scrollIntoView({ behavior: "smooth" });
+                        } else {
+                          __nextRouter?.push(destination);
+                        }
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["goToHttpsWwwPaziresh24ComPricingCalculator"] !=
+                    null &&
+                  typeof $steps[
+                    "goToHttpsWwwPaziresh24ComPricingCalculator"
+                  ] === "object" &&
+                  typeof $steps["goToHttpsWwwPaziresh24ComPricingCalculator"]
+                    .then === "function"
+                ) {
+                  $steps["goToHttpsWwwPaziresh24ComPricingCalculator"] =
+                    await $steps["goToHttpsWwwPaziresh24ComPricingCalculator"];
+                }
               }}
             />
           </div>
