@@ -523,12 +523,10 @@
   padding: 5px;
   border-width: 1px;
 }
-.text__jUhlH {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  min-width: 0;
+@media (min-width: 0px) and (max-width: 768px) {
+  .link__jScGh {
+    padding: 3px;
+  }
 }
 .freeBox__qVWa6 {
   display: grid;
@@ -553,7 +551,7 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
+  padding: 0px;
 }
 .freeBox__nioTn > :global(.__wab_flex-container) {
   flex-direction: row;
