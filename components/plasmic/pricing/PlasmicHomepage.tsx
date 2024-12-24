@@ -1608,10 +1608,12 @@ function PlasmicHomepage__RenderFunc(props: {
                                 disabled={false}
                                 max={10000}
                                 min={1000}
-                                onChange={generateStateOnChangeProp($state, [
-                                  "fragmentSlider",
-                                  "value"
-                                ])}
+                                onChange={async (...eventArgs: any) => {
+                                  generateStateOnChangeProp($state, [
+                                    "fragmentSlider",
+                                    "value"
+                                  ]).apply(null, eventArgs);
+                                }}
                                 step={50}
                                 value={generateStateValueProp($state, [
                                   "fragmentSlider",
@@ -1701,16 +1703,26 @@ function PlasmicHomepage__RenderFunc(props: {
                                   sty.txtResevationCount
                                 )}
                                 isDisabled={true}
-                                onChange={(...eventArgs) => {
-                                  generateStateOnChangeProp($state, [
-                                    "txtResevationCount",
-                                    "value"
-                                  ])(
-                                    (e => e.target?.value).apply(
-                                      null,
-                                      eventArgs
-                                    )
-                                  );
+                                onChange={async (...eventArgs: any) => {
+                                  ((...eventArgs) => {
+                                    generateStateOnChangeProp($state, [
+                                      "txtResevationCount",
+                                      "value"
+                                    ])(
+                                      (e => e.target?.value).apply(
+                                        null,
+                                        eventArgs
+                                      )
+                                    );
+                                  }).apply(null, eventArgs);
+
+                                  if (
+                                    eventArgs.length > 1 &&
+                                    eventArgs[1] &&
+                                    eventArgs[1]._plasmic_state_init_
+                                  ) {
+                                    return;
+                                  }
                                 }}
                                 placeholder={
                                   "\u062a\u0639\u062f\u0627\u062f \u0646\u0648\u0628\u062a"
@@ -1817,11 +1829,21 @@ function PlasmicHomepage__RenderFunc(props: {
                                 ]) ?? false
                               }
                               isDisabled={true}
-                              onChange={(...eventArgs) => {
-                                generateStateOnChangeProp($state, [
-                                  "reservationCheck",
-                                  "isChecked"
-                                ])(eventArgs[0]);
+                              onChange={async (...eventArgs: any) => {
+                                ((...eventArgs) => {
+                                  generateStateOnChangeProp($state, [
+                                    "reservationCheck",
+                                    "isChecked"
+                                  ])(eventArgs[0]);
+                                }).apply(null, eventArgs);
+
+                                if (
+                                  eventArgs.length > 1 &&
+                                  eventArgs[1] &&
+                                  eventArgs[1]._plasmic_state_init_
+                                ) {
+                                  return;
+                                }
                               }}
                             >
                               <div
@@ -1972,11 +1994,21 @@ function PlasmicHomepage__RenderFunc(props: {
                                 ]) ?? false
                               }
                               isDisabled={true}
-                              onChange={(...eventArgs) => {
-                                generateStateOnChangeProp($state, [
-                                  "siteAndAppCheck",
-                                  "isChecked"
-                                ])(eventArgs[0]);
+                              onChange={async (...eventArgs: any) => {
+                                ((...eventArgs) => {
+                                  generateStateOnChangeProp($state, [
+                                    "siteAndAppCheck",
+                                    "isChecked"
+                                  ])(eventArgs[0]);
+                                }).apply(null, eventArgs);
+
+                                if (
+                                  eventArgs.length > 1 &&
+                                  eventArgs[1] &&
+                                  eventArgs[1]._plasmic_state_init_
+                                ) {
+                                  return;
+                                }
                               }}
                             >
                               <div
@@ -2128,11 +2160,21 @@ function PlasmicHomepage__RenderFunc(props: {
                                   "isChecked"
                                 ]) ?? false
                               }
-                              onChange={(...eventArgs) => {
-                                generateStateOnChangeProp($state, [
-                                  "reservationPhoneCheck",
-                                  "isChecked"
-                                ])(eventArgs[0]);
+                              onChange={async (...eventArgs: any) => {
+                                ((...eventArgs) => {
+                                  generateStateOnChangeProp($state, [
+                                    "reservationPhoneCheck",
+                                    "isChecked"
+                                  ])(eventArgs[0]);
+                                }).apply(null, eventArgs);
+
+                                if (
+                                  eventArgs.length > 1 &&
+                                  eventArgs[1] &&
+                                  eventArgs[1]._plasmic_state_init_
+                                ) {
+                                  return;
+                                }
                               }}
                             >
                               <div
@@ -2282,11 +2324,21 @@ function PlasmicHomepage__RenderFunc(props: {
                                   "isChecked"
                                 ]) ?? false
                               }
-                              onChange={(...eventArgs) => {
-                                generateStateOnChangeProp($state, [
-                                  "specialSiteCheck",
-                                  "isChecked"
-                                ])(eventArgs[0]);
+                              onChange={async (...eventArgs: any) => {
+                                ((...eventArgs) => {
+                                  generateStateOnChangeProp($state, [
+                                    "specialSiteCheck",
+                                    "isChecked"
+                                  ])(eventArgs[0]);
+                                }).apply(null, eventArgs);
+
+                                if (
+                                  eventArgs.length > 1 &&
+                                  eventArgs[1] &&
+                                  eventArgs[1]._plasmic_state_init_
+                                ) {
+                                  return;
+                                }
                               }}
                             >
                               <div
@@ -2438,11 +2490,21 @@ function PlasmicHomepage__RenderFunc(props: {
                                   "isChecked"
                                 ]) ?? false
                               }
-                              onChange={(...eventArgs) => {
-                                generateStateOnChangeProp($state, [
-                                  "kioskResevationCheck",
-                                  "isChecked"
-                                ])(eventArgs[0]);
+                              onChange={async (...eventArgs: any) => {
+                                ((...eventArgs) => {
+                                  generateStateOnChangeProp($state, [
+                                    "kioskResevationCheck",
+                                    "isChecked"
+                                  ])(eventArgs[0]);
+                                }).apply(null, eventArgs);
+
+                                if (
+                                  eventArgs.length > 1 &&
+                                  eventArgs[1] &&
+                                  eventArgs[1]._plasmic_state_init_
+                                ) {
+                                  return;
+                                }
                               }}
                             >
                               <div
@@ -2594,11 +2656,21 @@ function PlasmicHomepage__RenderFunc(props: {
                                   "isChecked"
                                 ]) ?? false
                               }
-                              onChange={(...eventArgs) => {
-                                generateStateOnChangeProp($state, [
-                                  "announcementCheck",
-                                  "isChecked"
-                                ])(eventArgs[0]);
+                              onChange={async (...eventArgs: any) => {
+                                ((...eventArgs) => {
+                                  generateStateOnChangeProp($state, [
+                                    "announcementCheck",
+                                    "isChecked"
+                                  ])(eventArgs[0]);
+                                }).apply(null, eventArgs);
+
+                                if (
+                                  eventArgs.length > 1 &&
+                                  eventArgs[1] &&
+                                  eventArgs[1]._plasmic_state_init_
+                                ) {
+                                  return;
+                                }
                               }}
                             >
                               <div
@@ -2748,11 +2820,21 @@ function PlasmicHomepage__RenderFunc(props: {
                                   "isChecked"
                                 ]) ?? false
                               }
-                              onChange={(...eventArgs) => {
-                                generateStateOnChangeProp($state, [
-                                  "calculationCheck",
-                                  "isChecked"
-                                ])(eventArgs[0]);
+                              onChange={async (...eventArgs: any) => {
+                                ((...eventArgs) => {
+                                  generateStateOnChangeProp($state, [
+                                    "calculationCheck",
+                                    "isChecked"
+                                  ])(eventArgs[0]);
+                                }).apply(null, eventArgs);
+
+                                if (
+                                  eventArgs.length > 1 &&
+                                  eventArgs[1] &&
+                                  eventArgs[1]._plasmic_state_init_
+                                ) {
+                                  return;
+                                }
                               }}
                             >
                               <div
@@ -2904,11 +2986,21 @@ function PlasmicHomepage__RenderFunc(props: {
                                   "isChecked"
                                 ]) ?? false
                               }
-                              onChange={(...eventArgs) => {
-                                generateStateOnChangeProp($state, [
-                                  "onlinepaymentCheck",
-                                  "isChecked"
-                                ])(eventArgs[0]);
+                              onChange={async (...eventArgs: any) => {
+                                ((...eventArgs) => {
+                                  generateStateOnChangeProp($state, [
+                                    "onlinepaymentCheck",
+                                    "isChecked"
+                                  ])(eventArgs[0]);
+                                }).apply(null, eventArgs);
+
+                                if (
+                                  eventArgs.length > 1 &&
+                                  eventArgs[1] &&
+                                  eventArgs[1]._plasmic_state_init_
+                                ) {
+                                  return;
+                                }
                               }}
                             >
                               <div
@@ -3058,11 +3150,21 @@ function PlasmicHomepage__RenderFunc(props: {
                                   "isChecked"
                                 ]) ?? false
                               }
-                              onChange={(...eventArgs) => {
-                                generateStateOnChangeProp($state, [
-                                  "apiCheck",
-                                  "isChecked"
-                                ])(eventArgs[0]);
+                              onChange={async (...eventArgs: any) => {
+                                ((...eventArgs) => {
+                                  generateStateOnChangeProp($state, [
+                                    "apiCheck",
+                                    "isChecked"
+                                  ])(eventArgs[0]);
+                                }).apply(null, eventArgs);
+
+                                if (
+                                  eventArgs.length > 1 &&
+                                  eventArgs[1] &&
+                                  eventArgs[1]._plasmic_state_init_
+                                ) {
+                                  return;
+                                }
                               }}
                             >
                               <div
@@ -3210,11 +3312,21 @@ function PlasmicHomepage__RenderFunc(props: {
                                   "isChecked"
                                 ]) ?? false
                               }
-                              onChange={(...eventArgs) => {
-                                generateStateOnChangeProp($state, [
-                                  "ehrCheck",
-                                  "isChecked"
-                                ])(eventArgs[0]);
+                              onChange={async (...eventArgs: any) => {
+                                ((...eventArgs) => {
+                                  generateStateOnChangeProp($state, [
+                                    "ehrCheck",
+                                    "isChecked"
+                                  ])(eventArgs[0]);
+                                }).apply(null, eventArgs);
+
+                                if (
+                                  eventArgs.length > 1 &&
+                                  eventArgs[1] &&
+                                  eventArgs[1]._plasmic_state_init_
+                                ) {
+                                  return;
+                                }
                               }}
                             >
                               <div
@@ -3364,11 +3476,21 @@ function PlasmicHomepage__RenderFunc(props: {
                                   "isChecked"
                                 ]) ?? false
                               }
-                              onChange={(...eventArgs) => {
-                                generateStateOnChangeProp($state, [
-                                  "referralCheck",
-                                  "isChecked"
-                                ])(eventArgs[0]);
+                              onChange={async (...eventArgs: any) => {
+                                ((...eventArgs) => {
+                                  generateStateOnChangeProp($state, [
+                                    "referralCheck",
+                                    "isChecked"
+                                  ])(eventArgs[0]);
+                                }).apply(null, eventArgs);
+
+                                if (
+                                  eventArgs.length > 1 &&
+                                  eventArgs[1] &&
+                                  eventArgs[1]._plasmic_state_init_
+                                ) {
+                                  return;
+                                }
                               }}
                             >
                               <div
@@ -3516,11 +3638,21 @@ function PlasmicHomepage__RenderFunc(props: {
                                   "isChecked"
                                 ]) ?? false
                               }
-                              onChange={(...eventArgs) => {
-                                generateStateOnChangeProp($state, [
-                                  "dashboardCheck",
-                                  "isChecked"
-                                ])(eventArgs[0]);
+                              onChange={async (...eventArgs: any) => {
+                                ((...eventArgs) => {
+                                  generateStateOnChangeProp($state, [
+                                    "dashboardCheck",
+                                    "isChecked"
+                                  ])(eventArgs[0]);
+                                }).apply(null, eventArgs);
+
+                                if (
+                                  eventArgs.length > 1 &&
+                                  eventArgs[1] &&
+                                  eventArgs[1]._plasmic_state_init_
+                                ) {
+                                  return;
+                                }
                               }}
                             >
                               <div
@@ -3671,11 +3803,21 @@ function PlasmicHomepage__RenderFunc(props: {
                                 ]) ?? false
                               }
                               isDisabled={true}
-                              onChange={(...eventArgs) => {
-                                generateStateOnChangeProp($state, [
-                                  "supportTicketCheck",
-                                  "isChecked"
-                                ])(eventArgs[0]);
+                              onChange={async (...eventArgs: any) => {
+                                ((...eventArgs) => {
+                                  generateStateOnChangeProp($state, [
+                                    "supportTicketCheck",
+                                    "isChecked"
+                                  ])(eventArgs[0]);
+                                }).apply(null, eventArgs);
+
+                                if (
+                                  eventArgs.length > 1 &&
+                                  eventArgs[1] &&
+                                  eventArgs[1]._plasmic_state_init_
+                                ) {
+                                  return;
+                                }
                               }}
                             >
                               <div
@@ -3823,11 +3965,21 @@ function PlasmicHomepage__RenderFunc(props: {
                                   "isChecked"
                                 ]) ?? false
                               }
-                              onChange={(...eventArgs) => {
-                                generateStateOnChangeProp($state, [
-                                  "supportTelCheck",
-                                  "isChecked"
-                                ])(eventArgs[0]);
+                              onChange={async (...eventArgs: any) => {
+                                ((...eventArgs) => {
+                                  generateStateOnChangeProp($state, [
+                                    "supportTelCheck",
+                                    "isChecked"
+                                  ])(eventArgs[0]);
+                                }).apply(null, eventArgs);
+
+                                if (
+                                  eventArgs.length > 1 &&
+                                  eventArgs[1] &&
+                                  eventArgs[1]._plasmic_state_init_
+                                ) {
+                                  return;
+                                }
                               }}
                             >
                               <div
@@ -3977,11 +4129,21 @@ function PlasmicHomepage__RenderFunc(props: {
                                   "isChecked"
                                 ]) ?? false
                               }
-                              onChange={(...eventArgs) => {
-                                generateStateOnChangeProp($state, [
-                                  "supportServerCheck",
-                                  "isChecked"
-                                ])(eventArgs[0]);
+                              onChange={async (...eventArgs: any) => {
+                                ((...eventArgs) => {
+                                  generateStateOnChangeProp($state, [
+                                    "supportServerCheck",
+                                    "isChecked"
+                                  ])(eventArgs[0]);
+                                }).apply(null, eventArgs);
+
+                                if (
+                                  eventArgs.length > 1 &&
+                                  eventArgs[1] &&
+                                  eventArgs[1]._plasmic_state_init_
+                                ) {
+                                  return;
+                                }
                               }}
                             >
                               <div
