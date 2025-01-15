@@ -64,6 +64,7 @@ import TextInput from "../../TextInput"; // plasmic-import: ZdzGQGZE4mJ7/compone
 import Checkbox from "../../Checkbox"; // plasmic-import: dk4vJhcf_j2D/component
 import { SideEffect } from "@plasmicpkgs/plasmic-basic-components";
 import Button from "../../Button"; // plasmic-import: oVzoHzMf1TLl/component
+import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 
 import { useScreenVariants as useScreenVariantsebUcSKv8J57Q } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: ebUcSKv8j57Q/globalVariant
@@ -138,6 +139,7 @@ export type PlasmicDynamicCalculator__OverridesType = {
   gridSpecialSite?: Flex__<"div">;
   gridReferral?: Flex__<"div">;
   gridDashboard?: Flex__<"div">;
+  embedHtml?: Flex__<typeof Embed>;
   btnFixedCalculator?: Flex__<"div">;
   sideEffectPageLoad?: Flex__<typeof SideEffect>;
 };
@@ -6009,6 +6011,14 @@ function PlasmicDynamicCalculator__RenderFunc(props: {
                   </div>
                 </div>
               ) : null}
+              <Embed
+                data-plasmic-name={"embedHtml"}
+                data-plasmic-override={overrides.embedHtml}
+                className={classNames("__wab_instance", sty.embedHtml)}
+                code={
+                  '<script type="text/javascript">\r\n    (function(c,l,a,r,i,t,y){\r\n        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};\r\n        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;\r\n        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);\r\n    })(window, document, "clarity", "script", "pu6cvrhzwk");\r\n</script>'
+                }
+              />
             </section>
             <div className={classNames(projectcss.all, sty.freeBox__prDzY)}>
               <div className={classNames(projectcss.all, sty.freeBox__qhbS)}>
@@ -6281,6 +6291,7 @@ const PlasmicDescendants = {
     "gridSpecialSite",
     "gridReferral",
     "gridDashboard",
+    "embedHtml",
     "btnFixedCalculator",
     "sideEffectPageLoad"
   ],
@@ -6325,6 +6336,7 @@ const PlasmicDescendants = {
   gridSpecialSite: ["gridSpecialSite"],
   gridReferral: ["gridReferral"],
   gridDashboard: ["gridDashboard"],
+  embedHtml: ["embedHtml"],
   btnFixedCalculator: ["btnFixedCalculator"],
   sideEffectPageLoad: ["sideEffectPageLoad"]
 } as const;
@@ -6365,6 +6377,7 @@ type NodeDefaultElementType = {
   gridSpecialSite: "div";
   gridReferral: "div";
   gridDashboard: "div";
+  embedHtml: typeof Embed;
   btnFixedCalculator: "div";
   sideEffectPageLoad: typeof SideEffect;
 };
@@ -6463,6 +6476,7 @@ export const PlasmicDynamicCalculator = Object.assign(
     gridSpecialSite: makeNodeComponent("gridSpecialSite"),
     gridReferral: makeNodeComponent("gridReferral"),
     gridDashboard: makeNodeComponent("gridDashboard"),
+    embedHtml: makeNodeComponent("embedHtml"),
     btnFixedCalculator: makeNodeComponent("btnFixedCalculator"),
     sideEffectPageLoad: makeNodeComponent("sideEffectPageLoad"),
 
