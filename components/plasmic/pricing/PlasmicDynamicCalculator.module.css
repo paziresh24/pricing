@@ -57,7 +57,7 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .freeBox__ooK9X {
     padding-top: 8px;
-    padding-bottom: 0px;
+    padding-bottom: 8px;
   }
 }
 .freeBox__s1NWk {
@@ -2639,6 +2639,11 @@
   color: #3f4079;
   min-width: 0;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .h2__nogS {
+    font-size: 20px;
+  }
+}
 .text__bqQwn {
   position: relative;
   width: 100%;
@@ -3379,6 +3384,11 @@
   font-size: 25px;
   color: #3f4079;
   min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .h2__d9QOk {
+    font-size: 20px;
+  }
 }
 .text__kxiSd {
   position: relative;
@@ -4244,6 +4254,11 @@
   color: #3f4079;
   min-width: 0;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .h2__qMbnh {
+    font-size: 20px;
+  }
+}
 .text__szF3D {
   position: relative;
   width: 100%;
@@ -4611,6 +4626,11 @@
   color: #3f4079;
   min-width: 0;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .h2___6Awz4 {
+    font-size: 20px;
+  }
+}
 .text__ddRy {
   position: relative;
   width: 100%;
@@ -4953,6 +4973,11 @@
   padding-top: 0px;
   min-width: 0;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .h2__tE8Vf {
+    font-size: 20px;
+  }
+}
 .text__nygin {
   position: relative;
   width: 100%;
@@ -5083,6 +5108,11 @@
   color: #3f4079;
   margin-bottom: 0px;
   min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .h2___4KJym {
+    font-size: 20px;
+  }
 }
 .text__ktU4P {
   position: relative;
@@ -5315,6 +5345,11 @@
   padding-top: 0px;
   min-width: 0;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .h2___9Kyvm {
+    font-size: 20px;
+  }
+}
 .text___136Iq {
   position: relative;
   width: 100%;
@@ -5463,6 +5498,11 @@
   padding-top: 0px;
   min-width: 0;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .h2___6TAwd {
+    font-size: 20px;
+  }
+}
 .text___58Dv2 {
   position: relative;
   width: 100%;
@@ -5563,6 +5603,11 @@
   margin-bottom: 0px;
   padding-top: 0px;
   min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .h2__vAimv {
+    font-size: 20px;
+  }
 }
 .text__lGsVx {
   position: relative;
