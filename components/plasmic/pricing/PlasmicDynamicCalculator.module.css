@@ -89,6 +89,11 @@
   min-width: 0;
   padding: 8px;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__vj2Nx {
+    grid-column-end: span 1;
+  }
+}
 .freeBox__xd1Xp {
   display: flex;
   position: relative;
@@ -101,6 +106,11 @@
   grid-column-end: span 4;
   min-width: 0;
   padding: 0px 8px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__xd1Xp {
+    grid-column-end: span 6;
+  }
 }
 .freeBox__lTBh {
   display: flex;
@@ -208,6 +218,7 @@
   .freeBox__pBsqU {
     padding-right: 0px;
     padding-left: 0px;
+    grid-column-end: span 1;
   }
 }
 .section__k9DKw {
@@ -265,6 +276,7 @@
   .freeBox__vQzvx {
     grid-template-columns: repeat(6, minmax(0, 1fr));
     grid-row-gap: 10px;
+    display: none;
   }
 }
 .btnReservation {
@@ -1524,7 +1536,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .freeBox__zlx3J {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 }
 .freeBox___6E3Zk {
@@ -1548,6 +1560,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    grid-column-end: span 3;
     min-width: 0;
     padding: 0px 8px;
   }
@@ -1581,6 +1594,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    grid-column-end: span 2;
     min-width: 0;
     padding: 0px 8px;
   }
@@ -1614,6 +1628,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    grid-column-end: span 2;
     min-width: 0;
     padding: 0px 8px;
   }
@@ -1634,6 +1649,11 @@
   max-width: 100%;
   min-width: 0;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__n4Jme {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+}
 .freeBox__gjXVn {
   display: flex;
   position: relative;
@@ -1651,6 +1671,7 @@
   .freeBox__gjXVn {
     padding-right: 0px;
     padding-left: 0px;
+    grid-column-end: span 3;
   }
 }
 .freeBox__yrPoX {
@@ -1707,6 +1728,11 @@
   padding: 0px 8px;
   border-width: 1px;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__keNof {
+    grid-column-end: span 2;
+  }
+}
 .text___7RJtL {
   position: relative;
   width: 100%;
@@ -1729,6 +1755,11 @@
   min-width: 0;
   padding: 0px 8px;
   border-width: 1px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__hyJEp {
+    grid-column-end: span 2;
+  }
 }
 .txtReservationInternetResult {
   position: relative;
@@ -1971,6 +2002,23 @@
   align-items: center;
   min-width: 0;
   padding: 0px 8px;
+}
+.freeBox__lq4Ag {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__lq4Ag {
+    grid-column-end: span 3;
+  }
 }
 .link {
   position: relative;
@@ -5634,6 +5682,11 @@
   bottom: 0;
   min-width: 0;
   padding: 8px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__prDzY {
+    display: none;
+  }
 }
 .freeBox__qhbS {
   display: flex;

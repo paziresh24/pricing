@@ -2162,27 +2162,33 @@ function PlasmicDynamicCalculator__RenderFunc(props: {
                                 projectcss.all,
                                 sty.freeBox__ckbyA
                               )}
-                            >
-                              <PlasmicLink__
-                                data-plasmic-name={"link"}
-                                data-plasmic-override={overrides.link}
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.a,
-                                  projectcss.__wab_text,
-                                  sty.link
-                                )}
-                                component={Link}
-                                href={"https://survey.porsline.ir/s/YCEGAgx"}
-                                platform={"nextjs"}
-                                target={"_blank"}
-                              >
-                                {
-                                  "\u062b\u0628\u062a \u0646\u0627\u0645 \u0645\u0631\u0627\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc"
-                                }
-                              </PlasmicLink__>
-                            </div>
+                            />
                           </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__lq4Ag
+                          )}
+                        >
+                          <PlasmicLink__
+                            data-plasmic-name={"link"}
+                            data-plasmic-override={overrides.link}
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.a,
+                              projectcss.__wab_text,
+                              sty.link
+                            )}
+                            component={Link}
+                            href={"https://survey.porsline.ir/s/YCEGAgx"}
+                            platform={"nextjs"}
+                            target={"_blank"}
+                          >
+                            {
+                              "\u062b\u0628\u062a \u0646\u0627\u0645 \u0645\u0631\u0627\u06a9\u0632 \u062f\u0631\u0645\u0627\u0646\u06cc"
+                            }
+                          </PlasmicLink__>
                         </div>
                       </div>
                       <SideEffect
