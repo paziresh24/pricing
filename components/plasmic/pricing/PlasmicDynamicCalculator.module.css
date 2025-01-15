@@ -1350,6 +1350,11 @@
   min-width: 0;
   padding: 8px;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__aVs1G {
+    display: none;
+  }
+}
 .h2___73QBu {
   position: relative;
   width: 100%;
