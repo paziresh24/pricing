@@ -2012,6 +2012,7 @@
   max-width: 100%;
   justify-content: flex-start;
   align-items: center;
+  grid-column-end: span 3;
   min-width: 0;
   padding: 8px;
 }
@@ -2031,6 +2032,9 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .link {
     font-size: 12px;
+    width: auto;
+    background: #ffffff;
+    padding: 8px;
   }
 }
 .sideEffectCalculator:global(.__wab_instance) {
