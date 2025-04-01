@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 import { CodeComponentMeta, useSelector } from "@plasmicapp/host";
 import * as InputPrimitive from "@/components/ui/input";
-import { HTMLInputTypeAttribute } from "react";
+import { HTMLInputTypeAttribute, RefAttributes } from "react";
 
 type InputType = {
   placeholder?: string;
@@ -11,11 +11,24 @@ type InputType = {
   className?: string;
   name?: string;
   type?: HTMLInputTypeAttribute;
+  attributes?: InputPrimitive.InputProps & RefAttributes<HTMLInputElement>;
+  multiple?: boolean;
+  accept?: string;
 };
 
 export const Input = (props: InputType) => {
-  const { placeholder, value, onChange, disabled, className, name, type } =
-    props;
+  const {
+    placeholder,
+    value,
+    onChange,
+    disabled,
+    className,
+    name,
+    type = "text",
+    attributes,
+    multiple,
+    accept,
+  } = props;
   const fragmentConfig = useSelector("Fragment");
   return (
     <InputPrimitive.Input
@@ -27,6 +40,11 @@ export const Input = (props: InputType) => {
       placeholder={placeholder}
       className={className}
       type={type}
+      {...(type == "file" && {
+        multiple,
+        accept,
+      })}
+      {...attributes}
     />
   );
 };
@@ -36,6 +54,7 @@ export const inputMeta: CodeComponentMeta<InputType> = {
   displayName: "Fragment/Input",
   importPath: "@/fragment/components/input",
   figmaMappings: [{ figmaComponentName: "Input" }],
+  section: "Fragment",
   props: {
     placeholder: "string",
     value: {
@@ -54,13 +73,28 @@ export const inputMeta: CodeComponentMeta<InputType> = {
         "time",
         "email",
         "tel",
+        "file",
       ],
+      defaultValue: "text",
+      defaultValueHint: "text",
     },
     disabled: "boolean",
+    multiple: {
+      type: "boolean",
+      hidden: (ps) => ps.type != "file",
+    },
+    accept: {
+      type: "string",
+      hidden: (ps) => ps.type != "file",
+    },
     name: {
       type: "string",
       advanced: true,
       description: "The HTML name of the input",
+    },
+    attributes: {
+      type: "object",
+      advanced: true,
     },
     onChange: {
       type: "eventHandler",
